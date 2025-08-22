@@ -1,0 +1,20 @@
+{
+	"items" : [
+		{ "id" : "Progress.Sitefinity.Ecommerce", "transform" : "Remove" },
+		{ "id" : "ServiceStack.Signed", "transform" : "Remove" },
+    { "id" : "ServiceStack.Common.Signed", "transform" : "Remove" },
+    { "id" : "ServiceStack.Client.Signed", "transform" : "Remove" },
+    { "id" : "ServiceStack.Text.Signed", "transform" : "Remove" },
+    { "id" : "ServiceStack.Redis.Signed", "transform" : "Remove" },
+    { "id" : "ServiceStack.Redis.Signed", "transform" : "Remove" },
+    { "id" : "Sitefinity.RedDog.Search", "transform" : "Remove" },
+    { "id" : "Microsoft.Azure.Search", "transform" : "Remove" },
+    { "id" : "Microsoft.Azure.Search.Common", "transform" : "Remove" },
+    { "id" : "Microsoft.Azure.Search.Data", "transform" : "Remove" },
+    { "id" : "Microsoft.Azure.Search.Service", "transform" : "Remove" },
+    { "id" : "Azure.Core", "transform" : "InsertIfMissing" },
+    { "id" : "Azure.Search.Documents", "transform" : "InsertIfMissing" },
+    { "id" : "System.Threading.Channels", "transform" : "InsertIfMissing" },
+    { "id" : "Telerik.Sitefinity.Reporting.Controls", "transform" : "Remove" }
+	]
+}

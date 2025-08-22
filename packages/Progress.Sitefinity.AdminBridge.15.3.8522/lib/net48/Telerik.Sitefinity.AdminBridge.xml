@@ -1,0 +1,1056 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Telerik.Sitefinity.AdminBridge</name>
+    </assembly>
+    <members>
+        <member name="T:Telerik.Sitefinity.AdminBridge.AdminAppSettings">
+            <summary>Provides settings for the AdminApp</summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.AdminBridge.AdminAppSettings.IsAdminAppEnabled">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.AdminBridge.AdminAppSettings.IsWhiteListedModule(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="T:Telerik.Sitefinity.AdminBridge.AdminBridgeModule">
+            <summary>
+            Module that provides the use of integrated backend admin app.
+            </summary>
+            <seealso cref="T:Telerik.Sitefinity.Services.ModuleBase" />
+        </member>
+        <member name="P:Telerik.Sitefinity.AdminBridge.AdminBridgeModule.LandingPageId">
+            <summary>
+            Gets the landing page id for each module inherit from <see cref="T:Telerik.Sitefinity.Services.SecuredModuleBase" /> class.
+            </summary>
+            <value>
+            The landing page id.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.AdminBridge.AdminBridgeModule.Managers">
+            <summary>
+            Gets the CLR types of all data managers provided by this module.
+            </summary>
+            <value>
+            An array of <see cref="T:System.Type" /> objects.
+            </value>
+        </member>
+        <member name="M:Telerik.Sitefinity.AdminBridge.AdminBridgeModule.Install(Telerik.Sitefinity.Abstractions.SiteInitializer)">
+            <summary>
+            Installs this module in Sitefinity system for the first time.
+            </summary>
+            <param name="initializer">The Site Initializer. A helper class for installing Sitefinity modules.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.AdminBridge.AdminBridgeModule.Initialize(Telerik.Sitefinity.Services.ModuleSettings)">
+            <summary>
+            Initializes the service with specified settings.
+            </summary>
+            <param name="settings">The settings.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.AdminBridge.AdminBridgeModule.IsPageUseSiteContext(Telerik.Sitefinity.Web.PageSiteNode)">
+            <summary>
+            Determines whether the specified page site node uses site context.
+            </summary>
+            <param name="pageSiteNode">The page site node.</param>
+            <returns>
+                <c>true</c> if the specified page site node uses site context; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.AdminBridge.AdminBridgeModule.IsAccessible(Telerik.Sitefinity.Web.PageSiteNode)">
+            <summary>
+            Determines whether the specified page site node is accessible.
+            </summary>
+            <param name="pageSiteNode">The page site node.</param>
+            <returns>
+              <c>true</c> if the specified page site node is accessible; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.AdminBridge.AdminBridgeModule.GetModuleConfig">
+            <summary>
+            Gets the module config.
+            </summary>
+            <returns>
+            The module config.
+            </returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.AdminBridge.AdminBridgeModule.GetVirtualPaths">
+            <inheritdoc />
+        </member>
+        <member name="T:Telerik.Sitefinity.AdminBridge.Cache.CacheManager">
+            <summary>
+            Manages the cache for the <see cref="T:Telerik.Sitefinity.AdminBridge.AdminBridgeModule"/>.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.AdminBridge.Cache.CacheManager.GetCachedItem">
+            <summary>
+            Gets the cached item.
+            </summary>
+            <returns>
+            The cached item.
+            </returns>
+        </member>
+        <member name="T:Telerik.Sitefinity.AdminBridge.Cache.Models.HtmlCache">
+            <summary>
+            Cache model for the web client markup.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.AdminBridge.Cache.Models.HtmlCache.Hash">
+            <summary>
+            Gets or sets the markup hash.
+            </summary>
+            <value>
+            The markup hash.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.AdminBridge.Cache.Models.HtmlCache.HeadContent">
+            <summary>
+            Gets or sets the content of the head tag.
+            </summary>
+            <value>
+            The content of the head tag.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.AdminBridge.Cache.Models.HtmlCache.BodyContent">
+            <summary>
+            Gets or sets the content of the body tag.
+            </summary>
+            <value>
+            The content of the body tag.
+            </value>
+        </member>
+        <member name="T:Telerik.Sitefinity.AdminBridge.Configuration.AdminAppConfig">
+            <summary>
+            The admin app config.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.AdminBridge.Configuration.AdminAppConfig.ContentItemsPerPage">
+            <summary>
+            Gets or sets the content items count per page.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.AdminBridge.Configuration.AdminAppConfig.MediaItemsPerPage">
+            <summary>
+            Gets or sets the media items count per page.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.AdminBridge.Configuration.AdminAppConfig.ColumnNamesWhitelist">
+            <summary>
+            Gets or sets the columns that are to be visualized together with the ones that are already visible.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.AdminBridge.Configuration.AdminAppConfig.DynamicModuleChildListOrder">
+            <summary>
+            Gets or sets the configuration that allows reordering of the child types in the ‘Contains’ column of hierarchical types with two or more children.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.AdminBridge.Configuration.AdminAppConfig.Virtualization">
+            <summary>
+            Gets or sets a value indicating whether there should be virtualization for pages or not.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.AdminBridge.Configuration.AdminAppConfig.SectionsMenuMinColumnsNumber">
+            <summary>
+            Gets or sets the minimum items to display sections menu.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.AdminBridge.Configuration.AdminAppConfig.DateTimeFormat">
+            <summary>
+            Gets or sets the date time format for fields.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.AdminBridge.Configuration.AdminAppConfig.EditorSettings">
+            <summary>
+            Gets or sets the editor settings.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.AdminBridge.Configuration.AdminAppConfig.CustomEditorSettings">
+            <summary>
+            Gets or sets the custom editor settings per content types.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.AdminBridge.Configuration.AdminAppConfig.LinkStyles">
+            <summary>
+            Gets or sets the link styles settings.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.AdminBridge.Configuration.AdminAppConfig.ChangeOwnerAllowedTypes">
+            <summary>
+            Gets or sets the content types for which the command Change owner will be enabled.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.AdminBridge.Configuration.AdminAppConfig.SearchSettings">
+            <summary>
+            Gets or sets the search settings.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.AdminBridge.Configuration.AdminAppConfig.VisibleInUI">
+            <inheritdoc />
+        </member>
+        <member name="T:Telerik.Sitefinity.AdminBridge.Configuration.AdminAppConfigConstants">
+            <summary>
+            The Admin app configuration constants class.
+            </summary>
+        </member>
+        <member name="F:Telerik.Sitefinity.AdminBridge.Configuration.AdminAppConfigConstants.EditorSettingsDefaultValue">
+            <summary>
+            The editor settings default value.
+            </summary>
+        </member>
+        <member name="F:Telerik.Sitefinity.AdminBridge.Configuration.AdminAppConfigConstants.DateTimeFormatDefaultValue">
+            <summary>
+            The date and time format default value.
+            </summary>
+        </member>
+        <member name="F:Telerik.Sitefinity.AdminBridge.Configuration.AdminAppConfigConstants.SectionsMenuMinColumnsNumberDefaultValue">
+            <summary>
+            The sections menu min columns number default value.
+            </summary>
+        </member>
+        <member name="F:Telerik.Sitefinity.AdminBridge.Configuration.AdminAppConfigConstants.ContentItemsPerPageDefaultValue">
+            <summary>
+            The content items per page default value.
+            </summary>
+        </member>
+        <member name="F:Telerik.Sitefinity.AdminBridge.Configuration.AdminAppConfigConstants.MediaItemsPerPageDefaultValue">
+            <summary>
+            The media items per page default value.
+            </summary>
+        </member>
+        <member name="F:Telerik.Sitefinity.AdminBridge.Configuration.AdminAppConfigConstants.ItemsPerPageMinValue">
+            <summary>
+            The items per page min value.
+            </summary>
+        </member>
+        <member name="F:Telerik.Sitefinity.AdminBridge.Configuration.AdminAppConfigConstants.ItemsPerPageMaxValue">
+            <summary>
+            The items per page max value.
+            </summary>
+        </member>
+        <member name="F:Telerik.Sitefinity.AdminBridge.Configuration.AdminAppConfigConstants.AdminAppConfigKey">
+            <summary>
+            The admin app config key
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.AdminBridge.Configuration.AdminAppConfigModel">
+            <summary>
+            The admin app configuration model.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.AdminBridge.Configuration.AdminAppConfigModel.ContentItemsPerPage">
+            <summary>
+            Gets or sets the minimum items to display sections menu.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.AdminBridge.Configuration.AdminAppConfigModel.MediaItemsPerPage">
+            <summary>
+            Gets or sets the minimum items to display sections menu.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.AdminBridge.Configuration.AdminAppConfigModel.ColumnNamesWhitelist">
+            <summary>
+            Gets or sets the columns that are to be visualized together with the ones that are already visible.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.AdminBridge.Configuration.AdminAppConfigModel.DynamicModuleChildListOrder">
+            <summary>
+            Gets or sets the configuration that allows reordering of the child types in the ‘Contains’ column of hierarchical types with two or more children.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.AdminBridge.Configuration.AdminAppConfigModel.SectionsMenuMinColumnsNumber">
+            <summary>
+            Gets or sets the minimum items to display sections menu.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.AdminBridge.Configuration.AdminAppConfigModel.DateTimeFormat">
+            <summary>
+            Gets or sets the date and time format for fields.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.AdminBridge.Configuration.AdminAppConfigModel.EditorSettings">
+            <summary>
+            Gets or sets the rich text editor settings.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.AdminBridge.Configuration.AdminAppConfigModel.CustomEditorSettings">
+            <summary>
+            Gets or sets the custom rich text editor settings per content type.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.AdminBridge.Configuration.AdminAppConfigModel.LinkStyles">
+            <summary>
+            Gets or sets the rich link styles settings.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.AdminBridge.Configuration.AdminAppConfigModel.ChangeOwnerAllowedTypes">
+            <summary>
+            Gets or sets the content types for which the command Change owner will be enabled.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.AdminBridge.Configuration.AdminAppConfigModel.SearchSettings">
+            <summary>
+            Gets or sets the search settings for entity sets and their properties.
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.AdminBridge.Configuration.AdminAppConfigSettingsViewProvider">
+            <summary>
+            This class allows access to the AdminApp's configuration
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.AdminBridge.Configuration.AdminAppConfigSettingsViewProvider.ConfigKey">
+            <inheritdoc />
+        </member>
+        <member name="P:Telerik.Sitefinity.AdminBridge.Configuration.AdminAppConfigSettingsViewProvider.ConfigTitle">
+            <inheritdoc />
+        </member>
+        <member name="P:Telerik.Sitefinity.AdminBridge.Configuration.AdminAppConfigSettingsViewProvider.ConfigTypeFullName">
+            <inheritdoc />
+        </member>
+        <member name="P:Telerik.Sitefinity.AdminBridge.Configuration.AdminAppConfigSettingsViewProvider.ConfigurationModelTypeFullName">
+            <inheritdoc />
+        </member>
+        <member name="T:Telerik.Sitefinity.AdminBridge.Configuration.AdminAppExtensionsConfig">
+            <summary>
+            Configuration for <see cref="T:Telerik.Sitefinity.AdminBridge.AdminBridgeModule"/>.
+            </summary>
+            <seealso cref="T:Telerik.Sitefinity.Configuration.ConfigSection" />
+        </member>
+        <member name="P:Telerik.Sitefinity.AdminBridge.Configuration.AdminAppExtensionsConfig.FeatureEnabled">
+            <summary>
+            Gets or sets a value indicating weather the whole feature is enabled.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.AdminBridge.Configuration.AdminAppExtensionsConfig.CustomFieldsEnabled">
+            <summary>
+            Gets or sets a value indicating weather the custom fields part of the feature is enabled.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.AdminBridge.Configuration.AdminAppExtensionsConfig.RteEnabled">
+            <summary>
+            Gets or sets a value indicating weather the custom fields part of the feature is enabled.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.AdminBridge.Configuration.AdminAppExtensionsConfig.DeveloperMode">
+            <summary>
+            Gets or sets a value indicating weather the feature is in developer mode.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.AdminBridge.Configuration.AdminAppExtensionsConfig.ExtensionsUrl">
+            <summary>
+            Gets or sets the decoupled extensions URL. https://blob.clienta.sfcloud.com/
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.AdminBridge.Configuration.AdminAppExtensionsConfig.DevModeExtensionsUrl">
+            <summary>
+            Gets or sets the decoupled extensions URL when in developer mode. https://dev.blob.clienta.sfcloud.com/
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.AdminBridge.Configuration.AdminBridgeConfig">
+            <summary>
+            Configuration for <see cref="T:Telerik.Sitefinity.AdminBridge.AdminBridgeModule"/>.
+            </summary>
+            <seealso cref="T:Telerik.Sitefinity.Configuration.ConfigSection" />
+        </member>
+        <member name="T:Telerik.Sitefinity.AdminBridge.Configuration.Attributes.ContentTypeSelectorAttribute">
+            <summary>
+            Specifies the appearance of content type selector component.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.AdminBridge.Configuration.Attributes.ContentTypeSelectorAttribute.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.AdminBridge.Configuration.Attributes.ContentTypeSelectorAttribute"/> class.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.AdminBridge.Configuration.Attributes.ContentTypeSelectorAttribute.#ctor(System.Boolean,System.Boolean,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.AdminBridge.Configuration.Attributes.ContentTypeSelectorAttribute"/> class.
+            </summary>
+            <param name="isMultipleSelection">A flag that states whether the content types will be many or single one.</param>
+            <param name="isDynamicParentContentType">A flag that states whether the content types will be dynamic parents.</param>
+            <param name="customDataType">Gets the name of custom field template that is associated with the data field.</param>
+        </member>
+        <member name="P:Telerik.Sitefinity.AdminBridge.Configuration.Attributes.ContentTypeSelectorAttribute.IsMultipleSelection">
+            <summary>
+            Gets or sets a value indicating whether the content type selector will allow multiple selection or only one content type.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.AdminBridge.Configuration.Attributes.ContentTypeSelectorAttribute.IsDynamicParentContentType">
+            <summary>
+            Gets or sets a value indicating whether the content type selector will work with dynamic parent content types only.
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.AdminBridge.Configuration.Migration.AdminAppConfigMigrator">
+            <summary>
+            The admin app config migrator.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.AdminBridge.Configuration.Migration.AdminAppConfigMigrator.Migrate">
+            <summary>
+            Migrates the admin app config.
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.AdminBridge.Http.ExtensionProviders.FileSystemExtensionsProvider">
+            <summary>
+            Provides API for retrieving extension bundles from the file system.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.AdminBridge.Http.ExtensionProviders.FileSystemExtensionsProvider.GetExtensionFiles">
+            <summary>
+            Reads the extension bundles from the file system.
+            </summary>
+            <returns>The read bundles.</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.AdminBridge.Http.ExtensionsHttpHandler.ProcessRequest(System.Web.HttpContext)">
+            <summary>
+            Retrieves all bundles from different providers
+            and returns them to the client.
+            </summary>
+            <param name="context">Current Http context.</param>
+        </member>
+        <member name="T:Telerik.Sitefinity.AdminBridge.Http.HttpRedirectModule">
+            <summary>
+            HTTP module that redirects incoming requests to content module pages to the new integrated Sitefinity backend.
+            </summary>
+            <seealso cref="T:System.Web.IHttpModule"/>
+        </member>
+        <member name="M:Telerik.Sitefinity.AdminBridge.Http.HttpRedirectModule.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.AdminBridge.Http.HttpRedirectModule"/> class.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.AdminBridge.Http.HttpRedirectModule.Init(System.Web.HttpApplication)">
+            <summary>
+            Initializes a module and prepares it to handle requests.
+            </summary>
+            <param name="context">
+            An <see cref="T:System.Web.HttpApplication"/> that provides access to the methods, properties, and
+            events common to all application objects within an ASP.NET application
+            </param>
+        </member>
+        <member name="M:Telerik.Sitefinity.AdminBridge.Http.HttpRedirectModule.Dispose">
+            <summary>
+            Disposes of the resources (other than memory) used by the module that implements <see cref="T:System.Web.IHttpModule"/>.
+            </summary>
+        </member>
+        <member name="F:Telerik.Sitefinity.AdminBridge.Http.HttpRedirectModule.ContentSegment">
+            <summary>
+            The segment content.
+            </summary>
+        </member>
+        <member name="F:Telerik.Sitefinity.AdminBridge.Http.HttpRedirectModule.PagesSegment">
+            <summary>
+            The segment pages.
+            </summary>
+        </member>
+        <member name="F:Telerik.Sitefinity.AdminBridge.Http.HttpRedirectModule.TemplatesSegment">
+            <summary>
+            The segment page templates.
+            </summary>
+        </member>
+        <member name="F:Telerik.Sitefinity.AdminBridge.Http.HttpRedirectModule.IntegrationsSegment">
+            <summary>
+            The segment integrations.
+            </summary>
+        </member>
+        <member name="F:Telerik.Sitefinity.AdminBridge.Http.HttpRedirectModule.AdminAppContentBasePath">
+            <summary>
+            The destination content base path.
+            </summary>
+        </member>
+        <member name="F:Telerik.Sitefinity.AdminBridge.Http.HttpRedirectModule.AdminAppIntegrationsBasePath">
+            <summary>
+            The destination integrations base path.
+            </summary>
+        </member>
+        <member name="F:Telerik.Sitefinity.AdminBridge.Http.HttpRedirectModule.AdminAppPagesBasePath">
+            <summary>
+            The destination pages base path.
+            </summary>
+        </member>
+        <member name="F:Telerik.Sitefinity.AdminBridge.Http.HttpRedirectModule.AdminAppPageTemplatesBasePath">
+            <summary>
+            The destination page templates base path.
+            </summary>
+        </member>
+        <member name="F:Telerik.Sitefinity.AdminBridge.Http.HttpRedirectModule.AdminAppBasePath">
+            <summary>
+            The base path.
+            </summary>
+        </member>
+        <member name="F:Telerik.Sitefinity.AdminBridge.Http.HttpRedirectModule.SitefinityBasePath">
+            <summary>
+            The Sitefinity base path
+            </summary>
+        </member>
+        <member name="F:Telerik.Sitefinity.AdminBridge.Http.HttpRedirectModule.SitefinityDashboardBasePath">
+            <summary>
+            The Sitefinity Dashboard base path
+            </summary>
+        </member>
+        <member name="F:Telerik.Sitefinity.AdminBridge.Http.HttpRedirectModule.SitefinityDashboardPagePath">
+            <summary>
+            The Sitefinity Dashboard page main path
+            </summary>
+        </member>
+        <member name="F:Telerik.Sitefinity.AdminBridge.Http.HttpRedirectModule.NewDashboardPath">
+            <summary>
+            The new Sitefinity Dashboard path
+            </summary>
+        </member>
+        <member name="F:Telerik.Sitefinity.AdminBridge.Http.HttpRedirectModule.ResFolderPath">
+            <summary>
+            The resource folder virtual path
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.AdminBridge.Http.RedirectHandlers.ContentViewDialogRedirectHandler">
+            <summary>
+            Handles redirect for <see cref="T:Telerik.Sitefinity.Web.UI.ContentUI.ContentViewEditDialog"/> requests.
+            </summary>
+            <seealso cref="T:Telerik.Sitefinity.AdminBridge.Http.RedirectHandlers.IRedirectHandler" />
+        </member>
+        <member name="M:Telerik.Sitefinity.AdminBridge.Http.RedirectHandlers.ContentViewDialogRedirectHandler.GetRedirectUrl(Telerik.Sitefinity.AdminBridge.Http.UrlResolvers.UrlResolverBase,System.Web.HttpContextBase,Telerik.Sitefinity.Web.PageSiteNode)">
+            <summary>
+            Gets the redirect URL.
+            </summary>
+            <param name="resolver">The URL resolver.</param>
+            <param name="context">The HTTP context.</param>
+            <param name="siteNode">The page site node.</param>
+            <returns>
+            The redirect URL.
+            </returns>
+        </member>
+        <member name="T:Telerik.Sitefinity.AdminBridge.Http.RedirectHandlers.EditActionRedirectHandler">
+            <summary>
+            Handles redirect for the edit action of pages.
+            </summary>
+            <seealso cref="T:Telerik.Sitefinity.AdminBridge.Http.RedirectHandlers.IRedirectHandler" />
+        </member>
+        <member name="M:Telerik.Sitefinity.AdminBridge.Http.RedirectHandlers.EditActionRedirectHandler.GetRedirectUrl(Telerik.Sitefinity.AdminBridge.Http.UrlResolvers.UrlResolverBase,System.Web.HttpContextBase,Telerik.Sitefinity.Web.PageSiteNode)">
+            <summary>
+            Gets the redirect URL.
+            </summary>
+            <param name="resolver">The URL resolver.</param>
+            <param name="context">The HTTP context.</param>
+            <param name="siteNode">The page site node.</param>
+            <returns>
+            The redirect URL.
+            </returns>
+        </member>
+        <member name="T:Telerik.Sitefinity.AdminBridge.Http.RedirectHandlers.FormEditRedirectHandler">
+            <summary>
+            Handles redirect for the edit of forms.
+            </summary>
+            <seealso cref="T:Telerik.Sitefinity.AdminBridge.Http.RedirectHandlers.IRedirectHandler" />
+        </member>
+        <member name="M:Telerik.Sitefinity.AdminBridge.Http.RedirectHandlers.FormEditRedirectHandler.GetRedirectUrl(Telerik.Sitefinity.AdminBridge.Http.UrlResolvers.UrlResolverBase,System.Web.HttpContextBase,Telerik.Sitefinity.Web.PageSiteNode)">
+            <summary>
+            Gets the redirect URL.
+            </summary>
+            <param name="resolver">The URL resolver.</param>
+            <param name="context">The HTTP context.</param>
+            <param name="siteNode">The page site node.</param>
+            <returns>
+            The redirect URL.
+            </returns>
+        </member>
+        <member name="T:Telerik.Sitefinity.AdminBridge.Http.RedirectHandlers.FormResponsesRedirectHandler">
+            <summary>
+            Handles redirect for the responses of form.
+            </summary>
+            <seealso cref="T:Telerik.Sitefinity.AdminBridge.Http.RedirectHandlers.IRedirectHandler" />
+        </member>
+        <member name="M:Telerik.Sitefinity.AdminBridge.Http.RedirectHandlers.FormResponsesRedirectHandler.GetRedirectUrl(Telerik.Sitefinity.AdminBridge.Http.UrlResolvers.UrlResolverBase,System.Web.HttpContextBase,Telerik.Sitefinity.Web.PageSiteNode)">
+            <summary>
+            Gets the redirect URL.
+            </summary>
+            <param name="resolver">The URL resolver.</param>
+            <param name="context">The HTTP context.</param>
+            <param name="siteNode">The page site node.</param>
+            <returns>
+            The redirect URL.
+            </returns>
+        </member>
+        <member name="T:Telerik.Sitefinity.AdminBridge.Http.RedirectHandlers.InsecureConnectionRedirectHandler">
+            <summary>
+            Redirect handler for insecure connection.
+            </summary>
+            <seealso cref="T:Telerik.Sitefinity.AdminBridge.Http.RedirectHandlers.IRedirectHandler" />
+        </member>
+        <member name="M:Telerik.Sitefinity.AdminBridge.Http.RedirectHandlers.InsecureConnectionRedirectHandler.GetRedirectUrl(Telerik.Sitefinity.AdminBridge.Http.UrlResolvers.UrlResolverBase,System.Web.HttpContextBase,Telerik.Sitefinity.Web.PageSiteNode)">
+            <summary>
+            Gets the redirect URL.
+            </summary>
+            <param name="resolver">The URL resolver.</param>
+            <param name="context">The HTTP context.</param>
+            <param name="siteNode">The page site node.</param>
+            <returns>
+            The redirect URL.
+            </returns>
+        </member>
+        <member name="T:Telerik.Sitefinity.AdminBridge.Http.RedirectHandlers.IRedirectHandler">
+            <summary>
+            Defines the contract for <see cref="T:Telerik.Sitefinity.AdminBridge.Http.HttpRedirectModule"/> redirect handler.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.AdminBridge.Http.RedirectHandlers.IRedirectHandler.GetRedirectUrl(Telerik.Sitefinity.AdminBridge.Http.UrlResolvers.UrlResolverBase,System.Web.HttpContextBase,Telerik.Sitefinity.Web.PageSiteNode)">
+            <summary>
+            Gets the redirect URL.
+            </summary>
+            <param name="resolver">The URL resolver.</param>
+            <param name="context">The HTTP context.</param>
+            <param name="siteNode">The page site node.</param>
+            <returns>
+            The redirect URL.
+            </returns>
+        </member>
+        <member name="T:Telerik.Sitefinity.AdminBridge.Http.RedirectHandlers.PageRedirectHandler">
+            <summary>
+            Redirect handler for Sitefinity pages.
+            </summary>
+            <seealso cref="T:Telerik.Sitefinity.AdminBridge.Http.RedirectHandlers.IRedirectHandler" />
+        </member>
+        <member name="M:Telerik.Sitefinity.AdminBridge.Http.RedirectHandlers.PageRedirectHandler.GetRedirectUrl(Telerik.Sitefinity.AdminBridge.Http.UrlResolvers.UrlResolverBase,System.Web.HttpContextBase,Telerik.Sitefinity.Web.PageSiteNode)">
+            <summary>
+            Gets the redirect URL.
+            </summary>
+            <param name="resolver">The resolver.</param>
+            <param name="context">The context.</param>
+            <param name="currentNode">The current node.</param>
+            <returns>
+            The redirect URL.
+            </returns>
+        </member>
+        <member name="T:Telerik.Sitefinity.AdminBridge.Http.RedirectHandlers.PageTemplateRedirectHandler">
+            <summary>
+            Redirect handler for Sitefinity page templates.
+            </summary>
+            <seealso cref="T:Telerik.Sitefinity.AdminBridge.Http.RedirectHandlers.IRedirectHandler" />
+        </member>
+        <member name="M:Telerik.Sitefinity.AdminBridge.Http.RedirectHandlers.PageTemplateRedirectHandler.GetRedirectUrl(Telerik.Sitefinity.AdminBridge.Http.UrlResolvers.UrlResolverBase,System.Web.HttpContextBase,Telerik.Sitefinity.Web.PageSiteNode)">
+            <summary>
+            Gets the redirect URL.
+            </summary>
+            <param name="resolver">The resolver.</param>
+            <param name="context">The context.</param>
+            <param name="currentNode">The current node.</param>
+            <returns>
+            The redirect URL.
+            </returns>
+        </member>
+        <member name="T:Telerik.Sitefinity.AdminBridge.Http.RewriteHandlers.IRewriteHandler">
+            <summary>
+            Contract for URL rewrite handlers.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.AdminBridge.Http.RewriteHandlers.IRewriteHandler.GetRewritePath(System.Web.HttpContextBase)">
+            <summary>
+            Gets the rewrite path based on the current HTTP request.
+            </summary>
+            <param name="currentContext">The current HTTP context.</param>
+            <returns>
+            The rewrite path.
+            </returns>
+        </member>
+        <member name="T:Telerik.Sitefinity.AdminBridge.Http.Transformers.IBundleTransformer">
+            <summary>
+            Provides API for transforming extension bundles.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.AdminBridge.Http.Transformers.IBundleTransformer.Transform(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Replaces existing bundle and module IDs with new ones
+            to avoid collisions.
+            </summary>
+            <param name="bundles">The bundles to transform.</param>
+            <returns>Transformed bundle.</returns>
+        </member>
+        <member name="T:Telerik.Sitefinity.AdminBridge.Http.UrlResolvers.DynamicModuleUrlResolver">
+            <summary>
+            URL resolver for dynamic module home pages.
+            </summary>
+            <seealso cref="T:Telerik.Sitefinity.AdminBridge.Http.UrlResolvers.UrlResolverBase" />
+        </member>
+        <member name="T:Telerik.Sitefinity.AdminBridge.Http.UrlResolvers.IntegrationsModuleUrlResolver">
+            <summary>
+            URL resolver for integrations(administration) modules home pages.
+            </summary>
+            <seealso cref="T:Telerik.Sitefinity.AdminBridge.Http.UrlResolvers.UrlResolverBase" />
+        </member>
+        <member name="T:Telerik.Sitefinity.AdminBridge.Http.UrlResolvers.StaticModuleUrlResolver">
+            <summary>
+            URL resolver for static module home pages.
+            </summary>
+            <seealso cref="T:Telerik.Sitefinity.AdminBridge.Http.UrlResolvers.UrlResolverBase" />
+        </member>
+        <member name="F:Telerik.Sitefinity.AdminBridge.Http.UrlResolvers.StaticModuleUrlResolver.StaticModuleUrlPageIdPathMap">
+            <summary>Map for the supported static module page ids</summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.AdminBridge.Http.UrlResolvers.UrlResolverBase">
+            <summary>
+            Base class for content module home page URL resolvers.
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.AdminBridge.Resources">
+            <summary>
+            Resources for the <see cref="T:Telerik.Sitefinity.AdminBridge.AdminBridgeModule"/>.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.AdminBridge.Resources.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.AdminBridge.Resources" /> class with the default <see cref="T:Telerik.Sitefinity.Localization.Data.ResourceDataProvider"/>.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.AdminBridge.Resources.#ctor(Telerik.Sitefinity.Localization.Data.ResourceDataProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.AdminBridge.Resources" /> class with the provided <see cref="T:Telerik.Sitefinity.Localization.Data.ResourceDataProvider"/>.
+            </summary>
+            <param name="dataProvider">The <see cref="T:Telerik.Sitefinity.Localization.Data.ResourceDataProvider"/></param>
+        </member>
+        <member name="P:Telerik.Sitefinity.AdminBridge.Resources.ResourcesTitle">
+            <summary>
+            Gets the title of this class.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.AdminBridge.Resources.ResourcesDescription">
+            <summary>
+            Gets the description of this class.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.AdminBridge.Resources.HomePageTitle">
+            <summary>
+            Gets the title of the home page.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.AdminBridge.Resources.ConfigurationPageTitle">
+            <summary>
+            Gets the title of the configuration page.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.AdminBridge.Resources.ConfigurationPageUrlName">
+            <summary>
+            Gets the URL name of the configuration page.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.AdminBridge.Resources.AdministrationPageTitle">
+            <summary>
+            Gets the title of the admin app administration page.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.AdminBridge.Resources.AdministrationPageUrlName">
+            <summary>
+            Gets the URL name of the administration page.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.AdminBridge.Resources.WidgetPresetsPageTitle">
+            <summary>
+            Gets the title of the widget presets page.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.AdminBridge.Resources.ConfigTitle">
+            <summary>
+            Gets the AdminBridge configuration title.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.AdminBridge.Resources.ConfigDescription">
+            <summary>
+            Gets the AdminBridge configuration description.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.AdminBridge.Resources.AdminAppConfigProviderTitle">
+            <summary>
+            Gets the phrase: Backend interface
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.AdminBridge.Resources.ModuleDisabledMessage">
+            <summary>
+            Gets the message for the case where an AdminBridge page is requested the module is disabled.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.AdminBridge.Resources.CannotLogErrorMessage">
+            <summary>
+            Gets the message for the case where a web client error should be logged and the AdminBridge module is disabled.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.AdminBridge.Resources.FileRequiredMessageFormat">
+            <summary>
+            Gets the message format for the case where an AdminBridge file is not found on the file system.
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.AdminBridge.Startup">
+            <summary>
+            Entry point for registering application dependencies.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.AdminBridge.Startup.Initialize">
+            <summary>
+            Initializes the application.
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.AdminBridge.Web.Services.DTO.Request.GetBackendStatus">
+            <summary>
+            Request DTO for retrieving the status of the new backend interface.
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.AdminBridge.Web.Services.DTO.Request.LogData">
+            <summary>
+            Request DTO for data logging.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.AdminBridge.Web.Services.DTO.Request.LogData.Message">
+            <summary>
+            Gets or sets the message.
+            </summary>
+            <value>
+            The message.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.AdminBridge.Web.Services.DTO.Request.LogData.StackTrace">
+            <summary>
+            Gets or sets the stack trace.
+            </summary>
+            <value>
+            The stack trace.
+            </value>
+        </member>
+        <member name="T:Telerik.Sitefinity.AdminBridge.Web.Services.DTO.Response.BackendStatus">
+            <summary>
+            The response DTO for the status of the new backend interface.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.AdminBridge.Web.Services.DTO.Response.BackendStatus.Enabled">
+            <summary>
+            Gets or sets a value indicating whether the new backend interface <see cref="T:Telerik.Sitefinity.AdminBridge.Web.Services.DTO.Response.BackendStatus"/> is enabled.
+            </summary>
+            <value>
+              <c>true</c> if the new backend interface is enabled; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="T:Telerik.Sitefinity.AdminBridge.Web.Services.DTO.Response.LogError">
+            <summary>
+            The response DTO for a logged web client error.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.AdminBridge.Web.Services.DTO.Response.LogError.Message">
+            <summary>
+            Gets or sets the logged error message.
+            </summary>
+            <value>
+            The logged error message.
+            </value>
+        </member>
+        <member name="T:Telerik.Sitefinity.AdminBridge.Web.Services.ServiceStackPlugin">
+            <summary>
+            This class represents a Service Stack <see cref="T:ServiceStack.IPlugin"/> for registering the service endpoints of the <see cref="T:Telerik.Sitefinity.AdminBridge.AdminBridgeModule"/>.
+            </summary>
+            <seealso cref="T:ServiceStack.IPlugin" />
+        </member>
+        <member name="M:Telerik.Sitefinity.AdminBridge.Web.Services.ServiceStackPlugin.Register(ServiceStack.IAppHost)">
+            <summary>
+            Registers the specified application host.
+            </summary>
+            <param name="appHost">The application host.</param>
+            <exception cref="T:System.ArgumentNullException">The appHost parameter is empty. Cannot register service for AdminBridge module.</exception>
+        </member>
+        <member name="T:Telerik.Sitefinity.AdminBridge.Web.Services.WebService">
+            <summary>
+            This class is a <see cref="T:ServiceStack.Service"/> containing operations related to the new backend interface.
+            </summary>
+            <seealso cref="T:ServiceStack.Service" />
+        </member>
+        <member name="M:Telerik.Sitefinity.AdminBridge.Web.Services.WebService.Get(Telerik.Sitefinity.AdminBridge.Web.Services.DTO.Request.GetBackendStatus)">
+            <summary>
+            Gets the current state of the new backend.
+            </summary>
+            <param name="request">The backend status request DTO.</param>
+            <returns>
+            The backend status.
+            </returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.AdminBridge.Web.Services.WebService.Post(Telerik.Sitefinity.AdminBridge.Web.Services.DTO.Request.LogData[])">
+            <summary>
+            Logs collection of error from the backend client.
+            </summary>
+            <param name="logData">The collection of log data DTO.</param>
+        </member>
+        <member name="T:Telerik.Sitefinity.AdminBridge.Web.UI.AdminAppFilesDeletedView">
+            <summary>
+            Represents a view for not supported browsers
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.AdminBridge.Web.UI.AdminAppFilesDeletedView.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.AdminBridge.Web.UI.AdminAppFilesDeletedView"/> class.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.AdminBridge.Web.UI.AdminAppFilesDeletedView.InitializeControls(Telerik.Sitefinity.Web.UI.GenericContainer)">
+            <inheritdoc />
+        </member>
+        <member name="T:Telerik.Sitefinity.AdminBridge.Web.UI.BrowserNotSupportedView">
+            <summary>
+            Represents a view for not supported browsers
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.AdminBridge.Web.UI.BrowserNotSupportedView.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.AdminBridge.Web.UI.BrowserNotSupportedView"/> class.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.AdminBridge.Web.UI.BrowserNotSupportedView.InitializeControls(Telerik.Sitefinity.Web.UI.GenericContainer)">
+            <inheritdoc />
+        </member>
+        <member name="T:Telerik.Sitefinity.AdminBridge.Web.UI.ContentWrapper">
+            <summary>
+            Wrapper control for the web client HTML.
+            </summary>
+            <seealso cref="T:System.Web.UI.WebControls.WebControl" />
+        </member>
+        <member name="M:Telerik.Sitefinity.AdminBridge.Web.UI.ContentWrapper.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.AdminBridge.Web.UI.ContentWrapper"/> class.
+            </summary>
+            <param name="rawContent">Content of the raw.</param>
+        </member>
+        <member name="P:Telerik.Sitefinity.AdminBridge.Web.UI.ContentWrapper.Content">
+            <summary>
+            Gets or sets the control content.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.AdminBridge.Web.UI.ContentWrapper.RenderBeginTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML opening tag of the control to the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.AdminBridge.Web.UI.ContentWrapper.RenderEndTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML closing tag of the control into the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.AdminBridge.Web.UI.ContentWrapper.RenderContents(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the contents of the control to the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="T:Telerik.Sitefinity.AdminBridge.Web.UI.FormEditorHostPageWrapper">
+            <summary>
+            Wrapper for the <see cref="T:System.Web.UI.Page"/> instance of the page edit screen.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.AdminBridge.Web.UI.FormEditorHostPageWrapper.#ctor(System.Web.UI.Page)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.AdminBridge.Web.UI.FormEditorHostPageWrapper"/> class.
+            </summary>
+            <param name="inner">The wrapped <see cref="T:System.Web.UI.Page"/></param>
+        </member>
+        <member name="P:Telerik.Sitefinity.AdminBridge.Web.UI.FormEditorHostPageWrapper.EditorToolBar">
+            <summary>
+            Gets the editor toolbar control
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.AdminBridge.Web.UI.HostPage">
+            <summary>
+            Code-behind for the <see cref="T:Telerik.Sitefinity.AdminBridge.AdminBridgeModule"/> home page. This page hosts the web client application.
+            </summary>
+            <seealso cref="T:System.Web.UI.Page" />
+        </member>
+        <member name="P:Telerik.Sitefinity.AdminBridge.Web.UI.HostPage.Content">
+            <summary>
+            Gets or sets the page content.
+            </summary>
+            <value>
+            The page content.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.AdminBridge.Web.UI.HostPage.Resources">
+            <summary>
+            Gets the resource links.
+            </summary>
+            <value>
+            The resource links.
+            </value>
+        </member>
+        <member name="T:Telerik.Sitefinity.AdminBridge.Web.UI.HostPageWrapperBase">
+            <summary>
+            Wrapper for the <see cref="T:System.Web.UI.Page"/> instance.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.AdminBridge.Web.UI.HostPageWrapperBase.#ctor(System.Web.UI.Page)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.AdminBridge.Web.UI.HostPageWrapperBase"/> class.
+            </summary>
+            <param name="inner">The wrapped <see cref="T:System.Web.UI.Page"/></param>
+        </member>
+        <member name="P:Telerik.Sitefinity.AdminBridge.Web.UI.HostPageWrapperBase.Form">
+            <summary>
+            Gets the form control.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.AdminBridge.Web.UI.HostPageWrapperBase.Header">
+            <summary>
+            Gets the header control.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.AdminBridge.Web.UI.HostPageWrapperBase.Page">
+            <summary>
+            Gets or sets the page control.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.AdminBridge.Web.UI.HostPageWrapperBase.Content">
+            <summary>
+            Gets or sets the content control
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.AdminBridge.Web.UI.HostPageWrapperBase.Resources">
+            <summary>
+            Gets the resource links
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.AdminBridge.Web.UI.IHostPage">
+            <summary>
+            Contract for a page that hosts the <see cref="N:Telerik.Sitefinity.AdminBridge"/> client.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.AdminBridge.Web.UI.IHostPage.Header">
+            <summary>
+            Gets the header control
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.AdminBridge.Web.UI.IHostPage.Content">
+            <summary>
+            Gets or sets the content control
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.AdminBridge.Web.UI.IHostPage.Form">
+            <summary>
+            Gets the form control
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.AdminBridge.Web.UI.IHostPage.Page">
+            <summary>
+            Gets or sets the page.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.AdminBridge.Web.UI.IHostPage.Resources">
+            <summary>
+            Gets the resource links control
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.AdminBridge.Web.UI.PageEditorHostPageWrapper">
+            <summary>
+            Wrapper for the <see cref="T:System.Web.UI.Page"/> instance of the page edit screen.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.AdminBridge.Web.UI.PageEditorHostPageWrapper.#ctor(System.Web.UI.Page)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.AdminBridge.Web.UI.PageEditorHostPageWrapper"/> class.
+            </summary>
+            <param name="inner">The wrapped <see cref="T:System.Web.UI.Page"/></param>
+        </member>
+        <member name="P:Telerik.Sitefinity.AdminBridge.Web.UI.PageEditorHostPageWrapper.EditorToolBar">
+            <summary>
+            Gets the editor toolbar control
+            </summary>
+        </member>
+    </members>
+</doc>

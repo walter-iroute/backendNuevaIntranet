@@ -1,0 +1,1679 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Progress.Sitefinity.Renderer</name>
+    </assembly>
+    <members>
+        <member name="T:Progress.Sitefinity.Renderer.Contracts.Forms.ChoiceOption">
+            <summary>
+            Entity for the choice option.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Contracts.Forms.ChoiceOption.Name">
+            <summary>
+            Gets or sets the label of the choice option.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Contracts.Forms.ChoiceOption.Value">
+            <summary>
+            Gets or sets the value of the choice option.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Contracts.Forms.ChoiceOption.Selected">
+            <summary>
+            Gets or sets a value indicating whether the option is selected.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.Renderer.Contracts.Forms.IChoiceFieldContract">
+            <summary>
+            The base interface for form choice widget.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Contracts.Forms.IChoiceFieldContract.Choices">
+            <summary>
+            Gets or sets the choices of the widget.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.Renderer.Contracts.Forms.IFileFieldContract">
+            <summary>
+            The base interface for form file widgets.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Contracts.Forms.IFileFieldContract.AllowMultipleFiles">
+            <summary>
+            Gets or sets a value indicating whether multiple files can be uploaded.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Contracts.Forms.IFileFieldContract.Range">
+            <summary>
+            Gets or sets the range of the file.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Contracts.Forms.IFileFieldContract.FileSizeViolationMessage">
+            <summary>
+            Gets or sets the file size violation message.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Contracts.Forms.IFileFieldContract.FileTypes">
+            <summary>
+            Gets or sets the file types.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Contracts.Forms.IFileFieldContract.FileTypeViolationMessage">
+            <summary>
+            Gets or sets the file type violation message.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.Renderer.Contracts.Forms.IFormFieldContract">
+            <summary>
+            The base interface for form widgets.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Contracts.Forms.IFormFieldContract.Label">
+            <summary>
+            Gets or sets the label of the form widget.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Contracts.Forms.IFormFieldContract.Required">
+            <summary>
+            Gets or sets a value indicating whether the field is required.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Contracts.Forms.IFormFieldContract.Hidden">
+            <summary>
+            Gets or sets a value indicating whether the field is hidden.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Contracts.Forms.IFormFieldContract.RequiredErrorMessage">
+            <summary>
+            Gets or sets the text length violation message.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Contracts.Forms.IFormFieldContract.SfFieldName">
+            <summary>
+            Gets or sets the developer name.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Contracts.Forms.IFormFieldContract.SfFieldType">
+            <summary>
+            Gets or sets the field type.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.Renderer.Contracts.Forms.IHasAdditionalChoiceFieldContract">
+            <summary>
+            Interface that for choice widgets that have the ability to visualize additional choice option.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Contracts.Forms.IHasAdditionalChoiceFieldContract.HasAdditionalChoice">
+            <summary>
+            Gets or sets a value indicating whether "Other" choice option should be visible on the frontend.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.Renderer.Contracts.Forms.ITextContract">
+            <summary>
+            The base interface for form text widgets.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Contracts.Forms.ITextContract.TextLengthViolationMessage">
+            <summary>
+            Gets or sets the text length violation message.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Contracts.Forms.ITextContract.Range">
+            <summary>
+            Gets or sets the Range value.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.Renderer.Contracts.Forms.ITextFieldContract">
+            <summary>
+            The base interface for form text box widget.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Contracts.Forms.ITextFieldContract.RegularExpression">
+            <summary>
+            Gets or sets the regular expression.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Contracts.Forms.ITextFieldContract.RegularExpressionViolationMessage">
+            <summary>
+            Gets or sets the regular expression validation message.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.Renderer.Designers.Attributes.ChoiceAttribute">
+            <summary>
+            Specifies choices options.
+            </summary>
+        </member>
+        <member name="M:Progress.Sitefinity.Renderer.Designers.Attributes.ChoiceAttribute.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Progress.Sitefinity.Renderer.Designers.Attributes.ChoiceAttribute" /> class.
+            </summary>
+        </member>
+        <member name="M:Progress.Sitefinity.Renderer.Designers.Attributes.ChoiceAttribute.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Progress.Sitefinity.Renderer.Designers.Attributes.ChoiceAttribute" /> class.
+            </summary>
+            <param name="choices">The choices.</param>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Designers.Attributes.ChoiceAttribute.Choices">
+            <summary>
+            Gets or sets the choices.
+            </summary>
+            <remarks>If the <see cref="P:Progress.Sitefinity.Renderer.Designers.Attributes.ChoiceAttribute.ServiceUrl"/> option is set, the choices will not be used.</remarks>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Designers.Attributes.ChoiceAttribute.ServiceUrl">
+            <summary>
+            Gets or sets the service URL or URL template for the choice options.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Designers.Attributes.ChoiceAttribute.ServiceCallParameters">
+            <summary>
+            Gets or sets the service URL parameters in case it is a template.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Designers.Attributes.ChoiceAttribute.ServiceWarningMessage">
+            <summary>
+            Gets or sets a warning message when the service returns no results.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Designers.Attributes.ChoiceAttribute.ShowFriendlyName">
+            <summary>
+            Gets or sets a value indicating whether a friendly name for the choice item should be used.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Designers.Attributes.ChoiceAttribute.ActionTitle">
+            <summary>
+            Gets or sets the action title.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Designers.Attributes.ChoiceAttribute.ButtonTitle">
+            <summary>
+            Gets or sets the button title.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Designers.Attributes.ChoiceAttribute.NotResponsive">
+            <summary>
+            Gets or sets a value indicating whether the chip choice will convert to dropdown when too many options are available.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Designers.Attributes.ChoiceAttribute.SideLabel">
+            <summary>
+            Gets or sets the label located on right side of the choice chip element.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.Renderer.Designers.Attributes.ConditionalVisibilityAttribute">
+            <summary>
+            Attribute for marking properties that should be shown based on a JSON rule condition.
+            </summary>
+        </member>
+        <member name="M:Progress.Sitefinity.Renderer.Designers.Attributes.ConditionalVisibilityAttribute.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Progress.Sitefinity.Renderer.Designers.Attributes.ConditionalVisibilityAttribute" /> class.
+            </summary>
+            <param name="condition">The condition.</param>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Designers.Attributes.ConditionalVisibilityAttribute.Condition">
+            <summary>
+            Gets or sets the condition.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.Renderer.Designers.Attributes.ContentAttribute">
+            <summary>
+            Class containing metadata to describe Sitefinity content.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Designers.Attributes.ContentAttribute.Type">
+            <summary>
+            Gets or sets the type of the content tp be displayed in the selector. E.g Telerik.Sitefinity.News.Model.NewsItem
+            For dynamic types the full Clr Type name is expected. E.g. Telerik.Sitefinity.DynamicTypes.Model.Pressreleases.PressRelease.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Designers.Attributes.ContentAttribute.IsFilterable">
+            <summary>
+            Gets or sets a value indicating whether the filter logic will be applied for the content that has the <see cref="P:Progress.Sitefinity.Renderer.Designers.Attributes.ContentAttribute.Type"/> attribute defined.
+            This takes effect when no specific type is selected.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Designers.Attributes.ContentAttribute.AllowMultipleItemsSelection">
+            <summary>
+            Gets or sets a value indicating whether multiple items can be selected.
+            Defaults to 'true'.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Designers.Attributes.ContentAttribute.OpenMultipleItemsSelection">
+            <summary>
+            Gets or sets a value indicating whether the selector for items to be opened directly and the input option to be skipped
+            Defaults to 'false'.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Designers.Attributes.ContentAttribute.LiveData">
+            <summary>
+            Gets or sets a value indicating whether to use live or master data in the selectors.
+            Applicable for all content types except: Pages, Images, Videos and Documents.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Designers.Attributes.ContentAttribute.Provider">
+            <summary>
+            Gets or sets a name of the provider; If none was specified we will show data from all providers.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Designers.Attributes.ContentAttribute.DisableInteraction">
+            <summary>
+            Gets or sets a value indicating whether to disable interaction with selected items.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Designers.Attributes.ContentAttribute.ShowSiteSelector">
+            <summary>
+            Gets or sets a value indicating whether to show the providers/sites selector in show all items dialog.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Designers.Attributes.ContentAttribute.AllowCreate">
+            <summary>
+            Gets or sets a value indicating whether create item button is visible.
+            Defaults to 'true'.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Designers.Attributes.ContentAttribute.ForceShouldShowAll">
+            <summary>
+            Gets or sets a value indicating whether show all button is visible.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Designers.Attributes.ContentAttribute.TypeBlacklist">
+            <summary>
+            Gets or sets a value indicating which types to be filtered out.
+            Blacklisted properties take precedence over whitelisted ones.
+            Accepts a string with comma separated values. E.g. "Telerik.Sitefinity.News.Model.NewsItem, Telerik.Sitefinity.Blogs.Model.BlogPost".
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.Renderer.Designers.Attributes.ContentSectionAttribute">
+            <summary>
+            Specifies to which section the propertye applies and it's order of appearance.
+            </summary>
+        </member>
+        <member name="M:Progress.Sitefinity.Renderer.Designers.Attributes.ContentSectionAttribute.#ctor(System.String,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Progress.Sitefinity.Renderer.Designers.Attributes.ContentSectionAttribute"/> class.
+            </summary>
+            <param name="sectionName">Name of the section.</param>
+            <param name="position">The position in section.</param>
+        </member>
+        <member name="M:Progress.Sitefinity.Renderer.Designers.Attributes.ContentSectionAttribute.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Progress.Sitefinity.Renderer.Designers.Attributes.ContentSectionAttribute"/> class.
+            </summary>
+            <param name="sectionName">Name of the section.</param>
+        </member>
+        <member name="M:Progress.Sitefinity.Renderer.Designers.Attributes.ContentSectionAttribute.#ctor(System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Progress.Sitefinity.Renderer.Designers.Attributes.ContentSectionAttribute"/> class.
+            </summary>
+            <param name="position">The position in section.</param>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Designers.Attributes.ContentSectionAttribute.Name">
+            <summary>
+            Gets or sets the name of the section.
+            </summary>
+            <value>The name of the section.</value>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Designers.Attributes.ContentSectionAttribute.Position">
+            <summary>
+            Gets or sets the position in section.
+            </summary>
+            <value>The position in section.</value>
+        </member>
+        <member name="T:Progress.Sitefinity.Renderer.Designers.Attributes.DateSettingsAttribute">
+            <summary>
+            Specifies settings for the date field.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Designers.Attributes.DateSettingsAttribute.ShowTime">
+            <summary>
+            Gets or sets a value indicating whether the time should be displayed.
+            </summary>
+            <value>true if you want to display the time;otherwise - false.</value>
+        </member>
+        <member name="T:Progress.Sitefinity.Renderer.Designers.Attributes.DescriptionExtendedAttribute">
+            <summary>
+            Specifies a short description for the property, ment to render inline.
+            </summary>
+        </member>
+        <member name="M:Progress.Sitefinity.Renderer.Designers.Attributes.DescriptionExtendedAttribute.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Progress.Sitefinity.Renderer.Designers.Attributes.DescriptionExtendedAttribute" /> class.
+            </summary>
+        </member>
+        <member name="M:Progress.Sitefinity.Renderer.Designers.Attributes.DescriptionExtendedAttribute.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Progress.Sitefinity.Renderer.Designers.Attributes.DescriptionExtendedAttribute" /> class.
+            </summary>
+            <param name="description">The description text.</param>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Designers.Attributes.DescriptionExtendedAttribute.Description">
+            <inheritdoc/>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Designers.Attributes.DescriptionExtendedAttribute.InlineDescription">
+            <summary>
+            Gets or sets a description for the label.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Designers.Attributes.DescriptionExtendedAttribute.InstructionalNotes">
+            <summary>
+            Gets or sets an instruction notes.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.Renderer.Designers.Attributes.DialogAttribute">
+            <summary>
+            Specifies dialog data - buttons and labels.
+            </summary>
+        </member>
+        <member name="M:Progress.Sitefinity.Renderer.Designers.Attributes.DialogAttribute.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Progress.Sitefinity.Renderer.Designers.Attributes.DialogAttribute" /> class.
+            </summary>
+            <param name="data">The dialog data.</param>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Designers.Attributes.DialogAttribute.Data">
+            <summary>
+            Gets or sets the dialog data.
+            </summary>
+            <value>The data.</value>
+        </member>
+        <member name="T:Progress.Sitefinity.Renderer.Designers.Attributes.DisplaySettingsAttribute">
+            <summary>
+            Determine the visibility of the field.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Designers.Attributes.DisplaySettingsAttribute.Hide">
+            <summary>
+            Gets or sets a value indicating whether or not the field should be rendered.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Designers.Attributes.DisplaySettingsAttribute.HideContent">
+            <summary>
+            Gets or sets a value indicating whether or not the content of the field should be visible.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.Renderer.Designers.Attributes.EnumDisplayNameAttribute">
+            <summary>
+            Specifies chip choice display name.
+            </summary>
+        </member>
+        <member name="M:Progress.Sitefinity.Renderer.Designers.Attributes.EnumDisplayNameAttribute.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Progress.Sitefinity.Renderer.Designers.Attributes.EnumDisplayNameAttribute" /> class.
+            </summary>
+        </member>
+        <member name="M:Progress.Sitefinity.Renderer.Designers.Attributes.EnumDisplayNameAttribute.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Progress.Sitefinity.Renderer.Designers.Attributes.EnumDisplayNameAttribute" /> class.
+            </summary>
+            /// <param name="displayName">The display name.</param>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Designers.Attributes.EnumDisplayNameAttribute.DisplayName">
+            <summary>
+            Gets or sets the display name.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.Renderer.Designers.Attributes.FallbackToDefaultValueWhenEmptyAttribute">
+            <summary>
+            Attribute for marking values for which the property should be considered empty.
+            This can be especially useful when you want the property to fallback to its default value.
+            </summary>
+        </member>
+        <member name="M:Progress.Sitefinity.Renderer.Designers.Attributes.FallbackToDefaultValueWhenEmptyAttribute.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Progress.Sitefinity.Renderer.Designers.Attributes.FallbackToDefaultValueWhenEmptyAttribute" /> class.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Designers.Attributes.FallbackToDefaultValueWhenEmptyAttribute.EmptyValues">
+            <summary>
+            Gets or sets the empty field values.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.Renderer.Designers.Attributes.GroupAttribute">
+            <summary>
+            Specifies icon name.
+            </summary>
+        </member>
+        <member name="M:Progress.Sitefinity.Renderer.Designers.Attributes.GroupAttribute.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Progress.Sitefinity.Renderer.Designers.Attributes.GroupAttribute" /> class.
+            </summary>
+            <param name="name">The name.</param>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Designers.Attributes.GroupAttribute.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.Renderer.Designers.Attributes.IconAttribute">
+            <summary>
+            Specifies icon name.
+            </summary>
+        </member>
+        <member name="M:Progress.Sitefinity.Renderer.Designers.Attributes.IconAttribute.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Progress.Sitefinity.Renderer.Designers.Attributes.IconAttribute" /> class.
+            </summary>
+            <param name="name">The name.</param>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Designers.Attributes.IconAttribute.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.Renderer.Designers.Attributes.InitialValueAttribute">
+            <summary>
+            Attribute for marking properties with an initial value to be set.
+            </summary>
+        </member>
+        <member name="M:Progress.Sitefinity.Renderer.Designers.Attributes.InitialValueAttribute.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Progress.Sitefinity.Renderer.Designers.Attributes.InitialValueAttribute" /> class.
+            </summary>
+            <param name="propName">The property name.</param>
+            <param name="value">The property value.</param>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Designers.Attributes.InitialValueAttribute.Name">
+            <summary>
+            Gets the property name.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Designers.Attributes.InitialValueAttribute.Value">
+            <summary>
+            Gets the value.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.Renderer.Designers.Attributes.IsNullableAttribute">
+            <summary>
+            Attribute for marking properties with an initial value to be set.
+            </summary>
+        </member>
+        <member name="M:Progress.Sitefinity.Renderer.Designers.Attributes.IsNullableAttribute.#ctor(System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Progress.Sitefinity.Renderer.Designers.Attributes.IsNullableAttribute"/> class.
+            </summary>
+            <param name="isNullable">Defines whether the propertly can have a non-default value that is null.</param>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Designers.Attributes.IsNullableAttribute.Value">
+            <summary>
+            Gets or sets a value indicating whether the property can have a null value.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.Renderer.Designers.Attributes.KnownContentTypes">
+            <summary>
+            Class holding the known content types from Sitefinity.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.Renderer.Designers.Attributes.KnownContentTypes.News">
+            <summary>
+            The news content type CLR name.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.Renderer.Designers.Attributes.KnownContentTypes.Sites">
+            <summary>
+            The sites content type CLR name.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.Renderer.Designers.Attributes.KnownContentTypes.Pages">
+            <summary>
+            The pages content type CLR name.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.Renderer.Designers.Attributes.KnownContentTypes.PageTemplates">
+            <summary>
+            The page templates content type CLR name.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.Renderer.Designers.Attributes.KnownContentTypes.Tags">
+            <summary>
+            The reference name for Tags.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.Renderer.Designers.Attributes.KnownContentTypes.Categories">
+            <summary>
+            The reference name for categories.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.Renderer.Designers.Attributes.KnownContentTypes.Taxonomies">
+            <summary>
+            The reference name for taxonomies.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.Renderer.Designers.Attributes.KnownContentTypes.Images">
+            <summary>
+            The images content type CLR name.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.Renderer.Designers.Attributes.KnownContentTypes.Videos">
+            <summary>
+            The videos content type CLR name.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.Renderer.Designers.Attributes.KnownContentTypes.Documents">
+            <summary>
+            The documents content type CLR name.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.Renderer.Designers.Attributes.KnownContentTypes.BlogPost">
+            <summary>
+            The blog post content type CLR name.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.Renderer.Designers.Attributes.KnownContentTypes.Blogs">
+            <summary>
+            The blogs content type CLR name.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.Renderer.Designers.Attributes.KnownContentTypes.Events">
+            <summary>
+            The events content type CLR name.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.Renderer.Designers.Attributes.KnownContentTypes.Calendars">
+            <summary>
+            The calendars content type CLR name.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.Renderer.Designers.Attributes.KnownContentTypes.GenericContent">
+            <summary>
+            The content block type CLR name.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.Renderer.Designers.Attributes.KnownContentTypes.ListItems">
+            <summary>
+            The list items type CLR name.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.Renderer.Designers.Attributes.KnownContentTypes.Lists">
+            <summary>
+            The lists type CLR name.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.Renderer.Designers.Attributes.KnownContentTypes.Forms">
+            <summary>
+            The forms type CLR name.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.Renderer.Designers.Attributes.KnownContentTypes.Albums">
+            <summary>
+            The albums type CLR name.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.Renderer.Designers.Attributes.KnownContentTypes.DocumentLibraries">
+            <summary>
+            The document libraries type CLR name.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.Renderer.Designers.Attributes.KnownContentTypes.VideoLibraries">
+            <summary>
+            The video libraries type CLR name.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.Renderer.Designers.Attributes.KnownContentTypes.Folders">
+            <summary>
+            The folders type CLR name.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.Renderer.Designers.Attributes.LengthDependsOnAttribute">
+            <summary>
+            Specifies property to depends on.
+            </summary>
+        </member>
+        <member name="M:Progress.Sitefinity.Renderer.Designers.Attributes.LengthDependsOnAttribute.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Progress.Sitefinity.Renderer.Designers.Attributes.LengthDependsOnAttribute"/> class.
+            </summary>
+            <param name="propertyName">Name of the property.</param>
+            <param name="displayName">The name used as a key for the record.</param>
+            <param name="displayTitle">The name used to generate the title of the record.</param>
+        </member>
+        <member name="M:Progress.Sitefinity.Renderer.Designers.Attributes.LengthDependsOnAttribute.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Progress.Sitefinity.Renderer.Designers.Attributes.LengthDependsOnAttribute"/> class.
+            </summary>
+            <param name="propertyName">Name of the proeprty.</param>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Designers.Attributes.LengthDependsOnAttribute.PropertyName">
+            <summary>
+            Gets or sets the proeprty name.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Designers.Attributes.LengthDependsOnAttribute.DisplayName">
+            <summary>
+            Gets or sets the display name.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Designers.Attributes.LengthDependsOnAttribute.DisplayTitle">
+            <summary>
+            Gets or sets the display title.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Designers.Attributes.LengthDependsOnAttribute.ExtraRecords">
+            <summary>
+            Gets or sets JSON with title name values used to present extra rows.
+            </summary>
+            <remarks>Format: [{Name: \"Row1\", Title: \"Row 1\"}].</remarks>
+        </member>
+        <member name="T:Progress.Sitefinity.Renderer.Designers.Attributes.MappedTypeAttribute">
+            <summary>
+            Attribute for making types to be rerpresented as a specific client type
+            other than the ones that are basic value types.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Designers.Attributes.MappedTypeAttribute.DataType">
+            <summary>
+            Gets or sets the data type.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.Renderer.Designers.Attributes.MediaItemAttribute">
+            <summary>
+            Attribute for marking properties that should be visualized with media item selector in edit mode.
+            </summary>
+        </member>
+        <member name="M:Progress.Sitefinity.Renderer.Designers.Attributes.MediaItemAttribute.#ctor(System.String,System.Boolean,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Progress.Sitefinity.Renderer.Designers.Attributes.MediaItemAttribute" /> class.
+            </summary>
+            <param name="itemType">The item type full name.</param>
+            <param name="allowMultipleSelecton">Allow multiple selection.</param>
+            <param name="standalone">If standalone mode.</param>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Designers.Attributes.MediaItemAttribute.ItemType">
+            <summary>
+            Gets or sets the item type.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Designers.Attributes.MediaItemAttribute.AllowMultipleSelection">
+            <summary>
+            Gets or sets a value indicating whether the multiple selection is allowed.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Designers.Attributes.MediaItemAttribute.Standalone">
+            <summary>
+            Gets or sets a value indicating whether the selector should be opened by default when no item is selected.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.Renderer.Designers.Attributes.MirrorAttribute">
+            <summary>
+            Attribute for marking properties that should mirror another field value.
+            </summary>
+        </member>
+        <member name="M:Progress.Sitefinity.Renderer.Designers.Attributes.MirrorAttribute.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Progress.Sitefinity.Renderer.Designers.Attributes.MirrorAttribute" /> class.
+            </summary>
+            <param name="mirrorFieldName">The name of the field to mirror.</param>
+            <param name="mirrorFieldProperty">The name of the property to mirror.</param>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Designers.Attributes.MirrorAttribute.FieldName">
+            <summary>
+            Gets or sets the name of the field to mirror.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Designers.Attributes.MirrorAttribute.FieldProperty">
+            <summary>
+            Gets or sets the name of the property to mirror if the field name is complex.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Designers.Attributes.MirrorAttribute.EnableMirroring">
+            <summary>
+            Gets a value indicating whether to enable mirroring.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.Renderer.Designers.Attributes.PlaceholderAttribute">
+            <summary>
+            Specifies property to placeholder.
+            </summary>
+        </member>
+        <member name="M:Progress.Sitefinity.Renderer.Designers.Attributes.PlaceholderAttribute.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Progress.Sitefinity.Renderer.Designers.Attributes.PlaceholderAttribute" /> class.
+            </summary>
+            <param name="text">The placeholder text.</param>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Designers.Attributes.PlaceholderAttribute.Text">
+            <summary>
+            Gets or sets the text.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.Renderer.Designers.Attributes.SectionsOrderAttribute">
+            <summary>
+            Defines the sections order.
+            </summary>
+        </member>
+        <member name="M:Progress.Sitefinity.Renderer.Designers.Attributes.SectionsOrderAttribute.#ctor(System.String[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:Progress.Sitefinity.Renderer.Designers.Attributes.SectionsOrderAttribute"/> class.
+            </summary>
+            <param name="sections">The ordered sections.</param>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Designers.Attributes.SectionsOrderAttribute.Sections">
+            <summary>
+            Gets the ordered sections.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.Renderer.Designers.Attributes.SuffixAttribute">
+            <summary>
+            Specifies the suffix.
+            </summary>
+        </member>
+        <member name="M:Progress.Sitefinity.Renderer.Designers.Attributes.SuffixAttribute.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Progress.Sitefinity.Renderer.Designers.Attributes.SuffixAttribute" /> class.
+            </summary>
+            <param name="value">The value.</param>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Designers.Attributes.SuffixAttribute.Value">
+            <summary>
+            Gets or sets the name.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.Renderer.Designers.Attributes.TableViewAttribute">
+            <summary>
+            Specifies the apperance of the property as a table.
+            </summary>
+        </member>
+        <member name="M:Progress.Sitefinity.Renderer.Designers.Attributes.TableViewAttribute.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Progress.Sitefinity.Renderer.Designers.Attributes.TableViewAttribute"/> class.
+            </summary>
+        </member>
+        <member name="M:Progress.Sitefinity.Renderer.Designers.Attributes.TableViewAttribute.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Progress.Sitefinity.Renderer.Designers.Attributes.TableViewAttribute"/> class.
+            </summary>
+            <param name="columnTitle">Title in the column.</param>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Designers.Attributes.TableViewAttribute.ColumnTitle">
+            <summary>
+            Gets or sets the title in the first column.
+            </summary>
+            <value>The title in the first column.</value>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Designers.Attributes.TableViewAttribute.Enabled">
+            <summary>
+            Gets a value indicating whether the table view is enabled.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Designers.Attributes.TableViewAttribute.Reorderable">
+            <summary>
+            Gets or sets a value indicating whether the items in the table are reorderable.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Designers.Attributes.TableViewAttribute.Selectable">
+            <summary>
+            Gets or sets a value indicating whether the items in the table are selectable.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Designers.Attributes.TableViewAttribute.MultipleSelect">
+            <summary>
+            Gets or sets a value indicating whether multiple items can be selected.
+            Taken into account only when <see cref="P:Progress.Sitefinity.Renderer.Designers.Attributes.TableViewAttribute.Selectable"/> is set to true.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Designers.Attributes.TableViewAttribute.AllowEmptyState">
+            <summary>
+            Gets or sets a value indicating whether the table can have an empty state.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Designers.Attributes.TableViewAttribute.AddManyFileName">
+            <summary>
+            Gets or sets the file name to a file containing predefined lists with values.
+            The file should be placed under wwwroot/js/{widgetName}/ .
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Designers.Attributes.TableViewAttribute.ColumnCount">
+            <summary>
+            Gets or sets a value indicating the number of columns that are displayed in the table view.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.Renderer.Designers.Attributes.TaxonomyContentAttribute">
+            <summary>
+            Class containing metadata to describe taxonomies content.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Designers.Attributes.TaxonomyContentAttribute.Type">
+            <inheritdoc />
+        </member>
+        <member name="T:Progress.Sitefinity.Renderer.Designers.Dto.CategoryGroupDto">
+            <summary>
+            The section group.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Designers.Dto.CategoryGroupDto.Name">
+            <summary>
+            Gets or sets the name of the section.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Designers.Dto.CategoryGroupDto.Sections">
+            <summary>
+            Gets or sets the Sections.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.Renderer.Designers.Dto.ChoiceValueDto">
+            <summary>
+            Choice value.
+            </summary>
+        </member>
+        <member name="M:Progress.Sitefinity.Renderer.Designers.Dto.ChoiceValueDto.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Progress.Sitefinity.Renderer.Designers.Dto.ChoiceValueDto"/> class.
+            </summary>
+            <param name="name">The choice name.</param>
+            <param name="value">The value of the choice.</param>
+        </member>
+        <member name="M:Progress.Sitefinity.Renderer.Designers.Dto.ChoiceValueDto.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Progress.Sitefinity.Renderer.Designers.Dto.ChoiceValueDto"/> class.
+            </summary>
+            <param name="name">The choice name.</param>
+            <param name="title">The choice title.</param>
+            <param name="value">The value of the choice.</param>
+        </member>
+        <member name="M:Progress.Sitefinity.Renderer.Designers.Dto.ChoiceValueDto.#ctor(System.String,System.String,System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Progress.Sitefinity.Renderer.Designers.Dto.ChoiceValueDto"/> class.
+            </summary>
+            <param name="name">The choice name.</param>
+            <param name="title">The choice title.</param>
+            <param name="value">The value of the choice.</param>
+            <param name="tooltip">The value of the tooltip.</param>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Designers.Dto.ChoiceValueDto.Title">
+            <summary>
+            Gets or sets the title.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Designers.Dto.ChoiceValueDto.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Designers.Dto.ChoiceValueDto.Tooltip">
+            <summary>
+            Gets or sets the tooltip.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Designers.Dto.ChoiceValueDto.Value">
+            <summary>
+            Gets or sets the value.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Designers.Dto.ChoiceValueDto.Icon">
+            <summary>
+            Gets or sets the icon.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.Renderer.Designers.Dto.ControlMetadataDto">
+            <summary>
+            The control metadata.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Designers.Dto.ControlMetadataDto.Name">
+            <summary>
+            Gets or sets the name of the component.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Designers.Dto.ControlMetadataDto.Caption">
+            <summary>
+            Gets or sets the caption of the component.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Designers.Dto.ControlMetadataDto.PropertyMetadata">
+            <summary>
+            Gets or sets the proeprty metadata of the component.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Designers.Dto.ControlMetadataDto.PropertyMetadataFlat">
+            <summary>
+            Gets or sets the proeprty metadata of the component.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.Renderer.Designers.Dto.IconDto">
+            <summary>
+            Describes an icon transferable object.
+            </summary>
+        </member>
+        <member name="M:Progress.Sitefinity.Renderer.Designers.Dto.IconDto.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Progress.Sitefinity.Renderer.Designers.Dto.IconDto"/> class.
+            </summary>
+            <param name="name">The icon name.</param>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Designers.Dto.IconDto.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Designers.Dto.IconDto.Look">
+            <summary>
+            Gets or sets the look.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.Renderer.Designers.Dto.NameTitleDto">
+            <summary>
+            The name title container.
+            </summary>
+        </member>
+        <member name="M:Progress.Sitefinity.Renderer.Designers.Dto.NameTitleDto.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Progress.Sitefinity.Renderer.Designers.Dto.NameTitleDto"/> class.
+            </summary>
+        </member>
+        <member name="M:Progress.Sitefinity.Renderer.Designers.Dto.NameTitleDto.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Progress.Sitefinity.Renderer.Designers.Dto.NameTitleDto"/> class.
+            </summary>
+            <param name="name">The choice name.</param>
+        </member>
+        <member name="M:Progress.Sitefinity.Renderer.Designers.Dto.NameTitleDto.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Progress.Sitefinity.Renderer.Designers.Dto.NameTitleDto"/> class.
+            </summary>
+            <param name="name">The choice name.</param>
+            <param name="title">The choice title.</param>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Designers.Dto.NameTitleDto.Title">
+            <summary>
+            Gets or sets the title.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Designers.Dto.NameTitleDto.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.Renderer.Designers.Dto.PropertyMetadataContainerDto">
+            <summary>
+            The property container transfer object.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Designers.Dto.PropertyMetadataContainerDto.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Designers.Dto.PropertyMetadataContainerDto.DefaultValue">
+            <summary>
+            Gets or sets the default property value for this type.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Designers.Dto.PropertyMetadataContainerDto.Title">
+            <summary>
+            Gets or sets the name.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Designers.Dto.PropertyMetadataContainerDto.Type">
+            <summary>
+            Gets or sets the type name of the property send to the backand.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Designers.Dto.PropertyMetadataContainerDto.SectionName">
+            <summary>
+            Gets or sets the section name.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Designers.Dto.PropertyMetadataContainerDto.CategoryName">
+            <summary>
+            Gets or sets the category name.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Designers.Dto.PropertyMetadataContainerDto.Properties">
+            <summary>
+            Gets or sets the dynamic properties.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Designers.Dto.PropertyMetadataContainerDto.TypeChildProperties">
+            <summary>
+            Gets or sets the child properties of the type.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Designers.Dto.PropertyMetadataContainerDto.Position">
+            <summary>
+            Gets or sets the position in the section.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.Renderer.Designers.Dto.SectionDto">
+            <summary>
+            Gets or sets the section transfer object.
+            </summary>
+        </member>
+        <member name="M:Progress.Sitefinity.Renderer.Designers.Dto.SectionDto.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Progress.Sitefinity.Renderer.Designers.Dto.SectionDto"/> class.
+            </summary>
+        </member>
+        <member name="M:Progress.Sitefinity.Renderer.Designers.Dto.SectionDto.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Progress.Sitefinity.Renderer.Designers.Dto.SectionDto"/> class.
+            </summary>
+            <param name="name">The name.</param>
+        </member>
+        <member name="M:Progress.Sitefinity.Renderer.Designers.Dto.SectionDto.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Progress.Sitefinity.Renderer.Designers.Dto.SectionDto"/> class.
+            </summary>
+            <param name="name">The name.</param>
+            <param name="title">The title.</param>
+        </member>
+        <member name="M:Progress.Sitefinity.Renderer.Designers.Dto.SectionDto.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Progress.Sitefinity.Renderer.Designers.Dto.SectionDto"/> class.
+            </summary>
+            <param name="name">The name.</param>
+            <param name="title">The title.</param>
+            <param name="categoryName">The category name.</param>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Designers.Dto.SectionDto.Name">
+            <summary>
+            Gets or sets the name of the section.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Designers.Dto.SectionDto.Title">
+            <summary>
+            Gets or sets the title of the section.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Designers.Dto.SectionDto.Properties">
+            <summary>
+            Gets or sets the Properties collecction.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Designers.Dto.SectionDto.CategoryName">
+            <summary>
+            Gets or sets the category name.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.Renderer.Designers.IDefaultValueResolver">
+            <summary>
+            Interface for retrieving the default value of a property.
+            </summary>
+        </member>
+        <member name="M:Progress.Sitefinity.Renderer.Designers.IDefaultValueResolver.GetDefaultValue(System.ComponentModel.PropertyDescriptor,System.String,System.Boolean)">
+            <summary>
+            Gets the default value of a property.
+            </summary>
+            <param name="descriptor">The property descriptor.</param>
+            <param name="componentName">The component name.</param>
+            <param name="asString">Controls whether the default value should be serialized as string.</param>
+            <returns>The default value.</returns>
+        </member>
+        <member name="T:Progress.Sitefinity.Renderer.Designers.DefaultValueResolver">
+            <summary>
+            Default implementation for the <see cref="T:Progress.Sitefinity.Renderer.Designers.IDefaultValueResolver"/> interface.
+            </summary>
+        </member>
+        <member name="M:Progress.Sitefinity.Renderer.Designers.DefaultValueResolver.GetDefaultValue(System.ComponentModel.PropertyDescriptor,System.String,System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Progress.Sitefinity.Renderer.Designers.IPropertiesConfigurator">
+            <summary>
+            Defines interface for properties configurator.
+            </summary>
+        </member>
+        <member name="M:Progress.Sitefinity.Renderer.Designers.IPropertiesConfigurator.GetProperties(System.Type,System.String,System.String)">
+            <summary>
+            Serializes the properties of the type.
+            </summary>
+            <param name="entityContainer">The container object to serialize.</param>
+            <param name="componentName">The component name.</param>
+            <param name="packageName">The package name.</param>
+            <returns>The serialized properties.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.Renderer.Designers.IPropertiesConfigurator.GetPropertiesHierarchy(System.Type,System.String,System.String)">
+            <summary>
+            Serializes the properties hierarchy (ordered in categories and sections) of the type.
+            </summary>
+            <param name="entityContainer">The container object to serialize.</param>
+            <param name="componentName">The component name.</param>
+            <param name="packageName">The package name.</param>
+            <returns>The serialized properties.</returns>
+        </member>
+        <member name="T:Progress.Sitefinity.Renderer.Designers.IPropertiesConfiguratorExtensions">
+            <summary>
+            Defines interface for properties configurator.
+            </summary>
+        </member>
+        <member name="M:Progress.Sitefinity.Renderer.Designers.IPropertiesConfiguratorExtensions.GetProperties(Progress.Sitefinity.Renderer.Designers.IPropertiesConfigurator,System.Type,System.String)">
+            <summary>
+            Serializes the properties of the type.
+            </summary>
+            <param name="configurator">The configurator object.</param>
+            <param name="entityContainer">The container object to serialize.</param>
+            <param name="componentName">The component name.</param>
+            <returns>The serialized properties.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.Renderer.Designers.IPropertiesConfiguratorExtensions.GetPropertiesHierarchy(Progress.Sitefinity.Renderer.Designers.IPropertiesConfigurator,System.Type,System.String)">
+            <summary>
+            Serializes the properties hierarchy (ordered in categories and sections) of the type.
+            </summary>
+            <param name="configurator">The configurator object.</param>
+            <param name="entityContainer">The container object to serialize.</param>
+            <param name="componentName">The component name.</param>
+            <returns>The serialized properties.</returns>
+        </member>
+        <member name="T:Progress.Sitefinity.Renderer.Designers.IPropertyConfigurator">
+            <summary>
+            Defines interface for a propertiy configurator.
+            </summary>
+        </member>
+        <member name="M:Progress.Sitefinity.Renderer.Designers.IPropertyConfigurator.ProcessPropertyMetadataContainer(System.ComponentModel.PropertyDescriptor,Progress.Sitefinity.Renderer.Designers.Dto.PropertyMetadataContainerDto,System.String)">
+            <summary>
+            Serializes the property.
+            </summary>
+            <param name="descriptor">The property descriptor.</param>
+            <param name="propertyContainer">The property container.</param>
+            <param name="componentName">The component name.</param>
+        </member>
+        <member name="T:Progress.Sitefinity.Renderer.Designers.KnownFieldTypes">
+            <summary>
+            The known field types other than the automatically mapped ones.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.Renderer.Designers.KnownFieldTypes.Html">
+            <summary>
+            The html field type for managing Rich Text.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.Renderer.Designers.KnownFieldTypes.TextArea">
+            <summary>
+            The html field type for managing TextArea.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.Renderer.Designers.KnownFieldTypes.RadioChoice">
+            <summary>
+            A diffrent kind of choice field visualization.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.Renderer.Designers.KnownFieldTypes.Choices">
+            <summary>
+            A field visualization as choice dropdown.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.Renderer.Designers.KnownFieldTypes.ChipChoice">
+            <summary>
+            A diffrent kind of choice field visualization.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.Renderer.Designers.KnownFieldTypes.CheckBox">
+            <summary>
+            Sets the visualization to be a single checkbox.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.Renderer.Designers.KnownFieldTypes.ChoiceList">
+            <summary>
+            Sets the visualization to be a list ofchoices.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.Renderer.Designers.KnownFieldTypes.MultipleChoiceChip">
+            <summary>
+            A field visualizing as chipchoice, but allowing multiple selections.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.Renderer.Designers.KnownFieldTypes.ChoiceMultiple">
+            <summary>
+            Sets the visualization to be a list of checkboxes.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.Renderer.Designers.KnownFieldTypes.Color">
+            <summary>
+            Sets the visualization to be a color picker.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.Renderer.Designers.KnownFieldTypes.Password">
+            <summary>
+            Sets the visualization to be a password text field.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.Renderer.Designers.KnownFieldTypes.Range">
+            <summary>
+            Sets the range of characters.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.Renderer.Designers.KnownFieldTypes.RangeLimitation">
+            <summary>
+            Sets the range of characters with updated UI look.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.Renderer.Designers.KnownFieldTypes.Attributes">
+            <summary>
+            Sets the attributes.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.Renderer.Designers.KnownFieldTypes.FileTypes">
+            <summary>
+            Sets the file types.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.Renderer.Designers.KnownFieldTypes.PencilButton">
+            <summary>
+            Sets the visualization to be a pencil button.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.Renderer.Designers.KnownFieldTypes.DropdownWithText">
+            <summary>
+            Sets the visialization to be a dropdown with a text input after.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.Renderer.Designers.PropertiesConfigurator">
+            <summary>
+            Configures properties metadata.
+            </summary>
+        </member>
+        <member name="M:Progress.Sitefinity.Renderer.Designers.PropertiesConfigurator.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Progress.Sitefinity.Renderer.Designers.PropertiesConfigurator"/> class.
+            </summary>
+        </member>
+        <member name="M:Progress.Sitefinity.Renderer.Designers.PropertiesConfigurator.#ctor(System.Collections.Generic.IEnumerable{Progress.Sitefinity.Renderer.Designers.IPropertyConfigurator},Progress.Sitefinity.Renderer.Designers.IDefaultValueResolver)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Progress.Sitefinity.Renderer.Designers.PropertiesConfigurator"/> class.
+            </summary>
+            <param name="propertyConfigurators">A collection of property configurators.</param>
+            <param name="defaultValueResolver">The default value resolver.</param>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Designers.PropertiesConfigurator.PropertyFilter">
+            <summary>
+            Gets or sets an action filter for the properties.
+            </summary>
+        </member>
+        <member name="M:Progress.Sitefinity.Renderer.Designers.PropertiesConfigurator.GetProperties(System.Type,System.String,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Progress.Sitefinity.Renderer.Designers.PropertiesConfigurator.GetPropertiesHierarchy(System.Type,System.String,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Progress.Sitefinity.Renderer.Designers.PropertiesConfigurator.ConfigureAsChoices(Progress.Sitefinity.Renderer.Designers.Dto.PropertyMetadataContainerDto,System.Collections.Generic.IList{Progress.Sitefinity.Renderer.Designers.Dto.ChoiceValueDto},System.Boolean)">
+            <summary>
+            Configures a property as a choice type.
+            </summary>
+            <param name="propertyContainer">The <see cref="T:Progress.Sitefinity.Renderer.Designers.Dto.PropertyMetadataContainerDto"/> object.</param>
+            <param name="choices">The choices array.</param>
+            <param name="allowMultiple">If multple choices can be selected.</param>
+        </member>
+        <member name="M:Progress.Sitefinity.Renderer.Designers.PropertiesConfigurator.ProcessPropertyMetadataContainer(System.ComponentModel.PropertyDescriptor,Progress.Sitefinity.Renderer.Designers.Dto.PropertyMetadataContainerDto,System.String,System.String)">
+            <summary>
+            Serializes the property.
+            </summary>
+            <param name="descriptor">The property descriptor.</param>
+            <param name="propertyContainer">The property container.</param>
+            <param name="componentName">The component name.</param>
+            <param name="packageName">The package name.</param>
+        </member>
+        <member name="T:Progress.Sitefinity.Renderer.Designers.PropertyCategory">
+            <summary>
+            Class that holds the categories of the properties.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.Renderer.Designers.PropertyCategory.Basic">
+            <summary>
+            The 'Basic' category name.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.Renderer.Designers.PropertyCategory.Advanced">
+            <summary>
+            The 'Advanced' category name.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.Renderer.Designers.PropertyCategory.QuickEdit">
+            <summary>
+            The 'QuickEdit' category name.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.Renderer.Designers.WidgetMetadataConstants">
+            <summary>
+            Class holding names of known metadata constants.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.Renderer.Designers.WidgetMetadataConstants.Prefix">
+            <summary>
+            The metadata prefix.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.Renderer.Designers.WidgetMetadataConstants.TaxonomyPrefix">
+            <summary>
+            The metadata prefix.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.Renderer.Designers.WidgetMetadataConstants.RequiredPropertyName">
+            <summary>
+            The required property name.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.Renderer.Designers.WidgetMetadataConstants.ReadonlyPropertyName">
+            <summary>
+            The required property name.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.Renderer.Designers.WidgetMetadataConstants.MinValuePropertyName">
+            <summary>
+            The min value property name.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.Renderer.Designers.WidgetMetadataConstants.MaxValuePropertyName">
+            <summary>
+            The required property name.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.Renderer.Designers.WidgetMetadataConstants.RegexPropertyName">
+            <summary>
+            The regex property name.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.Renderer.Designers.WidgetMetadataConstants.RegexErrorPropertyName">
+            <summary>
+            The regex error property name.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.Renderer.Designers.WidgetMetadataConstants.RequiredErrorPropertyName">
+            <summary>
+            The required error property name.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.Renderer.Designers.WidgetMetadataConstants.RangeErrorPropertyName">
+            <summary>
+            The required property name.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.Renderer.Designers.WidgetMetadataConstants.StrLengthErrorPropertyName">
+            <summary>
+            The string length error message property name.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.Renderer.Designers.WidgetMetadataConstants.MaxLengthErrorPropertyName">
+            <summary>
+            The max length property name.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.Renderer.Designers.WidgetMetadataConstants.MinLengthErrorPropertyName">
+            <summary>
+            The min length error message property name.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.Renderer.Designers.WidgetMetadataConstants.DecimalPlacesPropertyName">
+            <summary>
+            The decimal places property name.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.Renderer.Designers.WidgetMetadataConstants.UrlRegexPattern">
+            <summary>
+            Regexes used during the validation of attribute. Found inside System.ComponentModel.DataAnnotations classes.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.Renderer.Designers.WidgetMetadataConstants.EmailRegexPattern">
+            <summary>
+            The email regex.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.Renderer.Designers.WidgetMetadataConstants.DefaultBasicSectionName">
+            <summary>
+            the name of the default basic section.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.Renderer.Designers.WidgetMetadataConstants.DefaultAdvancedSectionName">
+            <summary>
+            The name of the default advanced section.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.Renderer.Designers.WidgetMetadataConstants.DefaultValue">
+            <summary>
+            The default value metadata name.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.Renderer.Designers.WidgetMetadataConstants.ContainsLinks">
+            <summary>
+            The cotnains links const.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.Renderer.Designers.WidgetMetadataConstants.ExcludeFromCopy">
+            <summary>
+            The exclude from copy metadata name.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.Renderer.Designers.WidgetMetadataConstants.IsNullable">
+            <summary>
+            The IsNullable metadata name.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.Renderer.Models.LinkModel">
+            <summary>
+            The link model.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Models.LinkModel.Href">
+            <summary>
+            Gets or sets the href of the link.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Models.LinkModel.Sfref">
+            <summary>
+            Gets or sets the sfRef for the link.
+            </summary>
+            <remarks>This is used for resolving the item in Sitefinity if its URL has been changed.</remarks>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Models.LinkModel.Id">
+            <summary>
+            Gets or sets the id of the link.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Models.LinkModel.Text">
+            <summary>
+            Gets or sets the link text.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Models.LinkModel.Target">
+            <summary>
+            Gets or sets the link's target.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Models.LinkModel.QueryParams">
+            <summary>
+            Gets or sets the query parameters of the link.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Models.LinkModel.Anchor">
+            <summary>
+            Gets or sets the link's anchor.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Models.LinkModel.Tooltip">
+            <summary>
+            Gets or sets the link's tooltip.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Models.LinkModel.Type">
+            <summary>
+            Gets or sets the item's type in the link.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Models.LinkModel.ClassList">
+            <summary>
+            Gets or sets the custom css classes that are to be applied to the link.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Models.LinkModel.Attributes">
+            <summary>
+            Gets or sets the custom attributes for the link.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.Renderer.Entities.ChoiceWithText">
+            <summary>
+            Model for the <see cref="F:Progress.Sitefinity.Renderer.Designers.KnownFieldTypes.DropdownWithText"/> designer field.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Entities.ChoiceWithText.ChoiceValue">
+            <summary>
+            Gets or sets the value for the choice field.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Entities.ChoiceWithText.TextValue">
+            <summary>
+            Gets or sets the value for the text field.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.Renderer.Entities.Content.ContentContext">
+            <summary>
+            The entity class for storage and usage of Sitefinity content.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Entities.Content.ContentContext.Type">
+            <summary>
+            Gets or sets the type of the content.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Entities.Content.ContentContext.Variations">
+            <summary>
+            Gets or sets the variations. These variations hold the different combinations of providers and ids
+            from which the end result is retrieved.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.Renderer.Entities.Content.ContentVariation">
+            <summary>
+            The entity class for combining ids and source (provider name) for a single type.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Entities.Content.ContentVariation.Source">
+            <summary>
+            Gets or sets the source (provider name).
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Entities.Content.ContentVariation.Filter">
+            <summary>
+            Gets or sets the filter.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Entities.Content.ContentVariation.DynamicFilterByParent">
+            <summary>
+            Gets or sets a value indicating whether dynamic filtering by parent should be applied.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.Renderer.Entities.Content.MixedContentContext">
+            <summary>
+            The entity class for storage and usage of Sitefinity content accross multiple types and providers.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Entities.Content.MixedContentContext.ItemIdsOrdered">
+            <summary>
+            Gets or sets the order of the items. This order is used with selections of items, where the order in which they were
+            arranged is kept.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Entities.Content.MixedContentContext.Content">
+            <summary>
+            Gets or sets the child content contexts. Each of which is a group of a type and its different providers.
+            </summary>
+        </member>
+        <member name="M:Progress.Sitefinity.Renderer.Entities.Content.MixedContentContext.HasSelectedItems">
+            <summary>
+            Checks whether there are data items selected.
+            </summary>
+            <returns>Whether there are selected items.</returns>
+        </member>
+        <member name="T:Progress.Sitefinity.Renderer.Entities.FileTypes">
+            <summary>
+            The file types class holder.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Entities.FileTypes.Type">
+            <summary>
+            Gets or sets the Type of files - Audio, Video, Document, Image.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Entities.FileTypes.Other">
+            <summary>
+            Gets or sets the custom type.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.Renderer.Entities.NumericRange">
+            <summary>
+            The range of the length of the text.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Entities.NumericRange.Min">
+            <summary>
+            Gets or sets the Min property.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Renderer.Entities.NumericRange.Max">
+            <summary>
+            Gets or sets the Max property.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.Renderer.Forms.FormFieldType">
+            <summary>
+            The type of the form field.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.Renderer.Forms.FormFieldType.ShortText">
+            <summary>
+            Represents a short text field.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.Renderer.Forms.FormFieldType.Paragraph">
+            <summary>
+            Represents a paragraph field.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.Renderer.Forms.FormFieldType.File">
+            <summary>
+            Represents a file field.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.Renderer.Forms.FormFieldType.Captcha">
+            <summary>
+            Represents a file field.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.Renderer.Forms.FormFieldType.SubmitButton">
+            <summary>
+            Represents a submit button.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.Renderer.Forms.FormFieldType.FormSection">
+            <summary>
+            Represents a section.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.Renderer.Forms.FormFieldType.MultipleChoice">
+            <summary>
+            Represents a multiple choice field.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.Renderer.Forms.FormFieldType.Checkboxes">
+            <summary>
+            Represents a checkboxes choice field.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.Renderer.Forms.FormFieldType.Dropdown">
+            <summary>
+            Represents a dropdown choice field.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.Renderer.Forms.FormFieldType.ContentBlock">
+            <summary>
+            Represents a content block.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.Renderer.Forms.FormFieldType.DynamicList">
+            <summary>
+            Represents a dynamic content list field.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.Renderer.Forms.SitefinityPropertyNames">
+            <summary>
+            Sitefinity property names.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.Renderer.Forms.SitefinityPropertyNames.FieldType">
+            <summary>
+            The field type name.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.Renderer.Forms.SitefinityPropertyNames.FieldName">
+            <summary>
+            The field name.
+            </summary>
+        </member>
+    </members>
+</doc>

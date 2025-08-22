@@ -1,0 +1,3713 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Telerik.Sitefinity.Web.Api</name>
+    </assembly>
+    <members>
+        <member name="M:Telerik.Sitefinity.Web.Api.Configuration.CalculatedPropertyMapping.#ctor(Telerik.Sitefinity.Configuration.ConfigElement)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Web.Api.Configuration.CalculatedPropertyMapping" /> class.
+            </summary>
+            <param name="parent">The parent.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Configuration.CalculatedPropertyMapping.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Web.Api.Configuration.CalculatedPropertyMapping"/> class.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Configuration.CalculatedPropertyMapping.Parameters">
+            <summary>
+            Gets or sets a collection of user-defined parameters for the property.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Configuration.Properties.ClassPropertyMapping.#ctor(Telerik.Sitefinity.Configuration.ConfigElement)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Web.Api.Configuration.Properties.ClassPropertyMapping" /> class.
+            </summary>
+            <param name="parent">The parent.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Configuration.Properties.ClassPropertyMapping.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Web.Api.Configuration.Properties.ClassPropertyMapping"/> class.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Configuration.CommentsPropertyMapping.#ctor(Telerik.Sitefinity.Configuration.ConfigElement)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Web.Api.Configuration.CommentsPropertyMapping" /> class.
+            </summary>
+            <param name="parent">The parent.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Configuration.CommentsPropertyMapping.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Web.Api.Configuration.CommentsPropertyMapping"/> class.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Configuration.ComplexPropertyMapping.#ctor(Telerik.Sitefinity.Configuration.ConfigElement)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Web.Api.Configuration.ComplexPropertyMapping" /> class.
+            </summary>
+            <param name="parent">The parent.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Configuration.ComplexPropertyMapping.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Web.Api.Configuration.ComplexPropertyMapping"/> class.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Configuration.NavigationPropertyMapping.#ctor(Telerik.Sitefinity.Configuration.ConfigElement)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Web.Api.Configuration.NavigationPropertyMapping" /> class.
+            </summary>
+            <param name="parent">The parent.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Configuration.NavigationPropertyMapping.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Web.Api.Configuration.NavigationPropertyMapping"/> class.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Configuration.NavigationPropertyMapping.Parameters">
+            <summary>
+            Gets or sets a collection of user-defined parameters for the property.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Configuration.NavigationPropertyMapping.OnPropertiesInitialized">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Configuration.PersistentNavigationPropertyMapping.#ctor(Telerik.Sitefinity.Configuration.ConfigElement)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Web.Api.Configuration.PersistentNavigationPropertyMapping" /> class.
+            </summary>
+            <param name="parent">The parent.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Configuration.PersistentNavigationPropertyMapping.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Web.Api.Configuration.PersistentNavigationPropertyMapping"/> class.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Configuration.PersistentPropertyMapping.#ctor(Telerik.Sitefinity.Configuration.ConfigElement)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Web.Api.Configuration.PersistentPropertyMapping" /> class.
+            </summary>
+            <param name="parent">The parent.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Configuration.PersistentPropertyMapping.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Web.Api.Configuration.PersistentPropertyMapping"/> class.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Configuration.PropertyMapping.#ctor(Telerik.Sitefinity.Configuration.ConfigElement)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Web.Api.Configuration.PropertyMapping" /> class.
+            </summary>
+            <param name="parent">The parent.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Configuration.PropertyMapping.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Web.Api.Configuration.PropertyMapping"/> class.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Configuration.RelatedDataPropertyMapping.#ctor(Telerik.Sitefinity.Configuration.ConfigElement)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Web.Api.Configuration.RelatedDataPropertyMapping" /> class.
+            </summary>
+            <param name="parent">The parent.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Configuration.RelatedDataPropertyMapping.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Web.Api.Configuration.RelatedDataPropertyMapping"/> class.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Configuration.TaxPropertyMapping.#ctor(Telerik.Sitefinity.Configuration.ConfigElement)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Web.Api.Configuration.TaxPropertyMapping" /> class.
+            </summary>
+            <param name="parent">The parent.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Configuration.TaxPropertyMapping.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Web.Api.Configuration.TaxPropertyMapping"/> class.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Configuration.RouteElement.#ctor(Telerik.Sitefinity.Configuration.ConfigElement)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Web.Api.Configuration.RouteElement" /> class.
+            </summary>
+            <param name="parent">The parent.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Configuration.RouteElement.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Web.Api.Configuration.RouteElement"/> class.
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Web.Api.Configuration.WebServicesConfig">
+            <summary>
+            The configuration for Service API module.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Configuration.WebServicesConfig.OnSectionChanged">
+            <inheritdoc/>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Configuration.WebServicesConfig.DefaultRouteName">
+            <summary>
+            Gets or sets the default route name.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Configuration.WebServicesConfig.ProcessLegacySingleRelatedData">
+            <summary>
+            Gets or sets a value indicating whether single related data should be returned as object and not collection.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Configuration.WebServicesConfig.Routes">
+            <summary>
+            Gets a collection of profiles, represented by parameterized instances of the Service API Profile.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Configuration.WebServicesConfig.OnPropertiesInitialized">
+            <inheritdoc/>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Configuration.ServiceElement.#ctor(Telerik.Sitefinity.Configuration.ConfigElement)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Web.Api.Configuration.ServiceElement" /> class.
+            </summary>
+            <param name="parent">The parent.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Configuration.ServiceElement.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Web.Api.Configuration.ServiceElement"/> class.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Configuration.LifecycleTypeSettings.#ctor(Telerik.Sitefinity.Configuration.ConfigElement)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Web.Api.Configuration.LifecycleTypeSettings" /> class.
+            </summary>
+            <param name="parent">The parent.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Configuration.LifecycleTypeSettings.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Web.Api.Configuration.LifecycleTypeSettings"/> class.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Configuration.TypeSettings.#ctor(Telerik.Sitefinity.Configuration.ConfigElement)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Web.Api.Configuration.TypeSettings" /> class.
+            </summary>
+            <param name="parent">The parent.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Configuration.TypeSettings.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Web.Api.Configuration.TypeSettings"/> class.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Configuration.TypeSettings.PropertyMappings">
+            <summary>
+            Gets a collection of profiles, represented by parameterized instances of the Service API Profile.
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Web.Api.Controllers.UsersController">
+            <summary>
+            A controller for sitefinity web services.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Controllers.UsersController.UpdateProfile(System.Net.Http.HttpRequestMessage)">
+            <summary>
+            Handles the graphql query.
+            </summary>
+            <param name="request">The request message.</param>
+            <param name="query">The query.</param>
+            <returns>The executed result.</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Controllers.UsersController.ChangeEmail(System.Net.Http.HttpRequestMessage)">
+            <summary>
+            Changes the email.
+            </summary>
+            <param name="request">The <see cref="T:System.Net.Http.HttpRequestMessage"/>.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Controllers.UsersController.SendAgain(System.Net.Http.HttpRequestMessage)">
+            <summary>
+            Sends again activation email.
+            </summary>
+            <param name="request">The <see cref="T:System.Net.Http.HttpRequestMessage"/>.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Help.ApiDescriptionExtensions.GetFriendlyId(System.Web.Http.Description.ApiDescription)">
+            <summary>
+            Generates an URI-friendly ID for the <see cref="T:System.Web.Http.Description.ApiDescription"/>. E.g. "Get-Values-id_name" instead of "GetValues/{id}?name={name}"
+            </summary>
+            <param name="description">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <returns>The ID as a string.</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Help.ApiDescriptionExtensions.GetFriendlyName(System.Web.Http.Description.ApiDescription)">
+            <summary>
+            Generates an friendly name for the <see cref="T:System.Web.Http.Description.ApiDescription"/>. E.g. "Get news" or "Get news by key" instead of "only Get"
+            </summary>
+            <param name="description">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <returns>The friendly Name.</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Help.ApiDescriptionExtensions.GetTableHtml(System.Collections.Generic.IList{Telerik.Sitefinity.Web.Api.Help.ModelDescriptions.ParameterDescription})">
+            <summary>
+            Generates an friendly name for the <see cref="T:System.Web.Http.Description.ApiDescription"/>. E.g. "Get news" or "Get news by key" instead of "only Get"
+            </summary>
+            <param name="description">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <returns>The friendly Name.</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Help.HelpPageConfigurationExtensions.SetDocumentationProvider(System.Web.Http.HttpConfiguration,System.Web.Http.Description.IDocumentationProvider)">
+            <summary>
+            Sets the documentation provider for help page.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="documentationProvider">The documentation provider.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Help.HelpPageConfigurationExtensions.SetSampleObjects(System.Web.Http.HttpConfiguration,System.Collections.Generic.IDictionary{System.Type,System.Object})">
+            <summary>
+            Sets the objects that will be used by the formatters to produce sample requests/responses.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sampleObjects">The sample objects.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Help.HelpPageConfigurationExtensions.SetSampleRequest(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.String,System.String)">
+            <summary>
+            Sets the sample request directly for the specified media type and action.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample request.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Help.HelpPageConfigurationExtensions.SetSampleRequest(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.String,System.String,System.String[])">
+            <summary>
+            Sets the sample request directly for the specified media type and action with parameters.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample request.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Help.HelpPageConfigurationExtensions.SetSampleResponse(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.String,System.String)">
+            <summary>
+            Sets the sample request directly for the specified media type of the action.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample response.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Help.HelpPageConfigurationExtensions.SetSampleResponse(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.String,System.String,System.String[])">
+            <summary>
+            Sets the sample response directly for the specified media type of the action with specific parameters.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample response.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Help.HelpPageConfigurationExtensions.SetSampleForMediaType(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue)">
+            <summary>
+            Sets the sample directly for all actions with the specified media type.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample.</param>
+            <param name="mediaType">The media type.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Help.HelpPageConfigurationExtensions.SetSampleForType(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.Type)">
+            <summary>
+            Sets the sample directly for all actions with the specified type and media type.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="type">The parameter type or return type of an action.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Help.HelpPageConfigurationExtensions.SetActualRequestType(System.Web.Http.HttpConfiguration,System.Type,System.String,System.String)">
+            <summary>
+            Specifies the actual type of <see cref="T:System.Net.Http.ObjectContent`1"/> passed to the <see cref="T:System.Net.Http.HttpRequestMessage"/> in an action.
+            The help page will use this information to produce more accurate request samples.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="type">The type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Help.HelpPageConfigurationExtensions.SetActualRequestType(System.Web.Http.HttpConfiguration,System.Type,System.String,System.String,System.String[])">
+            <summary>
+            Specifies the actual type of <see cref="T:System.Net.Http.ObjectContent`1"/> passed to the <see cref="T:System.Net.Http.HttpRequestMessage"/> in an action.
+            The help page will use this information to produce more accurate request samples.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="type">The type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Help.HelpPageConfigurationExtensions.SetActualResponseType(System.Web.Http.HttpConfiguration,System.Type,System.String,System.String)">
+            <summary>
+            Specifies the actual type of <see cref="T:System.Net.Http.ObjectContent`1"/> returned as part of the <see cref="T:System.Net.Http.HttpRequestMessage"/> in an action.
+            The help page will use this information to produce more accurate response samples.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="type">The type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Help.HelpPageConfigurationExtensions.SetActualResponseType(System.Web.Http.HttpConfiguration,System.Type,System.String,System.String,System.String[])">
+            <summary>
+            Specifies the actual type of <see cref="T:System.Net.Http.ObjectContent`1"/> returned as part of the <see cref="T:System.Net.Http.HttpRequestMessage"/> in an action.
+            The help page will use this information to produce more accurate response samples.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="type">The type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Help.HelpPageConfigurationExtensions.GetHelpPageSampleGenerator(System.Web.Http.HttpConfiguration)">
+            <summary>
+            Gets the help page sample generator.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <returns>The help page sample generator.</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Help.HelpPageConfigurationExtensions.SetHelpPageSampleGenerator(System.Web.Http.HttpConfiguration,Telerik.Sitefinity.Web.Api.Help.HelpPageSampleGenerator)">
+            <summary>
+            Sets the help page sample generator.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sampleGenerator">The help page sample generator.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Help.HelpPageConfigurationExtensions.GetModelDescriptionGenerator(System.Web.Http.HttpConfiguration,System.String,System.Web.Http.Description.ApiDescription)">
+            <summary>
+            Gets the model description generator.
+            </summary>
+            <param name="config">The configuration.</param>
+            <returns>The <see cref="T:Telerik.Sitefinity.Web.Api.Help.ModelDescriptions.ModelDescriptionGenerator"/></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Help.HelpPageConfigurationExtensions.GetHelpPageApiModel(System.Web.Http.HttpConfiguration,System.Web.Http.Description.ApiDescription)">
+            <summary>
+            Gets the model that represents an API displayed on the help page. The model is initialized on the first call and cached for subsequent calls.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="apiDescriptionId">The <see cref="T:System.Web.Http.Description.ApiDescription"/> ID.</param>
+            <returns>
+            An <see cref="T:Telerik.Sitefinity.Web.Api.Help.Models.HelpPageApiModel"/>
+            </returns>
+        </member>
+        <member name="T:Telerik.Sitefinity.Web.Api.Help.ModelDescriptions.ModelDescription">
+            <summary>
+            Describes a type model.
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Web.Api.Help.ModelDescriptions.ModelDescriptionGenerator">
+            <summary>
+            Generates model descriptions for given types.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Help.ModelDescriptions.ModelDescriptionGenerator.#ctor(System.Web.Http.HttpConfiguration)">
+            <summary>
+            Model Description Generator 
+            </summary>
+            <param name="config">configuration parameter</param>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Help.ModelDescriptions.ModelDescriptionGenerator.GeneratedModels">
+            <summary>
+            Gets dictionary of generated models for primitive types
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Help.ModelDescriptions.ModelDescriptionGenerator.GeneratedApiModels">
+            <summary>
+            Gets dictionary of generated types from Service Api with key profile and value model of this type
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Web.Api.Help.ModelDescriptions.ModelNameAttribute">
+            <summary>
+            Use this attribute to change the name of the <see cref="T:Telerik.Sitefinity.Web.Api.Help.ModelDescriptions.ModelDescription"/> generated for a type.
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Web.Api.Help.Models.ActionTypes">
+            <summary>
+            The action types
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Help.Models.ActionTypes.ApiModel">
+            <summary>
+            Gets or sets the API model.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Help.Models.ActionTypes.Description">
+            <summary>
+            Gets or sets the description.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Help.Models.ActionTypes.HelpUrl">
+            <summary>
+            Gets or sets the URL.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Help.Models.ActionTypes.IsSelected">
+            <summary>
+            Gets or sets a value indicating whether the action is selected.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Help.Models.ActionTypes.Group">
+            <summary>
+            Gets or sets the Group of this action. 'Default' or 'Related'.
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Web.Api.Help.Models.HelpModel">
+            <summary>
+            The help page model
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Help.Models.HelpModel.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Web.Api.Help.Models.HelpModel"/> class.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Help.Models.HelpModel.Services">
+            <summary>
+            Gets or sets the services.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Help.Models.HelpModel.CurrentService">
+            <summary>
+            Gets or sets the current service.
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Web.Api.Help.Models.HelpPageApiModel">
+            <summary>
+            The model that represents an API displayed on the help page.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Help.Models.HelpPageApiModel.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Web.Api.Help.Models.HelpPageApiModel"/> class.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Help.Models.HelpPageApiModel.ApiDescription">
+            <summary>
+            Gets or sets the <see cref="P:Telerik.Sitefinity.Web.Api.Help.Models.HelpPageApiModel.ApiDescription"/> that describes the API.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Help.Models.HelpPageApiModel.UriParameters">
+            <summary>
+            Gets the <see cref="T:Telerik.Sitefinity.Web.Api.Help.ModelDescriptions.ParameterDescription"/> collection that describes the URI parameters for the API.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Help.Models.HelpPageApiModel.RequestDocumentation">
+            <summary>
+            Gets or sets the documentation for the request.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Help.Models.HelpPageApiModel.RequestModelDescription">
+            <summary>
+            Gets or sets the <see cref="T:Telerik.Sitefinity.Web.Api.Help.ModelDescriptions.ModelDescription"/> that describes the request body.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Help.Models.HelpPageApiModel.RequestBodyParameters">
+            <summary>
+            Gets the request body parameter descriptions.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Help.Models.HelpPageApiModel.ResourceDescription">
+            <summary>
+            Gets or sets the <see cref="T:Telerik.Sitefinity.Web.Api.Help.ModelDescriptions.ModelDescription"/> that describes the resource.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Help.Models.HelpPageApiModel.ResourceProperties">
+            <summary>
+            Gets the resource property descriptions.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Help.Models.HelpPageApiModel.SampleRequests">
+            <summary>
+            Gets the sample requests associated with the API.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Help.Models.HelpPageApiModel.SampleResponses">
+            <summary>
+            Gets the sample responses associated with the API.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Help.Models.HelpPageApiModel.ErrorMessages">
+            <summary>
+            Gets the error messages associated with this model.
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Web.Api.Help.Models.ServiceModel">
+            <summary>
+            The service model.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Help.Models.ServiceModel.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Web.Api.Help.Models.ServiceModel"/> class.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Help.Models.ServiceModel.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Help.Models.ServiceModel.BaseUrl">
+            <summary>
+            Gets or sets the url.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Help.Models.ServiceModel.HelpUrl">
+            <summary>
+            Gets or sets the url.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Help.Models.ServiceModel.Types">
+            <summary>
+            Gets or sets the types.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Help.Models.ServiceModel.CurrentType">
+            <summary>
+            Gets or sets the current selected type.
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Web.Api.Help.Models.TypeModel">
+            <summary>
+            The type model
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Help.Models.TypeModel.SingleName">
+            <summary>
+            Gets or sets the single name.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Help.Models.TypeModel.PluralName">
+            <summary>
+            Gets or sets the single name.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Help.Models.TypeModel.UrlKey">
+            <summary>
+            Gets or sets the URL key.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Help.Models.TypeModel.HelpUrl">
+            <summary>
+            Gets or sets the URL.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Help.Models.TypeModel.IsSelected">
+            <summary>
+            Gets or sets a value indicating whether the type is selected.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Help.Models.TypeModel.Actions">
+            <summary>
+            Gets or sets the actions. TODOAPI: 
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Web.Api.Help.HelpPageSampleGenerator">
+            <summary>
+            This class will generate the samples for the help page.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Help.HelpPageSampleGenerator.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Web.Api.Help.HelpPageSampleGenerator"/> class.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Help.HelpPageSampleGenerator.ActualHttpMessageTypes">
+            <summary>
+            Gets CLR types that are used as the content of <see cref="T:System.Net.Http.HttpRequestMessage"/> or <see cref="T:System.Net.Http.HttpResponseMessage"/>.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Help.HelpPageSampleGenerator.ActionSamples">
+            <summary>
+            Gets the objects that are used directly as samples for certain actions.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Help.HelpPageSampleGenerator.SampleObjects">
+            <summary>
+            Gets the objects that are serialized as samples by the supported formatters.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Help.HelpPageSampleGenerator.SampleObjectFactories">
+            <summary>
+            Gets factories for the objects that the supported formatters will serialize as samples. Processed in order,
+            stopping when the factory successfully returns a non-<see langref="null"/> object.
+            </summary>
+            <remarks>
+            Collection includes just <see cref="M:Telerik.Sitefinity.Web.Api.Help.ObjectGenerator.GenerateObject(System.Type)"/> initially. Use
+            <code>SampleObjectFactories.Insert(0, func)</code> to provide an override and
+            <code>SampleObjectFactories.Add(func)</code> to provide a fallback.</remarks>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Help.HelpPageSampleGenerator.GetSampleRequests(System.Web.Http.Description.ApiDescription)">
+            <summary>
+            Gets the request body samples for a given <see cref="T:System.Web.Http.Description.ApiDescription"/>.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <returns>The samples keyed by media type.</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Help.HelpPageSampleGenerator.GetSampleResponses(System.Web.Http.Description.ApiDescription)">
+            <summary>
+            Gets the response body samples for a given <see cref="T:System.Web.Http.Description.ApiDescription"/>.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <returns>The samples keyed by media type.</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Help.HelpPageSampleGenerator.GetSample(System.Web.Http.Description.ApiDescription,Telerik.Sitefinity.Web.Api.Help.SampleDirection)">
+            <summary>
+            Gets the request or response body samples.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <param name="sampleDirection">The value indicating whether the sample is for a request or for a response.</param>
+            <returns>The samples keyed by media type.</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Help.HelpPageSampleGenerator.GetActionSample(System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.Type,System.Net.Http.Formatting.MediaTypeFormatter,System.Net.Http.Headers.MediaTypeHeaderValue,Telerik.Sitefinity.Web.Api.Help.SampleDirection)">
+            <summary>
+            Search for samples that are provided directly through <see cref="P:Telerik.Sitefinity.Web.Api.Help.HelpPageSampleGenerator.ActionSamples"/>.
+            </summary>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+            <param name="type">The CLR type.</param>
+            <param name="formatter">The formatter.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="sampleDirection">The value indicating whether the sample is for a request or for a response.</param>
+            <returns>The sample that matches the parameters.</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Help.HelpPageSampleGenerator.GetSampleObject(System.Type)">
+            <summary>
+            Gets the sample object that will be serialized by the formatters. 
+            First, it will look at the <see cref="P:Telerik.Sitefinity.Web.Api.Help.HelpPageSampleGenerator.SampleObjects"/>. If no sample object is found, it will try to create
+            one using <see cref="M:Telerik.Sitefinity.Web.Api.Help.HelpPageSampleGenerator.DefaultSampleObjectFactory(Telerik.Sitefinity.Web.Api.Help.HelpPageSampleGenerator,System.Type)"/> (which wraps an <see cref="T:Telerik.Sitefinity.Web.Api.Help.ObjectGenerator"/>) and other
+            factories in <see cref="P:Telerik.Sitefinity.Web.Api.Help.HelpPageSampleGenerator.SampleObjectFactories"/>.
+            </summary>
+            <param name="type">The type.</param>
+            <returns>The sample object.</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Help.HelpPageSampleGenerator.ResolveHttpRequestMessageType(System.Web.Http.Description.ApiDescription)">
+            <summary>
+            Resolves the actual type of <see cref="T:System.Net.Http.ObjectContent`1"/> passed to the <see cref="T:System.Net.Http.HttpRequestMessage"/> in an action.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <returns>The type.</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Help.HelpPageSampleGenerator.ResolveType(System.Web.Http.Description.ApiDescription,System.String,System.String,System.Collections.Generic.IEnumerable{System.String},Telerik.Sitefinity.Web.Api.Help.SampleDirection,System.Collections.ObjectModel.Collection{System.Net.Http.Formatting.MediaTypeFormatter}@)">
+            <summary>
+            Resolves the type of the action parameter or return value when <see cref="T:System.Net.Http.HttpRequestMessage"/> or <see cref="T:System.Net.Http.HttpResponseMessage"/> is used.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+            <param name="sampleDirection">The value indicating whether the sample is for a request or a response.</param>
+            <param name="formatters">The formatters.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Help.HelpPageSampleGenerator.WriteSampleObjectUsingFormatter(System.Net.Http.Formatting.MediaTypeFormatter,System.Object,System.Type,System.Net.Http.Headers.MediaTypeHeaderValue)">
+            <summary>
+            Writes the sample object using formatter.
+            </summary>
+            <param name="formatter">The formatter.</param>
+            <param name="value">The value.</param>
+            <param name="type">The type.</param>
+            <param name="mediaType">Type of the media.</param>
+            <returns>the object</returns>
+        </member>
+        <member name="T:Telerik.Sitefinity.Web.Api.Help.HelpPageSampleKey">
+            <summary>
+            This is used to identify the place where the sample should be applied.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Help.HelpPageSampleKey.#ctor(System.Net.Http.Headers.MediaTypeHeaderValue)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Telerik.Sitefinity.Web.Api.Help.HelpPageSampleKey"/> class based on media type.
+            </summary>
+            <param name="mediaType">The media type.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Help.HelpPageSampleKey.#ctor(System.Net.Http.Headers.MediaTypeHeaderValue,System.Type)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Telerik.Sitefinity.Web.Api.Help.HelpPageSampleKey"/> based on media type and CLR type.
+            </summary>
+            <param name="mediaType">The media type.</param>
+            <param name="type">The CLR type.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Help.HelpPageSampleKey.#ctor(Telerik.Sitefinity.Web.Api.Help.SampleDirection,System.String,System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Initialize a new instance of the <see cref="T:Telerik.Sitefinity.Web.Api.Help.HelpPageSampleKey"/> based on <see cref="P:Telerik.Sitefinity.Web.Api.Help.HelpPageSampleKey.SampleDirection"/>, controller name, action name and parameter names.
+            </summary>
+            <param name="sampleDirection">The <see cref="P:Telerik.Sitefinity.Web.Api.Help.HelpPageSampleKey.SampleDirection"/>.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Help.HelpPageSampleKey.#ctor(System.Net.Http.Headers.MediaTypeHeaderValue,Telerik.Sitefinity.Web.Api.Help.SampleDirection,System.String,System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Initialize a new instance of the <see cref="T:Telerik.Sitefinity.Web.Api.Help.HelpPageSampleKey"/> based on media type, <see cref="P:Telerik.Sitefinity.Web.Api.Help.HelpPageSampleKey.SampleDirection"/>, controller name, action name and parameter names.
+            </summary>
+            <param name="mediaType">The media type.</param>
+            <param name="sampleDirection">The <see cref="P:Telerik.Sitefinity.Web.Api.Help.HelpPageSampleKey.SampleDirection"/>.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Help.HelpPageSampleKey.ControllerName">
+            <summary>
+            Gets the name of the controller.
+            </summary>
+            <value>
+            The name of the controller.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Help.HelpPageSampleKey.ActionName">
+            <summary>
+            Gets the name of the action.
+            </summary>
+            <value>
+            The name of the action.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Help.HelpPageSampleKey.MediaType">
+            <summary>
+            Gets the media type.
+            </summary>
+            <value>
+            The media type.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Help.HelpPageSampleKey.ParameterNames">
+            <summary>
+            Gets the parameter names.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Help.HelpPageSampleKey.SampleDirection">
+            <summary>
+            Gets the <see cref="P:Telerik.Sitefinity.Web.Api.Help.HelpPageSampleKey.SampleDirection"/>.
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Web.Api.Help.ImageSample">
+            <summary>
+            This represents an image sample on the help page. There's a display template named ImageSample associated with this class.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Help.ImageSample.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Web.Api.Help.ImageSample"/> class.
+            </summary>
+            <param name="src">The URL of an image.</param>
+        </member>
+        <member name="T:Telerik.Sitefinity.Web.Api.Help.InvalidSample">
+            <summary>
+            This represents an invalid sample on the help page. There's a display template named InvalidSample associated with this class.
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Web.Api.Help.ObjectGenerator">
+            <summary>
+            This class will create an object of a given type and populate it with sample data.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Help.ObjectGenerator.GenerateObject(System.Type)">
+            <summary>
+            Generates an object for a given type. The type needs to be public, have a public default constructor and settable public properties/fields. Currently it supports the following types:
+            Simple types: <see cref="T:System.Int32"/>, <see cref="T:System.String"/>, <see cref="T:System.Enum"/>, <see cref="T:System.DateTime"/>, <see cref="T:System.Uri"/>, etc.
+            Complex types: POCO types.
+            Nullables: <see cref="T:System.Nullable`1"/>.
+            Arrays: arrays of simple types or complex types.
+            Key value pairs: <see cref="T:System.Collections.Generic.KeyValuePair`2"/>
+            Tuples: <see cref="T:System.Tuple`1"/>, <see cref="T:System.Tuple`2"/>, etc
+            Dictionaries: <see cref="T:System.Collections.Generic.IDictionary`2"/> or anything deriving from <see cref="T:System.Collections.Generic.IDictionary`2"/>.
+            Collections: <see cref="T:System.Collections.Generic.IList`1"/>, <see cref="T:System.Collections.Generic.IEnumerable`1"/>, <see cref="T:System.Collections.Generic.ICollection`1"/>, <see cref="T:System.Collections.IList"/>, <see cref="T:System.Collections.IEnumerable"/>, <see cref="T:System.Collections.ICollection"/> or anything deriving from <see cref="T:System.Collections.Generic.ICollection`1"/> or <see cref="T:System.Collections.IList"/>.
+            Queryables: <see cref="T:System.Linq.IQueryable"/>, <see cref="T:System.Linq.IQueryable`1"/>.
+            </summary>
+            <param name="type">The type.</param>
+            <returns>An object of the given type.</returns>
+        </member>
+        <member name="T:Telerik.Sitefinity.Web.Api.Help.SampleDirection">
+            <summary>
+            Indicates whether the sample is used for request or response
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Web.Api.Help.TextSample">
+            <summary>
+            This represents a preformatted text sample on the help page. There's a display template named TextSample associated with this class.
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Web.Api.OData.Controllers.CustomMetadataController">
+            <summary>
+            TODOAPI: better doc
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.OData.Controllers.CustomMetadataController.SfLocatableTypes">
+            <summary>
+            Returns all entity sets that can be viewed by generated standard url.
+            </summary>
+            <returns>Entity set names</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.OData.Controllers.CustomMetadataController.SfMeta">
+            <summary>
+            TODOAPI: better doc
+            </summary>
+            <returns>The metadata.</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.OData.Controllers.CustomMetadataController.UserPreferences(Microsoft.AspNet.OData.ODataUntypedActionParameters)">
+            <summary>
+            Sets a user preference for a unique key.
+            </summary>
+            <param name="parameters">The action parameters.</param>
+            <returns>
+            The result of the operation.
+            </returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.OData.Controllers.CustomMetadataController.CurrentSite">
+            <summary>
+            Gets current site information
+            </summary>
+            <returns>Site info</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.OData.Controllers.CustomMetadataController.SfUI">
+            <summary>
+            TODOAPI: better doc
+            </summary>
+            <returns>The metadata.</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.OData.Controllers.CustomMetadataController.Item(System.String)">
+            <summary>
+            Parses the specified dynamic link and returns the item that corresponds to it.
+            </summary>
+            <param name="dynamicLink">The dynamic link.</param>
+            <returns>
+            The item.
+            </returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.OData.Controllers.CustomMetadataController.SfHelp">
+            <summary>
+            TODOAPI: Better documentation.
+            </summary>
+            <returns> To document</returns>
+        </member>
+        <member name="T:Telerik.Sitefinity.Web.Api.OData.Controllers.DynamicDataController">
+            <summary>
+            TODOAPI: better doc
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.OData.Controllers.DynamicDataController.Get">
+            <summary>
+            Returns a set of data items.
+            </summary>
+            <returns>Found items.</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.OData.Controllers.DynamicDataController.Get(System.Guid)">
+            <summary>
+            Gets data item by id.
+            </summary>
+            <param name="key">Id of the item.</param>
+            <returns>Found item.</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.OData.Controllers.DynamicDataController.Property(System.Guid,System.String)">
+            <summary>
+            Gets data item property.
+            </summary>
+            <param name="key">Id of the item.</param>
+            <param name="property">Property of the item.</param>
+            <returns>Found property value.</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.OData.Controllers.DynamicDataController.Patch(System.Guid,Microsoft.AspNet.OData.IEdmStructuredObject)">
+            <summary>
+            Updates a data item.
+            </summary>
+            <param name="key">Id of the item to be updated.</param>
+            <param name="entity">Holds fields that have to be updated.</param>
+            <returns>No content.</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.OData.Controllers.DynamicDataController.Put(System.Guid,Microsoft.AspNet.OData.IEdmStructuredObject)">
+            <summary>
+            TODOAPI: better doc
+            </summary>
+            <param name="key">Id of the item to be updated.</param>
+            <param name="entity">Holds fields that have to be updated.</param>
+            <returns>No content.</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.OData.Controllers.DynamicDataController.Post(Microsoft.AspNet.OData.IEdmEntityObject)">
+            <summary>
+            Creates a data item.
+            </summary>
+            <param name="entity">Entity that holds property values for the new item.</param>
+            <returns>If no error, then newly created item will be returned.</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.OData.Controllers.DynamicDataController.Delete(System.Guid)">
+            <summary>
+            TODOAPI: better doc
+            </summary>
+            <param name="key">Id of the item to be updated.</param>
+            <returns>No content.</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.OData.Controllers.DynamicDataController.SfThumbnails(System.String)">
+            <summary>
+            TODOAPI: better doc
+            </summary>
+            <param name="imageUrl">The image url.</param>
+            <returns>The providers.</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.OData.Controllers.DynamicDataController.PostComment(System.Guid,Microsoft.AspNet.OData.ODataActionParameters)">
+            <summary>
+            Creates a comment
+            </summary>
+            <param name="key">The id of the item to commented.</param>
+            <param name="parameters">Posting comment action parameters. Must contain 1 string: message. Can contain 1 decimal? : rating</param>
+            <returns>The created comment</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.OData.Controllers.DynamicDataController.ReorderItems(Microsoft.AspNet.OData.ODataActionParameters)">
+            <summary>
+            Reorders items
+            </summary>
+            <param name="parameters">The order of the items</param>
+            <returns>The result</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.OData.Controllers.DynamicDataController.Operation(Microsoft.AspNet.OData.ODataUntypedActionParameters)">
+            <summary>
+            Invokes an action
+            </summary>
+            <param name="parameters">Operation parameters</param>
+            <returns>Returns the result of the operation</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.OData.Controllers.DynamicDataController.Operations">
+            <summary>
+            Gets the operations for this item type.
+            </summary>
+            <returns>returns the operations</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.OData.Controllers.DynamicDataController.Operation(System.String,Microsoft.AspNet.OData.ODataUntypedActionParameters)">
+            <summary>
+            Invokes an action
+            </summary>
+            <param name="key">The id of the item to be invoked an action for.</param>
+            <param name="parameters">Operation parameters</param>
+            <returns>Returns OK</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.OData.Controllers.DynamicDataController.Restore(System.String)">
+            <summary>
+            Invokes Restore action on item
+            </summary>
+            <param name="key">The id of the item to be restored.</param>
+            <returns>Returns OK</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.OData.Controllers.DynamicDataController.Operations(System.String)">
+            <summary>
+            Gets the operations for this item
+            </summary>
+            <param name="key">The identifier of the item</param>
+            <returns>returns the operations</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.OData.Controllers.DynamicDataController.AppliedTo(System.String)">
+            <summary>
+            Returns the number of items a taxon is applied to.
+            </summary>
+            <param name="key">The identifier of the item</param>
+            <returns>Returns the AppliedTo number.</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.OData.Controllers.DynamicDataController.ItemMeta(System.String,System.String)">
+            <summary>
+            Gets the field metadata
+            </summary>
+            <param name="key">The identifier of the item.</param>
+            <param name="state">The state of the item.</param>
+            <returns>The metadata of the fields for this item.</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.OData.Controllers.DynamicDataController.SaveTemp(System.String,Microsoft.AspNet.OData.ODataUntypedActionParameters)">
+            <summary>
+            Updates a data item.
+            </summary>
+            <param name="key">Id of the item to be updated.</param>
+            <param name="parameters">Holds fields that have to be updated.</param>
+            <returns>No content.</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.OData.Controllers.DynamicDataController.DynamicLink(System.String,System.String)">
+            <summary>
+            Gets the dynamic link for the item which corresponds to the provided key.
+            </summary>
+            <param name="key">The item key.</param>
+            <param name="culture">The culture of the dynamic link.</param>
+            <returns>The dynamic link.</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.OData.Controllers.DynamicDataController.ExecuteExternalMethod(Microsoft.AspNet.OData.ODataActionParameters)">
+            <summary>
+            A generic method that handles and reroutes the calls for all of the bound and unbound methods.
+            </summary>
+            <param name="odataParams">Parameters from POST requests</param>
+            <returns>The action/function result.</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.OData.Controllers.DynamicDataController.RemoveEmptyValuesFromQueryString">
+            <summary>
+            Removes empty parameters from the query string (if any), because they are breaking the QueryApplierBase
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.OData.Controllers.DynamicDataController.GetRelated(System.Guid,System.String)">
+            <summary>
+            GetRelated entities
+            </summary>
+            <param name="key">The key of parent type</param>
+            <param name="navigationProperty">The related path name</param>
+            <returns>returns a http response</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.OData.Controllers.DynamicDataController.GetRelated(System.Guid,System.String,System.Guid)">
+            <summary>
+            GetRelated entities
+            </summary>
+            <param name="key">The key of parent type</param>
+            <param name="navigationProperty">The related path name</param>
+            <param name="relatedKey">The related Item Key</param>
+            <returns>returns a http response</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.OData.Controllers.DynamicDataController.CreateRef(System.Guid,System.String,System.Uri)">
+            <summary>
+            TODOAPI: better doc
+            </summary>
+            <param name="key">The id of the item to be updated.</param>
+            <param name="navigationProperty">The navigation property to be updated.</param>
+            <param name="link">The link to the reference type.</param>
+            <returns>No content.</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.OData.Controllers.DynamicDataController.DeleteRef(System.Guid,System.String)">
+            <summary>
+            TODOAPI: better doc
+            </summary>
+            <param name="key">The id of the item to be updated.</param>
+            <param name="navigationProperty">The navigation property to be updated.</param>
+            <returns>No content.</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.OData.Controllers.DynamicDataController.DeleteRef(System.Guid,System.String,System.Guid)">
+            <summary>
+            TODOAPI: better doc
+            </summary>
+            <param name="key">The id of the item to be updated.</param>
+            <param name="navigationProperty">The navigation property to be updated.</param>
+            <param name="relatedKey">The relatedKey to be removed.</param>
+            <returns>No content.</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.OData.Controllers.DynamicDataController.GetRef(System.Guid,System.String)">
+            <summary>
+            TODOAPI: better doc
+            </summary>
+            <param name="key">The id pf the item to be updated.</param>
+            <param name="navigationProperty">The navigation property to be updated.</param>
+            <returns>No content.</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.OData.Controllers.DynamicDataController.LinkItems(System.Guid)">
+            <summary>
+            Gets the items that link to a specific data item.
+            </summary>
+            <param name="key">The id of the data item.</param>
+            <returns>Items linking to the data item.</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.OData.Controllers.DynamicDataController.LinkItemsCount(System.Guid)">
+            <summary>
+            Gets the count of items that link to a specific data item.
+            </summary>
+            <param name="key">The id of the data item.</param>
+            <returns>Count of items linking to the data item.</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.OData.Controllers.DynamicDataController.DisplayPages(System.Guid)">
+            <summary>
+            Gets pages where a specific data item is displayed.
+            </summary>
+            <param name="key">The id of the data item.</param>
+            <returns>Pages where the data item is displayed.</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.OData.Controllers.DynamicDataController.DisplayPagesCount(System.Guid)">
+            <summary>
+            Gets the count of locations where a specific data item is displayed.
+            </summary>
+            <param name="key">The id of the data item.</param>
+            <returns>Count of the locations where the data item is displayed.</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.OData.Controllers.DynamicDataController.MediaItemsRecursiveSearch(System.Guid)">
+            <summary>
+            Gets all media items recursively.
+            </summary>
+            <param name="parentId">The id of the parent item.</param>
+            <returns>The found media items.</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.OData.Controllers.DynamicDataController.Folders">
+            <summary>
+            Gets all folders and libraries.
+            </summary>
+            <returns>The found folders and libraries.</returns>
+        </member>
+        <member name="T:Telerik.Sitefinity.Web.Api.OData.Controllers.MediaEntityStreamController">
+            <summary>
+            Handles requests to create/update the stream of IBlobContent items.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.OData.Controllers.MediaEntityStreamController.Post">
+            <summary>
+            Creates an IBlobContent item and fill its stream.
+            </summary>
+            <returns>HTTP response with metadata of the created item.</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.OData.Controllers.MediaEntityStreamController.Patch(System.Guid)">
+            <summary>
+            Updates data item's stream value.
+            </summary>
+            <param name="key">Id of the item.</param>
+            <returns>HTTP response.</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.OData.Controllers.MediaEntityStreamController.GetValue(System.Guid)">
+            <summary>
+            Retrieves data item's stream value.
+            </summary>
+            <param name="key">Id of the item.</param>
+            <returns>HTTP response containing data stream and content type.</returns>
+        </member>
+        <member name="T:Telerik.Sitefinity.Web.Api.OData.Controllers.SitefinityODataController">
+            <summary>
+            Base class with helper methods for Sitefinity OData controllers.
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Web.Api.OData.Model.IAppendOnlyCollection`1">
+            <summary>
+            Used as a parameter to Transform method, instead of <see cref="T:System.Collections.Generic.ICollection`1"/>,
+            because unlike ICollection{T}, this can be casted to IAppendOnlyCollection{TDerived} where TDerived : T
+            </summary>
+            <typeparam name="T">Type of the collection.</typeparam>
+        </member>
+        <member name="T:Telerik.Sitefinity.Web.Api.OData.Model.ItemContentLocations.DisplayPage">
+            <summary>
+            Represents a class that describes the pages displaying an item
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Web.Api.OData.Model.ItemContentLocations.LinkItem">
+            <summary>
+            Represents a class that describes the items relating another item
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Web.Api.OData.Model.PropertyStrategies.CultureKey.CultureKeyCollectionStrategy">
+            <summary>
+            Property strategy that handles culture key collection property.
+            </summary>
+            <seealso cref="T:Telerik.Sitefinity.Web.Api.OData.Model.PropertyStrategies.CultureKey.CultureKeyStrategyBase" />
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.OData.Model.PropertyStrategies.CultureKey.CultureKeyCollectionStrategy.#ctor(System.ComponentModel.PropertyDescriptor,System.Type)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Web.Api.OData.Model.PropertyStrategies.CultureKey.CultureKeyCollectionStrategy"/> class.
+            </summary>
+            <param name="desc">The property descriptor.</param>
+            <param name="clrType">The item type.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.OData.Model.PropertyStrategies.CultureKey.CultureKeyCollectionStrategy.GetValue(System.Object)">
+            <summary>
+            Gets the property value.
+            </summary>
+            <param name="item">The item.</param>
+            <returns>
+            The property value.
+            </returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.OData.Model.PropertyStrategies.CultureKey.CultureKeyCollectionStrategy.SetValue(System.Object,System.Object,Telerik.Sitefinity.Data.IManager)">
+            <summary>
+            Sets the property value.
+            </summary>
+            <param name="value">The value.</param>
+            <param name="item">The item.</param>
+            <param name="manager">The manager.</param>
+            <returns>
+            Whether the property was set successfully.
+            </returns>
+        </member>
+        <member name="T:Telerik.Sitefinity.Web.Api.OData.Model.PropertyStrategies.CultureKey.CultureKeyStrategy">
+            <summary>
+            Property strategy that handles culture key property.
+            </summary>
+            <seealso cref="T:Telerik.Sitefinity.Web.Api.OData.Model.PropertyStrategies.CultureKey.CultureKeyStrategyBase" />
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.OData.Model.PropertyStrategies.CultureKey.CultureKeyStrategy.#ctor(System.ComponentModel.PropertyDescriptor,System.Type)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Web.Api.OData.Model.PropertyStrategies.CultureKey.CultureKeyStrategy"/> class.
+            </summary>
+            <param name="desc">The property descriptor.</param>
+            <param name="clrType">The item type.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.OData.Model.PropertyStrategies.CultureKey.CultureKeyStrategy.GetValue(System.Object)">
+            <summary>
+            Gets the property value.
+            </summary>
+            <param name="item">The item.</param>
+            <returns>
+            The property value.
+            </returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.OData.Model.PropertyStrategies.CultureKey.CultureKeyStrategy.SetValue(System.Object,System.Object,Telerik.Sitefinity.Data.IManager)">
+            <summary>
+            Sets the property value.
+            </summary>
+            <param name="value">The value.</param>
+            <param name="item">The item.</param>
+            <param name="manager">The manager.</param>
+            <returns>
+            Whether the property was set successfully.
+            </returns>
+        </member>
+        <member name="T:Telerik.Sitefinity.Web.Api.OData.Model.PropertyStrategies.CultureKey.CultureKeyStrategyBase">
+            <summary>
+            Property strategy base class for handling culture key property.
+            </summary>
+            <seealso cref="T:Telerik.Sitefinity.Web.Api.OData.Model.PropertyStrategies.PropertyStrategyBase" />
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.OData.Model.PropertyStrategies.CultureKey.CultureKeyStrategyBase.#ctor(System.ComponentModel.PropertyDescriptor,System.Type)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Web.Api.OData.Model.PropertyStrategies.CultureKey.CultureKeyStrategyBase"/> class.
+            </summary>
+            <param name="desc">The property descriptor.</param>
+            <param name="clrType">The item type.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.OData.Model.PropertyStrategies.CultureKey.CultureKeyStrategyBase.GetCultureName(System.String)">
+            <summary>
+            Gets the culture name from the provided culture key.
+            </summary>
+            <param name="cultureKey">The culture key.</param>
+            <returns>
+            The culture name.
+            </returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.OData.Model.PropertyStrategies.CultureKey.CultureKeyStrategyBase.GetCultureKey(System.String)">
+            <summary>
+            Gets the culture key that corresponds to the provided name.
+            </summary>
+            <param name="cultureName">The culture name.</param>
+            <returns>
+            The culture key.
+            </returns>
+        </member>
+        <member name="T:Telerik.Sitefinity.Web.Api.OData.Model.PropertyStrategies.OldChoicesStrategy">
+            <summary>This class is responsible for handling the values of the old choice field (before version 5.3)</summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Web.Api.OData.Model.PropertyStrategies.PropertyStrategyExtensions">
+            <summary>
+            Provides common extension methods for PropertyStrategies
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.OData.Model.PropertyStrategies.PropertyStrategyExtensions.ResolveDynamicLink(Telerik.Sitefinity.Web.Api.OData.Model.PropertyStrategies.PropertyStrategyBase,System.Object)">
+            <summary>
+            Parses persistent property values using LinkParser.
+            </summary>
+            <param name="propertyStrategy">The property strategy.</param>
+            <param name="persistentPropValue">The persistent property value.</param>
+            <returns>The parsed property value.</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.OData.Model.TooltipHelpers.GetIncludeInSiteSearchTooltip">
+            <summary>
+            Gets the include in site search tooltip.
+            </summary>
+            <returns>An IDictionary.</returns>
+        </member>
+        <member name="T:Telerik.Sitefinity.Web.Api.OData.Operations.Configugrations.ConfigDto">
+            <summary>
+            An object containing information about the configuration
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Configugrations.ConfigDto.ConfigKey">
+            <summary>
+            Gets or sets the config key which is the full name of the configuration class e.g. Telerik.Sitefinity.AdminAppConfig.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Configugrations.ConfigDto.Properties">
+            <summary>
+            Gets or sets the config properties list.
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Web.Api.OData.Operations.Configurations.ConfigMetadataModel">
+            <summary>
+            The config metadata model.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Configurations.ConfigMetadataModel.Sections">
+            <summary>
+            Gets or sets the sections with their properties for the config.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Configurations.ConfigMetadataModel.CanPersistSiteSpecificValues">
+            <summary>
+            Gets or sets a value indicating whether the config can persist site specific values.
+            </summary>
+            <value>
+              <c>true</c> if the config can persist site specific values; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Configurations.ConfigMetadataModel.Description">
+            <summary>
+            Gets or sets a value to display config description message.
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Web.Api.OData.Operations.Configurations.SetConfigResponseModel">
+            <summary>
+            The set config endpoint response model.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Configurations.SetConfigResponseModel.Success">
+            <summary>
+            Gets or sets a value indicating whether the set config was a success.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Configurations.SetConfigResponseModel.Message">
+            <summary>
+            Gets or sets the message property.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Configurations.SetConfigResponseModel.PropertyName">
+            <summary>
+            Gets or sets the name of the property.
+            </summary>
+            <value>
+            The name of the property.
+            </value>
+        </member>
+        <member name="T:Telerik.Sitefinity.Web.Api.OData.Operations.GetRecentItemsOperationProvider">
+            <summary>
+            A class used to get the top 5 recent content items with the ability to filter out items by excludedItemIds parameter
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.OData.Operations.GetRecentItemsOperationProvider.GetOperations(System.Type)">
+            <summary>
+            Gets information about the OData endpoint names for this operation provider
+            </summary>
+            <param name="clrType">The type of the content item</param>
+            <returns>A collection of <see cref="T:Telerik.Sitefinity.Web.Services.Contracts.Operations.OperationData"/></returns>
+        </member>
+        <member name="T:Telerik.Sitefinity.Web.Api.OData.Operations.Media.Models.ChunkUploadInfo">
+            <summary>
+            A DTO for the data needed to initiate a chunked upload.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Media.Models.ChunkUploadInfo.ProviderSupportsChunkUpload">
+            <summary>
+            Gets or sets a value indicating whether the current blob provider supports chunk upload.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Media.Models.ChunkUploadInfo.BlobStorageProviderName">
+            <summary>
+            Gets or sets the blob storage provider's name.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Media.Models.ChunkUploadInfo.ChunkedFileUploadSessionId">
+            <summary>
+            Gets or sets the unique session Id used to upload a single file in chunks.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Media.Models.ChunkUploadInfo.ChunkSize">
+            <summary>
+            Gets or sets the size of a single chunk.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Media.Models.ChunkUploadInfo.MaxRetryCountForChunk">
+            <summary>
+            Gets or sets the maximum times a single chunk should be retried before failing the whole upload.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Media.Models.ChunkUploadInfo.MaxSimultaneousChunkUploadRequestsPerSession">
+            <summary>
+            Gets or sets the maximum concurrent requests can be sent to the server at once.
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Web.Api.OData.Operations.Media.Models.ICommitChunksDto">
+            <summary>
+            A DTO containing the necessary data to commit the chunks of the current upload session
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Media.Models.ICommitChunksDto.ChunkedFileUploadSessionId">
+            <summary>
+            Gets or sets the session id for the current upload session
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Media.Models.ICommitChunksDto.BlobStorageProviderName">
+            <summary>
+            Gets or sets the blob storage provider's name.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Media.Models.ICommitChunksDto.ContentType">
+            <summary>
+            Gets or sets the ContentType
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Media.Models.ICommitChunksDto.FileName">
+            <summary>
+            Gets or sets the FileName
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Media.Models.ICommitChunksDto.FileTotalSize">
+            <summary>
+            Gets or sets the FileTotalSize
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Media.Models.ICommitChunksDto.NumberOfChunks">
+            <summary>
+            Gets or sets the NumberOfChunks
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Media.Models.ICommitChunksDto.ItemId">
+            <summary>
+            Gets or sets the current media item id
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Media.Models.ICommitChunksDto.Properties">
+            <summary>
+            Gets or sets the UploadProperties
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Web.Api.OData.Operations.Media.Models.CommitChunksDto">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.OData.Operations.Media.Models.CommitChunksDto.#ctor">
+            <summary>
+             Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Web.Api.OData.Operations.Media.Models.CommitChunksDto" /> class.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Media.Models.CommitChunksDto.ChunkedFileUploadSessionId">
+            <inheritdoc />
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Media.Models.CommitChunksDto.BlobStorageProviderName">
+            <inheritdoc />
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Media.Models.CommitChunksDto.ContentType">
+            <inheritdoc />
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Media.Models.CommitChunksDto.FileTotalSize">
+            <inheritdoc />
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Media.Models.CommitChunksDto.NumberOfChunks">
+            <inheritdoc />
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Media.Models.CommitChunksDto.FileName">
+            <inheritdoc />
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Media.Models.CommitChunksDto.ItemId">
+            <inheritdoc />
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Media.Models.CommitChunksDto.Properties">
+            <inheritdoc />
+        </member>
+        <member name="T:Telerik.Sitefinity.Web.Api.OData.Operations.Media.Models.IDamAsset">
+            <summary>
+            A interface to represent data for a DAM asset
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Media.Models.IDamAsset.DamProvider">
+            <summary>
+            Gets or sets the dam provider property
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Media.Models.IDamAsset.Title">
+            <summary>
+            Gets or sets the title property
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Media.Models.IDamAsset.MimeType">
+            <summary>
+            Gets or sets the media type property
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Media.Models.IDamAsset.Extension">
+            <summary>
+            Gets or sets the extension property
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Media.Models.IDamAsset.Width">
+            <summary>
+            Gets or sets the width property
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Media.Models.IDamAsset.Height">
+            <summary>
+            Gets or sets the height property
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Media.Models.IDamAsset.Size">
+            <summary>
+            Gets or sets the size property in KB
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Media.Models.IDamAsset.Url">
+            <summary>
+            Gets or sets the url property
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Media.Models.IDamAsset.AdditionalProperties">
+            <summary>
+            Gets or sets additional properties of the dam asset
+            Any property which doesn't exist will be omitted
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Web.Api.OData.Operations.Media.Models.DamAsset">
+            <summary>
+            A class to represent data for a DAM asset
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Media.Models.DamAsset.DamProvider">
+            <inheritdoc />
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Media.Models.DamAsset.Title">
+            <inheritdoc />
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Media.Models.DamAsset.MimeType">
+            <inheritdoc />
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Media.Models.DamAsset.Extension">
+            <inheritdoc />
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Media.Models.DamAsset.Width">
+            <inheritdoc />
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Media.Models.DamAsset.Height">
+            <inheritdoc />
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Media.Models.DamAsset.Size">
+            <inheritdoc />
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Media.Models.DamAsset.Url">
+            <inheritdoc />
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Media.Models.DamAsset.AdditionalProperties">
+            <inheritdoc />
+        </member>
+        <member name="T:Telerik.Sitefinity.Web.Api.OData.Operations.Media.Models.DamProviderSettingsDto">
+            <summary>
+            DTO for dam provider
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Media.Models.DamProviderSettingsDto.ProviderTypeName">
+            <summary>
+            Gets or sets the name
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Media.Models.DamProviderSettingsDto.Properties">
+            <summary>
+            Gets or sets the properties
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Web.Api.OData.Operations.Media.Models.ThumbnailModel">
+            <summary>
+            A class to represent data for an image thumbnail
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Media.Models.ThumbnailModel.Title">
+            <summary>
+            Gets or sets the title property
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Media.Models.ThumbnailModel.Url">
+            <summary>
+            Gets or sets the url property
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Media.Models.ThumbnailModel.Size">
+            <summary>
+            Gets or sets the size property
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Web.Api.OData.Operations.Media.Models.UploadProperties">
+            <summary>
+            A container class for holding dynamic properties
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.OData.Operations.Media.Models.UploadProperties.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Web.Api.OData.Operations.Media.Models.UploadProperties"/> class.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.OData.Operations.Media.Models.UploadProperties.#ctor(System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Web.Api.OData.Operations.Media.Models.UploadProperties"/> class.
+            </summary>
+            <param name="properties">The properties.</param>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Media.Models.UploadProperties.Properties">
+            <summary>
+            Gets or the upload properties.
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Web.Api.OData.Operations.Models.PublishingPointDto">
+            <summary>
+            Represents the search index model.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Models.PublishingPointDto.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Models.PublishingPointDto.Value">
+            <summary>
+            Gets or sets the value.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Models.PublishingPointDto.Id">
+            <summary>
+            Gets or sets the index id.
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Web.Api.OData.Operations.Models.ReorderAction">
+            <summary>
+            Represents a class that describes a reorder action
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Models.ReorderAction.Id">
+            <summary>
+            Gets or sets the reordered page id.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Models.ReorderAction.Position">
+            <summary>
+            Gets or sets the position of the reorder action.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Models.ReorderAction.TargetId">
+            <summary>
+            Gets or sets the target page id.
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Web.Api.OData.Operations.Models.ReorderPosition">
+            <summary>
+            Reorder action positions
+            </summary>
+        </member>
+        <member name="F:Telerik.Sitefinity.Web.Api.OData.Operations.Models.ReorderPosition.Before">
+            <summary>
+            Reordered page is placed before the target
+            </summary>
+        </member>
+        <member name="F:Telerik.Sitefinity.Web.Api.OData.Operations.Models.ReorderPosition.After">
+            <summary>
+            Reordered page is placed after the target
+            </summary>
+        </member>
+        <member name="F:Telerik.Sitefinity.Web.Api.OData.Operations.Models.ReorderPosition.Under">
+            <summary>
+            Reordered page is placed under the target
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Web.Api.OData.Operations.Models.ScoringProfile">
+            <summary>
+            Represents the search index scoring profile model.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Models.ScoringProfile.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Models.ScoringProfile.Value">
+            <summary>
+            Gets or sets the value.
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Web.Api.OData.Operations.Models.SharedInLocation">
+            <summary>
+            Model that contains data about shared content location. Location is either page or template
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Models.SharedInLocation.Title">
+            <summary>
+            Gets or sets the title of the location.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Models.SharedInLocation.Breadcrumb">
+            <summary>
+            Gets or sets the breadcrumb of the location.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Models.SharedInLocation.DisplayStatus">
+            <summary>
+            Gets or sets the status of the location.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Models.SharedInLocation.Url">
+            <summary>
+            Gets or sets the url of the location.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Models.SharedInLocation.IsPage">
+            <summary>
+            Gets or sets a value indicating whether the location is a page.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Models.SharedInLocation.SiteId">
+            <summary>
+            Gets or sets the item's site id.
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Web.Api.OData.Operations.Pages.FrontendPageNodeExtended">
+            <summary>
+            Used by OData
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.OData.Operations.Pages.FrontendPageNodeExtended.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Web.Api.OData.Operations.Pages.FrontendPageNodeExtended"/> class.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.OData.Operations.Pages.FrontendPageNodeExtended.#ctor(System.Web.SiteMapNode,System.String,System.String,System.Boolean,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Web.Api.OData.Operations.Pages.FrontendPageNodeExtended"/> class.
+            </summary>
+            <param name="node">
+            The original SiteMapNode.
+            </param>
+            <param name="url">
+            The URL.
+            </param>
+            <param name="target">
+            The target.
+            </param>
+            <param name="isCurrentlyOpened">
+            if set to <c>true</c> is currently opened.
+            </param>
+            <param name="hasChildOpen">
+            if set to <c>true</c> currently opened page is descendent of this node.
+            </param>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Pages.FrontendPageNodeExtended.PageSiteMapNode">
+            <summary>
+            Gets or sets the original site map node.
+            </summary>
+            <value>
+            The original site map node.
+            </value>
+        </member>
+        <member name="T:Telerik.Sitefinity.Web.Api.OData.Operations.Pages.FrontendSitemapPage">
+            <summary>
+            The sitemap page DTO
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Pages.FrontendSitemapPage.Id">
+            <summary>
+            Gets or sets the ID.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Pages.FrontendSitemapPage.ParentId">
+            <summary>
+            Gets or sets the parent ID.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Pages.FrontendSitemapPage.Title">
+            <summary>
+            Gets or sets the title.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Pages.FrontendSitemapPage.HasChildren">
+            <summary>
+            Gets or sets a value indicating whether there are children.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Pages.FrontendSitemapPage.AvailableLanguages">
+            <summary>
+            Gets or sets the available languages.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Pages.FrontendSitemapPage.Breadcrumb">
+            <summary>
+            Gets or sets the breadcrumb.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Pages.FrontendSitemapPage.IsHomePage">
+            <summary>
+            Gets or sets a value indicating whether the page is a home page.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Pages.FrontendSitemapPage.Children">
+            <summary>
+            Gets or sets the children.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Pages.FrontendSitemapPage.ViewUrl">
+            <summary>
+            Gets or sets the view URL.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Pages.FrontendSitemapPage.PageType">
+            <summary>
+            Gets or sets the page type.
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Web.Api.OData.Operations.Pages.NavigationModelExtended">
+            <summary>
+                This class represents model used for Navigation widget.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.OData.Operations.Pages.NavigationModelExtended.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Web.Api.OData.Operations.Pages.NavigationModelExtended" /> class.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.OData.Operations.Pages.NavigationModelExtended.#ctor(Telerik.Sitefinity.Web.NavigationSettings)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Web.Api.OData.Operations.Pages.NavigationModelExtended" /> class.
+            </summary>
+            <param name="settings">The settings.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.OData.Operations.Pages.NavigationModelExtended.InstantiateNodeViewModel(System.Web.SiteMapNode)">
+            <summary>subs
+            Instantiates a node view model.
+            </summary>
+            <param name="node">The node.</param>
+            <returns>An instance of a node view model.</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.OData.Operations.Pages.NavigationModelExtended.InstantiateNodeViewModel(System.String,System.String)">
+            <summary>
+            Instantiates a node view model.
+            </summary>
+            <param name="url">The URL.</param>
+            <param name="target">The target.</param>
+            <returns>An instance of a node view model.</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.OData.Operations.Pages.PageTemplatesOperationProvider.HasItemsThatPreventSave(Telerik.Sitefinity.Pages.Model.PageTemplate,System.Collections.Generic.IEnumerable{System.String},System.Int32@,System.Int32@,System.String@)">
+            <summary>
+            Check if the template can be unshared. The template can't be unshared if it's used in pages or used as parent of other page template.
+            </summary>
+            <param name="template">The template</param>
+            <param name="unsharedSitesIds">The ids of the sites from were we want to un-share the template.</param>
+            <param name="pagesCount">The count of pages that are using this template for the provided sites.</param>
+            <param name="childrenTemplatesCount">The count of the children templates that are based on this template for the provided sites.</param>
+            <param name="siteNames">The site names where the template is used.</param>
+            <returns>'True' if the template is not used. 'False' if the template is used.</returns>
+        </member>
+        <member name="T:Telerik.Sitefinity.Web.Api.OData.Operations.Preferences.Models.PreferenceParameters">
+            <summary>
+            PreferenceParameters class
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Preferences.Models.PreferenceParameters.Key">
+            <summary>
+             Gets or sets the Key.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Preferences.Models.PreferenceParameters.Value">
+            <summary>
+             Gets or sets a value indicating whether the value is true or false.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Preferences.Models.PreferenceParameters.PreferenceType">
+            <summary>
+             Gets or sets the PreferenceType.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Preferences.Models.PreferenceParameters.PreferenceName">
+            <summary>
+             Gets or sets the PreferenceName.
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Web.Api.OData.Operations.Preferences.Models.UserPreferenceField">
+            <summary>
+            UserPreferenceField class
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Preferences.Models.UserPreferenceField.Title">
+            <summary>
+             Gets or sets the Title.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Preferences.Models.UserPreferenceField.Key">
+            <summary>
+             Gets or sets the Key.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Preferences.Models.UserPreferenceField.PreferenceName">
+            <summary>
+             Gets or sets the PreferenceName.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Preferences.Models.UserPreferenceField.Value">
+            <summary>
+             Gets or sets a value indicating whether the value is true or false.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Preferences.Models.UserPreferenceField.PreferenceTitle">
+            <summary>
+            Gets or sets the preference title.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Preferences.Models.UserPreferenceField.Configurable">
+            <summary>
+            Gets or sets a value indicating whether the preference is configurable.
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Web.Api.OData.Operations.Preferences.Models.UserPreferenceSection">
+            <summary>
+            UserPreferenceSection class
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Preferences.Models.UserPreferenceSection.Title">
+            <summary>
+             Gets or sets the Title.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Preferences.Models.UserPreferenceSection.Name">
+            <summary>
+            Gets or sets the Name.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Preferences.Models.UserPreferenceSection.Fields">
+            <summary>
+            Gets or sets the Fields.
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Web.Api.OData.Operations.Search.FacetsViewModel">
+            <summary>
+            View model for displaying a facet
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Search.FacetsViewModel.FacetableFieldLabels">
+            <summary>
+            Gets or sets the facet field title
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Search.FacetsViewModel.FacetableFieldNames">
+            <summary>
+            Gets or sets the facet field name
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Search.FacetsViewModel.FacetableFieldType">
+            <summary>
+            Gets or sets the facet field type
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Web.Api.OData.Operations.Search.SearchMetadata">
+            <summary>
+            A model for search metadata
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Search.SearchMetadata.IsSearchModuleActivated">
+            <summary>
+            Gets or sets a value indicating whether the search module is activated.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Search.SearchMetadata.SearchServiceSupportsFacets">
+            <summary>
+            Gets or sets a value indicating whether the search service supports facets.
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Web.Api.OData.Operations.Search.SearchResultDocumentDto">
+            <summary>
+            A single object that is part of the search results
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.OData.Operations.Search.SearchResultDocumentDto.#ctor(Telerik.Sitefinity.Services.Search.Data.IDocument)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Web.Api.OData.Operations.Search.SearchResultDocumentDto" /> class.
+            </summary>
+            <param name="document">The IDocument search match item.</param>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Search.SearchResultDocumentDto.HighLighterResult">
+            <summary>
+            Gets or sets the highlighter result
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Search.SearchResultDocumentDto.Language">
+            <summary>
+            Gets or sets the language
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Search.SearchResultDocumentDto.Provider">
+            <summary>
+            Gets or sets the provider
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Search.SearchResultDocumentDto.Link">
+            <summary>
+            Gets or sets the link
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Search.SearchResultDocumentDto.Title">
+            <summary>
+            Gets or sets the title
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Search.SearchResultDocumentDto.ContentType">
+            <summary>
+            Gets or sets the content type
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Search.SearchResultDocumentDto.Id">
+            <summary>
+            Gets or sets the Id of the original item.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Search.SearchResultDocumentDto.ThumbnailUrl">
+            <summary>
+            Gets or sets the url of the item's thumbnail.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Search.SearchResultDocumentDto.PublicationDate">
+            <summary>
+            Gets or sets the publication date of the item.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Search.SearchResultDocumentDto.LastModified">
+            <summary>
+            Gets or sets the last modified date of the item.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Search.SearchResultDocumentDto.Properties">
+            <summary>
+            Gets or sets a list of additional fields that are included in the search index
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Web.Api.OData.Operations.Search.SearchResultDto">
+            <summary>
+            The performed search result
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Search.SearchResultDto.TotalCount">
+            <summary>
+            Gets or sets the total count.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Search.SearchResultDto.SearchResults">
+            <summary>
+            Gets or sets the search results.
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Web.Api.OData.Operations.Sites.Models.DataSourceConfiguration">
+            <summary>
+            Model used for the configuration of data sources for sites
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.OData.Operations.Sites.Models.DataSourceConfiguration.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Web.Api.OData.Operations.Sites.Models.DataSourceConfiguration"/> class.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Sites.Models.DataSourceConfiguration.Name">
+            <summary>
+            Gets or sets the name of the data source
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Sites.Models.DataSourceConfiguration.IsChecked">
+            <summary>
+            Gets or sets a value indicating whether the data source is on or off for the current site
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Sites.Models.DataSourceConfiguration.Links">
+            <summary>
+            Gets or sets a collection of links.
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Web.Api.OData.Operations.Sites.Models.DataSourceLinkConfiguration">
+            <summary>
+            Model used for the configuration of links for data sources for sites
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Sites.Models.DataSourceLinkConfiguration.ProviderName">
+            <summary>
+            Gets or sets the name of the provider
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Sites.Models.DataSourceLinkConfiguration.IsDefault">
+            <summary>
+            Gets or sets a value indicating whether the link would be the default one used
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Web.Api.OData.Operations.Sites.Models.SiteConfiguration">
+            <summary>
+            Represents a class that describes a site operation
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Sites.Models.SiteConfiguration.LiveUrl">
+            <summary>
+            Gets or sets the site live url
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Sites.Models.SiteConfiguration.IsDefaultSite">
+            <summary>
+            Gets or sets a value indicating whether the site is default or not
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Web.Api.OData.Operations.Taxonomies.Models.TaxonDTO">
+            <summary>
+            A class representing a taxon object
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Taxonomies.Models.TaxonDTO.Id">
+            <summary>
+            Gets or sets the Id of the taxon
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Taxonomies.Models.TaxonDTO.Name">
+            <summary>
+            Gets or sets the Name of the taxon
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Taxonomies.Models.TaxonDTO.Title">
+            <summary>
+            Gets or sets the Title of the taxon
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Taxonomies.Models.TaxonDTO.UrlName">
+            <summary>
+            Gets or sets the UrlName of the taxon
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Taxonomies.Models.TaxonDTO.Description">
+            <summary>
+            Gets or sets the Description of the taxon
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Taxonomies.Models.TaxonDTO.LastModified">
+            <summary>
+            Gets or sets the LastModified date of the taxon
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Taxonomies.Models.TaxonDTO.AvailableLanguages">
+            <summary>
+            Gets or sets the AvailableLanguages i.e. the languages in which the taxon has translation in
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Taxonomies.Models.TaxonDTO.TaxonomyId">
+            <summary>
+            Gets or sets the Id of the taxonomy to which this taxon belongs to
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Taxonomies.Models.TaxonDTO.Synonym">
+            <summary>
+            Gets or sets the matches synonym name when returning as a search result.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Taxonomies.Models.TaxonDTO.AppliedTo">
+            <summary>
+            Gets or sets a value indicating the count of the content items that use the taxon.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Taxonomies.Models.TaxonDTO.SubTaxa">
+            <summary>
+            Gets or sets the children taxa.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Taxonomies.Models.TaxonDTO.Breadcrumb">
+            <summary>
+            Gets or sets the list of parents of the taxon.
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Web.Api.OData.Operations.Validation.Models.ValidationRequest">
+            <summary>
+            Represents a class that describes a validation request
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.OData.Operations.Validation.Models.ValidationRequest.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Web.Api.OData.Operations.Validation.Models.ValidationRequest"/> class.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.OData.Operations.Validation.Models.ValidationRequest.Properties">
+            <summary>
+            Gets or sets the properties of the request.
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Web.Api.OData.Query.IPropertyAccessCreator">
+            <summary>
+            Contains a method that creates property access expressions.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.OData.Query.IPropertyAccessCreator.CreatePropertyAccessor(System.Linq.Expressions.Expression)">
+            <summary>
+            Creates a property access expression.
+            </summary>
+            <param name="source">Expression that evaluates to the instance containing the property.</param>
+            <returns>Expression that evaluates to the property value.</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.OData.Query.QueryApplierBase.ResetOdataQueryOptions">
+            <summary>
+            Resets the OData query options.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.OData.Routing.CustomMetadataRoutingConvention.SelectController(Microsoft.AspNet.OData.Routing.ODataPath,System.Net.Http.HttpRequestMessage)">
+            <summary>
+            Selects the controller for OData requests.
+            </summary>
+            <param name="odataPath">The OData path.</param>
+            <param name="request">The request.</param>
+            <returns>
+              <c>null</c> if the request isn't handled by this convention; otherwise, the name of the selected controller
+            </returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.OData.Routing.CustomMetadataRoutingConvention.SelectAction(Microsoft.AspNet.OData.Routing.ODataPath,System.Web.Http.Controllers.HttpControllerContext,System.Linq.ILookup{System.String,System.Web.Http.Controllers.HttpActionDescriptor})">
+            <summary>
+            Selects the action for OData requests.
+            </summary>
+            <param name="odataPath">The OData path.</param>
+            <param name="controllerContext">The controller context.</param>
+            <param name="actionMap">The action map.</param>
+            <returns>
+              <c>null</c> if the request isn't handled by this convention; otherwise, the name of the selected action
+            </returns>
+        </member>
+        <member name="T:Telerik.Sitefinity.Web.Api.OData.Routing.DynamicPropertyRoutingConvention">
+            <inheritdoc/>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.OData.Routing.DynamicPropertyRoutingConvention.SelectAction(Microsoft.AspNet.OData.Routing.ODataPath,System.Web.Http.Controllers.HttpControllerContext,System.Linq.ILookup{System.String,System.Web.Http.Controllers.HttpActionDescriptor})">
+            <inheritdoc/>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.OData.Routing.DynamicPropertyRoutingConvention.GetProperty(Microsoft.AspNet.OData.Routing.ODataPath,System.Net.Http.HttpMethod)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.OData.Serialization.PayloadResolver.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Web.Api.OData.Serialization.PayloadResolver"/> class.
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Web.Api.OData.Strategies.DynamicLinks.DynamicLinkOperations">
+            <summary>
+            Provides functionality for performing operations related to dynamic links.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.OData.Strategies.DynamicLinks.DynamicLinkOperations.Generate(System.String,System.String,System.String,System.String)">
+            <summary>
+            Generates a dynamic link with the specified options.
+            </summary>
+            <param name="itemId">The item ID.</param>
+            <param name="itemTypeFullName">The item type full clr name.</param>
+            <param name="itemProvider">The item provider.</param>
+            <param name="itemCulture">The item culture.</param>
+            <returns>
+            The generated dynamic link.
+            </returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.OData.Strategies.DynamicLinks.DynamicLinkOperations.Parse(System.String,System.Boolean)">
+            <summary>
+            Parses the specified dynamic link and returns the resolved link.
+            </summary>
+            <param name="dynamicLink">The dynamic link.</param>
+            <returns>
+            The resolved link.
+            </returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.OData.Strategies.DynamicLinks.DynamicLinkOperations.GetLinkData(System.String)">
+            <summary>
+            Gets the dynamic link data.
+            </summary>
+            <param name="dynamicLink">The dynamic link.</param>
+            <returns>
+            The dynamic link data.
+            </returns>
+        </member>
+        <member name="T:Telerik.Sitefinity.Web.Api.ServiceApiModule">
+            <summary>
+            Service API for better use of Sitefinity services which work with oData and WebAPI
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.ServiceApiModule.LandingPageId">
+            <inheritdoc />
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.ServiceApiModule.Managers">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.ServiceApiModule.Initialize(Telerik.Sitefinity.Services.ModuleSettings)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.ServiceApiModule.Install(Telerik.Sitefinity.Abstractions.SiteInitializer)">
+            <inheritdoc />
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.ServiceApiModule.Telerik#Sitefinity#Modules#IExportableModule#ModuleName">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.ServiceApiModule.Telerik#Sitefinity#Modules#IExportableModule#GetModuleMetaTypes">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.ServiceApiModule.GetVirtualPaths">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.ServiceApiModule.GetModuleConfig">
+            <inheritdoc />
+        </member>
+        <member name="F:Telerik.Sitefinity.Web.Api.ServiceApiModule.ModuleName">
+            <summary>
+            Name of the module.
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Web.Api.ServiceApiModule.Constants">
+            <summary>
+            Id of the module.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Resources.ServiceApiResources.#ctor">
+            <summary>
+            Initializes a new instance of the<see cref="T:Telerik.Sitefinity.Web.Api.Resources.ServiceApiResources"/> class with the default <see cref="T:Telerik.Sitefinity.Localization.Data.ResourceDataProvider"/>.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Resources.ServiceApiResources.#ctor(Telerik.Sitefinity.Localization.Data.ResourceDataProvider)">
+            <summary>
+            Initializes a new instance of the<see cref="T:Telerik.Sitefinity.Web.Api.Resources.ServiceApiResources"/> class with the provided <see cref="T:Telerik.Sitefinity.Localization.Data.ResourceDataProvider"/>.
+            </summary>
+            <param name="dataProvider">Data Provider<see cref="T:Telerik.Sitefinity.Localization.Data.ResourceDataProvider"/></param>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Resources.ServiceApiResources.GetDocumentation">
+            <summary>
+            Gets Returns a set of data items of type {0}.
+            </summary>
+            <value>Returns a set of data items of type {0}.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Resources.ServiceApiResources.GetByKeyDocumentation">
+            <summary>
+            Gets {0} item by id.
+            </summary>
+            <value>item by id.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Resources.ServiceApiResources.GetPropertyDocumentation">
+            <summary>
+            Gets {0} item property with name {1}.
+            </summary>
+            <value>item property.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Resources.ServiceApiResources.PatchDocumentation">
+            <summary>
+            Gets partial updates a {0} item.
+            </summary>
+            <value>partial a {0} item.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Resources.ServiceApiResources.PutDocumentation">
+            <summary>
+            Gets full updates a {0} item.
+            </summary>
+            <value>full update a {0} item.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Resources.ServiceApiResources.PostDocumentation">
+            <summary>
+            Gets Creates a {0} item.
+            </summary>
+            <value>Creates a {0} item.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Resources.ServiceApiResources.DeleteDocumentation">
+            <summary>
+            Gets the Description about Delete method in DynamicDataController
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Resources.ServiceApiResources.GetRelatedDocumentation">
+            <summary>
+            Gets the Description about GetRelated method in DynamicDataController
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Resources.ServiceApiResources.GetRelatedByKeyDocumentation">
+            <summary>
+            Gets the Description about GetRelated({key}) method in DynamicDataController
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Resources.ServiceApiResources.CreateRefDocumentation">
+            <summary>
+            Gets the Description about CreateRef method in DynamicDataController
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Resources.ServiceApiResources.DeleteRefDocumentation">
+            <summary>
+            Gets the Description about DeleteRef method in DynamicDataController
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Resources.ServiceApiResources.DeleteRefByKeyDocumentation">
+            <summary>
+            Gets the Description about DeleteRef method in DynamicDataController
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Resources.ServiceApiResources.ApiServices">
+            <summary>
+            Gets the API services dashboard title
+            </summary>
+            <value>API services</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Resources.ServiceApiResources.ServiceApiUrlName">
+            <summary>
+            Gets the Service API Url name
+            </summary>
+            <value>... APIServices ...</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Resources.ServiceApiResources.ServiceApiResourcesTitle">
+            <summary>
+            Gets the Service API Title
+            </summary>
+            <value>Web services</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Resources.ServiceApiResources.ServiceApiTitle">
+            <summary>
+            Gets the Service API Title
+            </summary>
+            <value>API services</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Resources.ServiceApiResources.CreateService">
+            <summary>
+            Gets the create API service button value
+            </summary>
+            <value>Create an API service</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Resources.ServiceApiResources.ServiceName">
+            <summary>
+            Gets the name of the service
+            </summary>
+            <value>... Name ...</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Resources.ServiceApiResources.BackToServices">
+            <summary>
+            Gets the back to services list
+            </summary>
+            <value>Back to Services</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Resources.ServiceApiResources.ServiceUrl">
+            <summary>
+            Gets the service url name
+            </summary>
+            <value>URL name</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Resources.ServiceApiResources.CreateThisService">
+            <summary>
+            Gets the crate service button title
+            </summary>
+            <value>Create this service</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Resources.ServiceApiResources.ThisServiceIsActive">
+            <summary>
+            Gets the activation Check-box label for service
+            </summary>
+            <value>This service is active</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Resources.ServiceApiResources.AllowCors">
+            <summary>
+            Gets the allow CORS label
+            </summary>
+            <value>Allow access from other domains</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Resources.ServiceApiResources.AllowCorsExample">
+            <summary>
+            Gets the allow CORS example text
+            </summary>
+            <value>Allow HTTP access control (CORS) for specific domains. \n\n Enter one domain per line.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Resources.ServiceApiResources.EnterDomain">
+            <summary>
+            Gets the helper text below allowing CORS text field
+            </summary>
+            <value>Enter one domain per line</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Resources.ServiceApiResources.Everyone">
+            <summary>
+            Gets the Everyone
+            </summary>
+            <value>... Everyone ...</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Resources.ServiceApiResources.AuthenticatedUsers">
+            <summary>
+            Gets the Authenticated Users
+            </summary>
+            <value>Authenticated users</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Resources.ServiceApiResources.ReadAndWrite">
+            <summary>
+            Gets the Read and write radio button
+            </summary>
+            <value>Read and write</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Resources.ServiceApiResources.ReadOnly">
+            <summary>
+            Gets the Read only radio button
+            </summary>
+            <value>Read only</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Resources.ServiceApiResources.EditService">
+            <summary>
+            Gets the Edit label
+            </summary>
+            <value>Edit an API service</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Resources.ServiceApiResources.DeleteServiceTitle">
+            <summary>
+            Gets the deletion message for service
+            </summary>
+            <value>Are you sure you want to delete this service?</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Resources.ServiceApiResources.DeleteService">
+            <summary>
+            Gets the delete message for delete button.
+            </summary>
+            <value>Delete this service</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Resources.ServiceApiResources.AccessTitle">
+            <summary>
+            Gets the access field title.
+            </summary>
+            <value>Who can access the content by this service?</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Resources.ServiceApiResources.ContentType">
+            <summary>
+            Gets the content type
+            </summary>
+            <value>Content type</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Resources.ServiceApiResources.Url">
+            <summary>
+            Gets the url
+            </summary>
+            <value>... Url ...</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Resources.ServiceApiResources.Fields">
+            <summary>
+            Gets the fields
+            </summary>
+            <value>... Fields ...</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Resources.ServiceApiResources.Access">
+            <summary>
+            Gets the Access
+            </summary>
+            <value>... Access ...</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Resources.ServiceApiResources.Advanced">
+            <summary>
+            Gets the Advanced label for settings button
+            </summary>
+            <value>... Advanced ...</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Resources.ServiceApiResources.Simple">
+            <summary>
+            Gets the Simple label for settings button
+            </summary>
+            <value>... Simple ...</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Resources.ServiceApiResources.ServiceTypesDescription">
+            <summary>
+            Gets the service provided access
+            </summary>
+            <value>This service provides access to...</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Resources.ServiceApiResources.AccessTo">
+            <summary>
+            Gets the service provided access
+            </summary>
+            <value>This service provides access to...</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Resources.ServiceApiResources.Field">
+            <summary>
+            Gets the fields label
+            </summary>
+            <value>... Field ...</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Resources.ServiceApiResources.FieldType">
+            <summary>
+            Gets the fields type label
+            </summary>
+            <value>Field type</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Resources.ServiceApiResources.SelectedContentTypes">
+            <summary>
+            Gets the selected content types label
+            </summary>
+            <value>Selected content types ({0})</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Resources.ServiceApiResources.AllContentTypes">
+            <summary>
+            Gets the all content types label
+            </summary>
+            <value>All content types ({0})</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Resources.ServiceApiResources.InheritAccessForType">
+            <summary>
+            Gets the Access for type same as service access.
+            </summary>
+            <value>As set for service</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Resources.ServiceApiResources.AuthenticatedAccess">
+            <summary>
+            Gets the Authenticated access for types.
+            </summary>
+            <value>Authenticated (read and write)</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Resources.ServiceApiResources.AdminsAccess">
+            <summary>
+            Gets the Admin access for types.
+            </summary>
+            <value>Authenticated (read only)</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Resources.ServiceApiResources.ContentsLabel">
+            <summary>
+            Gets the contents label with first 3 contents and others count.
+            </summary>
+            <value>{0} and {1} more</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Resources.ServiceApiResources.AllContents">
+            <summary>
+            Gets the all content types label.
+            </summary>
+            <value>All content types</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Resources.ServiceApiResources.NoApiServicesYet">
+            <summary>
+            Gets the label for empty screen.
+            </summary>
+            <value>No web services have been created yet</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Resources.ServiceApiResources.AdministratorsOnly">
+            <summary>
+            Gets the label for administrators only radio button
+            </summary>
+            <value>Administrators only</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Resources.ServiceApiResources.EveryoneDropDown">
+            <summary>
+            Gets the Everyone drop down label
+            </summary>
+            <value>... Everyone ...</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Resources.ServiceApiResources.AuthenticatedDropDown">
+            <summary>
+            Gets the Authenticated users  drop down label
+            </summary>
+            <value>... Authenticated ...</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Resources.ServiceApiResources.AdministratorsDropDown">
+            <summary>
+            Gets the Administrators drop down label
+            </summary>
+            <value>... Administrators ...</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Resources.ServiceApiResources.InvalidUrl">
+            <summary>
+            Gets the Invalid url negative message.
+            </summary>
+            <value>Invalid url name: \"{0}\" .</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Resources.ServiceApiResources.InvalidName">
+            <summary>
+            Gets the Invalid name negative message.
+            </summary>
+            <value>Invalid name: \"{0}\" .</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Resources.ServiceApiResources.RequiredFields">
+            <summary>
+            Gets the required name and url fields negative message.
+            </summary>
+            <value>Name and URL name fields are required.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Resources.ServiceApiResources.UniqueNameUrl">
+            <summary>
+            Gets the service validation message for name or url.
+            </summary>
+            <value>A service with the same {0} exists: {1}</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Resources.ServiceApiResources.HelpPageLink">
+            <summary>
+            Gets the help page link in Web services page
+            </summary>
+            <value>Use in your app</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Resources.ServiceApiResources.NoDefaultRoute">
+            <summary>
+            Gets the warning message if it is not set or it is deleted default route.
+            </summary>
+            <value>The default route have to be configured, before creating Web services.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Resources.ServiceApiResources.GoToServicesConfig">
+            <summary>
+            Gets the service route configuration link message
+            </summary>
+            <value>Go to configure a route</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Resources.ServiceApiResources.NoDropDown">
+            <summary>
+            Gets the No filtering and sorting drop down label
+            </summary>
+            <value>... No ...</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Resources.ServiceApiResources.FilterOnlyDropDown">
+            <summary>
+            Gets the Filter only drop down label
+            </summary>
+            <value>Filter only</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Resources.ServiceApiResources.SortOnlyDropDown">
+            <summary>
+            Gets the Sort only drop down label
+            </summary>
+            <value>Sort only</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Resources.ServiceApiResources.FilterAndSortDropDown">
+            <summary>
+            Gets the Filter and sort drop down label
+            </summary>
+            <value>Filter and sort</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Resources.ServiceApiResources.WhichFieldsToUse">
+            <summary>
+            Gets the Which fields to use label
+            </summary>
+            <value>Which fields to use?</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Resources.ServiceApiResources.SortFilterColumn">
+            <summary>
+            Gets the filter/sort column header
+            </summary>
+            <value>Ability to filter / sort</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Resources.ServiceApiResources.AutoSelectFields">
+            <summary>
+            Gets the auto select fields label.
+            </summary>
+            <value>Automatically select newly created fields</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Resources.ServiceApiResources.AutoSelectContentTypes">
+            <summary>
+            Gets the auto select content types label
+            </summary>
+            <value>Automatically select newly created content types</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Resources.ServiceApiResources.ExternalLinkGraphiQL">
+            <summary>
+            Gets External Link: GraphiQL sample
+            </summary>
+            <value>Learn more</value>
+        </member>
+        <member name="T:Telerik.Sitefinity.Web.Api.ServicesStructureTransfer">
+            <summary>
+            Imports and exports services module packages
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.ServicesStructureTransfer.ExportModuleConfigs(Telerik.Sitefinity.Modules.IExportableModule,System.DateTime,System.Boolean)">
+            <summary>
+            Gets the module configurations content of the package transfer object
+            </summary>
+            <param name="module">The module.</param>
+            <param name="lastModified">The date that this package was updated for the last time.</param>
+            <param name="forceExport">A flag indicating whether to export regardless lastModified.</param>
+            <returns>The module configurations content of the package transfer object.</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Strategies.DynamicContentStrategy.GetOperations(System.Object,System.Nullable{System.Guid})">
+            <summary>
+            Gets the operations.
+            </summary>
+            <param name="item">The item.</param>
+            <param name="parentId">The parent id.</param>
+            <returns>
+            The operations.
+            </returns>
+        </member>
+        <member name="T:Telerik.Sitefinity.Web.Api.Strategies.DynamicLinks.DynamicLinkData">
+            <summary>
+            Represents the data for a dynamic content link.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Strategies.DynamicLinks.DynamicLinkData.Key">
+            <summary>
+            Gets or sets the dynamic link key.
+            Its value can be either a full type name for content items or
+            the ID of the root node for a page.
+            </summary>
+            <value>
+            The dynamic link key.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Strategies.DynamicLinks.DynamicLinkData.ItemId">
+            <summary>
+            Gets or sets the item ID.
+            </summary>
+            <value>
+            The item ID.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Strategies.DynamicLinks.DynamicLinkData.ItemProvider">
+            <summary>
+            Gets or sets the item provider.
+            </summary>
+            <value>
+            The item provider.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Strategies.DynamicLinks.DynamicLinkData.ItemCulture">
+            <summary>
+            Gets or sets the item culture.
+            </summary>
+            <value>
+            The item culture.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Strategies.DynamicLinks.DynamicLinkData.Options">
+            <summary>
+            Gets or sets the dynamic link options.
+            May contain e.g. the selected language or thumbnail for images.
+            </summary>
+            <value>
+            The dynamic link options.
+            </value>
+        </member>
+        <member name="T:Telerik.Sitefinity.Web.Api.Strategies.DynamicLinks.Models.ItemData">
+            <summary>
+            Represents the data for an item.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Strategies.DynamicLinks.Models.ItemData.Id">
+            <summary>
+            Gets or sets the ID.
+            </summary>
+            <value>
+            The ID.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Strategies.DynamicLinks.Models.ItemData.Title">
+            <summary>
+            Gets or sets the title.
+            </summary>
+            <value>
+            The title.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Strategies.DynamicLinks.Models.ItemData.Provider">
+            <summary>
+            Gets or sets the provider.
+            </summary>
+            <value>
+            The provider.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Strategies.DynamicLinks.Models.ItemData.Culture">
+            <summary>
+            Gets or sets the culture.
+            </summary>
+            <value>
+            The culture.
+            </value>
+        </member>
+        <member name="T:Telerik.Sitefinity.Web.Api.Strategies.DynamicLinks.Resolvers.IItemResolver">
+            <summary>
+            Contract for a dynamic link item resolver.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Strategies.DynamicLinks.Resolvers.IItemResolver.GetData(Telerik.Sitefinity.Web.Api.Strategies.DynamicLinks.DynamicLinkData)">
+            <summary>
+            Gets the item data.
+            </summary>
+            <param name="linkData">The dynamic link data.</param>
+            <returns>
+            The item data.
+            </returns>
+        </member>
+        <member name="T:Telerik.Sitefinity.Web.Api.Strategies.DynamicLinks.Resolvers.ItemResolver">
+            <summary>
+            Resolves content items from a dynamic link.
+            </summary>
+            <seealso cref="T:Telerik.Sitefinity.Web.Api.Strategies.DynamicLinks.Resolvers.IItemResolver" />
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Strategies.DynamicLinks.Resolvers.ItemResolver.#ctor(Telerik.Sitefinity.Web.Services.Contracts.IItemStrategy)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Web.Api.Strategies.DynamicLinks.Resolvers.ItemResolver"/> class.
+            </summary>
+            <param name="strategy">The strategy.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Strategies.DynamicLinks.Resolvers.ItemResolver.GetData(Telerik.Sitefinity.Web.Api.Strategies.DynamicLinks.DynamicLinkData)">
+            <summary>
+            Gets the item data.
+            </summary>
+            <param name="linkData">The dynamic link data.</param>
+            <returns>
+            The item data.
+            </returns>
+        </member>
+        <member name="T:Telerik.Sitefinity.Web.Api.Strategies.DynamicLinks.Resolvers.PageResolver">
+            <summary>
+            Resolves pages from a dynamic link.
+            </summary>
+            <seealso cref="T:Telerik.Sitefinity.Web.Api.Strategies.DynamicLinks.Resolvers.IItemResolver" />
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Strategies.DynamicLinks.Resolvers.PageResolver.GetData(Telerik.Sitefinity.Web.Api.Strategies.DynamicLinks.DynamicLinkData)">
+            <summary>
+            Gets the item data.
+            </summary>
+            <param name="linkData">The dynamic link data.</param>
+            <returns>
+            The item data.
+            </returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Strategies.ItemStrategyBase.SetDefaultLStringValues(System.ComponentModel.PropertyDescriptorCollection,System.Object,Telerik.Sitefinity.Data.IManager)">
+            <summary>
+            Lstring properties have default fallback behavior to invariant culture if value is null.
+            Therefore to avoid undesired fallback in backend and frontend we need to set the default null value to empty string.
+            </summary>
+            <param name="clrProps">Controller properties</param>
+            <param name="item">The item</param>
+            <param name="manager">The manager</param>
+        </member>
+        <member name="T:Telerik.Sitefinity.Web.Api.Strategies.Pages.PageType">
+            <summary>
+            Enumeration for the page types.
+            </summary>
+        </member>
+        <member name="F:Telerik.Sitefinity.Web.Api.Strategies.Pages.PageType.Standard">
+            <summary>
+            A standard page.
+            </summary>
+        </member>
+        <member name="F:Telerik.Sitefinity.Web.Api.Strategies.Pages.PageType.Group">
+            <summary>
+            A group page.
+            </summary>
+        </member>
+        <member name="F:Telerik.Sitefinity.Web.Api.Strategies.Pages.PageType.Redirect">
+            <summary>
+            A redirect page.
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Web.Api.Strategies.Pages.RedirectPage">
+            <summary>
+            DTO class for holding information if the page is redirecting
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Strategies.SearchIndexes.PipeSettingsHelper.GetTemplatePipesForPublishingPoint(System.Collections.Generic.IList{Telerik.Sitefinity.Publishing.Model.PipeSettings},System.Guid)">
+            <summary>
+            Get the template pipes for publishing point
+            Example for template pipe: When we create a publishing point and after that we create a new dynamic module we create a template pipe for this dynamic type.
+            </summary>
+            <param name="pipeSettings">The publishing point pipe settings</param>
+            <param name="publishingPointId">The publishing point id</param>
+            <returns>Returns the template pipes for publishing point.</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Strategies.SearchIndexes.PipeSettingsHelper.GetTemplatePipesCountForPublishingPoint(System.Collections.Generic.IList{Telerik.Sitefinity.Publishing.Model.PipeSettings},System.Guid)">
+            <summary>
+            Get the template pipes count for publishing point
+            </summary>
+            <param name="pipeSettings">The publishing point pipe settings</param>
+            <param name="publishingPointId">The publishing point id</param>
+            <returns>Returns the template pipes count for publishing point.</returns>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Strategies.UI.ApiSectionFieldWrapper.RenderChoicesAs">
+            <summary>
+            Gets or sets the RenderChoicesAs of the section field.
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Web.Api.Strategies.UI.FieldHandlers.IFieldHandler">
+            <summary>
+            Applies transformations to the field based on the field definitions.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Strategies.UI.FieldHandlers.IFieldHandler.ProcessField(Telerik.Sitefinity.Web.UI.Fields.Contracts.IFieldDefinition,System.String)">
+            <summary>
+            Processes fields definitions settings that should be supported by the new UI and returns a field wrapper to be returned by the services.
+            </summary>
+            <param name="fieldDefinition">The field definition settings on which the field is based.</param>
+            <param name="typeName">The name of the content item type</param>
+            <returns>The field wrapper.</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Strategies.UI.MediaUIResolver.ReorderDetailsSection(System.Collections.Generic.List{Telerik.Sitefinity.DynamicModules.Builder.Web.Services.Data.SectionFieldWrapper})">
+            <summary>
+            Reorder the Details section and its fields to be right after the Main section
+            </summary>
+            <param name="fields">All sections and fields</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Strategies.UI.PagesUIResolver.ReorderOpenGraphSection(System.Collections.Generic.List{Telerik.Sitefinity.DynamicModules.Builder.Web.Services.Data.SectionFieldWrapper})">
+            <summary>
+            Reorder the SocialMedia section and its fields to be right under the SEO section
+            </summary>
+            <param name="fields">All sections and fields</param>
+        </member>
+        <member name="T:Telerik.Sitefinity.Web.Api.Strategies.UI.UIResolverContext">
+            <summary>
+            Context used for resolving UI metadata
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Strategies.UI.UIResolverContext.TypeName">
+            <summary>
+            Gets or sets the name of the type.
+            </summary>
+            <value>
+            The name of the type.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Strategies.UI.UIResolverContext.ViewName">
+            <summary>
+            Gets or sets the name of the view.
+            </summary>
+            <value>
+            The name of the view.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Strategies.UI.UIResolverContext.ItemId">
+            <summary>
+            Gets or sets the item identifier.
+            </summary>
+            <value>
+            The item identifier.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Strategies.UI.UIResolverContext.ItemProvider">
+            <summary>
+            Gets or sets the item provider.
+            </summary>
+            <value>
+            The item provider.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Strategies.UI.UIResolverContext.ItemCulture">
+            <summary>
+            Gets or sets the item culture.
+            </summary>
+            <value>
+            The item culture.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Strategies.UI.UIResolverContext.ParentId">
+            <summary>
+            Gets or sets the parent identifier.
+            </summary>
+            <value>
+            The parent identifier.
+            </value>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Strategies.WorkflowItemStrategy`1.Delete(System.Guid,System.Boolean)">
+            <inheritdoc />
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.UsageTracking.ServiceApiModuleReport.ModuleName">
+            <summary>
+            Gets or sets the module name
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.UsageTracking.ServiceApiModuleReport.ServicesReport">
+            <summary>
+            Gets or sets service count
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.UsageTracking.ServiceReport.Name">
+            <summary>
+            Gets or sets the service name
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.UsageTracking.ServiceReport.Count">
+            <summary>
+            Gets or sets service count
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Web.Api.Web.Services.ApiServicePlugin">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Web.Services.ApiServicePlugin.Register(ServiceStack.IAppHost)">
+            <inheritdoc />
+        </member>
+        <member name="T:Telerik.Sitefinity.Web.Api.Web.Services.Dto.Requests.CreateService">
+            <summary>
+            Request DTO for create service.
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Web.Api.Web.Services.Dto.Requests.DeleteService">
+            <summary>
+            Response DTO for services proxy.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Web.Services.Dto.Requests.DeleteService.UrlName">
+            <summary>
+            Gets or sets the Name.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Web.Services.Dto.Requests.DeleteService.Route">
+            <summary>
+            Gets or sets the route.
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Web.Api.Web.Services.Dto.Requests.GetContents">
+            <summary>
+            Request DTO for get services.
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Web.Api.Web.Services.Dto.Requests.GetService">
+            <summary>
+            Request DTO for get services.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Web.Services.Dto.Requests.GetService.UrlName">
+            <summary>
+            Gets or sets the service name.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Web.Services.Dto.Requests.GetService.Route">
+            <summary>
+            Gets or sets the route.
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Web.Api.Web.Services.Dto.Requests.GetServices">
+            <summary>
+            Request DTO for get services.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Web.Services.Dto.Requests.GetServices.Types">
+            <summary>
+            Gets or sets a value indicating whether to display Types of services.
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Web.Api.Web.Services.Dto.Requests.ServiceBaseRequest">
+            <summary>
+            Represents the Services model
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Web.Services.Dto.Requests.ServiceBaseRequest.Route">
+            <summary>
+            Gets or sets the route.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Web.Services.Dto.Requests.ServiceBaseRequest.Name">
+            <summary>
+            Gets or sets the Name.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Web.Services.Dto.Requests.ServiceBaseRequest.UrlName">
+            <summary>
+            Gets or sets the Name.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Web.Services.Dto.Requests.ServiceBaseRequest.Enabled">
+            <summary>
+            Gets or sets a value indicating whether the service is enabled.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Web.Services.Dto.Requests.ServiceBaseRequest.ApiKey">
+            <summary>
+            Gets or sets the Api key.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Web.Services.Dto.Requests.ServiceBaseRequest.AccessControlAllowOrigin">
+            <summary>
+            Gets or sets the CORS.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Web.Services.Dto.Requests.ServiceBaseRequest.AutogenerateTypes">
+            <summary>
+            Gets or sets a value indicating whether the service types are auto generated.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Web.Services.Dto.Requests.ServiceBaseRequest.Access">
+            <summary>
+            Gets or sets the access.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Web.Services.Dto.Requests.ServiceBaseRequest.Types">
+            <summary>
+            Gets or sets the service registered content types
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Web.Services.Dto.Requests.ServiceBaseRequest.Protocol">
+            <summary>
+            Gets or sets the protocol.
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Web.Api.Web.Services.Dto.Requests.UpdateService">
+            <summary>
+            Request DTO for update service.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Web.Services.Dto.Requests.UpdateService.OldUrlName">
+            <summary>
+            Gets or sets the Old UrlName.
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Web.Api.Web.Services.Dto.Responses.ContentsProxy">
+            <summary>
+            Response DTO for services proxy.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Web.Services.Dto.Responses.ContentsProxy.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Web.Api.Web.Services.Dto.Responses.ContentsProxy" /> class.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Web.Services.Dto.Responses.ContentsProxy.Name">
+            <summary>
+            Gets or sets the Name.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Web.Services.Dto.Responses.ContentsProxy.ReadOnly">
+            <summary>
+            Gets or sets a value indicating whether the type is in read only mode.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Web.Services.Dto.Responses.ContentsProxy.UrlKey">
+            <summary>
+            Gets or sets the Name.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Web.Services.Dto.Responses.ContentsProxy.ClrType">
+            <summary>
+            Gets or sets the ClrType.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Web.Services.Dto.Responses.ContentsProxy.Access">
+            <summary>
+            Gets or sets the Access for content type.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Web.Services.Dto.Responses.ContentsProxy.Properties">
+            <summary>
+            Gets or sets the Properties collection.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Web.Services.Dto.Responses.ContentsProxy.Children">
+            <summary>
+            Gets or sets the Parent Content Type.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Web.Services.Dto.Responses.ContentsProxy.AutogenerateProperties">
+            <summary>
+            Gets or sets a value indicating whether the content type is auto generated.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Web.Services.Dto.Responses.ContentsProxy.parentId">
+            <summary>
+            Gets or sets the Parent Content Type.
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Web.Api.Web.Services.Dto.Responses.PropertiesProxy">
+            <summary>
+            Response DTO for services type properties.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Web.Services.Dto.Responses.PropertiesProxy.Name">
+            <summary>
+            Gets or sets the property name.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Web.Services.Dto.Responses.PropertiesProxy.PropertyType">
+            <summary>
+            Gets or sets the property type.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Web.Services.Dto.Responses.PropertiesProxy.IsPersistent">
+            <summary>
+            Gets or sets a value indicating whether the property is persistent.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Web.Services.Dto.Responses.PropertiesProxy.AllowSort">
+            <summary>
+            Gets or sets a value indicating whether it is allowed sorting by that property.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Web.Services.Dto.Responses.PropertiesProxy.AllowFilter">
+            <summary>
+            Gets or sets a value indicating whether it is allowed filtering by that property.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Web.Services.Dto.Responses.PropertiesProxy.IsKey">
+            <summary>
+            Gets or sets a value indicating whether the property is key.
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Web.Api.Web.Services.Dto.Responses.ServicesProxy">
+            <summary>
+            Response DTO for services proxy.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Web.Services.Dto.Responses.ServicesProxy.Name">
+            <summary>
+            Gets or sets the Name.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Web.Services.Dto.Responses.ServicesProxy.Route">
+            <summary>
+            Gets or sets the Route
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Web.Services.Dto.Responses.ServicesProxy.UrlName">
+            <summary>
+            Gets or sets the Name.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Web.Services.Dto.Responses.ServicesProxy.Enabled">
+            <summary>
+            Gets or sets a value indicating whether the service is enabled.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Web.Services.Dto.Responses.ServicesProxy.Access">
+            <summary>
+            Gets or sets the access.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Web.Services.Dto.Responses.ServicesProxy.ApiKey">
+            <summary>
+            Gets or sets the api key.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Web.Services.Dto.Responses.ServicesProxy.AccessControlAllowOrigin">
+            <summary>
+            Gets or sets the CORS.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Web.Services.Dto.Responses.ServicesProxy.AutogenerateTypes">
+            <summary>
+            Gets or sets a value indicating whether the service types are auto generated.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Web.Services.Dto.Responses.ServicesProxy.Types">
+            <summary>
+            Gets or sets the service registered content types
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Web.Services.Dto.Responses.ServicesProxy.Protocol">
+            <summary>
+            Gets or sets the protocol.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Web.Services.Dto.Responses.ServicesProxy.ErrorMessage">
+            <summary>
+            Gets or sets the error message.
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Web.Api.Web.UI.ApiServicesView">
+            <summary>
+            Represents the API services management back-end UI
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Web.UI.ApiServicesView.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Web.Api.Web.UI.ApiServicesView"/> class.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Web.UI.ApiServicesView.LayoutTemplateName">
+            <summary>
+            Gets the name of the embedded layout template.
+            </summary>
+            <value></value>
+            <remarks>
+            Override this property to change the embedded template to be used with the dialog
+            </remarks>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Web.UI.ApiServicesView.AdvancedSettingsHyperLink">
+            <summary>
+            Gets the reference of the advanced settings.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Web.UI.ApiServicesView.TagKey">
+            <inheritdoc />
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Web.UI.ApiServicesView.CreateServiceLink">
+            <summary>
+            Gets the reference to the create service link
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Web.UI.ApiServicesView.DecisionScreenCreateService">
+            <summary>
+            Gets the create link from empty screen.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Web.UI.ApiServicesView.ServiceEditView">
+            <summary>
+            Gets the reference to the service edit view
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Web.UI.ApiServicesView.Grid">
+            <summary>
+            Gets a reference to the div element that will be transformed into grid.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Web.UI.ApiServicesView.DecisionScreenContainer">
+            <summary>
+            Gets a empty screen.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Web.UI.ApiServicesView.DeleteConfirmationDialog">
+            <summary>
+            Gets the reference to the delete module confirmation dialog
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Web.UI.ApiServicesView.ClientLabelManager">
+            <summary>
+            Gets a reference to the client label manager.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Web.UI.ApiServicesView.GetScriptDescriptors">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Web.UI.ApiServicesView.GetScriptReferences">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Web.UI.ApiServicesView.InitializeControls(Telerik.Sitefinity.Web.UI.GenericContainer)">
+            <inheritdoc />
+        </member>
+        <member name="T:Telerik.Sitefinity.Web.Api.Web.UI.ContentTypesSelectorView">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Web.UI.ContentTypesSelectorView.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Web.Api.Web.UI.ContentTypesSelectorView"/> class.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Web.UI.ContentTypesSelectorView.LayoutTemplateName">
+            <summary>
+            Gets the name of the embedded layout template.
+            </summary>
+            <value></value>
+            <remarks>
+            Override this property to change the embedded template to be used with the dialog
+            </remarks>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Web.UI.ContentTypesSelectorView.OuterDiv">
+            <summary>
+            Gets a reference to the outer div containing the window content.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Web.UI.ContentTypesSelectorView.BackLink">
+            <summary>
+            Gets a reference to the back to sites link.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Web.UI.ContentTypesSelectorView.CancelLink">
+            <summary>
+            Gets the reference to the cancel link
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Web.UI.ContentTypesSelectorView.DoneButton">
+            <summary>
+            Gets the reference to the done button
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Web.UI.ContentTypesSelectorView.SelectContentsCheckbox">
+            <summary>
+            Gets the CheckBox for content types.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Web.UI.ContentTypesSelectorView.ClientLabelManager">
+            <summary>
+            Gets a reference to the client label manager.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Web.UI.ContentTypesSelectorView.DialogTitle">
+            <summary>
+            Gets a reference to the dialog title.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Web.UI.ContentTypesSelectorView.LoadingView">
+            <summary>
+            Gets the loading view.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Web.UI.ContentTypesSelectorView.ButtonsPanel">
+            <summary>
+            Gets the buttons panel.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Web.UI.ContentTypesSelectorView.ContentTypeSelector">
+            <summary>
+            Gets the Content Type Tree View.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Web.UI.ContentTypesSelectorView.AutoGeneratedTypesCheckbox">
+            <summary>
+            Gets the auto generated content types check box.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Web.UI.ContentTypesSelectorView.SearchBox">
+            <summary>
+            Gets the search box.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Web.UI.ContentTypesSelectorView.GetScriptDescriptors">
+            <summary>
+            Gets a collection of script descriptors that represent ECMAScript (JavaScript) client components.
+            </summary>
+            <returns>
+            An <see cref="T:System.Collections.IEnumerable"/> collection of <see cref="T:System.Web.UI.ScriptDescriptor"/> objects.
+            </returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Web.UI.ContentTypesSelectorView.GetScriptReferences">
+            <summary>
+            Gets a collection of <see cref="T:System.Web.UI.ScriptReference"/> objects that define script resources that the control requires.
+            </summary>
+            <returns>
+            An <see cref="T:System.Collections.IEnumerable"/> collection of <see cref="T:System.Web.UI.ScriptReference"/> objects.
+            </returns>
+        </member>
+        <member name="T:Telerik.Sitefinity.Web.Api.Web.UI.EditServicesView">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Web.UI.EditServicesView.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Web.Api.Web.UI.EditServicesView"/> class.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Web.UI.EditServicesView.LayoutTemplateName">
+            <summary>
+            Gets the name of the embedded layout template.
+            </summary>
+            <value></value>
+            <remarks>
+            Override this property to change the embedded template to be used with the dialog
+            </remarks>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Web.UI.EditServicesView.OuterDiv">
+            <summary>
+            Gets a reference to the outer div containing the window content.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Web.UI.EditServicesView.ContentsLabel">
+            <summary>
+            Gets the selected contents label.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Web.UI.EditServicesView.OpenSelectorButton">
+            <summary>
+            Gets the reference to the content selector dialog.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Web.UI.EditServicesView.BackLink">
+            <summary>
+            Gets a reference to the back to sites link.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Web.UI.EditServicesView.IsServiceIsActive">
+            <summary>
+            Represents the choicefield for activating the service
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Web.UI.EditServicesView.AllowCorsDomains">
+            <summary>
+            Represents the choicefield for setting the CORS domains
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Web.UI.EditServicesView.ClientLabelManager">
+            <summary>
+            Gets a reference to the client label manager.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Web.UI.EditServicesView.DialogTitle">
+            <summary>
+            Gets a reference to the dialog title.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Web.UI.EditServicesView.LoadingView">
+            <summary>
+            Gets the loading view.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Web.UI.EditServicesView.MessageControl">
+            <summary>
+            Gets the reference to the message control
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Web.UI.EditServicesView.ButtonsPanel">
+            <summary>
+            Gets the buttons panel.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Web.UI.EditServicesView.ContentTypesSelectorView">
+            <summary>
+            Gets the reference to the service edit view
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Web.UI.EditServicesView.FieldsSelectorView">
+            <summary>
+            Gets the reference to the service fields selector
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Web.UI.EditServicesView.ContentsGrid">
+            <summary>
+            Gets a reference to the div element that will be transformed into grid.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Web.UI.EditServicesView.InitializeControls(Telerik.Sitefinity.Web.UI.GenericContainer)">
+            <summary>
+            Initializes the controls.
+            </summary>
+            <param name="container"></param>
+            <remarks>
+            Initialize your controls in this method. Do not override CreateChildControls method.
+            </remarks>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Web.UI.EditServicesView.GetScriptDescriptors">
+            <summary>
+            Gets a collection of script descriptors that represent ECMAScript (JavaScript) client components.
+            </summary>
+            <returns>
+            An <see cref="T:System.Collections.IEnumerable"/> collection of <see cref="T:System.Web.UI.ScriptDescriptor"/> objects.
+            </returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Web.UI.EditServicesView.GetScriptReferences">
+            <summary>
+            Gets a collection of <see cref="T:System.Web.UI.ScriptReference"/> objects that define script resources that the control requires.
+            </summary>
+            <returns>
+            An <see cref="T:System.Collections.IEnumerable"/> collection of <see cref="T:System.Web.UI.ScriptReference"/> objects.
+            </returns>
+        </member>
+        <member name="T:Telerik.Sitefinity.Web.Api.Web.UI.FieldsSelectorView">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Web.UI.FieldsSelectorView.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Web.Api.Web.UI.FieldsSelectorView"/> class.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Web.UI.FieldsSelectorView.LayoutTemplateName">
+            <summary>
+            Gets the name of the embedded layout template.
+            </summary>
+            <value></value>
+            <remarks>
+            Override this property to change the embedded template to be used with the dialog
+            </remarks>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Web.UI.FieldsSelectorView.OuterDiv">
+            <summary>
+            Gets a reference to the outer div containing the window content.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Web.UI.FieldsSelectorView.BackLink">
+            <summary>
+            Gets a reference to the back to sites link.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Web.UI.FieldsSelectorView.CancelLink">
+            <summary>
+            Gets the reference to the cancel link
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Web.UI.FieldsSelectorView.DoneButton">
+            <summary>
+            Gets the reference to the done button
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Web.UI.FieldsSelectorView.ClientLabelManager">
+            <summary>
+            Gets a reference to the client label manager.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Web.UI.FieldsSelectorView.DialogTitle">
+            <summary>
+            Gets a reference to the dialog title.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Web.UI.FieldsSelectorView.Grid">
+            <summary>
+            Gets a reference to the div element that will be transformed into grid.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Web.UI.FieldsSelectorView.LoadingView">
+            <summary>
+            Gets the loading view.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Web.UI.FieldsSelectorView.ButtonsPanel">
+            <summary>
+            Gets the buttons panel.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Web.UI.FieldsSelectorView.AutoGeneratedFieldsCheckbox">
+            <summary>
+            Gets the auto generated fields check box.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.Api.Web.UI.FieldsSelectorView.SelectFieldsCheckbox">
+            <summary>
+            Gets the CheckBox for fields.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Web.UI.FieldsSelectorView.GetScriptDescriptors">
+            <summary>
+            Gets a collection of script descriptors that represent ECMAScript (JavaScript) client components.
+            </summary>
+            <returns>
+            An <see cref="T:System.Collections.IEnumerable"/> collection of <see cref="T:System.Web.UI.ScriptDescriptor"/> objects.
+            </returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.Api.Web.UI.FieldsSelectorView.GetScriptReferences">
+            <summary>
+            Gets a collection of <see cref="T:System.Web.UI.ScriptReference"/> objects that define script resources that the control requires.
+            </summary>
+            <returns>
+            An <see cref="T:System.Collections.IEnumerable"/> collection of <see cref="T:System.Web.UI.ScriptReference"/> objects.
+            </returns>
+        </member>
+    </members>
+</doc>

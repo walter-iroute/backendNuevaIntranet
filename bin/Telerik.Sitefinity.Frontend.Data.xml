@@ -1,0 +1,249 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Telerik.Sitefinity.Frontend.Data</name>
+    </assembly>
+    <members>
+        <member name="T:Telerik.Sitefinity.Frontend.FilesMonitoring.Data.FileData">
+            <summary>
+            This class represent file data persisted by the file monitoring functionality. 
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Frontend.FilesMonitoring.Data.FileData.Id">
+            <summary>
+            Gets or sets the identifier.
+            </summary>
+            <value>
+            The identifier.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Frontend.FilesMonitoring.Data.FileData.FileName">
+            <summary>
+            Gets or sets the name of the file.
+            </summary>
+            <value>The name of the file.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Frontend.FilesMonitoring.Data.FileData.FilePath">
+            <summary>
+            Gets or sets the file path.
+            </summary>
+            <value>
+            The file path.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Frontend.FilesMonitoring.Data.FileData.PackageName">
+            <summary>
+            Gets or sets the name of the package.
+            </summary>
+            <value>
+            The name of the package.
+            </value>
+        </member>
+        <member name="T:Telerik.Sitefinity.Frontend.FilesMonitoring.Data.FileMonitorDataManager">
+            <summary>
+            Represents the data manager for the file monitoring functionality.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Frontend.FilesMonitoring.Data.FileMonitorDataManager.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Frontend.FilesMonitoring.Data.FileMonitorDataManager"/> class.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Frontend.FilesMonitoring.Data.FileMonitorDataManager.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Frontend.FilesMonitoring.Data.FileMonitorDataManager"/> class.
+            </summary>
+            <param name="providerName">Name of the provider.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Frontend.FilesMonitoring.Data.FileMonitorDataManager.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Frontend.FilesMonitoring.Data.FileMonitorDataManager"/> class.
+            </summary>
+            <param name="providerName">
+            The name of the provider. If empty string or null the default provider is set
+            </param>
+            <param name="transactionName">
+            The name of a distributed transaction. If empty string or null this manager will use separate transaction.
+            </param>
+        </member>
+        <member name="P:Telerik.Sitefinity.Frontend.FilesMonitoring.Data.FileMonitorDataManager.ModuleName">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Frontend.FilesMonitoring.Data.FileMonitorDataManager.GetManager">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Frontend.FilesMonitoring.Data.FileMonitorDataManager.GetManager(System.String,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Frontend.FilesMonitoring.Data.FileMonitorDataManager.GetManager(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="P:Telerik.Sitefinity.Frontend.FilesMonitoring.Data.FileMonitorDataManager.DefaultProviderDelegate">
+            <inheritdoc />
+        </member>
+        <member name="P:Telerik.Sitefinity.Frontend.FilesMonitoring.Data.FileMonitorDataManager.ProvidersSettings">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Frontend.FilesMonitoring.Data.FileMonitorDataManager.CreateFileData">
+            <summary>
+            Creates the file data.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Frontend.FilesMonitoring.Data.FileMonitorDataManager.CreateFileData(System.Guid)">
+            <summary>
+            Creates the file data.
+            </summary>
+            <param name="id">The id.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Frontend.FilesMonitoring.Data.FileMonitorDataManager.GetFileData(System.Guid)">
+            <summary>
+            Gets the file data.
+            </summary>
+            <param name="id">The id.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Frontend.FilesMonitoring.Data.FileMonitorDataManager.Delete(Telerik.Sitefinity.Frontend.FilesMonitoring.Data.FileData)">
+            <summary>
+            Deletes the specified file data to delete.
+            </summary>
+            <param name="fileDataToDelete">The file data to delete.</param>
+        </member>
+        <member name="T:Telerik.Sitefinity.Frontend.FilesMonitoring.Data.FileMonitorDataProvider">
+            <summary>
+            Represents the data provider for the file monitoring functionality.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Frontend.FilesMonitoring.Data.FileMonitorDataProvider.GetKnownTypes">
+            <summary>
+            Gets the known types.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Telerik.Sitefinity.Frontend.FilesMonitoring.Data.FileMonitorDataProvider.RootKey">
+            <summary>
+            Gets a unique key for each data provider base.
+            </summary>
+            <value></value>
+        </member>
+        <member name="M:Telerik.Sitefinity.Frontend.FilesMonitoring.Data.FileMonitorDataProvider.CreateFileData">
+            <summary>
+            Creates the file data.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Frontend.FilesMonitoring.Data.FileMonitorDataProvider.CreateFileData(System.Guid)">
+            <summary>
+            Creates the file data.
+            </summary>
+            <param name="id">The id.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Frontend.FilesMonitoring.Data.FileMonitorDataProvider.GetFileData(System.Guid)">
+            <summary>
+            Gets the file data.
+            </summary>
+            <param name="id">The id.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Frontend.FilesMonitoring.Data.FileMonitorDataProvider.GetFilesData">
+            <summary>
+            Gets the files data.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Frontend.FilesMonitoring.Data.FileMonitorDataProvider.Delete(Telerik.Sitefinity.Frontend.FilesMonitoring.Data.FileData)">
+            <summary>
+            Deletes the specified file data.
+            </summary>
+            <param name="fileDataToDelete">The file data to delete.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Frontend.FilesMonitoring.Data.FileMonitorDataProvider.CreateItem(System.Type,System.Guid)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Frontend.FilesMonitoring.Data.FileMonitorDataProvider.GetItem(System.Type,System.Guid)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Frontend.FilesMonitoring.Data.FileMonitorDataProvider.GetItemOrDefault(System.Type,System.Guid)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Frontend.FilesMonitoring.Data.FileMonitorDataProvider.GetItems(System.Type,System.String,System.String,System.Int32,System.Int32,System.Nullable{System.Int32}@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Frontend.FilesMonitoring.Data.FileMonitorDataProvider.DeleteItem(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="T:Telerik.Sitefinity.Frontend.FilesMonitoring.Data.FileMonitorFluentMapping">
+            <summary>
+            A concrete implementation of the <see cref="T:Telerik.Sitefinity.OpenAccessFluentMappingBase"/> for the file monitoring.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Frontend.FilesMonitoring.Data.FileMonitorFluentMapping.GetMapping">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Frontend.FilesMonitoring.Data.FileMonitorFluentMapping.MapFileData(System.Collections.Generic.List{Telerik.OpenAccess.Metadata.Fluent.MappingConfiguration})">
+            <summary>
+            Maps the file data.
+            </summary>
+            <param name="mappings">The mappings.</param>
+        </member>
+        <member name="T:Telerik.Sitefinity.Frontend.FilesMonitoring.Data.FileMonitorFluentMetadataSource">
+            <summary>
+            A concrete implementation of the <see cref="T:Telerik.Sitefinity.Data.OA.SitefinityMetadataSourceBase"/> for the file monitoring.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Frontend.FilesMonitoring.Data.FileMonitorFluentMetadataSource.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Frontend.FilesMonitoring.Data.FileMonitorFluentMetadataSource"/> class.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Frontend.FilesMonitoring.Data.FileMonitorFluentMetadataSource.#ctor(Telerik.Sitefinity.Model.IDatabaseMappingContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Frontend.FilesMonitoring.Data.FileMonitorFluentMetadataSource"/> class.
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Frontend.FilesMonitoring.Data.FileMonitorFluentMetadataSource.BuildCustomMappings">
+            <summary>
+            Builds the custom mappings.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Telerik.Sitefinity.Frontend.FilesMonitoring.Data.OpenAccessFileMonitorDataProvider">
+            <summary>
+            OpenAccess implementation of the <see cref="T:Telerik.Sitefinity.Frontend.FilesMonitoring.Data.FileMonitorDataProvider"/>.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Frontend.FilesMonitoring.Data.OpenAccessFileMonitorDataProvider.CurrentSchemaVersionNumber">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Frontend.FilesMonitoring.Data.OpenAccessFileMonitorDataProvider.OnUpgrading(Telerik.Sitefinity.Data.OA.UpgradingContext,System.Int32)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Frontend.FilesMonitoring.Data.OpenAccessFileMonitorDataProvider.OnUpgraded(Telerik.Sitefinity.Data.OA.UpgradingContext,System.Int32)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Frontend.FilesMonitoring.Data.OpenAccessFileMonitorDataProvider.GetMetaDataSource(Telerik.Sitefinity.Model.IDatabaseMappingContext)">
+            <inheritdoc />
+        </member>
+        <member name="P:Telerik.Sitefinity.Frontend.FilesMonitoring.Data.OpenAccessFileMonitorDataProvider.Context">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Frontend.FilesMonitoring.Data.OpenAccessFileMonitorDataProvider.CreateFileData">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Frontend.FilesMonitoring.Data.OpenAccessFileMonitorDataProvider.CreateFileData(System.Guid)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Frontend.FilesMonitoring.Data.OpenAccessFileMonitorDataProvider.GetFileData(System.Guid)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Frontend.FilesMonitoring.Data.OpenAccessFileMonitorDataProvider.GetFilesData">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Frontend.FilesMonitoring.Data.OpenAccessFileMonitorDataProvider.Delete(Telerik.Sitefinity.Frontend.FilesMonitoring.Data.FileData)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>

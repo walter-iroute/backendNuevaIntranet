@@ -1,0 +1,985 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Telerik.Sitefinity.SiteSync</name>
+    </assembly>
+    <members>
+        <member name="T:Telerik.Sitefinity.SiteSync.ILogEntryGenerator">
+            <summary>
+            Describes a generator of SiteSyncLogEntry items
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.SiteSync.ILogEntryGenerator.GenerateLogEntries(System.String)">
+            <summary>
+            Generates log entries for given type
+            </summary>
+            <param name="type">The type</param>
+        </member>
+        <member name="T:Telerik.Sitefinity.SiteSync.ISiteSyncExportFilterRegistry">
+            <summary>
+            A global registry of <see cref="T:Telerik.Sitefinity.SiteSync.ISiteSyncExportFilter" /> instances.
+            Each instance is associated with the type of items which it exports.
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.SiteSync.ISiteSyncSnapIn">
+            <summary>
+            Interface for a snap-in that will handle syncing of an items from a specified type(s)
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.ISiteSyncSnapIn.SupportedType">
+            <summary>
+            The supported type for this snapin
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.SiteSync.ISiteSyncDependencySnapIn">
+            <summary>
+            Interface for supporting dependencies between synchronized types
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Telerik.Sitefinity.SiteSync.ISiteSyncDependencySnapIn.CalculateDependencies(Telerik.Sitefinity.SiteSync.ISiteSyncExportContext)" -->
+        <member name="T:Telerik.Sitefinity.SiteSync.ISiteSyncValidatingSnapIn">
+            <summary>
+            Defines validation methods for snapIns
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.SiteSync.ISiteSyncValidatingSnapIn.GetValidationRequest(Telerik.Sitefinity.SiteSync.ISiteSyncExportContext)">
+            <summary>
+            Gets the source validation request for current sync operation
+            </summary>
+            <param name="settings">Current sync settings</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.SiteSync.ISiteSyncValidatingSnapIn.Validate(System.String)">
+            <summary>
+            Validates the source validation request on the target server
+            </summary>
+            <param name="sourceValidationRequest">The source validation request.</param>
+            <returns>A validation error message or <c>null</c>, if none.</returns>
+        </member>
+        <member name="T:Telerik.Sitefinity.SiteSync.ISiteSyncSnapInRegistry">
+            <summary>
+            A global registry of <see cref="T:Telerik.Sitefinity.SiteSync.ISiteSyncSnapIn" /> instances.
+            Each instance is associated with the type of items which synchronization it implements.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.SiteSync.ISiteSyncSnapInRegistry.GetSnapInTypes">
+            <summary>
+            Returns the types of all registered snap-ins.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.SiteSync.ISiteSyncSnapInRegistry.GetSnapIn(System.String)">
+            <summary>
+            Gets a snap-in for given type name.
+            </summary>
+            <param name="type">The type name that the snap-in handles.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.SiteSync.ISiteSyncSnapInRegistry.Register(System.String,Telerik.Sitefinity.SiteSync.ISiteSyncSnapIn)">
+            <summary>
+            Registers a snap-in instance that will handle the synchronization of items of <paramref name="type"/> type.
+            </summary>
+            <param name="type">The type that the snap-in handles.</param>
+            <param name="snapIn">The instance of the snap-in.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.SiteSync.ISiteSyncSnapInRegistry.Unregister(System.String)">
+            <summary>
+            Un-registers the snap-in that handles the specified type.
+            </summary>
+            <param name="type">The type that the snap-in handles.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.SiteSync.ISiteSyncSnapInRegistry.ResolveSnapIn``1(System.String)">
+            <summary>
+            Resolves a <see cref="T:Telerik.Sitefinity.SiteSync.ISiteSyncSnapIn" /> instance 
+            </summary>
+            <typeparam name="TSnapIn">The type of the snapin</typeparam>
+            <param name="supportedType">The supported items type</param>
+            <returns>The resolved instance</returns>
+        </member>
+        <member name="T:Telerik.Sitefinity.SiteSync.ISiteSyncTypeRegistry">
+            <summary>
+            A registry of the <see cref="T:SitefinityType"/>s which support synchronization.
+            </summary>
+            <remarks>
+            <para>Before registering a type in this registry a <see cref="T:SitefinityType"/> with the same key should be registered 
+            in the system-wide <see cref="T:SitefinityTypeRegistry"/> accessible through the <see cref="M:SystemManager.TypeRegistry"/> property.</para>
+            <seealso cref="T:SitefinityType"/>
+            </remarks>
+        </member>
+        <member name="M:Telerik.Sitefinity.SiteSync.ISiteSyncTypeRegistry.Register(System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Registers type that supports synchronization
+            </summary>
+            <param name="typeKey">The type key</param>
+            <param name="dependencyTypes">The dependencies</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.SiteSync.ISiteSyncTypeRegistry.Register(System.String,Telerik.Sitefinity.SiteSync.SiteSyncTypeKind,System.Collections.Generic.IEnumerable{System.String},Telerik.Sitefinity.SiteSync.SiteSyncTypeCategory,System.String)">
+            <summary>
+            Registers type that supports synchronization
+            </summary>
+            <param name="typeKey">The type key</param>
+            <param name="typeKind">The type kind</param>
+            <param name="dependencyTypes">The dependencies</param>
+            <param name="category">The category of the type</param>
+            <param name="tooltip">The tooltip for the type</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.SiteSync.ISiteSyncTypeRegistry.Unregister(System.String)">
+            <summary>
+            Unregisters type from the registry
+            </summary>
+            <param name="typeKey">The type key</param>
+        </member>
+        <member name="T:Telerik.Sitefinity.SiteSync.Model.ScheduledTasksViewModel">
+            <summary>
+            Scheduled tasks that are to be synced
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.Model.ScheduledTasksViewModel.TaskId">
+            <summary>
+            Gets or sets the id of the task.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.Model.ScheduledTasksViewModel.Task">
+            <summary>
+            Gets or sets the Task name
+            </summary>
+            <value>The site id.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.Model.ScheduledTasksViewModel.SendFrom">
+            <summary>
+            Gets or sets the Send from field
+            </summary>
+            <value>The site name.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.Model.ScheduledTasksViewModel.To">
+            <summary>
+            Gets or sets the destination url
+            </summary>
+            <value>The site url.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.Model.ScheduledTasksViewModel.Note">
+            <summary>
+            Gets or sets the note for the sync job
+            </summary>
+            <value>The sync status of the site.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.Model.ScheduledTasksViewModel.CreatedOn">
+            <summary>
+            Gets or sets the Date on which the task was created
+            </summary>
+            <value>The Css class of the sync status label.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.Model.ScheduledTasksViewModel.IsScheduledRetryOperation">
+            <summary>
+            Gets or sets a value indicating whether the current scheduled operation is retry operation.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.Model.ScheduledTasksViewModel.HasSyncInProgress">
+            <summary>
+            Gets or sets a value indicating whether there is an ongoing sync operation.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.Model.ScheduledTasksViewModel.CssStatusClass">
+            <summary>
+            Gets or sets a value indicating the Css class that should be applied.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.Model.ScheduledTasksViewModel.TargetServer">
+            <summary>
+            Gets or sets the site to which we are syncing.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.Model.ScheduledTasksViewModel.SiteIds">
+            <summary>
+            Gets or sets the site id
+            </summary>
+            <value>The site id.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.Model.ScheduledTasksViewModel.NextRunDate">
+            <summary>
+            Gets or sets the date for the next run
+            </summary>
+            <value>The next run date</value>
+        </member>
+        <member name="T:Telerik.Sitefinity.SiteSync.Model.SiteSyncServerViewModel">
+            <summary>
+            The sites that are to be synced
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.Model.SiteSyncServerViewModel.SiteId">
+            <summary>
+            Gets or sets the site id.
+            </summary>
+            <value>The site id.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.Model.SiteSyncServerViewModel.SiteName">
+            <summary>
+            Gets or sets the site name
+            </summary>
+            <value>The site name.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.Model.SiteSyncServerViewModel.SiteUrl">
+            <summary>
+            Gets or sets the site url
+            </summary>
+            <value>The site url.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.Model.SiteSyncServerViewModel.SitePendingItemsCount">
+            <summary>
+            Gets or sets the pending items count for the site
+            </summary>
+            <value>The pending items count for the site.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.Model.SiteSyncServerViewModel.SiteSyncStatus">
+            <summary>
+            Gets or sets the sync status of the site
+            </summary>
+            <value>The sync status of the site.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.Model.SiteSyncServerViewModel.SiteSyncStatusCssClass">
+            <summary>
+            Gets or sets the Css class for that sync status label
+            </summary>
+            <value>The Css class of the sync status label.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.Model.SiteSyncServerViewModel.SiteAvailablilityStatus">
+            <summary>
+            Gets or sets a value indicating whether the offline / online status of the site.
+            </summary>
+            <value>The offline / online status of the site.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.Model.SiteSyncServerViewModel.SiteAvailablilityStatusCssClass">
+            <summary>
+            Gets or sets a value indicating the Css class for the offline status of the site.
+            </summary>
+            <value>The Css class for the offline status of the site.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.Model.SiteSyncServerViewModel.FailedItems">
+            <summary>
+            Gets or sets a value indicating the unsuccessful items count.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.Model.SiteSyncServerViewModel.SuccessItems">
+            <summary>
+            Gets or sets value indicating the number of successful items.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.Model.SiteSyncServerViewModel.TargetServer">
+            <summary>
+            Gets or sets the site to which we are syncing.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.Model.SiteSyncServerViewModel.SyncEndTime">
+            <summary>
+            Gets or sets value indicating the time of the last sync.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.Model.SiteSyncServerViewModel.IsLasySyncDetailsButtonVisible">
+            <summary>
+            Gets or sets a value indicating whether the last sync details button is visible.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.Model.SiteSyncServerViewModel.FailedItemsLabel">
+            <summary>
+            Gets or sets value indicating the label for failed items.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.Model.SiteSyncServerViewModel.SuccessItemsLabel">
+            <summary>
+            Gets or sets value indicating the label for success items.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.Model.SiteSyncServerViewModel.TargetServerLabel">
+            <summary>
+            Gets or sets value indicating the label for target server.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.Model.SiteSyncServerViewModel.HasSyncInProgress">
+            <summary>
+            Gets or sets a value indicating whether there is sync in progress for this site.
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.SiteSync.Model.SiteSyncViewsModel">
+            <summary>
+            The views that are to be showed
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.Model.SiteSyncViewsModel.ViewName">
+            <summary>
+            Gets or sets the view name
+            </summary>
+            <value>The view name.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.Model.SiteSyncViewsModel.ViewItems">
+            <summary>
+            Gets or sets the view item counter
+            </summary>
+            <value>The view items counter.</value>
+        </member>
+        <member name="T:Telerik.Sitefinity.SiteSync.Model.SyncHistoryDataViewModel">
+            <summary>
+            The views that are to be showed
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.Model.SyncHistoryDataViewModel.SiteSyncSummaryId">
+            <summary>
+            Gets or sets the sync summary id
+            </summary>
+            <value>The sync summary id.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.Model.SyncHistoryDataViewModel.SyncDate">
+            <summary>
+            Gets or sets the sync date
+            </summary>
+            <value>The sync date.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.Model.SyncHistoryDataViewModel.SourceSites">
+            <summary>
+            Gets or sets the source site names
+            </summary>
+            <value>The source site names.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.Model.SyncHistoryDataViewModel.SourceSiteIds">
+            <summary>
+            Gets or sets the source site ids
+            </summary>
+            <value>The source site ids.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.Model.SyncHistoryDataViewModel.SuccessItems">
+            <summary>
+            Gets or sets the success items count
+            </summary>
+            <value>The success items count.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.Model.SyncHistoryDataViewModel.FailedItems">
+            <summary>
+            Gets or sets the failed items count
+            </summary>
+            <value>The the failed items count.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.Model.SyncHistoryDataViewModel.SyncTaskDetails">
+            <summary>
+            Gets or sets the sync task details
+            </summary>
+            <value>The sync task details.</value>
+        </member>
+        <member name="M:Telerik.Sitefinity.SiteSync.SiteSyncSnapInBase.GenerateLogEntries(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.SiteSync.SiteSyncSnapInBase.FilterDependencies(Telerik.Sitefinity.SiteSync.SiteSyncSnapInBase.DependenciesInfo,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.IEnumerable{System.Guid}})">
+            <summary>
+            Filters the dependencies, so only the required once will be synced.
+            Mostly language filtration at this point.
+            </summary>
+            <param name="info">The <see cref="T:Telerik.Sitefinity.SiteSync.SiteSyncSnapInBase.DependenciesInfo"/> object to use</param>
+            <param name="result">The result collection, where the filtered dependencies will be pushed</param>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.SiteSyncSnapInBase.Behaviors">
+            <summary>
+            Gets the behaviors.
+            </summary>
+            <value>
+            The behaviors.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.SiteSyncSnapInBase.Telerik#Sitefinity#SiteSync#ISiteSyncBehavioralSnapIn#Behaviors">
+            <summary>
+            Gets the behaviors.
+            </summary>
+            <value>
+            The behaviors.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.SiteSyncSnapInBase.CustomMigrationBehavior">
+            <summary>
+            Returns the registered cusom migration behavior or null.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.SiteSyncSnapInBase.DependenciesInfo.ExactLangCache">
+            <summary>
+            Gets or sets the exact languages matches - [entryId, [entryExactLangMatchId, entryExactLangMatch]]
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.SiteSyncSnapInBase.DependenciesInfo.DefaultLangCache">
+            <summary>
+            Gets or sets the default languages matches - [entryId, [entryDefaultLangMatchId, entryDefaultLangMatch]]
+            </summary>
+        </member>
+        <member name="F:Telerik.Sitefinity.SiteSync.SiteSyncTypeKind.Type">
+            <summary>
+            Used for type syncing
+            </summary>
+        </member>
+        <member name="F:Telerik.Sitefinity.SiteSync.SiteSyncTypeKind.TypeWithMetaFields">
+            <summary>
+            Used for dynamic module content type syncing
+            </summary>
+        </member>
+        <member name="F:Telerik.Sitefinity.SiteSync.SiteSyncTypeKind.Module">
+            <summary>
+            Used for dynamic module syncing
+            </summary>
+        </member>
+        <member name="F:Telerik.Sitefinity.SiteSync.SiteSyncTypeKind.Group">
+            <summary>
+            Used, when there is no suitable module or type - it groups some types under a group.
+            </summary>
+        </member>
+        <member name="F:Telerik.Sitefinity.SiteSync.SiteSyncTypeCategory.Content">
+            <summary>
+            Used for content types
+            </summary>
+        </member>
+        <member name="F:Telerik.Sitefinity.SiteSync.SiteSyncTypeCategory.Settings">
+            <summary>
+            Used for settings types
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.SiteSync.SiteSyncType">
+            <summary>
+            <para>A type of content/data synchronized by Site Sync.</para>
+            <para>The term type is used in a sense broader than .NET type or Sitefinity content type,
+            which is the reason why a string is used for a key.</para>
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.SiteSyncType.Type">
+            <summary>
+            String key representing the type. For .NET types their full name is used by convention.
+            </summary>
+            <remarks>
+            Should be registered in the system type registry (<see cref="M:SystemManager.TypeRegistry"/>).
+            </remarks>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.SiteSyncType.DependencyTypes">
+            <summary>
+            The keys of the types on which synchronization the synchronization of this type depends,
+            and thus they should be synchronized before this one.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.SiteSyncType.Title">
+            <summary>
+            User-friendly title.
+            </summary>
+            <remarks>
+            Copied from the system type registry (<see cref="M:SystemManager.TypeRegistry"/>).
+            </remarks>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.SiteSyncType.ParentType">
+            <summary>
+            The key of the parent type, if any; <c>null</c> otherwise.
+            </summary>
+            <remarks>
+            Copied from the system type registry (<see cref="M:SystemManager.TypeRegistry"/>).
+            </remarks>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.SiteSyncType.TypeKind">
+            <summary>
+            The kind of this type. See <see cref="T:Telerik.Sitefinity.SiteSync.SiteSyncTypeKind"/> for the possible types.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.SiteSyncType.Category">
+            <summary>
+            The category of this type. See <see cref="T:Telerik.Sitefinity.SiteSync.SiteSyncTypeCategory"/>.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.SiteSyncType.Tooltip">
+            <summary>
+            Gets or sets the tooltip for the type
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.SiteSync.SyncingStatus">
+            <summary>
+            Enumerates the possible statuses of an item regarding its synchronization.
+            </summary>
+            <preliminary />
+        </member>
+        <member name="T:Telerik.Sitefinity.SiteSync.SummaryItemTypeDetails">
+            <summary>
+            This class specifies the summary status for each type
+            </summary>
+            <remarks>
+            This class is also serialized and stored in the database.
+            Its protection level should be public because otherwise the XMLSerializer won't serialize it.
+            </remarks>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.SummaryItemTypeDetails.Type">
+            <summary>
+            Specifies the type of each item
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.SummaryItemTypeDetails.FriendlyTypeName">
+            <summary>
+            A friendly type name for the user interface
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.SummaryItemTypeDetails.TotalCount">
+            <summary>
+            The total number of synced items of the specific type
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.SummaryItemTypeDetails.SuccessfulItemsCount">
+            <summary>
+            Count of the successfully synced items of the specific type
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.SummaryItemTypeDetails.FailedItemsCount">
+            <summary>
+            Failed items count of the specific type
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.SummaryItemTypeDetails.ErrorDetails">
+            <summary>
+            A detailed explanation of the error for the failed item
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.SummaryItemTypeDetails.SuccessDetails">
+            <summary>
+            A detailed information about the successful items.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.SummaryItemTypeDetails.SiteOriginId">
+            <summary>
+            Site origin id.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.SummaryItemTypeDetails.SiteOriginName">
+            <summary>
+            Site origin name
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.SyncSummary.Id">
+            <summary>
+            The sync summary id
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.SyncSummary.UserName">
+            <summary>
+            Name of the user performed the sync operation.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.SyncSummary.Date">
+            <summary>
+            Date on which the sync operation has completed.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.SyncSummary.Note">
+            <summary>
+            The note of the sync operation.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.SyncSummary.ServerUrl">
+            <summary>
+            List of the servers used in the sync operation.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.SyncSummary.ServerUserFriendlyName">
+            <summary>
+            Server user friendly name.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.SyncSummary.SyncedItems">
+            <summary>
+            List of the successfully synced items.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.SyncSummary.FailedItems">
+            <summary>
+            List of the failed items.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.SyncSummary.GeneralErrors">
+            <summary>
+            The general errors, occured during the sync operations.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.SyncSummary.SummaryServer">
+            <summary>
+            The summary for the sync server.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.SyncSummary.Sites">
+            <summary>
+            List of the sites included in the sync process.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.SyncSummary.SiteNamesLabel">
+            <summary>
+            The label with site names.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.SyncSummary.FailedItemsRetryInterval">
+            <summary>
+            Gets or sets the failed items retry interval.
+            </summary>
+            <value>The failed items retry interval.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.SyncSummary.FailedItemsCurrentRetryCount">
+            <summary>
+            Gets or sets the failed items current retry count.
+            </summary>
+            <value>The failed items current retry count.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.SyncSummary.FailedItemsMaxRetryCount">
+            <summary>
+            Gets or sets the configured failed items retry count.
+            </summary>
+            <value>The configured failed items retry count.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.SyncSummaryServer.ServerId">
+            <summary>
+            Id of the server that was synced to.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.SyncSummaryServer.ServerName">
+            <summary>
+            Name of the server that was synced to.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.SyncSummaryServer.TotalItems">
+            <summary>
+            Number of the total items.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.SyncSummaryServer.SyncedItems">
+            <summary>
+            Number of the successfully synced items.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.SyncSummaryServer.FailedItems">
+            <summary>
+            Number of the failed items.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.SyncSummaryServer.SummaryItemDetails">
+            <summary>
+            Details about the items from the synced process.
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.SiteSync.Web.MigrationCompletedDTO">
+            <summary>
+            A class, representing the data sent for completing migration operation
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.Web.MigrationCompletedDTO.MigrationMappings">
+            <summary>
+            Gets or sets the migration mappings
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.Web.MigrationCompletedDTO.SiteInfo">
+            <summary>
+            Gets or sets the target site info
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.Web.ProviderMigrationRequest.Providers">
+            <summary>
+            Describes the provider configuration - type/provider/provider properties (represented as IDictionary)
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.Web.SiteSyncLogEntryViewModel.Id">
+            <summary>
+            Gets the unique identity of the item.
+            </summary>
+            <value>The id.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.Web.SiteSyncLogEntryViewModel.ServerId">
+            <summary>
+            Gets the id of the server where this item should be synced.
+            </summary>
+            <value>The id of the server.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.Web.SiteSyncLogEntryViewModel.Version">
+            <summary>
+            Gets the version of the item.
+            </summary>
+            <value>The version.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.Web.SiteSyncLogEntryViewModel.TypeName">
+            <summary>
+            Gets the type of the item.
+            </summary>
+            <value>The type.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.Web.SiteSyncLogEntryViewModel.Title">
+            <summary>
+            Gets the title of the item.
+            </summary>
+            <value>The title.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.Web.SiteSyncLogEntryViewModel.StatusDetails">
+            <summary>
+            Gets the status details of the item.
+            </summary>
+            <value>The status details.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.Web.SiteSyncLogEntryViewModel.Status">
+            <summary>
+            Gets the status of the item.
+            </summary>
+            <value>The status.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.Web.SiteSyncLogEntryViewModel.Provider">
+            <summary>
+            Gets the provider of the item.
+            </summary>
+            <value>The provider.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.Web.SiteSyncLogEntryViewModel.ParentTitle">
+            <summary>
+            Gets the title of the parent.
+            </summary>
+            <value>The title of the parent.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.Web.SiteSyncLogEntryViewModel.ModifiedSinceLastSync">
+            <summary>
+            Gets the value if the item is modified since last sync.
+            </summary>
+            <value>The value if the item is modified since last sync.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.Web.SiteSyncLogEntryViewModel.Language">
+            <summary>
+            Gets the language of the item.
+            </summary>
+            <value>The language.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.Web.SiteSyncLogEntryViewModel.ItemId">
+            <summary>
+            Gets the unique identity of the synced item.
+            </summary>
+            <value>The unique identity of the synced item.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.Web.SiteSyncLogEntryViewModel.ItemAction">
+            <summary>
+            Gets the item action.
+            </summary>
+            <value>The item action.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.Web.SiteSyncLogEntryViewModel.ItemActionTitle">
+            <summary>
+            Gets the item action title.
+            </summary>
+            <value>The item action title.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.Web.SiteSyncLogEntryViewModel.Timestamp">
+            <summary>
+            Gets the date when the item was modified.
+            </summary>
+            <value>The date when the item was modified.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.Web.SiteSyncLogEntryViewModel.UserId">
+            <summary>
+            Gets the user that modified the item.
+            </summary>
+            <value>The user that modified the item.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.Web.SiteSyncLogEntryViewModel.UserName">
+            <summary>
+            Gets the username that modified the item.
+            </summary>
+            <value>The username that modified the item.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.Web.SiteSyncLogEntryViewModel.AdditionalInfo">
+            <summary>
+            Gets the additional info for the item.
+            </summary>
+            <value>The additional info for the item.</value>
+        </member>
+        <member name="T:Telerik.Sitefinity.SiteSync.Web.ISiteSyncService">
+            <summary>
+            Base contract for syncing between Sitefinity dev instances at live environment.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.SiteSync.Web.ISiteSyncService.RequestValidation(Telerik.Sitefinity.SiteSync.Web.UI.SyncSettings)">
+            <summary>
+            On the source, validates the sync operation before it starts, sending a validation request to the destination.
+            </summary>
+            <param name="settings">The synchronization settings.</param>
+            <returns>The validation error message, or empty string if there are none</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.SiteSync.Web.ISiteSyncService.Validate(Telerik.Sitefinity.SiteSync.Web.SiteSyncValidationRequest)">
+            <summary>
+            On the destination, responds to a sync validation request by the source.
+            </summary>
+            <param name="request">The validation request.</param>
+            <returns>A list with error messages.</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.SiteSync.Web.ISiteSyncService.StartSync(Telerik.Sitefinity.SiteSync.Web.UI.SyncSettings)">
+            <summary>
+            Starts the synchronization.
+            </summary>
+            <param name="settings">The synchronization settings.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.SiteSync.Web.ISiteSyncService.StopSync(System.Guid)">
+            <summary>
+            Stops synchronization after the current item operation completes.
+            </summary>
+            <param name="serverId">The ID of the target server.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.SiteSync.Web.ISiteSyncService.ForceStopSync(System.Guid)">
+            <summary>
+            Stops synchronization without waiting the current item operation to complete.
+            </summary>
+            <param name="serverId">The ID of the target server.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.SiteSync.Web.ISiteSyncService.Schedule(Telerik.Sitefinity.SiteSync.Web.UI.SyncSettings)">
+            <summary>
+            Schedules a synchronization.
+            </summary>
+            <param name="settings">The synchronization settings.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.SiteSync.Web.ISiteSyncService.ChangeSchedule(Telerik.Sitefinity.SiteSync.Web.UI.SyncSettings)">
+            <summary>
+            Changes a schedule for synchronization.
+            </summary>
+            <param name="settings">The synchronization settings.</param>
+            <param name="taskId">The id of the scheduled task.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.SiteSync.Web.ISiteSyncService.DeleteScheduledTasks(System.Guid[])">
+            <summary>
+            Deletes scheduled tasks.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.SiteSync.Web.ISiteSyncService.GetCurrentSyncState(System.Guid)">
+            <summary>
+            Gets the information about the current sync process.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.SiteSync.Web.ISiteSyncService.GetCurrentTasksState">
+            <summary>
+            Gets the information about the sync progress of scheduled items.
+            </summary>        
+        </member>
+        <member name="M:Telerik.Sitefinity.SiteSync.Web.ISiteSyncService.CalculateDependentItems(Telerik.Sitefinity.SiteSync.Web.UI.SyncSettings)">
+            <summary>
+            Starts synchronization.
+            </summary>
+            <param name="settings">The synchronization settings.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.SiteSync.Web.ISiteSyncService.GetLastSyncSummary(System.String,System.String[])">
+            <summary>
+            Gets the last sync summary.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.SiteSync.Web.ISiteSyncService.GetSyncSummary(System.String,System.String[])">
+            <summary>
+            Gets the sync summary.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.SiteSync.Web.ISiteSyncService.DeleteLastSyncSummary(System.String)">
+            <summary>
+            Deletes the last sync summary.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.SiteSync.Web.ISiteSyncService.TestConnection(System.String)">
+            <summary>
+            Tests the connection between two Sitefinity instances - called from client
+            </summary>
+            <param name="serverId">The target sync server id.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.SiteSync.Web.ISiteSyncService.RequestTargetSites(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Query the target server for the available sites
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.SiteSync.Web.ISiteSyncService.GetPendingItems(System.String,System.String,System.String,System.Int32,System.Int32,System.String,Telerik.Sitefinity.Web.Model.QueryData,System.String[])">
+            <summary>
+            Gets the changed items of given type
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.SiteSync.Web.ISiteSyncService.GetPendingItemsIds(System.String,System.String,Telerik.Sitefinity.Web.Model.QueryData,System.String[])">
+            <summary>
+            Gets the changed items ids of given type
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.SiteSync.Web.ISiteSyncService.ConfirmConnection">
+            <summary>
+            Confirms the connection between two Sitefinity instances - called from server, to check other server availability
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.SiteSync.Web.ISiteSyncService.MigrationCompleted(Telerik.Sitefinity.SiteSync.Web.MigrationCompletedDTO)">
+            <summary>
+            On the target, handles logic after migration completes.
+            </summary>
+            <param name="migrationMappings">The migration mappings.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.SiteSync.Web.ISiteSyncService.MultiSiteGetSitesSiteSyncData(System.Int32,System.Int32,System.String,System.String)">
+            <summary>
+            Returns the collection of pending items per site
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.SiteSync.Web.ISiteSyncService.GetSiteSyncViewsData">
+            <summary>
+            Returns the collection of pending items per view
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.SiteSync.Web.ISiteSyncService.GetSiteSyncHistoryData(System.Int32,System.Int32,System.String,System.String)">
+            <summary>
+            Returns the collection of sync history data
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.SiteSync.Web.ISiteSyncService.GetSyncTypeDetails(System.String,System.String[],System.String)">
+            <summary>
+            Retrieves the Item types for a specific server
+            </summary>
+            <param name="server">The target server</param>
+            <param name="siteId">The site ids</param>
+            <returns>A list of summary item types types</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.SiteSync.Web.ISiteSyncService.GetSyncItemErrorDetails(System.String,System.String[],System.String,System.Boolean,System.String)">
+            <summary>
+            Retrieves the error details for the synced items if any
+            </summary>
+            <param name="server">Target server</param>
+            <param name="siteId">The site ids</param>
+            <param name="type">Item type</param>
+            <param name="getErrors">A flag indicating whether error messages should also be returned.</param>
+            <returns>A string with all errors and messages for failed items</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.SiteSync.Web.ISiteSyncService.RequestTargetInfo(System.String)">
+            <summary>
+            Requests the information for the target server
+            </summary>
+            <param name="serverId">The id of the target server</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.SiteSync.Web.ISiteSyncService.GetInfo">
+            <summary>
+            Returns the information for this server
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.SiteSync.Web.ISiteSyncService.GenerateSiteSyncLogEntries">
+            <summary>
+            Generates entries for all the content in Sitefinity.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.SiteSync.Web.ISiteSyncService.MigrateProviders(Telerik.Sitefinity.SiteSync.Web.ProviderMigrationRequest)">
+            <summary>
+            Prepares the providers configuration and adds the necessary data source links
+            </summary>
+            <param name="providersReq">The structure, containing the information about the source site's providers</param>
+        </member>
+        <member name="T:Telerik.Sitefinity.SiteSync.Web.UI.Fields.ISyncDetailsListFieldDefinition">
+            <summary>
+            Defines the members that need to be implemented by every type that
+            represents a field definition for the control instances of type <see cref="!:SyncDetailsListField"/> interface.
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.SiteSync.Web.UI.Fields.ISyncSummaryFieldDefinition">
+            <summary>
+            An interface that provides the common members for the definition of synchronization summary field.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.Web.UI.SyncSettings.SubscribedEmails">
+            <summary>
+            Gets or sets the emails subscribed for the form
+            </summary>
+            <value>The emails subscribed for the form</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.SiteSync.Web.UI.SyncSettings.SyncStructureSettings">
+            <summary>
+            Gets or sets type of sync data operation per each dynamic type
+            </summary>
+            <value>The sync data operation per each dynamic type</value>
+        </member>
+    </members>
+</doc>

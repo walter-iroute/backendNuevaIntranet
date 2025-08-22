@@ -1,0 +1,3155 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Telerik.Sitefinity.Authentication</name>
+    </assembly>
+    <members>
+        <member name="T:Telerik.Sitefinity.Authentication.AuthenticationModule">
+            <summary>
+            Authentication module.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationModule.Managers">
+            <summary>
+            Gets the CLR types of all data managers provided by this module.
+            </summary>
+            <value>An array of <see cref="T:System.Type" /> objects.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationModule.LandingPageId">
+            <summary>
+            Gets the landing page id for each module inherit from <see cref="T:Telerik.Sitefinity.Services.SecuredModuleBase" /> class.
+            </summary>
+            <value>The landing page id.</value>
+        </member>
+        <member name="E:Telerik.Sitefinity.Authentication.AuthenticationModule.Initialized">
+            <summary>
+            Raised when the Authentication module has finished its initialization.
+            </summary>
+        </member>
+        <member name="F:Telerik.Sitefinity.Authentication.AuthenticationModule.DefaultExternalProviderImagesLibraryId">
+            <summary>
+            Id of the default external provider images
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.AuthenticationModule.Install(Telerik.Sitefinity.Abstractions.SiteInitializer)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.AuthenticationModule.Uninstall(Telerik.Sitefinity.Abstractions.SiteInitializer)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.AuthenticationModule.Initialize(Telerik.Sitefinity.Services.ModuleSettings)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.AuthenticationModule.Load">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.AuthenticationModule.Unload">
+            <inheritdoc />
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationModule.ManagersInitializationMode">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.AuthenticationModule.GetModuleConfig">
+            <summary>
+            Gets the module config.
+            </summary>
+            <returns>The config section for the Authentication module.</returns>
+        </member>
+        <member name="F:Telerik.Sitefinity.Authentication.AuthenticationModule.ModuleName">
+            <summary>
+            Property that specifies the module name.
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Authentication.AuthenticationProvidersInitializer">
+            <summary>
+            Represents an initializer for the authentication providers
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.AuthenticationProvidersInitializer.GetAdditionalIdentityProviders">
+            <summary>
+            Returns the additional authentication providers. The results contain the names of the providers as keys and the initialization logic as values.
+            </summary>
+            <returns>The additional authentication providers</returns>
+        </member>
+        <member name="T:Telerik.Sitefinity.Authentication.AuthenticationResources">
+            <summary>
+            Localizable strings for the Authentication module
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.AuthenticationResources.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Authentication.AuthenticationResources"/> class.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.AuthenticationResources.#ctor(Telerik.Sitefinity.Localization.Data.ResourceDataProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Authentication.AuthenticationResources"/> class with the provided <see cref="T:Telerik.Sitefinity.Localization.Data.ResourceDataProvider"/>.
+            </summary>
+            <param name="dataProvider">ResourceDataProvider<see cref="T:Telerik.Sitefinity.Localization.Data.ResourceDataProvider"/>dataProvider</param>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.AuthenticationResourcesTitle">
+            <summary>
+            Gets Authentication module labels
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.AuthenticationResourcesDescription">
+            <summary>
+            Gets localizable resources for help information such as UI elements descriptions, usage explanations, FAQ and etc.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.AuthenticationProtocolCaption">
+            <summary>
+            Gets the authentication mechanism caption.
+            </summary>
+            <value>Authentication mechanism</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.AuthenticationProtocolDescription">
+            <summary>
+            Gets the authentication mechanism description.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.DisableIdentityServerHostHeaderTitle">
+            <summary>
+            Gets the identity server host header config title.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.DisableIdentityServerHostHeaderDescription">
+            <summary>
+            Gets the identity server host header config description.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.IdentityServerHostHeaderValueTitle">
+            <summary>
+            Gets the identity server host header valid value config title.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.IdentityServerHostHeaderValueDescription">
+            <summary>
+            Gets the identity server host header valid value config description.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.EncryptionKeyDescription">
+            <summary>
+            Gets the encryption key description.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.IssuerCaption">
+            <summary>
+            Gets the Issuer caption.
+            </summary>
+            <value>STS Url</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.IssuerDescription">
+            <summary>
+            Gets the Issuer description.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.RealmCaption">
+            <summary>
+            Gets the Realm caption.
+            </summary>
+            <value>STS Url</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.RealmDescription">
+            <summary>
+            Gets the Realm description.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.RequireHttpsCaption">
+            <summary>
+            Gets the Require HTTPS caption.
+            </summary>
+            <value>Require Https</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.RequireHttpsDescription">
+            <summary>
+            Gets the Require HTTPS description.
+            </summary>
+            <value>Gets or sets a value indicating whether https is required</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.ApplicationClientNameCaption">
+            <summary>
+            Gets the application client name caption.
+            </summary>
+            <value>Application client name</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.ApplicationClientNameDescription">
+            <summary>
+            Gets the Application client name description
+            </summary>
+            <value>The name of this application, when used as a client for an external STS</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.ServicePathDescription">
+            <summary>
+            Gets the STS Service path description.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.TransientDataCleanupCronSpecTitle">
+            <summary>
+            Gets the Transient data cleanup schedule caption.
+            </summary>
+            <value>Transient data cleanup schedule</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.TransientDataCleanupCronSpecDescription">
+            <summary>
+            Gets the Transient data cleanup schedule description.
+            </summary>
+            <value>Use cron expression syntax to schedule cleaning transient data such as consents, tokens, etc. For example: 5 * * * * (run on the fifth minute of every hour)</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.CookieRememberMeDurationCaption">
+            <summary>
+            Gets the Cookie remember me duration caption.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.CookieRememberMeDurationDescription">
+            <summary>
+            Gets the Cookie remember me duration description.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.CSPConnectSourceCaption">
+            <summary>
+            Gets the Content Security Policy Connect Source caption.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.CSPConnectSourceDescription">
+            <summary>
+            Gets the Content Security Policy Connect Source description.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.CSPFontSourceCaption">
+            <summary>
+            Gets the Content Security Policy Font Source caption.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.CSPFontSourceDescription">
+            <summary>
+            Gets the Content Security Policy Font Source description.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.CSPImageSourceCaption">
+            <summary>
+            Gets the Content Security Policy Image Source caption.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.CSPImageSourceDescription">
+            <summary>
+            Gets the Content Security Policy Image Source description.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.CSPScriptSourceCaption">
+            <summary>
+            Gets the Content Security Policy Script Source caption.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.CSPScriptSourceDescription">
+            <summary>
+            Gets the Content Security Policy Script Source description.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.CSPStyleSourceCaption">
+            <summary>
+            Gets the Content Security Policy Style Source caption.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.CSPStyleSourceDescription">
+            <summary>
+            Gets the Content Security Policy Style Source description.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.ClientNameCaption">
+            <summary>
+            Gets the client name caption.
+            </summary>
+            <value>Client name</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.ClientNameDescription">
+            <summary>
+            Gets the client name description.
+            </summary>
+            <value>The name of the client</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.ClientEnabledCaption">
+            <summary>
+            Gets the Client enabled caption.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.ClientEnabledDescription">
+            <summary>
+            Gets the Client enabled description.
+            </summary>
+            <value>Determines if the client is enabled</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.AllowAccessToAllScopesCaption">
+            <summary>
+            Gets the Allow access to all scopes caption.
+            </summary>
+            <value>Allow access to all scopes</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.AllowAccessToAllScopesDescription">
+            <summary>
+            Gets the Allow access to all scopes description.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.AllowedScopesCaption">
+            <summary>
+            Gets the Allowed scopes caption
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.AllowedScopesDescription">
+            <summary>
+            Gets the Allowed scopes description.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.RequireConsentCaption">
+            <summary>
+            Gets the Require consent caption.
+            </summary>
+            <value>Require consent</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.RequireConsentDescription">
+            <summary>
+            Gets the Require consent description.
+            </summary>
+            <value>Defines if the consent will be required (consent screen will be displayed to choose which scopes to allow)</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.RefreshTokenUsageCaption">
+            <summary>
+            Gets the Refresh token usage caption
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.RefreshTokenUsageDescription">
+            <summary>
+            Gets the Refresh token usage description
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.RefreshTokenExpirationCaption">
+            <summary>
+            Gets the Refresh token expiration caption
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.RefreshTokenExpirationDescription">
+            <summary>
+            Gets the Refresh token expiration description
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.SlidingRefreshTokenLifetimeCaption">
+            <summary>
+            Gets the Sliding refresh token lifetime caption
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.SlidingRefreshTokenLifetimeDescription">
+            <summary>
+            Gets the Sliding refresh token lifetime description
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.AbsoluteRefreshTokenLifetimeCaption">
+            <summary>
+            Gets the Absolute refresh token lifetime caption
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.AbsoluteRefreshTokenLifetimeDescription">
+            <summary>
+            Gets the Absolute refresh token lifetime description
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.AccessTokenTypeCaption">
+            <summary>
+            Gets the Access token type caption.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.AccessTokenTypeDescription">
+            <summary>
+            Gets the Access token type description
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.IdentityTokenLifetimeCaption">
+            <summary>
+            Gets the Identity token lifetime caption
+            </summary>
+            <value>Identity token lifetime</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.IdentityTokenLifetimeDescription">
+            <summary>
+            Gets the Identity token lifetime description
+            </summary>
+            <value>Defines the identity token lifetime in seconds</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.AccessTokenLifetimeCaption">
+            <summary>
+            Gets the Access token lifetime caption.
+            </summary>
+            <value>Access token lifetime</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.AccessTokenLifetimeDescription">
+            <summary>
+            Gets the Access token lifetime description.
+            </summary>
+            <value>Defines the lifetime of the access token in seconds</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.AuthorizationCodeLifetimeCaption">
+            <summary>
+            Gets the Authorization code lifetime caption.
+            </summary>
+            <value>Authorization code lifetime</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.AuthorizationCodeLifetimeDescription">
+            <summary>
+            Gets the Authorization code lifetime description.
+            </summary>
+            <value>Defines the lifetime of the authorization code in seconds</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.InludeJwtIdCaption">
+            <summary>
+            Gets the Include JWT id caption.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.InludeJwtIdDescription">
+            <summary>
+            Gets the Include JWT id description.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.AllowedCorsOriginCaption">
+            <summary>
+            Gets the Allowed Cross-Origin Resource Sharing origins caption.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.AllowedCorsOriginDescription">
+            <summary>
+            Gets the Allowed Cross-Origin Resource Sharing origins description.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.AllowedBasicAuthRoutesCaption">
+            <summary>
+            Gets the Allowed Basic authentication Routes Resource Sharing origins caption.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.AllowedBasicAuthRoutesDescription">
+            <summary>
+            Gets the Allowed Basic authentication Routes Resource Sharing origins description.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.FlowCaption">
+            <summary>
+            Gets the Authentication Flow caption.
+            </summary>
+            <value>Client flow</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.FlowDescription">
+            <summary>
+            Gets the Authentication Flow description.
+            </summary>
+            <value>Defines the client flow</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.ClientIdCaption">
+            <summary>
+            Gets the Client ID caption.
+            </summary>
+            <value>Client ID</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.ClientIdDescription">
+            <summary>
+            Gets the Client ID description.
+            </summary>
+            <value>Defines the client ID</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.ClientSecretsCaption">
+            <summary>
+            Gets the Client secrets caption.
+            </summary>
+            <value>Client secret</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.ClientSecretsDescription">
+            <summary>
+            Gets the Client secrets description.
+            </summary>
+            <value>Defines the client secret</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.StsProviderMappingsCaption">
+            <summary>
+            Gets the STS provider mappings caption.
+            </summary>
+            <value>STS provider mappings</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.StsProviderMappingsDescription">
+            <summary>
+            Gets the STS provider mappings description.
+            </summary>
+            <value>The mappings between the STS and the local providers</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.StsProviderNameCaption">
+            <summary>
+            Gets the STS provider name caption.
+            </summary>
+            <value>STS provider name</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.StsProviderNameDescription">
+            <summary>
+            Gets the STS provider name description.
+            </summary>
+            <value>The name of the STS provider</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.LocalProviderNameCaption">
+            <summary>
+            Gets the Local provider name caption.
+            </summary>
+            <value>Local provider name</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.LocalProviderNameDescription">
+            <summary>
+            Gets the Local provider name description.
+            </summary>
+            <value>The name of the local provider</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.ClaimsToRolesMappingsCaption">
+            <summary>
+            Gets the Claims to roles mapping caption.
+            </summary>
+            <value>Claims to roles mappings</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.ClaimsToRolesMappingsDescription">
+            <summary>
+            Gets the Claims to roles mapping description.
+            </summary>
+            <value>Defines a collection of mappings between claim type and value to user roles</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.ClaimsToFieldsMappingsCaption">
+            <summary>
+            Gets the Claims to fields mapping caption.
+            </summary>
+            <value>Claims to fields mappings</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.ClaimsToFieldsMappingsDescription">
+            <summary>
+            Gets the Claims to fields mapping description.
+            </summary>
+            <value>Defines a collection of mappings between claim and user field</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.ClaimTypeCaption">
+            <summary>
+            Gets the Claim type caption.
+            </summary>
+            <value>Claim type</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.ClaimTypeDescription">
+            <summary>
+            Gets the Claim type description.
+            </summary>
+            <value>The type of the claim</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.ClaimValueCaption">
+            <summary>
+            Gets the Claim value caption.
+            </summary>
+            <value>Claim value</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.ClaimValueDescription">
+            <summary>
+            Gets the Claim value description.
+            </summary>
+            <value>The value of the claim</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.MappedRolesCaption">
+            <summary>
+            Gets the Mapped roles caption.
+            </summary>
+            <value>Mapped roles</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.MappedRolesDescription">
+            <summary>
+            Gets the Mapped roles description.
+            </summary>
+            <value>Defines the mapped roles, separated with comma e.g. 'BackendUsers, Editors'</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.StoreNameCaption">
+            <summary>
+            Gets the Certification store name caption.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.StoreNameDescription">
+            <summary>
+            Gets the Certification store name description.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.StoreLocationCaption">
+            <summary>
+            Gets the Certification store location caption.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.StoreLocationDescription">
+            <summary>
+            Gets the Certification store location description.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.SubjectNameCaption">
+            <summary>
+            Gets the Certificate subject name caption.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.SubjectNameDescription">
+            <summary>
+            Gets the Certificate subject name description.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.AuthCookieFromBearerTokenEndpointCaption">
+            <summary>
+            Gets the Authentication cookie from bearer token endpoint caption
+            </summary>
+            <value>Authentication cookie from bearer token endpoint</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.AuthCookieFromBearerTokenEndpointDescription">
+            <summary>
+            Gets the Authentication cookie from bearer token endpoint description
+            </summary>
+            <value>The endpoint that allows retrieving authentication cookie using bearer token. If the value is empty, no endpoint is exposed.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.AdditionalScopesCaption">
+            <summary>
+            Gets the additional scopes of claims to be requested from the STS caption
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.AdditionalScopesDescription">
+            <summary>
+            Gets the space separated list of additional scopes to be requested from the STS description
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.ScopeNameCaption">
+            <summary>
+            Gets the scope name caption
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.ScopeNameDescription">
+            <summary>
+            Gets the scope name description
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.ScopeDisplayNameCaption">
+            <summary>
+            Gets the scope display name caption
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.ScopeDisplayNameDescription">
+            <summary>
+            Gets the scope display name description
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.ScopeClaimsCaption">
+            <summary>
+            Gets the scope claims caption
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.ScopeClaimsDescription">
+            <summary>
+            Gets the scope claims description
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.ScopeTypeCaption">
+            <summary>
+            Gets the scope type caption
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.ScopeTypeDescription">
+            <summary>
+            Gets the scope type description
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.IdentityProviderCaption">
+            <summary>
+            Gets the Identity provider caption
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.IdentityProviderDescription">
+            <summary>
+            Gets the Identity provider description.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.EnableBasicAuthenticationForBackendServicesCaption">
+            <summary>
+            Gets the enable basic authentication for back-end services caption.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.EnableBasicAuthenticationForBackendServicesDescription">
+            <summary>
+            Gets the enable basic authentication for back-end services description.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.ExternalProdiverAppIdCaption">
+            <summary>
+            Gets the External provider App Id caption
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.ExternalProdiverAppIdDescription">
+            <summary>
+            Gets the External provider App Id description
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.AdfsMetadataAddressCaption">
+            <summary>
+            Gets the ADFS Metadata Address Title
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.AdfsMetadataAddressDescription">
+            <summary>
+            Gets the ADFS Metadata Address Description
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.AdfsWtrealmCaption">
+            <summary>
+            Gets the ADFS realm caption
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.AdfsWtrealmDescription">
+            <summary>
+            Gets the ADFS realm description
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.WinAuthMetadataAddressCaption">
+            <summary>
+            Gets the Windows authentication Metadata Address Caption
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.WinAuthMetadataAddressDescription">
+            <summary>
+            Gets the Windows authentication Metadata Address Description
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.WinAuthWtrealmCaption">
+            <summary>
+            Gets the windows authentication realm caption
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.WinAuthWtrealmDescription">
+            <summary>
+            Gets the windows authentication realm description
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.ExternalLoginDataProviderCaption">
+            <summary>
+            Gets the External log-in data provider caption
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.ExternalLoginDataProviderDescription">
+            <summary>
+            Gets the External log-in data provider description
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.ExternalProdiverAppSecretCaption">
+            <summary>
+            Gets the External provider app secret title
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.ExternalProdiverAppSecretDescription">
+            <summary>
+            Gets the External provider app secret description
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.ExternalProdiverNameCaption">
+            <summary>
+            Gets the External provider name caption
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.ExternalProdiverNameDescription">
+            <summary>
+            Gets the External provider name description
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.ExternalProdiverTitleCaption">
+            <summary>
+            Gets the External provider title caption
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.ExternalProdiverTitleDescription">
+            <summary>
+            Gets the External provider title description
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.ExternalProdiverEnabledCaption">
+            <summary>
+            Gets the External provider enabled caption
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.ExternalProdiverEnabledDescription">
+            <summary>
+            Gets the External provider enabled description
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.ExternalProdiverRequireEmailClaimCaption">
+            <summary>
+            Gets the External provider require email claim caption
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.ExternalProdiverRequireEmailClaimDescription">
+            <summary>
+            Gets the External provider require email claim description
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.ExternalProdiverLinkCssClassCaption">
+            <summary>
+            Gets the External provider link CSS class caption
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.ExternalProdiverLinkCssClassDescription">
+            <summary>
+            Gets the External provider link CSS class description
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.ExternalProdiverAutoAssignedRolesCaption">
+            <summary>
+            Gets the External provider auto assigned roles caption
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.ExternalProdiverAutoAssignedRolesDescription">
+            <summary>
+            Gets the External provider auto assigned roles description
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.ExternalProdiverAdditionalScopesCaption">
+            <summary>
+            Gets the External provider auto assigned roles caption
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.ExternalProdiverAdditionalScopesDescription">
+            <summary>
+            Gets the External provider auto assigned roles caption
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.OpenIdConnectNonceSettingsTitle">
+            <summary>
+            Gets the OpenIdConnectNonce Settings Title
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.OpenIdConnectNonceSettingsDescription">
+            <summary>
+            Gets the OpenIdConnectNonce Settings Description
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.ErrorInvalidEmailOrPassword">
+            <summary>
+            Gets Error message for invalid credentials.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.ErrorUserEmailAlreadyExists">
+            <summary>
+            Gets Error message for existing user.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.ErrorNoExternalProviderName">
+            <summary>
+            Gets Error message for invalid external provider.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.ErrorNoExternalProviderUserId">
+            <summary>
+            Gets Error message for invalid external provider user id.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.ErrorNoExternalProviderEmail">
+            <summary>
+            Gets Error message for missing external provider email.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.ErrorInvalidExternalEmail">
+            <summary>
+            Gets Error message for invalid external provider email.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.ErrorLdapUserNotFound">
+            <summary>
+            Gets Error message for missing ldap user.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.ErrorUsernameRequired">
+            <summary>
+            Gets Error message for missing user name.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.ErrorPasswordRequired">
+            <summary>
+            Gets Error message for missing password.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.ErrorUserLockedOut">
+            <summary>
+            Gets Error message for locked user.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.ErrorInvalidExternalUser">
+            <summary>
+            Gets Error message for invalid external user.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.ErrorUnexpected">
+            <summary>
+            Gets Unexpected error message.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.EnableLoggingTitle">
+            <summary>
+            Gets the enable logging title
+            </summary>
+            <value>Enable logging</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.EnableLoggingDescription">
+            <summary>
+            Gets the enable logging description
+            </summary>
+            <value>Indicates if the Identity Server advanced logging is enabled</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.AuthCookieSecureOptionCaption">
+            <summary>
+            Gets the CookieSecureOptionCaption
+            </summary>
+            <value>Authentication cookie security</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.AuthCookieSecureOptionDescription">
+            <summary>
+            Gets the CookieSecureOptionDescription
+            </summary>
+            <value>Defines whether the authentication cookie should be secured</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.AuthCookieHttpOnlyCaption">
+            <summary>
+            Gets the CookieHttpOnlyCaption
+            </summary>
+            <value>Authentication cookie http only</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.AuthCookieHttpOnlyDescription">
+            <summary>
+            Gets the CookieHttpOnlyDescription
+            </summary>
+            <value>Defines if the authentication cookie should be http only</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.AuthCookieSlidingExpirationCaption">
+            <summary>
+            Gets the CookieSlidingExpirationCaption
+            </summary>
+            <value>Authentication cookie sliding expiration</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.AuthCookieSlidingExpirationDescription">
+            <summary>
+            Gets the CookieSlidingExpirationDescription
+            </summary>
+            <value>Defines if the authentication cookie has sliding expiration</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.AuthCookieExpirationTimeCaption">
+            <summary>
+            Gets the CookieExpirationTimeCaption
+            </summary>
+            <value>Authentication cookie expiration time</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.AuthCookieExpirationTimeDescription">
+            <summary>
+            Gets the CookieExpirationTimeDescription
+            </summary>
+            <value>Defines the expiration time of the authentication cookie in minutes</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.ResponseTypeCaption">
+            <summary>
+            Gets the ResponseTypeCaption
+            </summary>
+            <value>Defines the response type</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.ResponseTypeDescription">
+            <summary>
+            Gets the ResponseTypeDescription
+            </summary>
+            <value>Defines the response type</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.AuthorityCaption">
+            <summary>
+            Gets the AuthorityCaption
+            </summary>
+            <value>Defines the authority</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.AuthorityDescription">
+            <summary>
+            Gets the AuthorityDescription
+            </summary>
+            <value>Defines the authority</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.OpenIDMetadataAddressCaption">
+            <summary>
+            Gets the OpenID Metadata Address Title
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.OpenIDMetadataAddressDescription">
+            <summary>
+            Gets the OpenID Metadata Address Description
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.RedirectUriCaption">
+            <summary>
+            Gets the RedirectUriCaption
+            </summary>
+            <value>Defines the redirect uri</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.RedirectUriDescription">
+            <summary>
+            Gets the RedirectUriDescription
+            </summary>
+            <value>Defines the redirect uri</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.CallbackPathUriCaption">
+            <summary>
+            Gets the CallbackPathUriCaption
+            </summary>
+            <value>Defines the callback path</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.CallbackPathDescription">
+            <summary>
+            Gets the CallbackPathDescription
+            </summary>
+            <value>Defines the callback path</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.PostLogoutRedirectUriCaption">
+            <summary>
+            Gets the PostLogoutRedirectUriCaption
+            </summary>
+            <value>Defines the post log out redirect uri</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.PostLogoutRedirectUriDescription">
+            <summary>
+            Gets the PostLogoutRedirectUriDescription
+            </summary>
+            <value>Defines the post log out redirect uri</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.FieldCaption">
+            <summary>
+            Gets the FieldCaption
+            </summary>
+            <value>Defines the field which the mapping applies to</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.FieldDescription">
+            <summary>
+            Gets the FieldDescription
+            </summary>
+            <value>Defines the field which the mapping applies to</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.ClaimCaption">
+            <summary>
+            Gets the ClaimCaption
+            </summary>
+            <value>Defines the name of the caption mapped to the field</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.ClaimDescription">
+            <summary>
+            Gets the ClaimDescription
+            </summary>
+            <value>Defines the name of the caption mapped to the field</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.MapUsersViaEmailCaption">
+            <summary>
+            Gets the map external users to local caption
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.MapUsersViaEmailDescription">
+            <summary>
+            Gets the map external users to local description
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.IsPersistentCaption">
+            <summary>
+            Gets the is persistent caption
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.IsPersistentDescription">
+            <summary>
+            Gets the is persistent description
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.IsPersistentDurationCaption">
+            <summary>
+            Gets the is persistent duration caption.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.IsPersistentDurationDescription">
+            <summary>
+            Gets the is persistent duration description.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.OpenIdNotificationsTypeCaption">
+            <summary>
+            Gets the open id notifications type caption
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.OpenIdNotificationsTypeDescription">
+            <summary>
+            Gets the open id notifications type description
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.AdfsNotificationsTypeCaption">
+            <summary>
+            Gets the ADFS notifications type caption
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.AdfsNotificationsTypeDescription">
+            <summary>
+            Gets the ADFS notifications type description
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.FindASolution">
+            <summary>
+            Gets a phrase: Find a solution
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.InsecureProviderSystemStatusTitle">
+            <summary>
+            Gets a phrase: Insecure Authentication Provider
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.InsecureProviderSystemStatusDescription">
+            <summary>
+            Gets a phrase: The following authentication providers are insecure due to their OpenIdConnect.nonce validation settings:{0}.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.PasswordStrengthSystemStatusTitle">
+            <summary>
+            Gets a phrase: Password requirements not configured
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.PasswordStrengthSystemStatusDescription">
+            <summary>
+            Gets a phrase: You are using the default password requirements. Configure new requirements to prevent security risks.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.PasswordStrengthDocumentationUrl">
+            <summary>
+            Gets the password requirements url
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.PasswordStrengthDocumentationTitle">
+            <summary>
+            Gets the password requirements title
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.InsecureProviderSystemStatusRemoteOnly">
+            <summary>
+            Gets a phrase: <br /><em>RemoteOnly:</em> {0}
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.InsecureProviderSystemStatusDisabled">
+            <summary>
+            Gets a phrase: <br /><em>Disabled:</em> {0}
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.InsecureProviderDocumentationUrl">
+            <summary>
+            Gets the documentation article url
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.AuthenticationMechanismsDeprecationErrorDescription">
+            <summary>
+            Gets the AuthenticationMechanismsDeprecationErrorDescription shown in DashboardSystemStatusWidget
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.AuthenticationLinkUrl">
+            <summary>
+            Gets the Authentication documentaion link url
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.FormsAuthenticationDeprecationNotification">
+            <summary>
+            Gets a phrase: Forms authentication is no longer supported and is being deprecated. Change the authentication mechanism of your system by selecting Claims based authentication instead. Before doing any changes, make sure to back-up the project and the database. Once you apply the changes, this screen will no longer be visible. Revert is supported through configuration only. More about Claims based authentication
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.AuthenticationGroupPage">
+            <summary>
+            Gets a phrase: Authentication Group Page
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.AuthenticationGroupPageUrlName">
+            <summary>
+            Gets a word: authentication
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.LoginPageTitle">
+            <summary>
+            Gets a word: Login
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.LoginPageUrlName">
+            <summary>
+            Gets a word: login
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.TokendEndpointPathDescription">
+            <summary>
+            Gets a phrase: The relative path to the service responsible for issuing access and refresh tokens.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.AccessTokenTimeDescription">
+            <summary>
+            Gets a phrase: The time the access token is valid in seconds.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.RefreshTokenTimeDescription">
+            <summary>
+            Gets a phrase: The time the refresh token is valid in seconds.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.AuthorizedClientsDescription">
+            <summary>
+            Gets a phrase: The applications that are allowed to request tokens.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.TokenAuthorizationDescription">
+            <summary>
+            Gets a phrase: The applications that are allowed to request tokens.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.AuthorizeEndpointPathPathDescription">
+            <summary>
+            Gets a phrase: The path to the OAuth 2 authorize endpoint
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.TokenEndpointPathPathDescription">
+            <summary>
+            Gets a phrase: The path to the OAuth 2 authorize endpoint
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.OAuthServerDescription">
+            <summary>
+            Gets a phrase: The path to the OAuth 2 authorize endpoint
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.UsePKCECaption">
+            <summary>
+            Gets a phrase: Use PKCE
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.UsePKCEDescription">
+            <summary>
+            Gets a phrase: Enables or disables the use of the Proof Key for Code Exchange (PKCE) standard. This only applies when the response type is set to 'code'.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.ClientSecretDescription">
+            <summary>
+            Gets a phrase: Client secret as defined by OAuth 2.0 specs. It is not needed for implicit flow (response type is set to 'id_token').
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.AuthenticationResources.ClientSecretCaption">
+            <summary>
+            Gets a phrase: Client secret
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Authentication.Configuration.AuthenticationConfig">
+            <summary>
+            Represents the configuration section for Authentication module.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Configuration.AuthenticationConfig.RelyingParty">
+            <summary>
+            Gets the Relying Party settings.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Configuration.AuthenticationConfig.SecurityTokenService">
+            <summary>
+            Gets the Security Token Service settings.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Configuration.AuthenticationConfig.OAuthServer">
+            <summary>
+            Gets the 'OAuth' server settings.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Configuration.AuthenticationConfig.BasicAuthentication">
+            <summary>
+            Gets the Basic authentication settings.
+            </summary>        
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Configuration.AuthenticationConfig.EnableLogging">
+            <summary>
+            Gets or sets a value indicating whether the verbose authentication logging is enabled.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Configuration.AuthenticationConfig.TransientDataCleanupCronSpec">
+            <summary>
+            Gets or sets the cron specification for transient data cleanup task.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Configuration.AuthenticationConfig.Upgrade(System.Version,System.Version)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Configuration.AuthenticationConfig.OnPropertiesInitialized">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Configuration.AuthenticationConfig.InitializeDefaultProviders(Telerik.Sitefinity.Configuration.ConfigElementDictionary{System.String,Telerik.Sitefinity.Configuration.DataProviderSettings})">
+            <inheritdoc />
+        </member>
+        <member name="T:Telerik.Sitefinity.Authentication.Configuration.AuthenticationProtocol">
+            <summary>
+            Authentication protocols
+            </summary>
+        </member>
+        <member name="F:Telerik.Sitefinity.Authentication.Configuration.AuthenticationProtocol.Default">
+            <summary>
+            No internal identity provider is used and the user is authenticated directly in Sitefinity. External authentication providers
+            can still be registered and used for authentication against third party identity providers.
+            </summary>
+        </member>
+        <member name="F:Telerik.Sitefinity.Authentication.Configuration.AuthenticationProtocol.OpenId">
+            <summary>
+            OpenId protocol. Uses IdentityServer for STS
+            </summary>
+        </member>
+        <member name="F:Telerik.Sitefinity.Authentication.Configuration.AuthenticationProtocol.SimpleWebToken">
+            <summary>
+            SimpleWebToken protocol. For backward compatibility.
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Authentication.Configuration.BasicAuthentication.AllowedBasicAuthenticationRouteElement">
+            <summary>
+            Represents an allowed basic authentication path resource sharing
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Configuration.BasicAuthentication.AllowedBasicAuthenticationRouteElement.#ctor(Telerik.Sitefinity.Configuration.ConfigElement)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Authentication.Configuration.BasicAuthentication.AllowedBasicAuthenticationRouteElement"/> class.
+            </summary>
+            <param name="parent">The parent element.</param>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Configuration.BasicAuthentication.AllowedBasicAuthenticationRouteElement.Route">
+            <summary>
+            Gets or sets the allowed basic authentication paths
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Authentication.Configuration.BasicAuthentication.BasicAuthenticationElement">
+            <summary>
+            Configures the basic authentication
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Configuration.BasicAuthentication.BasicAuthenticationElement.#ctor(Telerik.Sitefinity.Configuration.ConfigElement)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Authentication.Configuration.BasicAuthentication.BasicAuthenticationElement" /> class.
+            </summary>
+            <param name="parent">The parent element.</param>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Configuration.BasicAuthentication.BasicAuthenticationElement.AllowedBasicAuthenticationRoutes">
+            <summary>
+            Gets or sets the allowed basic authentication paths resource sharing
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Authentication.Configuration.OAuthClientElement">
+            <summary>
+            Settings for the OAuth client application.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Configuration.OAuthClientElement.#ctor(Telerik.Sitefinity.Configuration.ConfigElement)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Authentication.Configuration.OAuthClientElement" /> class.
+            </summary>
+            <param name="parent">The parent element.</param>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Configuration.OAuthClientElement.ClientId">
+            <summary>
+            Gets or sets the client id
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Configuration.OAuthClientElement.Secret">
+            <summary>
+            Gets or sets the secret
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Configuration.OAuthClientElement.RedirectUrls">
+            <summary>
+            Gets or sets the redirectUrl
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Authentication.Configuration.OAuthServerElement">
+            <summary>
+            Represents settings for OAuth authorization of external apps.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Configuration.OAuthServerElement.#ctor(Telerik.Sitefinity.Configuration.ConfigElement)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Authentication.Configuration.OAuthServerElement" /> class.
+            </summary>
+            <param name="parent">The parent element.</param>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Configuration.OAuthServerElement.AuthorizedClients">
+            <summary>
+            Gets the authorized clients settings.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Configuration.OAuthServerElement.AuthorizeEndpointPath">
+            <summary>
+            Gets or sets the authorization endpoint path.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Configuration.OAuthServerElement.TokenEndpointPath">
+            <summary>
+            Gets or sets the token endpoint path.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Configuration.OAuthServerElement.AccessTokenTime">
+            <summary>
+            Gets or sets the valid time for access tokens in seconds.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Configuration.OAuthServerElement.RefreshTokenTime">
+            <summary>
+            Gets or sets the valid time for refresh tokens in seconds.
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Authentication.Configuration.RedirectUrlElement">
+            <summary>Configures the Redirect Url after authentication.</summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Configuration.RedirectUrlElement.#ctor(Telerik.Sitefinity.Configuration.ConfigElement)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Authentication.Configuration.RedirectUrlElement"/> class.
+            </summary>
+            <param name="parent">The parent element.</param>
+            <remarks>
+            ConfigElementCollection generally needs to have a parent, however, sometimes it is necessary
+            to create a collection in memory only which is then used later on in the context of a parent.
+            Therefore, is the element is of ConfigElementCollection, exception for a non existing parent
+            will not be thrown.
+            </remarks>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Configuration.RedirectUrlElement.Value">
+            <summary>
+            Gets or sets the URL of a server instance.
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Authentication.Configuration.RelyingParty.ClaimToRolesMappingElement">
+            <summary>
+            Config element, describing claim to roles mapping
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Configuration.RelyingParty.ClaimToRolesMappingElement.#ctor(Telerik.Sitefinity.Configuration.ConfigElement)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Authentication.Configuration.RelyingParty.ClaimToRolesMappingElement" /> class.
+            </summary>
+            <param name="parent">The parent element.</param>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Configuration.RelyingParty.ClaimToRolesMappingElement.Name">
+            <summary>
+            Gets or sets the name of the mapping
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Configuration.RelyingParty.ClaimToRolesMappingElement.ClaimType">
+            <summary>
+            Gets or sets the claim type
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Configuration.RelyingParty.ClaimToRolesMappingElement.ClaimValue">
+            <summary>
+            Gets or sets the claim value
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Configuration.RelyingParty.ClaimToRolesMappingElement.IdentityProvider">
+            <summary>
+            Gets or sets the name of the provider
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Configuration.RelyingParty.ClaimToRolesMappingElement.MappedRoles">
+            <summary>
+            Gets or sets the mapped roles
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Authentication.Configuration.RelyingParty.RelyingPartyElement">
+            <summary>
+            Relaying party configuration element.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Configuration.RelyingParty.RelyingPartyElement.#ctor(Telerik.Sitefinity.Configuration.ConfigElement)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Authentication.Configuration.RelyingParty.RelyingPartyElement" /> class.
+            </summary>
+            <param name="parent">The parent element.</param>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Configuration.RelyingParty.RelyingPartyElement.ClaimsToRolesMappings">
+            <summary>
+            Gets the claims to roles mappings
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Configuration.RelyingParty.RelyingPartyElement.AuthCookieExpirationTime">
+            <summary>
+            Gets or sets the authentication cookie expiration time
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Configuration.RelyingParty.RelyingPartyElement.AuthCookieSlidingExpiration">
+            <summary>
+            Gets or sets a value indicating whether the authentication cookie sliding expiration
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Configuration.RelyingParty.RelyingPartyElement.AuthCookieHttpOnly">
+            <summary>
+            Gets or sets a value indicating whether the authentication cookie http only mode
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Configuration.RelyingParty.RelyingPartyElement.AuthCookieSecureOption">
+            <summary>
+            Gets or sets authentication cookie secure option
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Configuration.RelyingParty.RelyingPartyElement.EnableBasicAuthenticationForBackendServices">
+            <summary>
+            Gets or sets a value indicating whether the authentication cookie sliding expiration
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Authentication.Configuration.RelyingParty.StsProviderMappingElement">
+            <summary>
+            Config element, describing STS provider mapping
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Configuration.RelyingParty.StsProviderMappingElement.#ctor(Telerik.Sitefinity.Configuration.ConfigElement)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Authentication.Configuration.RelyingParty.StsProviderMappingElement" /> class.
+            </summary>
+            <param name="parent">The parent element.</param>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Configuration.RelyingParty.StsProviderMappingElement.StsProviderName">
+            <summary>
+            Gets or sets the name of the STS provider
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Configuration.RelyingParty.StsProviderMappingElement.LocalProviderName">
+            <summary>
+            Gets or sets the name of the local provider
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Authentication.Configuration.SecurityTokenService.ExternalProviders.AdfsAuthenticationProviderElement">
+            <summary>
+            Config element, describing external provider properties
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Configuration.SecurityTokenService.ExternalProviders.AdfsAuthenticationProviderElement.#ctor(Telerik.Sitefinity.Configuration.ConfigElement)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Authentication.Configuration.SecurityTokenService.ExternalProviders.AdfsAuthenticationProviderElement" /> class.
+            </summary>
+            <param name="parent">The parent element.</param>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Configuration.SecurityTokenService.ExternalProviders.AdfsAuthenticationProviderElement.MetadataAddress">
+            <summary>
+            Gets or sets Metadata Address
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Configuration.SecurityTokenService.ExternalProviders.AdfsAuthenticationProviderElement.Wtrealm">
+            <summary>
+            Gets or sets URI that identifies the RP
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Configuration.SecurityTokenService.ExternalProviders.AdfsAuthenticationProviderElement.NotificationsType">
+            <summary>
+            Gets or sets the open id connect notifications type
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Configuration.SecurityTokenService.ExternalProviders.AdfsAuthenticationProviderElement.CallbackPath">
+            <summary>
+            Gets or sets the callback path
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Authentication.Configuration.SecurityTokenService.ExternalProviders.AuthenticationProviderElement">
+            <summary>
+            Config element, describing an authentication provider
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Configuration.SecurityTokenService.ExternalProviders.AuthenticationProviderElement.#ctor(Telerik.Sitefinity.Configuration.ConfigElement)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Authentication.Configuration.SecurityTokenService.ExternalProviders.AuthenticationProviderElement" /> class.
+            </summary>
+            <param name="parent">The parent element.</param>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Configuration.SecurityTokenService.ExternalProviders.AuthenticationProviderElement.DataProviderName">
+            <summary>
+            Gets or sets the name of the provider
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Configuration.SecurityTokenService.ExternalProviders.AuthenticationProviderElement.Name">
+            <summary>
+            Gets or sets the name of the provider
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Configuration.SecurityTokenService.ExternalProviders.AuthenticationProviderElement.Title">
+            <summary>
+            Gets or sets the title of the provider
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Configuration.SecurityTokenService.ExternalProviders.AuthenticationProviderElement.Enabled">
+            <summary>
+            Gets or sets a value indicating whether the provider is enabled
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Configuration.SecurityTokenService.ExternalProviders.AuthenticationProviderElement.AutoAssignedRoles">
+            <summary>
+            Gets or sets the roles that will be assigned to the users from this provider
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Configuration.SecurityTokenService.ExternalProviders.AuthenticationProviderElement.LinkCssClass">
+            <summary>
+            Gets or sets the title of the provider link
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Configuration.SecurityTokenService.ExternalProviders.AuthenticationProviderElement.Parameters">
+            <summary>
+            Gets or sets a collection of user-defined parameters for the provider.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Configuration.SecurityTokenService.ExternalProviders.AuthenticationProviderElement.RequireEmailClaim">
+            <summary>
+            Gets or sets a value indicating whether the provider requires email claim
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Authentication.Configuration.SecurityTokenService.ExternalProviders.ExternalAuthenticationProviderElement">
+            <summary>
+            Config element, describing external provider properties
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Configuration.SecurityTokenService.ExternalProviders.ExternalAuthenticationProviderElement.#ctor(Telerik.Sitefinity.Configuration.ConfigElement)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Authentication.Configuration.SecurityTokenService.ExternalProviders.ExternalAuthenticationProviderElement" /> class.
+            </summary>
+            <param name="parent">The parent element.</param>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Configuration.SecurityTokenService.ExternalProviders.ExternalAuthenticationProviderElement.AppId">
+            <summary>
+            Gets or sets App Id
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Configuration.SecurityTokenService.ExternalProviders.ExternalAuthenticationProviderElement.AppSecret">
+            <summary>
+            Gets or sets App Secret
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Configuration.SecurityTokenService.ExternalProviders.ExternalAuthenticationProviderElement.CallbackPath">
+            <summary>
+            Gets or sets the callback path
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Authentication.Configuration.SecurityTokenService.ExternalProviders.FacebookAuthenticationProviderElement">
+            <summary>
+            Config element, describing external provider properties
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Configuration.SecurityTokenService.ExternalProviders.FacebookAuthenticationProviderElement.#ctor(Telerik.Sitefinity.Configuration.ConfigElement)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Authentication.Configuration.SecurityTokenService.ExternalProviders.FacebookAuthenticationProviderElement" /> class.
+            </summary>
+            <param name="parent">The parent element.</param>
+        </member>
+        <member name="T:Telerik.Sitefinity.Authentication.Configuration.SecurityTokenService.ExternalProviders.GoogleAuthenticationProviderElement">
+            <summary>
+            Config element, describing external provider properties
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Configuration.SecurityTokenService.ExternalProviders.GoogleAuthenticationProviderElement.#ctor(Telerik.Sitefinity.Configuration.ConfigElement)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Authentication.Configuration.SecurityTokenService.ExternalProviders.GoogleAuthenticationProviderElement" /> class.
+            </summary>
+            <param name="parent">The parent element.</param>
+        </member>
+        <member name="T:Telerik.Sitefinity.Authentication.Configuration.SecurityTokenService.ExternalProviders.MicrosoftAuthenticationProviderElement">
+            <summary>
+            Config element, describing external provider properties
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Configuration.SecurityTokenService.ExternalProviders.MicrosoftAuthenticationProviderElement.#ctor(Telerik.Sitefinity.Configuration.ConfigElement)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Authentication.Configuration.SecurityTokenService.ExternalProviders.MicrosoftAuthenticationProviderElement" /> class.
+            </summary>
+            <param name="parent">The parent element.</param>
+        </member>
+        <member name="T:Telerik.Sitefinity.Authentication.Configuration.SecurityTokenService.ExternalProviders.OpenIDConnectAuthenticationProviderElement">
+            <summary>
+            Config element, describing external provider properties
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Configuration.SecurityTokenService.ExternalProviders.OpenIDConnectAuthenticationProviderElement.#ctor(Telerik.Sitefinity.Configuration.ConfigElement)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Authentication.Configuration.SecurityTokenService.ExternalProviders.OpenIDConnectAuthenticationProviderElement" /> class.
+            </summary>
+            <param name="parent">The parent element.</param>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Configuration.SecurityTokenService.ExternalProviders.OpenIDConnectAuthenticationProviderElement.ClientId">
+            <summary>
+            Gets or sets client id
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Configuration.SecurityTokenService.ExternalProviders.OpenIDConnectAuthenticationProviderElement.ClientSecret">
+            <summary>
+            Gets or sets the client secret
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Configuration.SecurityTokenService.ExternalProviders.OpenIDConnectAuthenticationProviderElement.ResponseType">
+            <summary>
+            Gets or sets the response type
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Configuration.SecurityTokenService.ExternalProviders.OpenIDConnectAuthenticationProviderElement.Scope">
+            <summary>
+            Gets or sets the scope
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Configuration.SecurityTokenService.ExternalProviders.OpenIDConnectAuthenticationProviderElement.Authority">
+            <summary>
+            Gets or sets the authority
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Configuration.SecurityTokenService.ExternalProviders.OpenIDConnectAuthenticationProviderElement.MetadataAddress">
+            <summary>
+            Gets or sets Metadata Address
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Configuration.SecurityTokenService.ExternalProviders.OpenIDConnectAuthenticationProviderElement.RedirectUri">
+            <summary>
+            Gets or sets the redirect uri
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Configuration.SecurityTokenService.ExternalProviders.OpenIDConnectAuthenticationProviderElement.CallbackPath">
+            <summary>
+            Gets or sets the callback path
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Configuration.SecurityTokenService.ExternalProviders.OpenIDConnectAuthenticationProviderElement.PostLogoutRedirectUri">
+            <summary>
+            Gets or sets the post log out redirect uri
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Configuration.SecurityTokenService.ExternalProviders.OpenIDConnectAuthenticationProviderElement.ClaimsMap">
+            <summary>
+            Gets the fields to external claims map
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Configuration.SecurityTokenService.ExternalProviders.OpenIDConnectAuthenticationProviderElement.NotificationsType">
+            <summary>
+            Gets or sets the open id connect notifications type
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Configuration.SecurityTokenService.ExternalProviders.OpenIDConnectAuthenticationProviderElement.OpenIdConnectNonceMode">
+            <summary>
+            Gets or sets the OpenIdConnect.nonce mode
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Configuration.SecurityTokenService.ExternalProviders.OpenIDConnectAuthenticationProviderElement.UsePKCE">
+            <summary>
+            Gets or sets a value indicating whether to use the PKCE extension to the Authorization code flow
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Configuration.SecurityTokenService.ExternalProviders.OpenIDConnectAuthenticationProviderElement.OnPropertiesInitialized">
+            <inheritdoc />
+        </member>
+        <member name="F:Telerik.Sitefinity.Authentication.Configuration.SecurityTokenService.ExternalProviders.OpenIDConnectAuthenticationProviderElement.EmailPropertyMap">
+            <summary>
+            User's property which is mapped to email claim from external provider
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Authentication.Configuration.SecurityTokenService.ExternalProviders.OpenIdConnectNonceMode">
+            <summary>
+            Represents the OpenIdConnect.nonce mode
+            </summary>
+        </member>
+        <member name="F:Telerik.Sitefinity.Authentication.Configuration.SecurityTokenService.ExternalProviders.OpenIdConnectNonceMode.Enabled">
+            <summary>
+            Enabled mode
+            </summary>
+        </member>
+        <member name="F:Telerik.Sitefinity.Authentication.Configuration.SecurityTokenService.ExternalProviders.OpenIdConnectNonceMode.Disabled">
+            <summary>
+            Disabled mode
+            </summary>
+        </member>
+        <member name="F:Telerik.Sitefinity.Authentication.Configuration.SecurityTokenService.ExternalProviders.OpenIdConnectNonceMode.RemoteOnly">
+            <summary>
+            Remote only mode
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Authentication.Configuration.SecurityTokenService.ExternalProviders.TwitterAuthenticationProviderElement">
+            <summary>
+            Config element, describing external provider properties
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Configuration.SecurityTokenService.ExternalProviders.TwitterAuthenticationProviderElement.#ctor(Telerik.Sitefinity.Configuration.ConfigElement)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Authentication.Configuration.SecurityTokenService.ExternalProviders.TwitterAuthenticationProviderElement" /> class.
+            </summary>
+            <param name="parent">The parent element.</param>
+        </member>
+        <member name="T:Telerik.Sitefinity.Authentication.Configuration.SecurityTokenService.ExternalProviders.WindowsAuthenticationProviderElement">
+            <summary>
+            Config element, describing external provider properties
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Configuration.SecurityTokenService.ExternalProviders.WindowsAuthenticationProviderElement.#ctor(Telerik.Sitefinity.Configuration.ConfigElement)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Authentication.Configuration.SecurityTokenService.ExternalProviders.WindowsAuthenticationProviderElement" /> class.
+            </summary>
+            <param name="parent">The parent element.</param>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Configuration.SecurityTokenService.ExternalProviders.WindowsAuthenticationProviderElement.MetadataAddress">
+            <summary>
+            Gets or sets Metadata Address
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Configuration.SecurityTokenService.ExternalProviders.WindowsAuthenticationProviderElement.Wtrealm">
+            <summary>
+            Gets or sets URI that identifies the RP
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Configuration.SecurityTokenService.ExternalProviders.WindowsAuthenticationProviderElement.CallbackPath">
+            <summary>
+            Gets or sets the callback path
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Configuration.SecurityTokenService.ExternalProviders.WindowsAuthenticationProviderElement.AutoAssignedRoles">
+            <inheritdoc />
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Configuration.SecurityTokenService.ExternalProviders.WindowsAuthenticationProviderElement.DataProviderName">
+            <inheritdoc />
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Configuration.SecurityTokenService.ExternalProviders.WindowsAuthenticationProviderElement.RequireEmailClaim">
+            <inheritdoc />
+        </member>
+        <member name="T:Telerik.Sitefinity.Authentication.Configuration.SecurityTokenService.IdentityServer.ClaimsMapElement">
+            <summary>
+            ClaimsMapElement configuration element
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Configuration.SecurityTokenService.IdentityServer.ClaimsMapElement.Field">
+            <summary>
+            Gets or sets the field.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Configuration.SecurityTokenService.IdentityServer.ClaimsMapElement.Claim">
+            <summary>
+            Gets or sets the claim.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Configuration.SecurityTokenService.IdentityServer.ClaimsMapElement.#ctor(Telerik.Sitefinity.Configuration.ConfigElement)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Authentication.Configuration.SecurityTokenService.IdentityServer.ClaimsMapElement" /> class.
+            </summary>
+            <param name="parent">The parent element.</param>
+        </member>
+        <member name="T:Telerik.Sitefinity.Authentication.Configuration.SecurityTokenService.IdentityServer.IdentityServerElement">
+            <summary>
+            IdentityServer configuration element
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Configuration.SecurityTokenService.IdentityServer.IdentityServerElement.#ctor(Telerik.Sitefinity.Configuration.ConfigElement)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Authentication.Configuration.SecurityTokenService.IdentityServer.IdentityServerElement" /> class.
+            </summary>
+            <param name="parent">The parent element.</param>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Configuration.SecurityTokenService.IdentityServer.IdentityServerElement.EnableLogging">
+            <summary>
+            Gets or sets a value indicating whether the identity server logging is enabled.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Configuration.SecurityTokenService.IdentityServer.IdentityServerElement.TransientDataCleanupCronSpec">
+            <summary>
+            Gets or sets the cron specification for transient data cleanup task.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Configuration.SecurityTokenService.IdentityServer.IdentityServerElement.MapUsersViaEmail">
+            <summary>
+            Gets or sets a value indicating whether the provider requires email claim
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Authentication.Configuration.SecurityTokenService.SecurityCertificateConfigurationElement">
+            <summary>
+            Settings for security certificates
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Configuration.SecurityTokenService.SecurityCertificateConfigurationElement.#ctor(Telerik.Sitefinity.Configuration.ConfigElement)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Authentication.Configuration.SecurityTokenService.SecurityCertificateConfigurationElement"/> class.
+            </summary>
+            <param name="parent">The parent configuration element.</param>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Configuration.SecurityTokenService.SecurityCertificateConfigurationElement.StoreName">
+            <summary>
+            Gets or sets the security store name in which the certificate is installed.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Configuration.SecurityTokenService.SecurityCertificateConfigurationElement.StoreLocation">
+            <summary>
+            Gets or sets the location of the store.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Configuration.SecurityTokenService.SecurityCertificateConfigurationElement.SubjectName">
+            <summary>
+            Gets or sets the subject name for the certificate.
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Authentication.Configuration.SecurityTokenService.SecurityTokenServiceElement">
+            <summary>
+            Security Token Service configuration element
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Configuration.SecurityTokenService.SecurityTokenServiceElement.#ctor(Telerik.Sitefinity.Configuration.ConfigElement)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Authentication.Configuration.SecurityTokenService.SecurityTokenServiceElement" /> class.
+            </summary>
+            <param name="parent">The parent element.</param>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Configuration.SecurityTokenService.SecurityTokenServiceElement.IdentityServer">
+            <summary>
+            Gets the IdentityServer settings.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Configuration.SecurityTokenService.SecurityTokenServiceElement.StsSignout">
+            <summary>
+            Gets or sets a value indicating whether to sign out from the external identity provider after log out from Sitefinity. This setting is only valid for external users.
+            </summary>
+            <value>The STS sign out.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Configuration.SecurityTokenService.SecurityTokenServiceElement.AuthenticationProviders">
+            <summary>
+            Gets authentication providers
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Configuration.SecurityTokenService.SecurityTokenServiceElement.MapUsersViaEmail">
+            <summary>
+            Gets or sets a value indicating whether the provider requires email claim
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Authentication.Cookies.SitefinityCookieAuthenticationHandler">
+            <summary>
+            Authentication handler for the <see cref="T:Telerik.Sitefinity.Authentication.Cookies.SitefinityCookieAuthenticationMiddleware"/>.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Cookies.SitefinityCookieAuthenticationHandler.#ctor(Microsoft.Owin.Logging.ILogger)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Authentication.Cookies.SitefinityCookieAuthenticationHandler" /> class.
+            </summary>
+            <param name="logger">The logger.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Cookies.SitefinityCookieAuthenticationHandler.AuthenticateCoreAsync">
+            <summary>
+            Authenticating with either the Authentication Cookie or Temp Authentication Cookie
+            Will be invoked at most once per request. 
+            Do not call directly, call the wrapping Authenticate method instead.
+            </summary>
+            <returns>The ticket data provided by the authentication logic.</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Cookies.SitefinityCookieAuthenticationHandler.ApplyResponseGrantAsync">
+            <summary>
+            Deals with SignIn, SignOut and Renewal of the authentication cookie.
+            </summary>
+            <returns>An instance of <see cref="T:System.Threading.Tasks.Task"/>.</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Cookies.SitefinityCookieAuthenticationHandler.ApplyResponseChallengeAsync">
+            <summary>
+            Handles a 401 response and converts it to a Redirect response.
+            </summary>
+            <returns>An instance of <see cref="T:System.Threading.Tasks.Task"/>.</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Cookies.SitefinityCookieAuthenticationHandler.SignIn(Microsoft.Owin.Security.AuthenticationResponseGrant,Microsoft.Owin.Security.AuthenticationTicket)">
+            <summary>
+            Tries to sign in the given identity.
+            </summary>
+            <param name="signin">The AuthenticationResponseGrant.</param>
+            <param name="ticket">The ticket.</param>
+            <returns>An instance of <see cref="T:System.Threading.Tasks.Task"/>.</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Cookies.SitefinityCookieAuthenticationHandler.SignOut(Microsoft.Owin.Security.AuthenticationResponseRevoke)">
+            <summary>
+            Signs out the current user and deletes the authentication cookies.
+            </summary>
+            <param name="signout">The sign out.</param>
+            <returns>An instance of <see cref="T:System.Threading.Tasks.Task"/>.</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Cookies.SitefinityCookieAuthenticationHandler.Renew(Microsoft.Owin.Security.AuthenticationTicket)">
+            <summary>
+            Renews the authentication cookie.
+            </summary>
+            <param name="ticket">The ticket.</param>
+            <returns>An instance of <see cref="T:System.Threading.Tasks.Task"/>.</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Cookies.SitefinityCookieAuthenticationHandler.AuthenticateWithAuthCookie(System.String)">
+            <summary>
+            Authenticates the request using the authentication cookie.
+            </summary>
+            <param name="cookie">The cookie.</param>
+            <returns>The authentication ticket.</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Cookies.SitefinityCookieAuthenticationHandler.AuthenticateWithTempAuthCookie(System.String)">
+            <summary>
+            Authenticates the request using the temp authentication cookie.
+            </summary>
+            <param name="tempCookie">The temp cookie.</param>
+            <returns>The authentication ticket.</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Cookies.SitefinityCookieAuthenticationHandler.HasTicketExpired(System.Nullable{System.DateTimeOffset},System.DateTimeOffset)">
+            <summary>
+            Determines whether the ticket has expired.
+            </summary>
+            <param name="expiresUtc">The expiration date of the ticket in UTC.</param>
+            <param name="currentUtc">Current time in UTC.</param>
+            <returns>True if the ticket has expired, false otherwise.</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Cookies.SitefinityCookieAuthenticationHandler.SetAuthCookie(Microsoft.Owin.Security.AuthenticationTicket,System.Boolean,System.Nullable{System.DateTimeOffset})">
+            <summary>
+            Sets the authentication cookie.
+            </summary>
+            <param name="ticket">The ticket.</param>
+            <param name="isPersistent">Whether the cookie should be persistent.</param>
+            <param name="expiresUtc">The expires date in UTC. Valid only if the cookie is persistent.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Cookies.SitefinityCookieAuthenticationHandler.DeleteAuthCookie">
+            <summary>
+            Deletes the authentication cookie.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Cookies.SitefinityCookieAuthenticationHandler.SetTempAuthCookie(Microsoft.Owin.Security.AuthenticationTicket)">
+            <summary>
+            Sets the temp authentication cookie.
+            </summary>
+            <param name="ticket">The ticket.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Cookies.SitefinityCookieAuthenticationHandler.DeleteTempAuthCookie">
+            <summary>
+            Deletes the temp authentication cookie.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Cookies.SitefinityCookieAuthenticationHandler.AddToSession(Microsoft.Owin.Security.AuthenticationTicket)">
+            <summary>
+            Adds a ticket to the session store.
+            </summary>
+            <param name="ticket">The ticket to add.</param>
+            <returns>If added successfully returns a new ticket associated with the session store, otherwise the same ticket.</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Cookies.SitefinityCookieAuthenticationHandler.RetrieveFromSession(Microsoft.Owin.Security.AuthenticationTicket)">
+            <summary>
+            Retrieves an authentication ticket from session store if such exists.
+            </summary>
+            <param name="ticket">The ticket.</param>
+            <returns>
+            The same ticket if no Session store exists.
+            If found, returns the ticket from the Session store, otherwise returns <value>null</value>.
+            </returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Cookies.SitefinityCookieAuthenticationMiddleware.#ctor(Microsoft.Owin.OwinMiddleware,Owin.IAppBuilder,Telerik.Sitefinity.Authentication.Cookies.SitefinityCookieAuthenticationOptions)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Authentication.Cookies.SitefinityCookieAuthenticationMiddleware" /> class.
+            </summary>
+            <param name="next">The next middleware in the OWIN pipeline to invoke</param>
+            <param name="app">The OWIN application</param>
+            <param name="options">Configuration options for the middleware</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Cookies.SitefinityCookieAuthenticationMiddleware.CreateHandler">
+            <summary>
+            Provides the <see cref="T:Microsoft.Owin.Security.Infrastructure.AuthenticationHandler"/> object for processing authentication-related requests.
+            </summary>
+            <returns>An <see cref="T:Microsoft.Owin.Security.Infrastructure.AuthenticationHandler"/> configured with the <see cref="!:CookieAuthenticationOptions"/> supplied to the constructor.</returns>
+        </member>
+        <member name="T:Telerik.Sitefinity.Authentication.Cookies.SitefinityCookieAuthenticationOptions">
+            <summary>
+            Authentication options used by the <see cref="T:Telerik.Sitefinity.Authentication.Cookies.SitefinityCookieAuthenticationMiddleware"/>.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Cookies.SitefinityCookieAuthenticationOptions.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Authentication.Cookies.SitefinityCookieAuthenticationOptions" /> class.
+            </summary>
+            <param name="authenticationType">The authentication type.</param>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Cookies.SitefinityCookieAuthenticationOptions.AuthCookie">
+            <summary>
+            Gets or sets the authentication cookie. 
+            The default name is ".AspNet.Cookies".
+            This value should be changed if you change the name of the AuthenticationType, especially if your
+            system uses the cookie authentication middleware multiple times.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Cookies.SitefinityCookieAuthenticationOptions.TempAuthCookie">
+            <summary>
+            Gets or sets the temporary authentication cookie. 
+            The default name is ".AspNet.Temp.Cookies".
+            This value should be changed if you change the name of the AuthenticationType, especially if your
+            system uses the cookie authentication middleware multiple times.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Cookies.SitefinityCookieAuthenticationOptions.TicketDataFormat">
+            <summary>
+            Gets or sets the Ticket Data Format.
+            The TicketDataFormat is used to protect and unprotect the identity and other properties which are stored in the
+            cookie value. If it is not provided a default data handler is created using the data protection service contained
+            in the IAppBuilder.Properties. The default data protection service is based on machine key when running on ASP.NET, 
+            and on DPAPI when running in a different process.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Cookies.SitefinityCookieAuthenticationOptions.SystemClock">
+            <summary>
+            Gets or sets the System Clock.
+            The SystemClock provides access to the system's current time coordinates. If it is not provided a default instance is
+            used which calls DateTimeOffset.UtcNow. This is typically not replaced except for unit testing. 
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Cookies.SitefinityCookieAuthenticationOptions.CookieManager">
+            <summary>
+            Gets or sets the Cookie Manager.
+            The component used to get cookies from the request or set them on the response.
+            ChunkingCookieManager will be used by default.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Cookies.SitefinityCookieAuthenticationOptions.SessionStore">
+            <summary>
+            Gets or sets the Session Store.
+            An optional container in which to store the identity across requests. When used, only a session identifier is sent
+            to the client. This can be used to mitigate potential problems with very large identities.
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Authentication.Cookies.SitefinityCookieOptions">
+            <summary>
+            Options for cookies used by Sitefinity.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Cookies.SitefinityCookieOptions.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Authentication.Cookies.SitefinityCookieOptions" /> class.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Cookies.SitefinityCookieOptions.Name">
+            <summary>
+            Gets or sets the name of the cookie.
+            </summary>
+            <value>The name of the cookie.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Cookies.SitefinityCookieOptions.Domain">
+            <summary>
+            Gets or sets the domain to associate the cookie with.
+            </summary>
+            <returns>The domain to associate the cookie with.</returns>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Cookies.SitefinityCookieOptions.Path">
+            <summary>
+            Gets or sets the cookie path.
+            </summary>
+            <returns>The cookie path.</returns>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Cookies.SitefinityCookieOptions.HttpOnly">
+            <summary>
+            Gets or sets a value indicating whether a cookie is accessible by client-side script.
+            </summary>
+            <returns>true if a cookie is accessible by client-side script; otherwise, false.</returns>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Cookies.SitefinityCookieOptions.ExpireTimeSpan">
+            <summary>
+            Gets or sets the expire time span.
+            Controls how much time the cookie will remain valid from the point it is created. The expiration
+            information is in the protected cookie ticket. Because of that an expired cookie will be ignored 
+            even if it is passed to the server after the browser should have purged it 
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Cookies.SitefinityCookieOptions.SlidingExpiration">
+            <summary>
+            Gets or sets a value indicating whether the cookie should refresh.
+            The SlidingExpiration is set to true to instruct the middleware to re-issue a new cookie with a new
+            expiration time any time it processes a request which is more than halfway through the expiration window.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Cookies.SitefinityCookieOptions.SecureOption">
+            <summary>
+            Gets or sets the secure option for the cookie
+            </summary>
+            <value>The secure option for the cookie.</value>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Cookies.SitefinityCookieOptions.IsCookieSecure(Microsoft.Owin.IOwinRequest)">
+            <summary>
+            Gets a value indicating whether the cookie is secure or not.
+            </summary>
+            <param name="request">The request.</param>
+            <returns>True if secure, false otherwise.</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Cookies.SitefinityCookieOptions.GetCookieOptions(Microsoft.Owin.IOwinRequest)">
+            <summary>
+            Gets the cookie options for the given request.
+            </summary>
+            <param name="request">The request.</param>
+            <returns>An instance of <see cref="T:Microsoft.Owin.CookieOptions"/>.</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Cookies.SitefinityCookieOptions.GetCookieName(Microsoft.Owin.IOwinRequest)">
+            <summary>
+            Gets the name of the cookie for the given request.
+            </summary>
+            <param name="request">The request.</param>
+            <returns>The cookie name with an optional port prefix.</returns>
+        </member>
+        <member name="T:Telerik.Sitefinity.Authentication.Cookies.SitefinityResponseSignInContext">
+            <summary>
+            SignIn context for <see cref="T:Telerik.Sitefinity.Authentication.Cookies.SitefinityCookieAuthenticationHandler"/>.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Cookies.SitefinityResponseSignInContext.Context">
+            <summary>
+            Gets or sets the context.
+            </summary>
+            <value>The context.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Cookies.SitefinityResponseSignInContext.Options">
+            <summary>
+            Gets or sets the options.
+            </summary>
+            <value>The options.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Cookies.SitefinityResponseSignInContext.Identity">
+            <summary>
+            Gets or sets the identity.
+            </summary>
+            <value>The identity.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Cookies.SitefinityResponseSignInContext.Properties">
+            <summary>
+            Gets or sets the properties.
+            </summary>
+            <value>The properties.</value>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Cookies.SitefinityResponseSignInContext.#ctor(Microsoft.Owin.IOwinContext,Telerik.Sitefinity.Authentication.Cookies.SitefinityCookieAuthenticationOptions,System.Security.Claims.ClaimsIdentity,Microsoft.Owin.Security.AuthenticationProperties)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Authentication.Cookies.SitefinityResponseSignInContext" /> class.
+            </summary>
+            <param name="context">The OWIN context.</param>
+            <param name="options">The authentication options.</param>
+            <param name="claimsIdentity">The claims identity.</param>
+            <param name="authenticationProperties">The authentication properties.</param>
+        </member>
+        <member name="T:Telerik.Sitefinity.Authentication.Cookies.WebServicesCookieValidationMiddleware">
+            <summary>
+            The middleware is used to protect web service requests from CSRF by checking the presence of a custom header in the HTTP request.
+            Custom headers trigger CORS preflight requests in all browsers. This protection is recommended by OWASP also. This protection requires that CORS is correctly configured on the server. Ex. not allowing all domains by using '*' in the configuration.
+            </summary>
+        </member>
+        <member name="F:Telerik.Sitefinity.Authentication.Cookies.WebServicesCookieValidationMiddleware.AntiCsrfWebApiHeaderName">
+            <summary>
+            This header is commonly used by many JS frameworks to mark XHR requests.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Data.AuthenticationDataManager.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Authentication.Data.AuthenticationDataManager"/> class.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Data.AuthenticationDataManager.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Authentication.Data.AuthenticationDataManager"/> class.
+            </summary>
+            <param name="providerName">Name of the provider.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Data.AuthenticationDataManager.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Authentication.Data.AuthenticationDataManager"/> class.
+            </summary>
+            <param name="providerName">Name of the provider.</param>
+            <param name="transactionName">The name of a distributed transaction. If empty string or null this manager will use separate transaction.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Data.AuthenticationDataManager.GetManager">
+            <summary>
+            Get an instance of the AuthenticationDataManager using the default provider
+            </summary>
+            <returns>Instance of AuthenticationDataManager</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Data.AuthenticationDataManager.GetManager(System.String)">
+            <summary>
+            Get an instance of the AuthenticationDataManager by explicitly specifying the provider name to be used.
+            </summary>
+            <param name="providerName">Name of the provider to use, or null/empty string to use the default provider.</param>
+            <returns>Instance of the AuthenticationDataManager</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Data.AuthenticationDataManager.GetManager(System.String,System.String)">
+            <summary>
+            Get an instance of the AuthenticationDataManager by explicitly specifying the provider and transaction name to be used.
+            </summary>
+            <param name="providerName">Name of the provider to use, or null/empty string to use the default provider.</param>
+            <param name="transactionName">The name of a named transaction to be used.</param>
+            <returns>Instance of the AuthenticationDataManager</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Data.AuthenticationDataManager.CreateClaimsItem">
+            <summary>
+            Creates new <see cref="T:Telerik.Sitefinity.Authentication.Data.Model.ClaimsItem" />.
+            </summary>
+            <returns>A new instance of the <see cref="T:Telerik.Sitefinity.Authentication.Data.Model.ClaimsItem"/></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Data.AuthenticationDataManager.GetClaimsItem(System.String,System.String,System.String)">
+            <summary>
+            Gets claim by Id.
+            </summary>
+            <param name="externalProviderName">The name of the external provider.</param>
+            <param name="externalId">The id of the user in the external provider.</param>
+            <param name="email">Optional - for support of previously created claims.</param>
+            <returns>
+            An instance of the <see cref="T:Telerik.Sitefinity.Authentication.Data.Model.ClaimsItem" />
+            </returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Data.AuthenticationDataManager.GetClaimsItem(System.Guid)">
+            <summary>
+            Gets claim by Id.
+            </summary>
+            <param name="id">The identifier.</param>
+            <returns>
+            An instance of the <see cref="T:Telerik.Sitefinity.Authentication.Data.Model.ClaimsItem" />
+            </returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Data.AuthenticationDataManager.GetClaimsItemByEmail(System.String)">
+            <summary>
+            Gets claim by email.
+            </summary>
+            <param name="email">The email.</param>
+            <returns>
+            An instance of the <see cref="T:Telerik.Sitefinity.Authentication.Data.Model.ClaimsItem" />
+            </returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Data.AuthenticationDataManager.GetClaimsItemByExternalProviderAndId(System.String,System.String)">
+            <summary>
+            Gets claim by external provider name and external id.
+            </summary>
+            <param name="externalProviderName">The name of the external provider.</param>
+            <param name="externalId">The external id of the user.</param>
+            <returns>
+            An instance of the <see cref="T:Telerik.Sitefinity.Authentication.Data.Model.ClaimsItem" />
+            </returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Data.AuthenticationDataManager.GetClaimsItems">
+            <summary>
+            Gets all claims.
+            </summary>
+            <returns>Queryable object for all <see cref="T:Telerik.Sitefinity.Authentication.Data.Model.ClaimsItem"/> items</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Data.AuthenticationDataManager.DeleteClaimsItem(Telerik.Sitefinity.Authentication.Data.Model.ClaimsItem)">
+            <summary>
+            Deletes a claim.
+            </summary>
+            <param name="claimsItem">The claimsItem.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Data.AuthenticationDataManager.CreateOrUpdateClaimsItem(System.String,System.String,System.String,System.Collections.Generic.IEnumerable{System.Security.Claims.Claim})">
+            <summary>
+            Creates the or update claims.
+            </summary>
+            <param name="externalProviderName">The name of the external provider.</param>
+            <param name="externalId">The id of the user in the external provider.</param>
+            <param name="email">The email.</param>
+            <param name="claims">The claims.</param>
+        </member>
+        <member name="T:Telerik.Sitefinity.Authentication.Data.AuthenticationDataProvider">
+            <summary>
+            Defines the basic functionality that should be implemented by Authentication module data providers
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Data.AuthenticationDataProvider.CreateClaimsItem">
+            <summary>
+            Creates a claims item
+            </summary>
+            <returns>The claims item</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Data.AuthenticationDataProvider.GetClaimsItem(System.Guid)">
+            <summary>
+            Gets a claims item
+            </summary>
+            <param name="id">The id of the consent</param>
+            <returns>The claims item</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Data.AuthenticationDataProvider.GetClaimsItems">
+            <summary>
+            Gets claims items
+            </summary>
+            <returns>The claims items</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Data.AuthenticationDataProvider.DeleteClaimsItem(Telerik.Sitefinity.Authentication.Data.Model.ClaimsItem)">
+            <summary>
+            Deletes a claims item
+            </summary>
+            <param name="claimsItem">The claims item</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Data.AuthenticationDataProvider.CreateAuthToken">
+            <summary>
+            Creates an authentication token
+            </summary>
+            <returns>The token</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Data.AuthenticationDataProvider.GetAuthTokens">
+            <summary>
+            Gets authentication tokens
+            </summary>
+            <returns>The tokens</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Data.AuthenticationDataProvider.DeleteAuthToken(Telerik.Sitefinity.Authentication.Data.Model.AuthorizationToken)">
+            <summary>
+            Deletes an authentication token
+            </summary>
+            <param name="token">The authentication token</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Data.AuthenticationDataProvider.GetKnownTypes">
+            <inheritdoc />
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Data.AuthenticationDataProvider.RootKey">
+            <inheritdoc />
+        </member>
+        <member name="T:Telerik.Sitefinity.Authentication.Data.Model.AuthorizationToken">
+            <summary>
+            Model class for persistence of access and refresh tokens.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Data.Model.AuthorizationToken.Id">
+            <inheritdoc />
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Data.Model.AuthorizationToken.Transaction">
+            <inheritdoc />
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Data.Model.AuthorizationToken.Provider">
+            <inheritdoc />
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Data.Model.AuthorizationToken.LastModified">
+            <inheritdoc />
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Data.Model.AuthorizationToken.ApplicationName">
+            <inheritdoc />
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Data.Model.AuthorizationToken.ExpirationDateUTC">
+            <summary>
+            Gets or sets the expiration time.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Data.Model.AuthorizationToken.UserTokenId">
+            <summary>
+            Gets or sets the user token id that is used to track user login session from different browsers/computers etc.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Data.Model.AuthorizationToken.SerializedTicket">
+            <summary>
+            Gets or sets the serialized authentication POCO object for given authorization code.
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Authentication.Data.Model.ClaimsItem">
+            <summary>
+            Represents persistent ClaimsItem.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Data.Model.ClaimsItem.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Authentication.Data.Model.ClaimsItem"/> class.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Data.Model.ClaimsItem.#ctor(System.String,System.Guid)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Authentication.Data.Model.ClaimsItem"/> class.
+            </summary>
+            <param name="applicationName">Name of the application.</param>
+            <param name="id">The identifier.</param>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Data.Model.ClaimsItem.Id">
+            <summary>
+            Gets or sets the unique identity of the data item.
+            </summary>
+            <value>The id.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Data.Model.ClaimsItem.Transaction">
+            <summary>
+            Gets or sets the transaction this item belongs to or null.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Data.Model.ClaimsItem.Provider">
+            <summary>
+            Gets or sets the data provider this item was instantiated with.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Data.Model.ClaimsItem.LastModified">
+            <summary>
+            Gets or sets the time this item was last modified.
+            </summary>
+            <value>The last modified time.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Data.Model.ClaimsItem.ApplicationName">
+            <summary>
+            Gets or sets the name of the application to which this data item belongs to.
+            </summary>
+            <value>The name of the application.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Data.Model.ClaimsItem.Email">
+            <summary>
+            Gets or sets the email.
+            </summary>
+            <value>
+            The email.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Data.Model.ClaimsItem.ExternalProviderName">
+            <summary>
+            Gets or sets the external provider name.
+            </summary>
+            <value>
+            The external provider name.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Data.Model.ClaimsItem.ExternalId">
+            <summary>
+            Gets or sets the id of the user that is associated to it in the external provider.
+            </summary>
+            <value>
+            The id of the user in the external provider.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Data.Model.ClaimsItem.Data">
+            <summary>
+            Gets or sets the JSON serialized claims data.
+            </summary>
+            <value>
+            The JSON serialized claims data.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Data.Model.ClaimsItem.Claims">
+            <summary>
+            Gets or sets deserialized claims.
+            </summary>
+            <value>
+            The claims.
+            </value>
+        </member>
+        <member name="T:Telerik.Sitefinity.Authentication.Data.OpenAccessAuthenticationDataProvider">
+            <summary>
+            An implementation of the IdentityServerDataProvider based on OpenAccess ORM persistence framework
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Data.OpenAccessAuthenticationDataProvider.CreateClaimsItem">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Data.OpenAccessAuthenticationDataProvider.GetClaimsItem(System.Guid)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Data.OpenAccessAuthenticationDataProvider.GetClaimsItems">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Data.OpenAccessAuthenticationDataProvider.DeleteClaimsItem(Telerik.Sitefinity.Authentication.Data.Model.ClaimsItem)">
+            <inheritdoc />
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Data.OpenAccessAuthenticationDataProvider.Context">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Data.OpenAccessAuthenticationDataProvider.GetMetaDataSource(Telerik.Sitefinity.Model.IDatabaseMappingContext)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Data.OpenAccessAuthenticationDataProvider.CreateAuthToken">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Data.OpenAccessAuthenticationDataProvider.GetAuthTokens">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Data.OpenAccessAuthenticationDataProvider.DeleteAuthToken(Telerik.Sitefinity.Authentication.Data.Model.AuthorizationToken)">
+            <inheritdoc />
+        </member>
+        <member name="T:Telerik.Sitefinity.Authentication.External.ExternalClaimsResolver">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.External.ExternalClaimsResolver.AddExternalClaims(System.Security.Claims.ClaimsIdentity,Telerik.Sitefinity.Security.Model.User)">
+            <inheritdoc />
+        </member>
+        <member name="T:Telerik.Sitefinity.Authentication.External.ExternalProviders.FacebookAuthenticationMiddlewareFixed">
+            <summary>
+            OWIN middleware for authenticating users using Facebook
+            This classes is copied from https://github.com/aspnet/AspNetKatana/blob/dev/src/Microsoft.Owin.Security.Facebook/
+            When OWIN is updated this should be removed
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.External.ExternalProviders.FacebookAuthenticationMiddlewareFixed.#ctor(Microsoft.Owin.OwinMiddleware,Owin.IAppBuilder,Microsoft.Owin.Security.Facebook.FacebookAuthenticationOptions)">
+            <summary>
+            Initializes a <see cref="T:Telerik.Sitefinity.Authentication.External.ExternalProviders.FacebookAuthenticationMiddlewareFixed"/>
+            </summary>
+            <param name="next">The next middleware in the OWIN pipeline to invoke</param>
+            <param name="app">The OWIN application</param>
+            <param name="options">Configuration options for the middleware</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.External.ExternalProviders.FacebookAuthenticationMiddlewareFixed.CreateHandler">
+            <summary>
+            Provides the <see cref="T:Microsoft.Owin.Security.Infrastructure.AuthenticationHandler"/> object for processing authentication-related requests.
+            </summary>
+            <returns>An <see cref="T:Microsoft.Owin.Security.Infrastructure.AuthenticationHandler"/> configured with the <see cref="T:Microsoft.Owin.Security.Facebook.FacebookAuthenticationOptions"/> supplied to the constructor.</returns>
+        </member>
+        <member name="T:Telerik.Sitefinity.Authentication.External.ExternalProviders.FacebookBackChannelHandler">
+            <summary>
+            Class is used to replace request uri to Facebook in order to get the email correctly
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.External.ExternalProviders.FacebookBackChannelHandler.SendAsync(System.Net.Http.HttpRequestMessage,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="T:Telerik.Sitefinity.Authentication.External.ExternalProviders.SitefinityFacebookAuthenticationProvider">
+            <summary>
+            Authentication Provider for Facebook
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.External.ExternalProviders.SitefinityFacebookAuthenticationProvider.Authenticated(Microsoft.Owin.Security.Facebook.FacebookAuthenticatedContext)">
+            <summary>
+            Prepare Sitefinity claims
+            </summary>
+            <param name="context">Authenticated Context</param>
+            <returns>Not used</returns>
+        </member>
+        <member name="T:Telerik.Sitefinity.Authentication.External.ExternalProviders.SitefinityGoogleAuthenticationProvider">
+            <summary>
+            Authentication Provider for Google
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.External.ExternalProviders.SitefinityGoogleAuthenticationProvider.Authenticated(Microsoft.Owin.Security.Google.GoogleOAuth2AuthenticatedContext)">
+            <summary>
+            Prepare Sitefinity claims
+            </summary>
+            <param name="context">Authenticated Context</param>
+            <returns>Not used</returns>
+        </member>
+        <member name="T:Telerik.Sitefinity.Authentication.External.ExternalProviders.SitefinityMicrosoftAuthenticationProvider">
+            <summary>
+            Authentication Provider for Microsoft
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.External.ExternalProviders.SitefinityMicrosoftAuthenticationProvider.Authenticated(Microsoft.Owin.Security.MicrosoftAccount.MicrosoftAccountAuthenticatedContext)">
+            <summary>
+            Prepare Sitefinity claims
+            </summary>
+            <param name="context">Authenticated Context</param>
+            <returns>Not used</returns>
+        </member>
+        <member name="T:Telerik.Sitefinity.Authentication.External.ExternalProviders.SitefinityOpenIdConnectAuthenticationNotifications">
+            <summary>
+            Handles open id connect notifications 
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.External.ExternalProviders.SitefinityOpenIdConnectAuthenticationNotifications.#ctor(Telerik.Sitefinity.Authentication.Configuration.SecurityTokenService.ExternalProviders.OpenIDConnectAuthenticationProviderElement)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Authentication.External.ExternalProviders.SitefinityOpenIdConnectAuthenticationNotifications"/> class
+            </summary>
+            <param name="openIdConfig">The open id config</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.External.ExternalProviders.SitefinityOpenIdConnectAuthenticationNotifications.SecurityTokenValidatedHandler(Microsoft.Owin.Security.Notifications.SecurityTokenValidatedNotification{Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectMessage,Microsoft.Owin.Security.OpenIdConnect.OpenIdConnectAuthenticationOptions})">
+            <summary>
+            Security token validated handler
+            </summary>
+            <param name="notification">Security token validated notification</param>
+            <returns>Successfully completed task with result 0</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.External.ExternalProviders.SitefinityOpenIdConnectAuthenticationNotifications.RedirectToIdentityProviderHandler(Microsoft.Owin.Security.Notifications.RedirectToIdentityProviderNotification{Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectMessage,Microsoft.Owin.Security.OpenIdConnect.OpenIdConnectAuthenticationOptions})">
+            <summary>
+            Redirect to identity provider handler
+            </summary>
+            <param name="notification">Redirect to identity provider notification</param>
+            <returns>Successfully completed task with result 0</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.External.ExternalProviders.SitefinityOpenIdConnectAuthenticationNotifications.AuthenticationFailedHandler(Microsoft.Owin.Security.Notifications.AuthenticationFailedNotification{Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectMessage,Microsoft.Owin.Security.OpenIdConnect.OpenIdConnectAuthenticationOptions})">
+            <summary>
+            Authentication failed handler
+            </summary>
+            <param name="notification">Authentication failed notification</param>
+            <returns>Successfully completed task with result 0</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.External.ExternalProviders.SitefinityOpenIdConnectAuthenticationNotifications.AuthorizationCodeReceivedHandler(Microsoft.Owin.Security.Notifications.AuthorizationCodeReceivedNotification)">
+            <summary>
+            Authorization code received handler
+            </summary>
+            <param name="notification">Authorization code received notification</param>
+            <returns>Successfully completed task with result 0</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.External.ExternalProviders.SitefinityOpenIdConnectAuthenticationNotifications.MessageReceivedHandler(Microsoft.Owin.Security.Notifications.MessageReceivedNotification{Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectMessage,Microsoft.Owin.Security.OpenIdConnect.OpenIdConnectAuthenticationOptions})">
+            <summary>
+            Message received handler
+            </summary>
+            <param name="notification">Message received notification</param>
+            <returns>Successfully completed task with result 0</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.External.ExternalProviders.SitefinityOpenIdConnectAuthenticationNotifications.SecurityTokenReceivedHandler(Microsoft.Owin.Security.Notifications.SecurityTokenReceivedNotification{Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectMessage,Microsoft.Owin.Security.OpenIdConnect.OpenIdConnectAuthenticationOptions})">
+            <summary>
+            Security token received handler
+            </summary>
+            <param name="notification">Security token received notification</param>
+            <returns>Successfully completed task with result 0</returns>
+        </member>
+        <member name="T:Telerik.Sitefinity.Authentication.External.ExternalProviders.SitefinityTwitterAuthenticationProvider">
+            <summary>
+            Authentication Provider for Twitter
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.External.ExternalProviders.SitefinityTwitterAuthenticationProvider.Authenticated(Microsoft.Owin.Security.Twitter.TwitterAuthenticatedContext)">
+            <summary>
+            Prepare Sitefinity claims
+            </summary>
+            <param name="context">Authenticated Context</param>
+            <returns>Not used</returns>
+        </member>
+        <member name="T:Telerik.Sitefinity.Authentication.External.ExternalProviders.SitefinityWsFederationAuthenticationNotifications">
+            <summary>
+            Handles WS federation authentication notifications 
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.External.ExternalProviders.SitefinityWsFederationAuthenticationNotifications.#ctor(Telerik.Sitefinity.Authentication.Configuration.SecurityTokenService.ExternalProviders.AdfsAuthenticationProviderElement)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Authentication.External.ExternalProviders.SitefinityWsFederationAuthenticationNotifications"/> class
+            </summary>
+            <param name="adfsConfig">The ADFS config</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.External.ExternalProviders.SitefinityWsFederationAuthenticationNotifications.AuthenticationFailedHandler(Microsoft.Owin.Security.Notifications.AuthenticationFailedNotification{Microsoft.IdentityModel.Protocols.WsFederation.WsFederationMessage,Microsoft.Owin.Security.WsFederation.WsFederationAuthenticationOptions})">
+            <summary>
+            Authentication failed handler
+            </summary>
+            <param name="notification">Authentication failed notification</param>
+            <returns>Successfully completed task with result 0</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.External.ExternalProviders.SitefinityWsFederationAuthenticationNotifications.MessageReceivedHandler(Microsoft.Owin.Security.Notifications.MessageReceivedNotification{Microsoft.IdentityModel.Protocols.WsFederation.WsFederationMessage,Microsoft.Owin.Security.WsFederation.WsFederationAuthenticationOptions})">
+            <summary>
+            Message received handler
+            </summary>
+            <param name="notification">Message received notification</param>
+            <returns>Successfully completed task with result 0</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.External.ExternalProviders.SitefinityWsFederationAuthenticationNotifications.RedirectToIdentityProviderHandler(Microsoft.Owin.Security.Notifications.RedirectToIdentityProviderNotification{Microsoft.IdentityModel.Protocols.WsFederation.WsFederationMessage,Microsoft.Owin.Security.WsFederation.WsFederationAuthenticationOptions})">
+            <summary>
+            Redirect to identity provider handler
+            </summary>
+            <param name="notification">Redirect to identity provider notification</param>
+            <returns>Successfully completed task with result 0</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.External.ExternalProviders.SitefinityWsFederationAuthenticationNotifications.SecurityTokenReceivedHandler(Microsoft.Owin.Security.Notifications.SecurityTokenReceivedNotification{Microsoft.IdentityModel.Protocols.WsFederation.WsFederationMessage,Microsoft.Owin.Security.WsFederation.WsFederationAuthenticationOptions})">
+            <summary>
+            Security token received handler
+            </summary>
+            <param name="notification">Security token received notification</param>
+            <returns>Successfully completed task with result 0</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.External.ExternalProviders.SitefinityWsFederationAuthenticationNotifications.SecurityTokenValidatedHandler(Microsoft.Owin.Security.Notifications.SecurityTokenValidatedNotification{Microsoft.IdentityModel.Protocols.WsFederation.WsFederationMessage,Microsoft.Owin.Security.WsFederation.WsFederationAuthenticationOptions})">
+            <summary>
+            Security token validated handler
+            </summary>
+            <param name="notification">Security token validated notification</param>
+            <returns>Successfully completed task with result 0</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.External.SitefinityExternalUserService.GetUserFromSite(System.String,System.String,System.String,System.String,System.String@,System.String)">
+            <summary>
+            Gets the user from site's providers.
+            </summary>
+            <param name="defaultUserProviderName">The name of the default user provider configured for this site's external users.</param>
+            <param name="externalProviderName">Name of the external provider.</param>
+            <param name="externalId">The external identifier.</param>
+            <param name="email">The email.</param>
+            <param name="userProvider">The actual user provider. It can be different from default if the user has been moved.</param>
+            <param name="transactionName">Name of the transaction.</param>
+            <returns>The user if it is found.</returns>
+        </member>
+        <member name="T:Telerik.Sitefinity.Authentication.External.SitefinityOpenIdConnectProtocolValidator">
+            <summary>
+            Overriding protocol validator
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.External.SitefinityOpenIdConnectProtocolValidator.#ctor(Telerik.Sitefinity.Authentication.Configuration.SecurityTokenService.ExternalProviders.AuthenticationProviderElement)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Authentication.External.SitefinityOpenIdConnectProtocolValidator" /> class
+            </summary>
+            <param name="config">The authentication provider config element</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.External.SitefinityOpenIdConnectProtocolValidator.ValidateNonce(Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectProtocolValidationContext)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Telerik.Sitefinity.Authentication.External.UserPropertiesStrategy">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.External.UserPropertiesStrategy.GetReadOnlyFields(System.String,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="T:Telerik.Sitefinity.Authentication.Infrastructure.AnonymousUserMiddleware">
+            <summary>
+            Middleware to set the current user to Anonymous user.
+            This middleware is required because Sitefinity expects that there is always a principal set in the context.
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Authentication.Infrastructure.Owin.Cookies.CookieParser">
+            <summary>
+            Parser for cookie headers.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Infrastructure.Owin.Cookies.CookieParser.Parse(System.Collections.Generic.IList{System.String})">
+            <summary>
+            Parses the specified cookie headers.
+            </summary>
+            <param name="cookieHeaders">The cookie headers.</param>
+            <returns>The parsed collection of HttpCookies.</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Infrastructure.Owin.Cookies.CookieParser.Parse(System.String)">
+            <summary>
+            Parses the specified cookie header.
+            </summary>
+            <param name="cookieHeader">The cookie header.</param>
+            <returns>The parsed HttpCookie.</returns>
+        </member>
+        <member name="T:Telerik.Sitefinity.Authentication.Infrastructure.Owin.Cookies.CookieSaver">
+            <summary>
+            Saves the response cookies added through the OWIN context to the HttpContext.Response.Cookies collection.
+            This is required because on sending headers the 'Set-Cookie' header is overwritten with the HttpContext.Response.Cookies collection
+            and cookies added through the OWIN context will be lost, unless saved in this collection.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Infrastructure.Owin.Cookies.CookieSaver.Save">
+            <summary>
+            Saves the cookies for the current HttpContext.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Infrastructure.Owin.Cookies.CookieSaver.Save(Microsoft.Owin.IOwinContext)">
+            <summary>
+            Saves the cookies for the specified OWIN Context.
+            </summary>
+            <param name="owinContext">The OWIN Context.</param>
+        </member>
+        <member name="F:Telerik.Sitefinity.Authentication.Infrastructure.Owin.Cookies.CookieSaver.FromHeaderProperty">
+            <summary>
+            The flag that is used to mark a cookie as set by native module before .NET 4.7
+            </summary>
+        </member>
+        <member name="F:Telerik.Sitefinity.Authentication.Infrastructure.Owin.Cookies.CookieSaver.IsInResponseHeaderProperty">
+            <summary>
+            The flag that is used to mark a cookie as set by native module in .NET 4.7
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Infrastructure.Owin.Cookies.Cookies.CookieSaverExtensions.UseCookieSaver(Owin.IAppBuilder)">
+            <summary>
+            Uses the CookieSaver middleware.
+            </summary>
+            <param name="app">The app.</param>
+            <returns>The modified application builder object.</returns>
+        </member>
+        <member name="T:Telerik.Sitefinity.Authentication.Infrastructure.Owin.Cookies.Cookies.CookieSaverMiddleware">
+            <summary>
+            Saves the response cookies added through the OWIN context to the HttpContext.Response.Cookies collection,
+            after the next handlers are executed.
+            Note that this will not work if the response is written earlier, thus we should call the CookieSaver manually before the response is sent.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Infrastructure.Owin.Cookies.Cookies.CookieSaverMiddleware.#ctor(Microsoft.Owin.OwinMiddleware)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Authentication.Infrastructure.Owin.Cookies.Cookies.CookieSaverMiddleware" /> class.
+            </summary>
+            <param name="next">The next.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Infrastructure.Owin.Cookies.Cookies.CookieSaverMiddleware.Invoke(Microsoft.Owin.IOwinContext)">
+            <summary>
+            Process an individual request.
+            </summary>
+            <param name="context">The context.</param>
+            <returns>The Task to execute.</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Infrastructure.Owin.OwinContextExtensions.CookieExist(Microsoft.Owin.IOwinRequest,System.String)">
+            <summary>
+            Checks whether a given cookie exists in the given request.
+            </summary>
+            <param name="request">The request.</param>
+            <param name="cookieName">Name of the cookie to check for.</param>
+            <returns>True if exists, false otherwise.</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Infrastructure.Owin.OwinContextExtensions.GetValueOrDefault(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String[]}},System.String)">
+            <summary>
+            Gets a value from a collection.
+            </summary>
+            <param name="collection">The collection to search into.</param>
+            <param name="key">The key to search for.</param>
+            <returns>The value or null if doesn't exist.</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Infrastructure.Owin.OwinContextExtensions.GetBoolValue(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String[]}},System.String)">
+            <summary>
+            Gets a bool value from a collection.
+            </summary>
+            <param name="collection">The collection to search into.</param>
+            <param name="key">The key to search for.</param>
+            <returns>If the value exists returns the value as bool, otherwise returns False.</returns>
+        </member>
+        <member name="T:Telerik.Sitefinity.Authentication.Infrastructure.RedirectLoginMiddleware">
+            <summary>a
+            When the HTTP status code is Unauthorized (401) redirects to the front end login (if such is set).
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Authentication.Infrastructure.SitefinityAuthenticationExtensions">
+            <summary>
+            Sitefinity Authentication OWIN extensions.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Infrastructure.SitefinityAuthenticationExtensions.UseSitefinityBasicAuthentication(Owin.IAppBuilder)">
+            <summary>
+            Uses the sitefinity basic authentication.
+            </summary>
+            <param name="app">The app.</param>
+            <returns>The modified application builder object.</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Infrastructure.SitefinityAuthenticationExtensions.UseAnonymousUser(Owin.IAppBuilder)">
+            <summary>
+            Uses the anonymous user middleware.
+            </summary>
+            <param name="app">The app.</param>
+            <returns>The modified application builder object.</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Infrastructure.SitefinityAuthenticationExtensions.UseUserValidation(Owin.IAppBuilder)">
+            <summary>
+            Uses user validation.
+            </summary>
+            <param name="app">The app.</param>
+            <returns>The modified application builder object.</returns>
+        </member>
+        <member name="T:Telerik.Sitefinity.Authentication.Infrastructure.SitefinityAuthenticationMiddleware">
+            <summary>
+            Middleware that sets the whole authentication pipeline for Sitefinity.
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Authentication.Infrastructure.UserValidationMiddleware">
+            <summary>
+            Middleware to validate the already authenticated user.
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Authentication.Services.LoginHandlersMiddleware">
+            <summary>
+                Used to provide login handler functionality for external applications login forms such as the .NET Core renderer.
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Authentication.Services.Operations.Models.ChangePasswordModel">
+            <summary>
+            Represents change password model
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Services.Operations.Models.ChangePasswordModel.OldPassword">
+            <summary>
+            Gets or sets the old password.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Services.Operations.Models.ChangePasswordModel.NewPassword">
+            <summary>
+            Gets or sets the new password.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Services.Operations.Models.ChangePasswordModel.RepeatPassword">
+            <summary>
+            Gets or sets the confirmation password.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Services.Operations.Models.ChangePasswordModel.AntiRequestForgeryToken">
+            <summary>
+            Gets or sets the Anti-CSRF token
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Authentication.Services.Operations.Models.ForgottenPasswordModel">
+            <summary>
+            Represents forgotten password model
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Services.Operations.Models.ForgottenPasswordModel.Email">
+            <summary>
+            Gets or sets the email
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Services.Operations.Models.ForgottenPasswordModel.ResetPasswordUrl">
+            <summary>
+            Gets or sets the reset password url
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Services.Operations.Models.ForgottenPasswordModel.MembershipProviderName">
+            <summary>
+            Gets or sets the membership provider
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Services.Operations.Models.ForgottenPasswordModel.RegistrationPageUrl">
+            <summary>
+            Gets or sets the registration page link.
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Authentication.Services.Operations.Models.RegistrationModel">
+            <summary>
+            Represents the registration model
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Services.Operations.Models.RegistrationModel.Email">
+            <summary>
+            Gets or sets the email
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Services.Operations.Models.RegistrationModel.FirstName">
+            <summary>
+            Gets or sets the first name
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Services.Operations.Models.RegistrationModel.LastName">
+            <summary>
+            Gets or sets the last name
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Services.Operations.Models.RegistrationModel.Password">
+            <summary>
+            Gets or sets the password
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Services.Operations.Models.RegistrationModel.RepeatPassword">
+            <summary>
+            Gets or sets the repeat password
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Services.Operations.Models.RegistrationModel.Question">
+            <summary>
+            Gets or sets the question
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Services.Operations.Models.RegistrationModel.Answer">
+            <summary>
+            Gets or sets the answer
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Services.Operations.Models.RegistrationModel.ActivationPageUrl">
+            <summary>
+            Gets or sets the activation page url
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Services.Operations.Models.RegistrationModel.AntiRequestForgeryToken">
+            <summary>
+            Gets or sets the Anti-CSRF token
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Services.Operations.Models.RegistrationModel.CaptchaResponse">
+            <summary>
+            Gets or sets the Captcha response
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Services.Operations.Models.RegistrationModel.Properties">
+            <summary>
+            Gets or sets the dynamic properties (for custom profile fields).
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Authentication.Services.Operations.Models.RegistrationSettingsModel">
+            <summary>
+            Represents the registration settings
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Services.Operations.Models.RegistrationSettingsModel.RequiresQuestionAndAnswer">
+            <summary>
+            Gets or sets a value indicating whether the membership provider settings require question and answer for reset/retrieval password functionality.
+            </summary>
+            <value>
+            <c>true</c> if the membership provider requires question and answer; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Services.Operations.Models.RegistrationSettingsModel.ActivationMethod">
+            <summary>
+            Gets or sets the activation method
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Services.Operations.Models.RegistrationSettingsModel.SmtpConfigured">
+            <summary>
+            Gets or sets a value indicating whether the SMTP settings are configured properly
+            </summary>
+            <value>
+            <c>true</c> if the SMTP settings are configured properly; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Services.Operations.Models.RegistrationSettingsModel.RegistrationEnabled">
+            <summary>
+            Gets or sets a value indicating whether registration is enabled
+            </summary>
+            <value>
+            <c>true</c> if registration is enabled; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="T:Telerik.Sitefinity.Authentication.Services.Operations.Models.ResetPasswordModel">
+            <summary>
+            Represents reset password model
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Services.Operations.Models.ResetPasswordModel.NewPassword">
+            <summary>
+            Gets or sets the new password
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Services.Operations.Models.ResetPasswordModel.RequiresQuestionAndAnswer">
+            <summary>
+            Gets or sets a value indicating whether the membership provider settings require question and answer for reset/retrieval password functionality.
+            </summary>
+            <value>
+            <c>true</c> if the membership provider requires question and answer; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Services.Operations.Models.ResetPasswordModel.Answer">
+            <summary>
+            Gets or sets the answer
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Services.Operations.Models.ResetPasswordModel.SecurityQuestion">
+            <summary>
+            Gets or sets the security question
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Services.Operations.Models.ResetPasswordModel.SecurityToken">
+            <summary>
+            Gets or sets the security token
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Services.Operations.Models.ResetPasswordModel.MembershipProviderName">
+            <summary>
+            Gets or sets the membership provider name
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Authentication.Tokens.AccessKeyMiddleware">
+            <summary>
+            Authenticates the request if Access Key is present.
+            </summary>
+            <seealso cref="!:Microsoft.Owin.OwinMiddleware" />
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Tokens.AccessKeyMiddleware.#ctor(Microsoft.Owin.OwinMiddleware)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Authentication.Tokens.AccessKeyMiddleware"/> class.
+            </summary>
+            <param name="next">The next middleware in the pipeline.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Tokens.AccessKeyMiddleware.Invoke(Microsoft.Owin.IOwinContext)">
+            <summary>
+            Authenticates the request if Access Key is present.
+            </summary>
+            <param name="context">The environment dictionary.</param>
+            <returns>The task.</returns>
+        </member>
+        <member name="T:Telerik.Sitefinity.Authentication.Tokens.CustomAccessTokenMiddleware">
+            <summary>
+            Authenticates the request if a custom access token has been provided.
+            </summary>
+            <seealso cref="!:Microsoft.Owin.OwinMiddleware" />
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Tokens.CustomAccessTokenMiddleware.Invoke(Microsoft.Owin.IOwinContext)">
+            <summary>
+            Authenticates the request if a custom access token has been provided.
+            </summary>
+            <param name="context">The environment dictionary.</param>
+            <returns>A task.</returns>
+        </member>
+        <member name="T:Telerik.Sitefinity.Authentication.Tokens.CustomAccessTokenValidatorResult">
+            <summary>
+            The result required by Sitefinity to authenticate the current request.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Tokens.CustomAccessTokenValidatorResult.TokenIdentifierValue">
+            <summary>
+            Gets or sets unique value associated to the third party access token, could be a hash or the token itself.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Tokens.CustomAccessTokenValidatorResult.ExpireUTC">
+            <summary>
+            Gets or sets the time when the token expires.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Tokens.CustomAccessTokenValidatorResult.ExternalUserId">
+            <summary>
+            Gets or sets the external user identifier - usually the "sub" claim.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Authentication.Tokens.CustomAccessTokenValidatorResult.Provider">
+            <summary>
+            Gets or sets the local provider name that is used by Sitefinity to store the associated local account for the external identity.
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Authentication.Tokens.ICustomAccessTokenValidator">
+            <summary>
+            Custom token validators are developer provided code to authorize requests
+            containing tokens from third party identity providers. These tokens are
+            exchanged for sitefinity access tokens if successful validation occurs.
+            Sitefinity must also be integrated with these identity providers and the 
+            external users for which the third party access token was issued should have logged in
+            at least once in Sitefinity in order for a local correlating user account
+            to have been created for them. Or in some circumstances the validation logic could create one such account
+            if the use case permits.
+            That local user account is used to be issued
+            an access token from Sitefinity.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Authentication.Tokens.ICustomAccessTokenValidator.TryAuthenticateWithCustomToken(Microsoft.Owin.IOwinContext)">
+            <summary>
+            Validates the request and returns the local user account for the third party token.
+            </summary>
+            <param name="ctx">The application context.</param>
+            <returns>An object containing information about the token and the user. Null if unsuccessful.</returns>
+        </member>
+    </members>
+</doc>

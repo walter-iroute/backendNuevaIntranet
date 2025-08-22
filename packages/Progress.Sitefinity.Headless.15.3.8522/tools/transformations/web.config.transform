@@ -1,0 +1,323 @@
+<?xml version="1.0"?>
+<configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform" xmlns:asm="urn:schemas-microsoft-com:asm.v1">
+	<!-- DO NOT remove any of these transformations (REQUIRED for upgrades from older versions). Handle only new ones. -->
+	<configSections>
+		<section name="microsoft.identityModel" type="Microsoft.IdentityModel.Configuration.MicrosoftIdentityModelSection, Microsoft.IdentityModel, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" xdt:Transform="Remove" xdt:Locator="Match(name)"/>
+		<section name="system.identityModel" type="System.IdentityModel.Configuration.SystemIdentityModelSection, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089" xdt:Transform="InsertIfMissing" xdt:Locator="Match(name)" />
+		<section name="system.identityModel.services" type="System.IdentityModel.Services.Configuration.SystemIdentityModelServicesSection, System.IdentityModel.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089" xdt:Transform="InsertIfMissing" xdt:Locator="Match(name)"    />
+	</configSections>
+	<appSettings>
+		<add key="aspnet:UseTaskFriendlySynchronizationContext" value="true" xdt:Transform="InsertIfMissing" xdt:Locator="Match(key)" />
+		<add key="aspnet:UseHostHeaderForRequestUrl" value="true" xdt:Transform="InsertIfMissing" xdt:Locator="Match(key)" />
+		<add key="ValidationSettings:UnobtrusiveValidationMode" value="None" xdt:Transform="InsertIfMissing" xdt:Locator="Match(key)" />
+		<add key="sf:serviceStackEnableFeatures" value="Json,Html" xdt:Transform="InsertIfMissing" xdt:Locator="Match(key)" />
+		<add key="sf-env:systemConfig/applicationModules/WebhookModule:startupType" value="OnApplicationStart" xdt:Transform="Remove" xdt:Locator="Match(key)" />
+	</appSettings>
+	<location path="RestApi">
+		<system.web>
+			<httpHandlers>
+				<add path="*" type="ServiceStack.HttpHandlerFactory, ServiceStack" verb="*" xdt:Transform="Remove" xdt:Locator="XPath(/configuration/location[@path='RestApi']/system.web)" />
+			</httpHandlers>
+		</system.web>
+		<system.webServer>
+			<validation validateIntegratedModeConfiguration="true" xdt:Transform="Replace"  />
+		</system.webServer>
+	</location>
+	<location path="RestApi/Sitefinity/packaging/archive/upload" xdt:Transform="Remove" xdt:Locator="Match(path)" />
+	<location path="RestApi/Sitefinity/packaging/archive/upload" xdt:Transform="InsertAfter(/configuration/system.web.webPages.razor)" >
+		<system.web>
+			<httpRuntime maxRequestLength="2097151" executionTimeout="7200" maxUrlLength="102400" maxQueryStringLength="102400" requestValidationType="Telerik.Sitefinity.Security.Claims.CustomRequestValidator, Telerik.Sitefinity" />
+		</system.web>
+		<system.webServer>
+			<security>
+				<requestFiltering>
+					<requestLimits maxAllowedContentLength="2147483648" />
+					<!--2GB-->
+				</requestFiltering>
+			</security>
+		</system.webServer>
+	</location>
+	<location path="sf/system" xdt:Transform="Remove" xdt:Locator="Match(path)" />
+	<location path="sf/system" xdt:Transform="InsertAfter(/configuration/system.web.webPages.razor)" >
+		<system.web>
+			<httpRuntime maxRequestLength="6048000" executionTimeout="7200" maxUrlLength="102400" maxQueryStringLength="102400" />
+		</system.web>
+		<system.webServer>
+			<security>
+				<requestFiltering>
+					<requestLimits maxAllowedContentLength="2147483648" />
+				</requestFiltering>
+			</security>
+		</system.webServer>
+	</location>
+	<system.web>
+		<httpRuntime targetFramework="4.8" xdt:Transform="SetAttributes(targetFramework)" />
+
+		<compilation targetFramework="4.8" xdt:Transform="SetAttributes(targetFramework)">
+			<assemblies>
+				<add assembly="netstandard, Version=2.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51" xdt:Transform="InsertIfMissing" xdt:Locator="Match(assembly)"/>
+			</assemblies>
+		</compilation>
+		<compilation targetFramework="4.8" xdt:Transform="RemoveAttributes(optimizeCompilations)" />
+
+		<httpHandlers xdt:Transform="Remove" />
+		<httpModules xdt:Transform="Remove" />
+	</system.web>
+	<system.webServer>
+		<validation validateIntegratedModeConfiguration="true" xdt:Transform="Replace" />
+		<modules runAllManagedModulesForAllRequests="true">
+			<add name="ClaimsPrincipalHttpModule" type="Microsoft.IdentityModel.Web.ClaimsPrincipalHttpModule, Microsoft.IdentityModel, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" xdt:Transform="Remove" xdt:Locator="Match(name)" />
+			<add name="SitefinityClaimsAuthenticationModule" type="Telerik.Sitefinity.Security.Claims.SitefinityClaimsAuthenticationModule, Telerik.Sitefinity" xdt:Transform="Remove" xdt:Locator="Match(name)" />
+			<add name="SessionAuthenticationModule" type="Telerik.Sitefinity.Security.Claims.SitefinitySessionAuthenticationModule, Telerik.Sitefinity" xdt:Transform="Remove" xdt:Locator="Match(name)" />
+			<remove name="OutputCache" xdt:Transform="Remove" xdt:Locator="Match(name)" />
+			<remove name="OutputCache" xdt:Transform="InsertBefore(/configuration/system.webServer/modules/add[@name='Sitefinity'])"/>
+			<add name="OutputCache" type="Telerik.Sitefinity.Web.OutputCache.SitefinityOutputCacheModule, Telerik.Sitefinity" xdt:Transform="Remove" xdt:Locator="Match(type)" />
+			<add name="OutputCache" type="Telerik.Sitefinity.Web.OutputCache.SitefinityOutputCacheModule, Telerik.Sitefinity" preCondition="integratedMode" xdt:Transform="InsertAfter(/configuration/system.webServer/modules/add[@name='Sitefinity'])" />
+			<add name="SitefinityAnalyticsModule" xdt:Transform="Remove" xdt:Locator="Match(name)" />
+			<remove name="SitefinityAnalyticsModule" xdt:Transform="Remove" xdt:Locator="Match(name)" />
+			<remove name="UrlRoutingModule" xdt:Transform="Remove" xdt:Locator="Match(name)" />
+			<remove name="UrlRoutingModule-4.0" xdt:Transform="InsertIfMissing" xdt:Locator="Match(name)" />
+			<remove name="ScriptModule" xdt:Transform="Remove" xdt:Locator="Match(name)" />
+			<remove name="ScriptModule-4.0" xdt:Transform="InsertIfMissing" xdt:Locator="Match(name)" />
+		</modules>
+
+		<handlers>
+			<remove name="Telerik.Sitefinity.LibrariesRadUploadHandler" xdt:Transform="Remove" xdt:Locator="Match(name)"/>
+			<remove name="Telerik.Sitefinity.AsyncFileUploadHandler" xdt:Transform="Remove" xdt:Locator="Match(name)"/>
+			<remove name="Telerik.ReportViewer.axd_*" xdt:Transform="Remove" xdt:Locator="Match(name)"/>
+			<add name="Telerik.Sitefinity.LibrariesRadUploadHandler" path="Telerik.Sitefinity.LibrariesRadUploadHandler.ashx" verb="*" type="Telerik.Sitefinity.Modules.Libraries.Web.LibrariesRadUploadHandler, Telerik.Sitefinity" xdt:Transform="Remove" xdt:Locator="Match(name)" />
+			<add name="Telerik.Sitefinity.AsyncFileUploadHandler" path="Telerik.Sitefinity.AsyncFileUploadHandler.ashx" verb="*" type="Telerik.Sitefinity.Workflow.AsyncFileUploadHandler, Telerik.Sitefinity" xdt:Transform="Remove" xdt:Locator="XPath(/configuration/system.webServer/handlers/add[@name='Telerik.Sitefinity.AsyncFileUploadHandler'])" />
+			<add name="Telerik.ReportViewer.axd_*" xdt:Transform="Remove" xdt:Locator="Match(name)"/>
+			<add name="WildCard" path="*" verb="*" modules="IsapiModule" scriptProcessor="%windir%\Microsoft.NET\Framework64\v4.0.30319\aspnet_isapi.dll" resourceType="Unspecified" requireAccess="None" preCondition="classicMode,runtimeVersionv4.0,bitness64" xdt:Transform="Remove" xdt:Locator="Match(scriptProcessor)"  />
+			<add name="WildCard32" path="*" verb="*" modules="IsapiModule" scriptProcessor="%windir%\Microsoft.NET\Framework\v4.0.30319\aspnet_isapi.dll" resourceType="Unspecified" requireAccess="None" preCondition="classicMode,runtimeVersionv4.0,bitness32" xdt:Transform="Remove" xdt:Locator="Match(scriptProcessor)" />
+		</handlers>
+	</system.webServer>
+	<microsoft.identityModel xdt:Transform="Remove" />
+	<system.identityModel.services xdt:Transform="Remove" />
+	<system.identityModel xdt:Transform="Remove" />
+	<runtime xdt:Transform="InsertIfMissing">
+		<assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+			<dependentAssembly xdt:Transform="Remove" xdt:Locator="XPath(/configuration/runtime/*[local-name()='assemblyBinding']/*[local-name()='dependentAssembly']/*[local-name()='assemblyIdentity'][@name='Microsoft.Extensions.DependencyInjection']/parent::*)" />
+			<dependentAssembly xdt:Transform="InsertIfMissing" xdt:Locator="Condition(assemblyIdentity/@name='Microsoft.Extensions.DependencyInjection')" >
+				<assemblyIdentity name="Microsoft.Extensions.DependencyInjection" publicKeyToken="adb9793829ddae60" culture="neutral" xdt:Transform="Replace" xdt:Locator="Match(name)" />
+				<bindingRedirect oldVersion="0.0.0.0-8.0.0.0" newVersion="8.0.0.0" />
+			</dependentAssembly>
+		</assemblyBinding>
+		<assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+			<dependentAssembly xdt:Transform="Remove" xdt:Locator="XPath(/configuration/runtime/*[local-name()='assemblyBinding']/*[local-name()='dependentAssembly']/*[local-name()='assemblyIdentity'][@name='Microsoft.Extensions.DependencyInjection.Abstractions']/parent::*)" />
+			<dependentAssembly xdt:Transform="InsertIfMissing" xdt:Locator="Condition(assemblyIdentity/@name='Microsoft.Extensions.DependencyInjection.Abstractions')" >
+				<assemblyIdentity name="Microsoft.Extensions.DependencyInjection.Abstractions" publicKeyToken="adb9793829ddae60" culture="neutral" xdt:Transform="Replace" xdt:Locator="Match(name)" />
+				<bindingRedirect oldVersion="0.0.0.0-8.0.0.0" newVersion="8.0.0.0" />
+			</dependentAssembly>
+		</assemblyBinding>
+		<assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+			<dependentAssembly xdt:Transform="Remove" xdt:Locator="Condition(asm:assemblyIdentity/@name='System.Runtime.CompilerServices.Unsafe')" />
+			<dependentAssembly xdt:Transform="InsertIfMissing" xdt:Locator="Condition(asm:assemblyIdentity/@name='System.Runtime.CompilerServices.Unsafe')" >
+				<assemblyIdentity name="System.Runtime.CompilerServices.Unsafe" publicKeyToken="b03f5f7f11d50a3a" culture="neutral" xdt:Transform="Replace" xdt:Locator="Match(name)" />
+				<bindingRedirect oldVersion="0.0.0.0-6.0.1.0" newVersion="6.0.1.0" />
+			</dependentAssembly>
+		</assemblyBinding>
+		<assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+			<dependentAssembly xdt:Transform="Remove" xdt:Locator="Condition(asm:assemblyIdentity/@name='System.Text.Encoding.CodePages')" />
+			<dependentAssembly xdt:Transform="InsertIfMissing" xdt:Locator="Condition(asm:assemblyIdentity/@name='System.Text.Encoding.CodePages')" >
+				<assemblyIdentity name="System.Text.Encoding.CodePages" publicKeyToken="b03f5f7f11d50a3a" culture="neutral" xdt:Transform="Replace" xdt:Locator="Match(name)" />
+				<bindingRedirect oldVersion="0.0.0.0-5.0.0.0" newVersion="5.0.0.0" />
+			</dependentAssembly>
+		</assemblyBinding>
+		<assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+			<dependentAssembly xdt:Transform="Remove" xdt:Locator="Condition(asm:assemblyIdentity/@name='AngleSharp')" />
+			<dependentAssembly xdt:Transform="InsertIfMissing" xdt:Locator="Condition(asm:assemblyIdentity/@name='AngleSharp')" >
+				<assemblyIdentity name="AngleSharp" publicKeyToken="e83494dcdc6d31ea" culture="neutral" xdt:Transform="Replace" xdt:Locator="Match(name)" />
+				<bindingRedirect oldVersion="0.0.0.0-0.17.1.0" newVersion="0.17.1.0" />
+			</dependentAssembly>
+		</assemblyBinding>
+		<assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+			<dependentAssembly xdt:Transform="Remove" xdt:Locator="Condition(asm:assemblyIdentity/@name='AngleSharp.Css')" />
+			<dependentAssembly xdt:Transform="InsertIfMissing" xdt:Locator="Condition(asm:assemblyIdentity/@name='AngleSharp.Css')" >
+				<assemblyIdentity name="AngleSharp.Css" publicKeyToken="e83494dcdc6d31ea" culture="neutral" xdt:Transform="Replace" xdt:Locator="Match(name)" />
+				<bindingRedirect oldVersion="0.0.0.0-0.16.4.0" newVersion="0.16.4.0" />
+			</dependentAssembly>
+		</assemblyBinding>
+		<assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+			<dependentAssembly xdt:Transform="Remove" xdt:Locator="Condition(asm:assemblyIdentity/@name='Microsoft.VisualStudio.QualityTools.UnitTestFramework')" />
+		</assemblyBinding>
+		<assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+			<dependentAssembly xdt:Transform="Remove" xdt:Locator="Condition(asm:assemblyIdentity/@name='System.Text.Encoding.CodePages')" />
+		</assemblyBinding>
+		<assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+			<dependentAssembly xdt:Transform="Remove" xdt:Locator="Condition(asm:assemblyIdentity/@name='Microsoft.Owin.Security')" />
+			<dependentAssembly xdt:Transform="InsertIfMissing" xdt:Locator="Condition(asm:assemblyIdentity/@name='Microsoft.Owin.Security')" >
+				<assemblyIdentity name="Microsoft.Owin.Security" publicKeyToken="31bf3856ad364e35" culture="neutral" xdt:Transform="Replace" xdt:Locator="Match(name)" />
+				<bindingRedirect oldVersion="0.0.0.0-4.2.2.0" newVersion="4.2.2.0" />
+			</dependentAssembly>
+		</assemblyBinding>
+		<assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+			<dependentAssembly xdt:Transform="Remove" xdt:Locator="Condition(asm:assemblyIdentity/@name='Microsoft.Owin.Security.Cookies')" />
+			<dependentAssembly xdt:Transform="InsertIfMissing" xdt:Locator="Condition(asm:assemblyIdentity/@name='Microsoft.Owin.Security.Cookies')" >
+				<assemblyIdentity name="Microsoft.Owin.Security.Cookies" publicKeyToken="31bf3856ad364e35" culture="neutral" xdt:Transform="Replace" xdt:Locator="Match(name)" />
+				<bindingRedirect oldVersion="0.0.0.0-4.2.2.0" newVersion="4.2.2.0" />
+			</dependentAssembly>
+		</assemblyBinding>
+		<assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+			<dependentAssembly xdt:Transform="Remove" xdt:Locator="Condition(asm:assemblyIdentity/@name='Microsoft.Owin.Cors')" />
+			<dependentAssembly xdt:Transform="InsertIfMissing" xdt:Locator="Condition(asm:assemblyIdentity/@name='Microsoft.Owin.Cors')" >
+				<assemblyIdentity name="Microsoft.Owin.Cors" publicKeyToken="31bf3856ad364e35" culture="neutral" xdt:Transform="Replace" xdt:Locator="Match(name)" />
+				<bindingRedirect oldVersion="0.0.0.0-4.2.2.0" newVersion="4.2.2.0" />
+			</dependentAssembly>
+		</assemblyBinding>
+		<assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+			<dependentAssembly xdt:Transform="Remove" xdt:Locator="Condition(asm:assemblyIdentity/@name='Microsoft.Owin')" />
+			<dependentAssembly xdt:Transform="InsertIfMissing" xdt:Locator="Condition(asm:assemblyIdentity/@name='Microsoft.Owin')" >
+				<assemblyIdentity name="Microsoft.Owin" publicKeyToken="31bf3856ad364e35" culture="neutral" xdt:Transform="Replace" xdt:Locator="Match(name)" />
+				<bindingRedirect oldVersion="0.0.0.0-4.2.2.0" newVersion="4.2.2.0" />
+			</dependentAssembly>
+		</assemblyBinding>
+		<assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+			<dependentAssembly xdt:Transform="Remove" xdt:Locator="Condition(asm:assemblyIdentity/@name='Microsoft.Owin.Security.OAuth')" />
+			<dependentAssembly xdt:Transform="InsertIfMissing" xdt:Locator="Condition(asm:assemblyIdentity/@name='Microsoft.Owin.Security.OAuth')" >
+				<assemblyIdentity name="Microsoft.Owin.Security.OAuth" publicKeyToken="31bf3856ad364e35" culture="neutral" xdt:Transform="Replace" xdt:Locator="Match(name)" />
+				<bindingRedirect oldVersion="0.0.0.0-4.2.2.0" newVersion="4.2.2.0" />
+			</dependentAssembly>
+		</assemblyBinding>
+		<assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+			<dependentAssembly xdt:Transform="Remove" xdt:Locator="Condition(asm:assemblyIdentity/@name='Microsoft.Owin.Security.Jwt')" />
+			<dependentAssembly xdt:Transform="InsertIfMissing" xdt:Locator="Condition(asm:assemblyIdentity/@name='Microsoft.Owin.Security.Jwt')" >
+				<assemblyIdentity name="Microsoft.Owin.Security.Jwt" publicKeyToken="31bf3856ad364e35" culture="neutral" xdt:Transform="Replace" xdt:Locator="Match(name)" />
+				<bindingRedirect oldVersion="0.0.0.0-4.2.2.0" newVersion="4.2.2.0" />
+			</dependentAssembly>
+		</assemblyBinding>
+		<assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+			<dependentAssembly xdt:Transform="Remove" xdt:Locator="Condition(asm:assemblyIdentity/@name='System.IdentityModel.Tokens.Jwt')" />
+			<dependentAssembly xdt:Transform="InsertIfMissing" xdt:Locator="Condition(asm:assemblyIdentity/@name='System.IdentityModel.Tokens.Jwt')" >
+				<assemblyIdentity name="System.IdentityModel.Tokens.Jwt" publicKeyToken="31bf3856ad364e35" culture="neutral" xdt:Transform="Replace" xdt:Locator="Match(name)" />
+				<bindingRedirect oldVersion="0.0.0.0-5.3.0.0" newVersion="5.3.0.0" />
+			</dependentAssembly>
+		</assemblyBinding>
+		<assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+			<dependentAssembly xdt:Transform="Remove" xdt:Locator="Condition(asm:assemblyIdentity/@name='Microsoft.Owin.StaticFiles')" />
+			<dependentAssembly xdt:Transform="InsertIfMissing" xdt:Locator="Condition(asm:assemblyIdentity/@name='Microsoft.Owin.StaticFiles')" >
+				<assemblyIdentity name="Microsoft.Owin.StaticFiles" publicKeyToken="31bf3856ad364e35" culture="neutral" xdt:Transform="Replace" xdt:Locator="Match(name)" />
+				<bindingRedirect oldVersion="0.0.0.0-4.2.2.0" newVersion="4.2.2.0" />
+			</dependentAssembly>
+		</assemblyBinding>
+		<assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+			<dependentAssembly xdt:Transform="Remove" xdt:Locator="Condition(asm:assemblyIdentity/@name='Microsoft.Owin.FileSystems')" />
+			<dependentAssembly xdt:Transform="InsertIfMissing" xdt:Locator="Condition(asm:assemblyIdentity/@name='Microsoft.Owin.FileSystems')" >
+				<assemblyIdentity name="Microsoft.Owin.FileSystems" publicKeyToken="31bf3856ad364e35" culture="neutral" xdt:Transform="Replace" xdt:Locator="Match(name)" />
+				<bindingRedirect oldVersion="0.0.0.0-4.2.2.0" newVersion="4.2.2.0" />
+			</dependentAssembly>
+		</assemblyBinding>
+		<assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+			<dependentAssembly xdt:Transform="Remove" xdt:Locator="Condition(asm:assemblyIdentity/@name='System.Text.Encodings.Web')" />
+			<dependentAssembly xdt:Transform="InsertIfMissing" xdt:Locator="Condition(asm:assemblyIdentity/@name='System.Text.Encodings.Web')" >
+				<assemblyIdentity name="System.Text.Encodings.Web" publicKeyToken="cc7b13ffcd2ddd51" culture="neutral" xdt:Transform="Replace" xdt:Locator="Match(name)" />
+				<bindingRedirect oldVersion="0.0.0.0-8.0.0.0" newVersion="8.0.0.0" />
+			</dependentAssembly>
+		</assemblyBinding>
+		<assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+			<dependentAssembly xdt:Transform="Remove" xdt:Locator="Condition(asm:assemblyIdentity/@name='System.ValueTuple')" />
+			<dependentAssembly xdt:Transform="InsertIfMissing" xdt:Locator="Condition(asm:assemblyIdentity/@name='System.ValueTuple')" >
+				<assemblyIdentity name="System.ValueTuple" publicKeyToken="cc7b13ffcd2ddd51" culture="neutral" xdt:Transform="Replace" xdt:Locator="Match(name)" />
+				<bindingRedirect oldVersion="0.0.0.0-4.0.3.0" newVersion="4.0.3.0" />
+			</dependentAssembly>
+		</assemblyBinding>
+		<assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+			<dependentAssembly xdt:Transform="Remove" xdt:Locator="Condition(asm:assemblyIdentity/@name='System.Text.Json')" />
+			<dependentAssembly xdt:Transform="InsertIfMissing" xdt:Locator="Condition(asm:assemblyIdentity/@name='System.Text.Json')" >
+				<assemblyIdentity name="System.Text.Json" publicKeyToken="cc7b13ffcd2ddd51" culture="neutral" xdt:Transform="Replace" xdt:Locator="Match(name)" />
+				<bindingRedirect oldVersion="0.0.0.0-8.0.0.5" newVersion="8.0.0.5" />
+			</dependentAssembly>
+		</assemblyBinding>
+		<assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+			<dependentAssembly xdt:Transform="Remove" xdt:Locator="Condition(asm:assemblyIdentity/@name='System.Diagnostics.DiagnosticSource')" />
+			<dependentAssembly xdt:Transform="InsertIfMissing" xdt:Locator="Condition(asm:assemblyIdentity/@name='System.Diagnostics.DiagnosticSource')" >
+				<assemblyIdentity name="System.Diagnostics.DiagnosticSource" publicKeyToken="cc7b13ffcd2ddd51" culture="neutral" xdt:Transform="Replace" xdt:Locator="Match(name)" />
+				<bindingRedirect oldVersion="0.0.0.0-8.0.0.0" newVersion="8.0.0.0" />
+			</dependentAssembly>
+		</assemblyBinding>
+		<assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+			<dependentAssembly xdt:Transform="Remove" xdt:Locator="Condition(asm:assemblyIdentity/@name='System.Numerics.Vectors')" />
+			<dependentAssembly xdt:Transform="InsertIfMissing" xdt:Locator="Condition(asm:assemblyIdentity/@name='System.Numerics.Vectors')" >
+				<assemblyIdentity name="System.Numerics.Vectors" publicKeyToken="b03f5f7f11d50a3a" culture="neutral" xdt:Transform="Replace" xdt:Locator="Match(name)" />
+				<bindingRedirect oldVersion="0.0.0.0-4.1.5.0" newVersion="4.1.5.0" />
+			</dependentAssembly>
+		</assemblyBinding>
+		<assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+			<dependentAssembly xdt:Transform="Remove" xdt:Locator="Condition(asm:assemblyIdentity/@name='System.Buffers')" />
+			<dependentAssembly xdt:Transform="InsertIfMissing" xdt:Locator="Condition(asm:assemblyIdentity/@name='System.Buffers')" >
+				<assemblyIdentity name="System.Buffers" publicKeyToken="cc7b13ffcd2ddd51" culture="neutral" xdt:Transform="Replace" xdt:Locator="Match(name)" />
+				<bindingRedirect oldVersion="0.0.0.0-4.0.4.0" newVersion="4.0.4.0" />
+			</dependentAssembly>
+		</assemblyBinding>
+		<assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+			<dependentAssembly xdt:Transform="Remove" xdt:Locator="Condition(asm:assemblyIdentity/@name='Azure.Core')" />
+			<dependentAssembly xdt:Transform="InsertIfMissing" xdt:Locator="Condition(asm:assemblyIdentity/@name='Azure.Core')" >
+				<assemblyIdentity name="Azure.Core" publicKeyToken="92742159e12e44c8" culture="neutral" xdt:Transform="Replace" xdt:Locator="Match(name)" />
+				<bindingRedirect oldVersion="0.0.0.0-1.40.0.0" newVersion="1.40.0.0" />
+			</dependentAssembly>
+		</assemblyBinding>
+		<assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+			<dependentAssembly xdt:Transform="Remove" xdt:Locator="Condition(asm:assemblyIdentity/@name='System.Memory')" />
+			<dependentAssembly xdt:Transform="InsertIfMissing" xdt:Locator="Condition(asm:assemblyIdentity/@name='System.Memory')" >
+				<assemblyIdentity name="System.Memory" publicKeyToken="cc7b13ffcd2ddd51" culture="neutral" xdt:Transform="Replace" xdt:Locator="Match(name)" />
+				<bindingRedirect oldVersion="0.0.0.0-4.0.2.0" newVersion="4.0.2.0" />
+			</dependentAssembly>
+		</assemblyBinding>
+		<assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+			<dependentAssembly xdt:Transform="Remove" xdt:Locator="Condition(asm:assemblyIdentity/@name='System.Threading.Tasks.Extensions')" />
+			<dependentAssembly xdt:Transform="InsertIfMissing" xdt:Locator="Condition(asm:assemblyIdentity/@name='System.Threading.Tasks.Extensions')" >
+				<assemblyIdentity name="System.Threading.Tasks.Extensions" publicKeyToken="cc7b13ffcd2ddd51" culture="neutral" xdt:Transform="Replace" xdt:Locator="Match(name)" />
+				<bindingRedirect oldVersion="0.0.0.0-4.2.1.0" newVersion="4.2.1.0" />
+			</dependentAssembly>
+		</assemblyBinding>
+		<assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+			<dependentAssembly xdt:Transform="Remove" xdt:Locator="Condition(asm:assemblyIdentity/@name='Microsoft.IdentityModel.Abstractions')" />
+			<dependentAssembly xdt:Transform="InsertIfMissing" xdt:Locator="Condition(asm:assemblyIdentity/@name='Microsoft.IdentityModel.Abstractions')" >
+				<assemblyIdentity name="Microsoft.IdentityModel.Abstractions" publicKeyToken="31bf3856ad364e35" culture="neutral" xdt:Transform="Replace" xdt:Locator="Match(name)" />
+				<bindingRedirect oldVersion="0.0.0.0-7.3.1.0" newVersion="7.3.1.0" />
+			</dependentAssembly>
+		</assemblyBinding>
+		<assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+			<dependentAssembly xdt:Transform="Remove" xdt:Locator="Condition(asm:assemblyIdentity/@name='Microsoft.IdentityModel.Logging')" />
+			<dependentAssembly xdt:Transform="InsertIfMissing" xdt:Locator="Condition(asm:assemblyIdentity/@name='Microsoft.IdentityModel.Logging')" >
+				<assemblyIdentity name="Microsoft.IdentityModel.Logging" publicKeyToken="31bf3856ad364e35" culture="neutral" xdt:Transform="Replace" xdt:Locator="Match(name)" />
+				<bindingRedirect oldVersion="0.0.0.0-7.3.1.0" newVersion="7.3.1.0" />
+			</dependentAssembly>
+		</assemblyBinding>
+		<assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+			<dependentAssembly xdt:Transform="Remove" xdt:Locator="Condition(asm:assemblyIdentity/@name='Microsoft.IdentityModel.Protocols')" />
+			<dependentAssembly xdt:Transform="InsertIfMissing" xdt:Locator="Condition(asm:assemblyIdentity/@name='Microsoft.IdentityModel.Protocols')" >
+				<assemblyIdentity name="Microsoft.IdentityModel.Protocols" publicKeyToken="31bf3856ad364e35" culture="neutral" xdt:Transform="Replace" xdt:Locator="Match(name)" />
+				<bindingRedirect oldVersion="0.0.0.0-7.3.1.0" newVersion="7.3.1.0" />
+			</dependentAssembly>
+		</assemblyBinding>
+		<assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+			<dependentAssembly xdt:Transform="Remove" xdt:Locator="Condition(asm:assemblyIdentity/@name='Microsoft.IdentityModel.Protocols.OpenIdConnect')" />
+			<dependentAssembly xdt:Transform="InsertIfMissing" xdt:Locator="Condition(asm:assemblyIdentity/@name='Microsoft.IdentityModel.Protocols.OpenIdConnect')" >
+				<assemblyIdentity name="Microsoft.IdentityModel.Protocols.OpenIdConnect" publicKeyToken="31bf3856ad364e35" culture="neutral" xdt:Transform="Replace" xdt:Locator="Match(name)" />
+				<bindingRedirect oldVersion="0.0.0.0-7.3.1.0" newVersion="7.3.1.0" />
+			</dependentAssembly>
+		</assemblyBinding>
+		<assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+			<dependentAssembly xdt:Transform="Remove" xdt:Locator="Condition(asm:assemblyIdentity/@name='Microsoft.IdentityModel.Tokens')" />
+			<dependentAssembly xdt:Transform="InsertIfMissing" xdt:Locator="Condition(asm:assemblyIdentity/@name='Microsoft.IdentityModel.Tokens')" >
+				<assemblyIdentity name="Microsoft.IdentityModel.Tokens" publicKeyToken="31bf3856ad364e35" culture="neutral" xdt:Transform="Replace" xdt:Locator="Match(name)" />
+				<bindingRedirect oldVersion="0.0.0.0-7.3.1.0" newVersion="7.3.1.0" />
+			</dependentAssembly>
+		</assemblyBinding>
+		<assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+			<dependentAssembly xdt:Transform="Remove" xdt:Locator="Condition(asm:assemblyIdentity/@name='Microsoft.IdentityModel.Protocols.WsFederation')" />
+			<dependentAssembly xdt:Transform="InsertIfMissing" xdt:Locator="Condition(asm:assemblyIdentity/@name='Microsoft.IdentityModel.Protocols.WsFederation')" >
+				<assemblyIdentity name="Microsoft.IdentityModel.Protocols.WsFederation" publicKeyToken="31bf3856ad364e35" culture="neutral" xdt:Transform="Replace" xdt:Locator="Match(name)" />
+				<bindingRedirect oldVersion="0.0.0.0-7.3.1.0" newVersion="7.3.1.0" />
+			</dependentAssembly>
+		</assemblyBinding>
+		<assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+			<dependentAssembly xdt:Transform="Remove" xdt:Locator="Condition(asm:assemblyIdentity/@name='Microsoft.IdentityModel.Tokens.Saml')" />
+			<dependentAssembly xdt:Transform="InsertIfMissing" xdt:Locator="Condition(asm:assemblyIdentity/@name='Microsoft.IdentityModel.Tokens.Saml')" >
+				<assemblyIdentity name="Microsoft.IdentityModel.Tokens.Saml" publicKeyToken="31bf3856ad364e35" culture="neutral" xdt:Transform="Replace" xdt:Locator="Match(name)" />
+				<bindingRedirect oldVersion="0.0.0.0-7.3.1.0" newVersion="7.3.1.0" />
+			</dependentAssembly>
+		</assemblyBinding>
+	</runtime>
+</configuration>

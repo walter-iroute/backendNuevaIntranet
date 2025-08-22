@@ -1,0 +1,558 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ServiceStack.Server</name>
+    </assembly>
+    <members>
+        <member name="P:ServiceStack.AutoQueryFeature.GenerateAutoBatchImplementationsFor">
+            <summary>
+            Which CRUD operations to implement AutoBatch implementations for 
+            </summary>
+        </member>
+        <member name="P:ServiceStack.AutoQueryFeature.UseDatabaseWriteLocks">
+            <summary>
+            Use DB Thread locks for DB Write operations.
+            This is useful when using SQLite which only allows 1 concurrent writer
+            </summary>
+        </member>
+        <member name="P:ServiceStack.AutoQueryFeature.ImplicitReferences">
+            <summary>
+            Whether to create implicit AutoQuery UI references based on field naming conventions
+            </summary>
+        </member>
+        <member name="P:ServiceStack.AutoQueryFeature.GenerateCrudServices">
+            <summary>
+            Enable code-gen of CRUD Services for registered database in any supported Add ServiceStack Reference Language:
+             - /autocrud/{Include}/{Lang}
+            
+            View DB Schema Services:
+             - /autocrud/schema - Default DB
+             - /autocrud/schema/{Schema} - Specified DB Schema
+            </summary>
+        </member>
+        <member name="T:ServiceStack.IAutoQueryDb">
+            <summary>
+            AutoQuery RDBMS APIs
+            </summary>
+        </member>
+        <member name="M:ServiceStack.IAutoQueryDb.GetFromType(System.Type)">
+            <summary>
+            Resolve the source Type for this Request DTO 
+            </summary>
+        </member>
+        <member name="M:ServiceStack.IAutoQueryDb.GetDb(System.Type,ServiceStack.Web.IRequest)">
+            <summary>
+            Non-generic API to resolve the DB Connection to use for this request 
+            </summary>
+        </member>
+        <member name="M:ServiceStack.IAutoQueryDb.GetDb``1(ServiceStack.Web.IRequest)">
+            <summary>
+            Generic API to resolve the DB Connection to use for this request
+            </summary>
+        </member>
+        <member name="M:ServiceStack.IAutoQueryDb.GetDbNamedConnection(System.Type,ServiceStack.Web.IRequest)">
+            <summary>
+            Non-generic API to resolve the DB Named Connection to use for this request 
+            </summary>
+        </member>
+        <member name="M:ServiceStack.IAutoQueryDb.GetTypedQuery(System.Type,System.Type)">
+            <summary>
+            Generate an untyped AutoQuery Query Builder
+            </summary>
+        </member>
+        <member name="M:ServiceStack.IAutoQueryDb.CreateQuery``1(ServiceStack.IQueryDb{``0},System.Collections.Generic.Dictionary{System.String,System.String},ServiceStack.Web.IRequest,System.Data.IDbConnection)">
+            <summary>
+            Generate a populated and Typed OrmLite SqlExpression using the same model as the source and output target
+            </summary>
+        </member>
+        <member name="M:ServiceStack.IAutoQueryDb.Execute``1(ServiceStack.IQueryDb{``0},ServiceStack.OrmLite.SqlExpression{``0},ServiceStack.Web.IRequest,System.Data.IDbConnection)">
+            <summary>
+            Execute an OrmLite SqlExpression using the same model as the source and output target
+            </summary>
+        </member>
+        <member name="M:ServiceStack.IAutoQueryDb.ExecuteAsync``1(ServiceStack.IQueryDb{``0},ServiceStack.OrmLite.SqlExpression{``0},ServiceStack.Web.IRequest,System.Data.IDbConnection)">
+            <summary>
+            Async Execute an OrmLite SqlExpression using the same model as the source and output target
+            </summary>
+        </member>
+        <member name="M:ServiceStack.IAutoQueryDb.CreateQuery``2(ServiceStack.IQueryDb{``0,``1},System.Collections.Generic.Dictionary{System.String,System.String},ServiceStack.Web.IRequest,System.Data.IDbConnection)">
+            <summary>
+            Generate a populated and Typed OrmLite SqlExpression using different models for source and output target
+            </summary>
+        </member>
+        <member name="M:ServiceStack.IAutoQueryDb.Execute``2(ServiceStack.IQueryDb{``0,``1},ServiceStack.OrmLite.SqlExpression{``0},ServiceStack.Web.IRequest,System.Data.IDbConnection)">
+            <summary>
+            Execute an OrmLite SqlExpression using different models for source and output target
+            </summary>
+        </member>
+        <member name="M:ServiceStack.IAutoQueryDb.ExecuteAsync``2(ServiceStack.IQueryDb{``0,``1},ServiceStack.OrmLite.SqlExpression{``0},ServiceStack.Web.IRequest,System.Data.IDbConnection)">
+            <summary>
+            Async Execute an OrmLite SqlExpression using different models for source and output target
+            </summary>
+        </member>
+        <member name="M:ServiceStack.IAutoQueryDb.CreateQuery(ServiceStack.IQueryDb,System.Collections.Generic.Dictionary{System.String,System.String},ServiceStack.Web.IRequest,System.Data.IDbConnection)">
+            <summary>
+            Generate a populated untyped ISqlExpression from an untyped AutoQuery Request
+            </summary>
+        </member>
+        <member name="M:ServiceStack.IAutoQueryDb.Execute(ServiceStack.IQueryDb,ServiceStack.OrmLite.ISqlExpression,System.Data.IDbConnection)">
+            <summary>
+            Execute an untyped ISqlExpression 
+            </summary>
+        </member>
+        <member name="M:ServiceStack.IAutoQueryDb.ExecuteAsync(ServiceStack.IQueryDb,ServiceStack.OrmLite.ISqlExpression,System.Data.IDbConnection)">
+            <summary>
+            Async Execute an untyped ISqlExpression 
+            </summary>
+        </member>
+        <member name="T:ServiceStack.IAutoCrudDb">
+            <summary>
+            AutoQuery CRUD RDBMS APIs
+            </summary>
+        </member>
+        <member name="M:ServiceStack.IAutoCrudDb.Create``1(ServiceStack.ICreateDb{``0},ServiceStack.Web.IRequest,System.Data.IDbConnection)">
+            <summary>
+            Inserts new entry into Table
+            </summary>
+        </member>
+        <member name="M:ServiceStack.IAutoCrudDb.CreateAsync``1(ServiceStack.ICreateDb{``0},ServiceStack.Web.IRequest,System.Data.IDbConnection)">
+            <summary>
+            Inserts new entry into Table Async
+            </summary>
+        </member>
+        <member name="M:ServiceStack.IAutoCrudDb.Update``1(ServiceStack.IUpdateDb{``0},ServiceStack.Web.IRequest,System.Data.IDbConnection)">
+            <summary>
+            Updates entry into Table
+            </summary>
+        </member>
+        <member name="M:ServiceStack.IAutoCrudDb.UpdateAsync``1(ServiceStack.IUpdateDb{``0},ServiceStack.Web.IRequest,System.Data.IDbConnection)">
+            <summary>
+            Updates entry into Table Async
+            </summary>
+        </member>
+        <member name="M:ServiceStack.IAutoCrudDb.Patch``1(ServiceStack.IPatchDb{``0},ServiceStack.Web.IRequest,System.Data.IDbConnection)">
+            <summary>
+            Partially Updates entry into Table
+            </summary>
+        </member>
+        <member name="M:ServiceStack.IAutoCrudDb.PatchAsync``1(ServiceStack.IPatchDb{``0},ServiceStack.Web.IRequest,System.Data.IDbConnection)">
+            <summary>
+            Partially Updates entry into Table Async
+            </summary>
+        </member>
+        <member name="M:ServiceStack.IAutoCrudDb.Delete``1(ServiceStack.IDeleteDb{``0},ServiceStack.Web.IRequest,System.Data.IDbConnection)">
+            <summary>
+            Deletes entry from Table
+            </summary>
+        </member>
+        <member name="M:ServiceStack.IAutoCrudDb.DeleteAsync``1(ServiceStack.IDeleteDb{``0},ServiceStack.Web.IRequest,System.Data.IDbConnection)">
+            <summary>
+            Deletes entry from Table Async
+            </summary>
+        </member>
+        <member name="M:ServiceStack.IAutoCrudDb.Save``1(ServiceStack.ISaveDb{``0},ServiceStack.Web.IRequest,System.Data.IDbConnection)">
+            <summary>
+            Inserts or Updates entry into Table
+            </summary>
+        </member>
+        <member name="M:ServiceStack.IAutoCrudDb.SaveAsync``1(ServiceStack.ISaveDb{``0},ServiceStack.Web.IRequest,System.Data.IDbConnection)">
+            <summary>
+            Inserts or Updates entry into Table Async
+            </summary>
+        </member>
+        <member name="M:ServiceStack.IAutoCrudDb.PartialUpdate``1(System.Object,ServiceStack.Web.IRequest,System.Data.IDbConnection)">
+            <summary>
+            Partially Update non-null properties of DTO
+            </summary>
+        </member>
+        <member name="M:ServiceStack.IAutoCrudDb.PartialUpdateAsync``1(System.Object,ServiceStack.Web.IRequest,System.Data.IDbConnection)">
+            <summary>
+            Partially Update non-null properties of DTO Async
+            </summary>
+        </member>
+        <member name="M:ServiceStack.ICrudEvents.Record(ServiceStack.CrudContext)">
+            <summary>
+            Record an AutoCrudEvent Sync
+            </summary>
+        </member>
+        <member name="M:ServiceStack.ICrudEvents.RecordAsync(ServiceStack.CrudContext)">
+            <summary>
+            Record an AutoCrudEvent Async
+            </summary>
+        </member>
+        <member name="P:ServiceStack.CrudEventsExecutor`1.RequestFactory">
+            <summary>
+            (RequestDto, HttpMethod) => IRequest
+            </summary>
+        </member>
+        <member name="P:ServiceStack.OrmLiteCrudEvents`1.ExcludePrimaryDb">
+            <summary>
+            Don't persist CrudEvent's in primary IDbConnectionFactory
+            </summary>
+        </member>
+        <member name="P:ServiceStack.OrmLiteCrudEvents`1.NamedConnections">
+            <summary>
+            Additional DB Connections CrudEvent's should be persisted in
+            </summary>
+        </member>
+        <member name="M:ServiceStack.OrmLiteCrudEvents`1.Record(ServiceStack.CrudContext)">
+            <summary>
+            Record an CrudEvent Sync
+            </summary>
+        </member>
+        <member name="M:ServiceStack.OrmLiteCrudEvents`1.RecordAsync(ServiceStack.CrudContext)">
+            <summary>
+            Record an CrudEvent Async
+            </summary>
+        </member>
+        <member name="M:ServiceStack.OrmLiteCrudEvents`1.GetEvents(System.Data.IDbConnection)">
+            <summary>
+            Returns all rows in CrudEvent Table, lazily paging in batches of OrmLiteCrudEvents.BatchSize
+            </summary>
+        </member>
+        <member name="M:ServiceStack.OrmLiteCrudEvents`1.InitSchema">
+            <summary>
+            Create CrudEvent if it doesn't already exist
+            </summary>
+        </member>
+        <member name="M:ServiceStack.OrmLiteCrudEvents`1.Clear">
+            <summary>
+            Delete all entries in CrudEvent Table
+            </summary>
+        </member>
+        <member name="M:ServiceStack.OrmLiteCrudEvents`1.Reset">
+            <summary>
+            WARNING: DROP and RE-CREATE CrudEvent
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ServiceStack.CrudEventsUtils.Null(System.String)">
+            <summary>
+            Returns null
+            </summary>
+        </member>
+        <member name="M:ServiceStack.CrudEventsUtils.Identity(System.String)">
+            <summary>
+            Returns itself as-is
+            </summary>
+        </member>
+        <member name="M:ServiceStack.CrudEventsUtils.AnonymizeLastIpSegment(System.String)">
+            <summary>
+            Returns Single IP with empty last segment 
+            </summary>
+        </member>
+        <member name="P:ServiceStack.AutoGenContext.Instruction">
+            <summary>
+            AutoGen Request DTO Instruction
+            </summary>
+        </member>
+        <member name="P:ServiceStack.AutoGenContext.TableName">
+            <summary>
+            Original Table Name
+            </summary>
+        </member>
+        <member name="P:ServiceStack.AutoGenContext.TableSchema">
+            <summary>
+            RDBMS TableSchema
+            </summary>
+        </member>
+        <member name="P:ServiceStack.AutoGenContext.DataModelName">
+            <summary>
+            Generated DataModel Name to use 
+            </summary>
+        </member>
+        <member name="P:ServiceStack.AutoGenContext.PluralDataModelName">
+            <summary>
+            Generated DataModel Name to use for Query Services 
+            </summary>
+        </member>
+        <member name="P:ServiceStack.AutoGenContext.RoutePathBase">
+            <summary>
+            Generated Route Path base to use 
+            </summary>
+        </member>
+        <member name="P:ServiceStack.AutoGenContext.OperationNames">
+            <summary>
+            Generated Request DTO Name to use per operation: Query, Create, Update, Patch, Delete
+            </summary>
+        </member>
+        <member name="P:ServiceStack.AutoGenContext.Dialect">
+            <summary>
+            RDBMS Dialect
+            </summary>
+        </member>
+        <member name="P:ServiceStack.AutoGenContext.GetTableAlias">
+            <summary>
+            Return what table [Alias] name should be used (if any)
+            </summary>
+        </member>
+        <member name="P:ServiceStack.AutoGenContext.GetColumnAlias">
+            <summary>
+            Return what table column [Alias] name should be used (if any)
+            </summary>
+        </member>
+        <member name="P:ServiceStack.IGenerateCrudServices.CreateServices">
+            <summary>
+            Generate services 
+            </summary>
+        </member>
+        <member name="M:ServiceStack.IGenerateCrudServices.GenerateMissingServices(ServiceStack.AutoQueryFeature,System.Collections.Generic.HashSet{System.Type})">
+            <summary>
+            Generate AutoQuery DTOs for specified RDBMS Tables
+            </summary>
+            <param name="feature"></param>
+            <param name="requestTypes"></param>
+            <returns>New AutoQuery Request DTOs</returns>
+        </member>
+        <member name="P:ServiceStack.IGenerateCrudServices.GetTableNames">
+            <summary>
+            Override which tables to generate APIs for from a 'schema'  
+            </summary>
+        </member>
+        <member name="P:ServiceStack.IGenerateCrudServices.GetTableColumns">
+            <summary>
+            Override which table columns to generate APIs for from a 'table' and 'schema'  
+            </summary>
+        </member>
+        <member name="T:ServiceStack.CreateCrudServices">
+            <summary>
+            Instruction for which AutoCrud Services to generate
+            </summary>
+        </member>
+        <member name="P:ServiceStack.CreateCrudServices.IncludeCrudOperations">
+            <summary>
+            Which AutoCrud Operations to include:
+            - Query
+            - Create
+            - Update
+            - Patch
+            - Delete
+            </summary>
+        </member>
+        <member name="P:ServiceStack.CreateCrudServices.Schema">
+            <summary>
+            The RDBMS Schema you want AutoQuery Services generated for
+            </summary>
+        </member>
+        <member name="P:ServiceStack.CreateCrudServices.NamedConnection">
+            <summary>
+            The NamedConnection you want AutoQuery Services generated for
+            </summary>
+        </member>
+        <member name="P:ServiceStack.CreateCrudServices.AddNamespaces">
+            <summary>
+            Include additional C# namespaces
+            </summary>
+        </member>
+        <member name="P:ServiceStack.CreateCrudServices.IncludeTables">
+            <summary>
+            Allow List to specify only the tables you would like to have code-generated
+            </summary>
+        </member>
+        <member name="P:ServiceStack.CreateCrudServices.ExcludeTables">
+            <summary>
+            Block list to specify which tables you would like excluded from being generated
+            </summary>
+        </member>
+        <member name="P:ServiceStack.CreateCrudServices.IncludeTypes">
+            <summary>
+            Allow List to specify only the types you would like to have code-generated, see:
+            https://docs.servicestack.net/csharp-add-servicestack-reference#includetypes
+            </summary>
+        </member>
+        <member name="P:ServiceStack.CreateCrudServices.ExcludeTypes">
+            <summary>
+            Block list to specify which types you would like excluded from being generated. see:
+            https://docs.servicestack.net/csharp-add-servicestack-reference#excludetypes
+            </summary>
+        </member>
+        <member name="P:ServiceStack.CrudCodeGenTypes.Include">
+            <summary>
+            Either 'all' to include all AutoQuery Services or 'new' to include only missing Services and Types
+            </summary>
+        </member>
+        <member name="P:ServiceStack.CrudCodeGenTypes.Lang">
+            <summary>
+            The language you want
+             csharp
+             typescript
+             java
+             kotlin
+             swift
+             dart
+             vbnet
+             fsharp
+             typescript.d
+            </summary>
+        </member>
+        <member name="P:ServiceStack.CrudCodeGenTypes.IncludeCrudOperations">
+            <summary>
+            Which AutoCrud Operations to include:
+            - Query
+            - Create
+            - Update
+            - Patch
+            - Delete
+            </summary>
+        </member>
+        <member name="P:ServiceStack.CrudCodeGenTypes.Schema">
+            <summary>
+            The RDBMS Schema you want AutoQuery Services generated for
+            </summary>
+        </member>
+        <member name="P:ServiceStack.CrudCodeGenTypes.NamedConnection">
+            <summary>
+            The NamedConnection you want AutoQuery Services generated for
+            </summary>
+        </member>
+        <member name="P:ServiceStack.CrudCodeGenTypes.AuthSecret">
+            <summary>
+            The Admin AuthSecret to access Service in Release mode
+            </summary>
+        </member>
+        <member name="P:ServiceStack.CrudCodeGenTypes.NoCache">
+            <summary>
+            Do not use cached DB Table Schemas, re-fetch latest 
+            </summary>
+        </member>
+        <member name="P:ServiceStack.CrudCodeGenTypes.IncludeTables">
+            <summary>
+            Allow List to specify only the tables you would like to have code-generated
+            </summary>
+        </member>
+        <member name="P:ServiceStack.CrudCodeGenTypes.ExcludeTables">
+            <summary>
+            Block list to specify which tables you would like excluded from being generated
+            </summary>
+        </member>
+        <member name="P:ServiceStack.CrudTables.IncludeTables">
+            <summary>
+            Allow List to specify only the tables you would like to have code-generated
+            </summary>
+        </member>
+        <member name="P:ServiceStack.CrudTables.ExcludeTables">
+            <summary>
+            Block list to specify which tables you would like excluded from being generated
+            </summary>
+        </member>
+        <member name="P:ServiceStack.GenerateCrudServices.DbFactory">
+            <summary>
+            Use specified DbFactory or from IOC
+            </summary>
+        </member>
+        <member name="P:ServiceStack.GenerateCrudServices.IncludeCrudOperations">
+            <summary>
+            List of AutoQuery Operations to generate
+            </summary>
+        </member>
+        <member name="P:ServiceStack.GenerateCrudServices.ExcludeTables">
+            <summary>
+            List of Tables to be excluded.
+            All Tables used for built-in ServiceStack features are excluded by default
+            </summary>
+        </member>
+        <member name="P:ServiceStack.GenerateCrudServices.CreateServices">
+            <summary>
+            Generate services 
+            </summary>
+        </member>
+        <member name="P:ServiceStack.GenerateCrudServices.GenerateOperationsFilter">
+            <summary>
+            Customize AutoGen Operation Generation
+            </summary>
+        </member>
+        <member name="P:ServiceStack.GenerateCrudServices.AutoRegister">
+            <summary>
+            Auto Register AutoQuery and Crud Services for Default DB
+            </summary>
+        </member>
+        <member name="P:ServiceStack.GenerateCrudServices.TableSchemasFilter">
+            <summary>
+            Filter to modify the `TableSchema` used by AutoGen to generate data models
+            </summary>
+        </member>
+        <member name="P:ServiceStack.GenerateCrudServices.GetTableColumns">
+            <summary>
+            Override which table columns to generate APIs for from a 'table' and 'schema'  
+            </summary>
+        </member>
+        <member name="T:ServiceStack.Messaging.Redis.RedisMqServer">
+            <summary>
+            Creates a Redis MQ Server that processes each message on its own background thread.
+            i.e. if you register 3 handlers it will create 7 background threads:
+              - 1 listening to the Redis MQ Subscription, getting notified of each new message
+              - 3x1 Normal InQ for each message handler
+              - 3x1 PriorityQ for each message handler (Turn off with DisablePriorityQueues)
+            
+            When RedisMqServer Starts it creates a background thread subscribed to the Redis MQ Topic that
+            listens for new incoming messages. It also starts 2 background threads for each message type:
+             - 1 for processing the services Priority Queue and 1 processing the services normal Inbox Queue.
+            
+            Priority Queue's can be enabled on a message-per-message basis by specifying types in the 
+            OnlyEnablePriorityQueuesForTypes property. The DisableAllPriorityQueues property disables all Queues.
+            
+            The Start/Stop methods are idempotent i.e. It's safe to call them repeatedly on multiple threads 
+            and the Redis MQ Server will only have Started or Stopped once.
+            </summary>
+        </member>
+        <member name="P:ServiceStack.Messaging.Redis.RedisMqServer.RequestFilter">
+            <summary>
+            Execute global transformation or custom logic before a request is processed.
+            Must be thread-safe.
+            </summary>
+        </member>
+        <member name="P:ServiceStack.Messaging.Redis.RedisMqServer.ResponseFilter">
+            <summary>
+            Execute global transformation or custom logic on the response.
+            Must be thread-safe.
+            </summary>
+        </member>
+        <member name="P:ServiceStack.Messaging.Redis.RedisMqServer.ErrorHandler">
+            <summary>
+            Execute global error handler logic. Must be thread-safe.
+            </summary>
+        </member>
+        <member name="P:ServiceStack.Messaging.Redis.RedisMqServer.PriorityQueuesWhitelist">
+            <summary>
+            If you only want to enable priority queue handlers (and threads) for specific msg types
+            </summary>
+        </member>
+        <member name="P:ServiceStack.Messaging.Redis.RedisMqServer.DisablePriorityQueues">
+            <summary>
+            Don't listen on any Priority Queues
+            </summary>
+        </member>
+        <member name="P:ServiceStack.Messaging.Redis.RedisMqServer.PublishResponsesWhitelist">
+            <summary>
+            Opt-in to only publish responses on this white list. 
+            Publishes all responses by default.
+            </summary>
+        </member>
+        <member name="P:ServiceStack.Messaging.Redis.RedisMqServer.DisablePublishingResponses">
+            <summary>
+            Don't publish any response messages
+            </summary>
+        </member>
+        <member name="P:ServiceStack.Messaging.Redis.RedisMqServer.PublishToOutqWhitelist">
+            <summary>
+            Opt-in to only publish .outq messages on this white list. 
+            Publishes all responses by default.
+            </summary>
+        </member>
+        <member name="P:ServiceStack.Messaging.Redis.RedisMqServer.DisablePublishingToOutq">
+            <summary>
+            Don't publish any messages to .outq
+            </summary>
+        </member>
+        <member name="T:ServiceStack.Messaging.Redis.RedisTransientMessageFactory">
+            <summary>
+            Transient message queues are a one-pass message queue service that starts
+            processing messages when Start() is called. Any subsequent Start() calls 
+            while the service is running is ignored.
+            
+            The transient service will continue to run until all messages have been 
+            processed after which time it will shutdown all processing until Start() is called again.
+            </summary>
+        </member>
+    </members>
+</doc>
