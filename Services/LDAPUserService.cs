@@ -33,23 +33,23 @@ namespace SitefinityWebApp.Services
 
             // Cargar el mapeo desde web.config
             _propertyMapping["LdapId"] = ConfigurationManager.AppSettings["LDAP.Properties.LdapId"] ?? "objectGUID";
-            _propertyMapping["Username"] = ConfigurationManager.AppSettings["LDAP.Properties.Username"] ?? "sAMAccountName";
-            _propertyMapping["FullName"] = ConfigurationManager.AppSettings["LDAP.Properties.FullName"] ?? "displayName";
-            _propertyMapping["Email"] = ConfigurationManager.AppSettings["LDAP.Properties.Email"] ?? "mail";
-            _propertyMapping["Identificacion"] = ConfigurationManager.AppSettings["LDAP.Properties.Identificacion"] ?? "postalCode";
-            _propertyMapping["Zone"] = ConfigurationManager.AppSettings["LDAP.Properties.Zone"] ?? "streetAddress";
-            _propertyMapping["Cargo"] = ConfigurationManager.AppSettings["LDAP.Properties.Cargo"] ?? "title";
-            _propertyMapping["Extension"] = ConfigurationManager.AppSettings["LDAP.Properties.Extension"] ?? "telephoneNumber";
-            _propertyMapping["Office"] = ConfigurationManager.AppSettings["LDAP.Properties.Office"] ?? "company";
-            _propertyMapping["CodeOffice"] = ConfigurationManager.AppSettings["LDAP.Properties.CodeOffice"] ?? "physicalDeliveryOfficeName";
-            _propertyMapping["Department"] = ConfigurationManager.AppSettings["LDAP.Properties.Department"] ?? "department";
-            _propertyMapping["Manager"] = ConfigurationManager.AppSettings["LDAP.Properties.Manager"] ?? "manager";
-            _propertyMapping["Grado"] = ConfigurationManager.AppSettings["LDAP.Properties.Grado"] ?? "msDS-cloudExtensionAttribute1";
-            _propertyMapping["BirthDay"] = ConfigurationManager.AppSettings["LDAP.Properties.BirthDay"] ?? "homePhone";
-            _propertyMapping["HireDay"] = ConfigurationManager.AppSettings["LDAP.Properties.HireDay"] ?? "pager";
-            _propertyMapping["Role"] = ConfigurationManager.AppSettings["LDAP.Properties.Role"] ?? "msDS-cloudExtensionAttribute2";
-            _propertyMapping["Profile"] = ConfigurationManager.AppSettings["LDAP.Properties.Profile"] ?? "msDS-cloudExtensionAttribute3";
-            _propertyMapping["Photo"] = ConfigurationManager.AppSettings["LDAP.Properties.Photo"] ?? "thumbnailPhoto";
+            _propertyMapping["Username"] = ConfigurationManager.AppSettings["LDAP.Properties.Username"];
+            _propertyMapping["FullName"] = ConfigurationManager.AppSettings["LDAP.Properties.FullName"];
+            _propertyMapping["Email"] = ConfigurationManager.AppSettings["LDAP.Properties.Email"];
+            _propertyMapping["Identificacion"] = ConfigurationManager.AppSettings["LDAP.Properties.Identificacion"] ;
+            _propertyMapping["Zone"] = ConfigurationManager.AppSettings["LDAP.Properties.Zone"];
+            _propertyMapping["Cargo"] = ConfigurationManager.AppSettings["LDAP.Properties.Cargo"];
+            _propertyMapping["Extension"] = ConfigurationManager.AppSettings["LDAP.Properties.Extension"];
+            _propertyMapping["Office"] = ConfigurationManager.AppSettings["LDAP.Properties.Office"];
+            _propertyMapping["CodeOffice"] = ConfigurationManager.AppSettings["LDAP.Properties.CodeOffice"];
+            _propertyMapping["Department"] = ConfigurationManager.AppSettings["LDAP.Properties.Department"];
+            _propertyMapping["Manager"] = ConfigurationManager.AppSettings["LDAP.Properties.Manager"];
+            _propertyMapping["Grado"] = ConfigurationManager.AppSettings["LDAP.Properties.Grado"];
+            _propertyMapping["BirthDay"] = ConfigurationManager.AppSettings["LDAP.Properties.BirthDay"];
+            _propertyMapping["HireDay"] = ConfigurationManager.AppSettings["LDAP.Properties.HireDay"];
+            _propertyMapping["Role"] = ConfigurationManager.AppSettings["LDAP.Properties.Role"];
+            _propertyMapping["Profile"] = ConfigurationManager.AppSettings["LDAP.Properties.Profile"];
+            _propertyMapping["Photo"] = ConfigurationManager.AppSettings["LDAP.Properties.Photo"];
         }
 
         // Método helper para obtener el nombre de la propiedad LDAP mapeada
