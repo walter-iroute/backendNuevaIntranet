@@ -2,12 +2,12 @@
 using SitefinityWebApp.Models;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.DirectoryServices;
 using System.Linq;
 using System.Web;
 using System.Web.Hosting;
 using System.Xml;
-using System.Configuration;
 
 namespace SitefinityWebApp.Services
 {
@@ -19,6 +19,7 @@ namespace SitefinityWebApp.Services
         private string _usersDN;
         private string _authenticationType;
 
+        // Diccionario para almacenar el mapeo de propiedades
         private Dictionary<string, string> _propertyMapping;
 
         public LDAPUserService()
@@ -32,11 +33,11 @@ namespace SitefinityWebApp.Services
             _propertyMapping = new Dictionary<string, string>();
 
             // Cargar el mapeo desde web.config
-            _propertyMapping["LdapId"] = ConfigurationManager.AppSettings["LDAP.Properties.LdapId"] ?? "objectGUID";
+            _propertyMapping["LdapId"] = ConfigurationManager.AppSettings["LDAP.Properties.LdapId"];
             _propertyMapping["Username"] = ConfigurationManager.AppSettings["LDAP.Properties.Username"];
             _propertyMapping["FullName"] = ConfigurationManager.AppSettings["LDAP.Properties.FullName"];
             _propertyMapping["Email"] = ConfigurationManager.AppSettings["LDAP.Properties.Email"];
-            _propertyMapping["Identificacion"] = ConfigurationManager.AppSettings["LDAP.Properties.Identificacion"] ;
+            _propertyMapping["Identificacion"] = ConfigurationManager.AppSettings["LDAP.Properties.Identificacion"];
             _propertyMapping["Zone"] = ConfigurationManager.AppSettings["LDAP.Properties.Zone"];
             _propertyMapping["Cargo"] = ConfigurationManager.AppSettings["LDAP.Properties.Cargo"];
             _propertyMapping["Extension"] = ConfigurationManager.AppSettings["LDAP.Properties.Extension"];
@@ -55,7 +56,7 @@ namespace SitefinityWebApp.Services
         // Método helper para obtener el nombre de la propiedad LDAP mapeada
         private string GetMappedProperty(string propertyName)
         {
-            return _propertyMapping.ContainsKey(propertyName) ? _propertyMapping[propertyName] : propertyName;
+            return _propertyMapping.ContainsKey(propertyName) ? _propertyMapping[propertyName] : null;
         }
 
         public List<LDAPUser> GetAllUsers()
@@ -69,13 +70,18 @@ namespace SitefinityWebApp.Services
                 using (var entry = new DirectoryEntry(ldapPath, _ldapUser, _ldapPassword, AuthenticationTypes.None))
                 using (var searcher = new DirectorySearcher(entry))
                 {
-                    // Búsqueda más específica y simple
                     searcher.Filter = "(objectClass=user)";
-
-                    // Solo propiedades básicas primero
                     searcher.PropertiesToLoad.Clear();
 
-                    // Limitar resultados para testing
+                    // Agregar solo las propiedades que necesitamos basadas en la configuración
+                    foreach (var mapping in _propertyMapping.Values)
+                    {
+                        if (!string.IsNullOrEmpty(mapping))
+                        {
+                            searcher.PropertiesToLoad.Add(mapping);
+                        }
+                    }
+
                     searcher.SizeLimit = 10;
                     searcher.PageSize = 10;
 
@@ -84,23 +90,24 @@ namespace SitefinityWebApp.Services
                         foreach (SearchResult result in results)
                         {
                             DebugPrintAllProperties(result);
-                            var ldapId = GetMappedProperty(result, "objectGUID");
-                            var username = GetMappedProperty(result, "sAMAccountName");
-                            var fullName = GetMappedProperty(result, "displayName");
-                            var email = GetMappedProperty(result, "mail");
-                            var identificacion = GetMappedProperty(result, "postalCode");
-                            var zona = GetMappedProperty(result, "streetAddress"); //
-                            var cargo = GetMappedProperty(result, "title"); //est 
-                            var ext = GetMappedProperty(result, "telephoneNumber");
-                            var office = GetMappedProperty(result, "company");
-                            var codeOffice = GetMappedProperty(result, "physicalDeliveryOfficeName");
-                            var department = GetMappedProperty(result, "department");
-                            var manager = GetMappedProperty(result, "manager");
-                            var degree = GetMappedProperty(result, "msDS-cloudExtensionAttribute1");
-                            var birthDay = GetMappedProperty(result, "homePhone");
-                            var hireDay = GetMappedProperty(result, "pager");
 
-                            // Solo agregar si tiene username y no es cuenta de computadora
+                            // Usar el mapeo configurable
+                            var ldapId = GetProperty(result, GetMappedProperty("LdapId"));
+                            var username = GetProperty(result, GetMappedProperty("Username"));
+                            var fullName = GetProperty(result, GetMappedProperty("FullName"));
+                            var email = GetProperty(result, GetMappedProperty("Email"));
+                            var identificacion = GetProperty(result, GetMappedProperty("Identificacion"));
+                            var zona = GetProperty(result, GetMappedProperty("Zone"));
+                            var cargo = GetProperty(result, GetMappedProperty("Cargo"));
+                            var ext = GetProperty(result, GetMappedProperty("Extension"));
+                            var office = GetProperty(result, GetMappedProperty("Office"));
+                            var codeOffice = GetProperty(result, GetMappedProperty("CodeOffice"));
+                            var department = GetProperty(result, GetMappedProperty("Department"));
+                            var manager = GetProperty(result, GetMappedProperty("Manager"));
+                            var degree = GetProperty(result, GetMappedProperty("Grado"));
+                            var birthDay = GetProperty(result, GetMappedProperty("BirthDay"));
+                            var hireDay = GetProperty(result, GetMappedProperty("HireDay"));
+
                             if (!string.IsNullOrEmpty(username) && !username.EndsWith("$"))
                             {
                                 var user = new LDAPUser
@@ -146,9 +153,11 @@ namespace SitefinityWebApp.Services
                 using (var entry = new DirectoryEntry(ldapPath, _ldapUser, _ldapPassword, AuthenticationTypes.Secure))
                 using (var searcher = new DirectorySearcher(entry))
                 {
-                    searcher.Filter = $"(&(objectClass=user)(sAMAccountName={username}))";
+                    searcher.Filter = $"(&(objectClass=user)({GetMappedProperty("Username")}={username}))";
                     searcher.PropertiesToLoad.AddRange(new[] {
-                        "sAMAccountName", "givenName", "mail"
+                        GetMappedProperty("Username"),
+                        "givenName", // Esto podrías mapearlo también si quieres
+                        GetMappedProperty("Email")
                     });
 
                     var result = searcher.FindOne();
@@ -156,9 +165,9 @@ namespace SitefinityWebApp.Services
                     {
                         return new LDAPUser
                         {
-                            Username = GetMappedProperty(result, "sAMAccountName") ?? "",
-                            FirstName = GetMappedProperty(result, "givenName") ?? "",
-                            Email = GetMappedProperty(result, "mail") ?? "",
+                            Username = GetProperty(result, GetMappedProperty("Username")) ?? "",
+                            FirstName = GetProperty(result, "givenName") ?? "",
+                            Email = GetProperty(result, GetMappedProperty("Email")) ?? "",
                             Enabled = !IsAccountDisabled(result)
                         };
                     }
@@ -172,7 +181,6 @@ namespace SitefinityWebApp.Services
             return null;
         }
 
-
         public LDAPUser GetProfileAndRol(string email)
         {
             try
@@ -182,9 +190,10 @@ namespace SitefinityWebApp.Services
                 using (var entry = new DirectoryEntry(ldapPath, _ldapUser, _ldapPassword, AuthenticationTypes.Secure))
                 using (var searcher = new DirectorySearcher(entry))
                 {
-                    searcher.Filter = $"(&(objectClass=user)(mail={email}))";
+                    searcher.Filter = $"(&(objectClass=user)({GetMappedProperty("Email")}={email}))";
                     searcher.PropertiesToLoad.AddRange(new[] {
-                        "msDS-cloudExtensionAttribute2", "msDS-cloudExtensionAttribute3"
+                        GetMappedProperty("Role"),
+                        GetMappedProperty("Profile")
                     });
 
                     var result = searcher.FindOne();
@@ -192,8 +201,8 @@ namespace SitefinityWebApp.Services
                     {
                         return new LDAPUser
                         {
-                            Role = GetMappedProperty(result, "msDS-cloudExtensionAttribute2") ?? "",  
-                            Profile = GetMappedProperty(result, "msDS-cloudExtensionAttribute3") ?? ""
+                            Role = GetProperty(result, GetMappedProperty("Role")) ?? "",
+                            Profile = GetProperty(result, GetMappedProperty("Profile")) ?? ""
                         };
                     }
                 }
@@ -215,13 +224,15 @@ namespace SitefinityWebApp.Services
                 using (var entry = new DirectoryEntry(ldapPath, _ldapUser, _ldapPassword, AuthenticationTypes.Secure))
                 using (var searcher = new DirectorySearcher(entry))
                 {
-                    searcher.Filter = $"(&(objectClass=user)(mail={email}))";
-                    searcher.PropertiesToLoad.Add("thumbnailPhoto");
+                    searcher.Filter = $"(&(objectClass=user)({GetMappedProperty("Email")}={email}))";
+                    searcher.PropertiesToLoad.Add(GetMappedProperty("Photo"));
 
                     var result = searcher.FindOne();
-                    if (result != null && result.Properties["thumbnailPhoto"] != null && result.Properties["thumbnailPhoto"].Count > 0)
+                    var photoProperty = GetMappedProperty("Photo");
+
+                    if (result != null && result.Properties[photoProperty] != null && result.Properties[photoProperty].Count > 0)
                     {
-                        return (byte[])result.Properties["thumbnailPhoto"][0];
+                        return (byte[])result.Properties[photoProperty][0];
                     }
                 }
             }
@@ -231,6 +242,12 @@ namespace SitefinityWebApp.Services
             }
 
             return null;
+        }
+
+        // Método para recargar la configuración sin reiniciar la aplicación
+        public void RefreshConfiguration()
+        {
+            LoadPropertyMapping();
         }
 
         private void LoadSitefinityLdapConfig()
@@ -281,7 +298,7 @@ namespace SitefinityWebApp.Services
             System.Diagnostics.Debug.WriteLine("=============================");
         }
 
-        private string GetMappedProperty(SearchResult result, string propertyName)
+        private string GetProperty(SearchResult result, string propertyName)
         {
             if (result.Properties.Contains(propertyName) && result.Properties[propertyName].Count > 0)
             {
@@ -295,18 +312,16 @@ namespace SitefinityWebApp.Services
             if (result.Properties.Contains("userAccountControl") && result.Properties["userAccountControl"].Count > 0)
             {
                 var uac = (int)result.Properties["userAccountControl"][0];
-                return (uac & 0x2) != 0; // UF_ACCOUNTDISABLE flag
+                return (uac & 0x2) != 0;
             }
             return false;
         }
 
         private string ExtractGroupName(string groupDN)
         {
-            // Extraer CN del Distinguished Name
-            // Ejemplo: "CN=Domain Admins,CN=Users,DC=testdomain,DC=local" -> "Domain Admins"
             if (groupDN.StartsWith("CN="))
             {
-                var start = 3; // Después de "CN="
+                var start = 3;
                 var end = groupDN.IndexOf(',');
                 if (end > start)
                 {
@@ -320,7 +335,6 @@ namespace SitefinityWebApp.Services
         {
             try
             {
-                // Buscar el grupo por RID (Relative ID)
                 var ldapPath = $"LDAP://{_ldapServer}:389/{_usersDN}";
                 using (var entry = new DirectoryEntry(ldapPath, _ldapUser, _ldapPassword, AuthenticationTypes.None))
                 using (var searcher = new DirectorySearcher(entry))
@@ -337,7 +351,6 @@ namespace SitefinityWebApp.Services
             }
             catch
             {
-                // Si falla, devolver nombres conocidos
                 switch (primaryGroupId)
                 {
                     case "513": return "Domain Users";
