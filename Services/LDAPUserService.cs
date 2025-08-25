@@ -17,7 +17,7 @@ namespace SitefinityWebApp.Services
         private string _ldapUser;
         private string _ldapPassword;
         private string _usersDN;
-        private string _authenticationType
+        private string _authenticationType;
 
         private Dictionary<string, string> _propertyMapping;
 
